@@ -55,10 +55,49 @@ a {
 h1,
 h2,
 h3,
-.brand-mark,
-.nav__logo {
+.brand-mark {
   font-family: "Poppins", system-ui, sans-serif;
   margin: 0;
+}
+
+/* Official logo lockups — never stretch, recolor, or recreate */
+.logo {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: center;
+  flex-shrink: 0;
+}
+
+.logo--nav {
+  width: clamp(140px, 18vw, 168px);
+  height: auto;
+  min-width: 120px; /* brand digital minimum for horizontal lockup */
+}
+
+.logo--hero {
+  width: clamp(200px, 42vw, 280px);
+  height: auto;
+  margin: 0 auto 1.25rem;
+  min-width: 120px;
+  opacity: 0;
+  animation: riseIn 0.9s 0.1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.logo--clarity {
+  width: clamp(180px, 36vw, 220px);
+  height: auto;
+  margin: 0 auto 1.15rem;
+  min-width: 120px;
+}
+
+.logo--footer {
+  width: clamp(150px, 28vw, 180px);
+  height: auto;
+  min-width: 120px;
+  margin-bottom: 0.35rem;
 }
 
 .container {
@@ -189,18 +228,17 @@ h3,
 }
 
 .nav__logo {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 0.65rem;
-  color: var(--white);
-  font-weight: 700;
-  font-size: 1rem;
-  letter-spacing: -0.01em;
+  /* Clear space ≈ chart-icon height (X) per brand board */
+  padding: 0.55rem 0.65rem;
+  margin: -0.55rem -0.65rem;
 }
 
-.nav__logo svg {
-  width: 28px;
-  height: 28px;
+.nav__logo--footer {
+  display: inline-flex;
+  margin: 0 0 0.75rem;
+  padding: 0.5rem 0;
 }
 
 .nav__links {
@@ -299,17 +337,6 @@ h3,
   text-align: center;
 }
 
-.hero__brand {
-  font-family: "Poppins", sans-serif;
-  font-weight: 800;
-  font-size: clamp(1.15rem, 2.4vw, 1.45rem);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  margin-bottom: 1.25rem;
-  opacity: 0;
-  animation: riseIn 0.9s 0.1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-}
-
 .hero__title {
   font-size: clamp(2.6rem, 8vw, 4.6rem);
   font-weight: 800;
@@ -381,7 +408,7 @@ h3,
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero__brand,
+  .logo--hero,
   .hero__title,
   .hero__glass,
   .hero__aurora,
@@ -1032,28 +1059,9 @@ h3,
   margin: 0 auto 2.5rem;
 }
 
-.clarity-brand {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.85rem;
-  margin-bottom: 1.1rem;
-}
-
-.clarity-brand__text {
-  font-family: "Poppins", sans-serif;
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.95);
-}
-
-.clarity-brand__rule {
-  width: 28px;
-  height: 2px;
-  background: var(--green);
-  border-radius: 999px;
+.clarity-head .logo--clarity {
+  /* Clear space around lockup (≈ icon height X) */
+  padding: 0.75rem 0;
 }
 
 .clarity-title {
@@ -1624,18 +1632,6 @@ h3,
   border-top: 1px solid rgba(255, 255, 255, 0.12);
   font-size: 0.82rem;
   color: rgba(255, 255, 255, 0.55);
-}
-
-.mock-banner {
-  position: sticky;
-  top: var(--nav-h);
-  z-index: 40;
-  background: rgba(71, 189, 104, 0.95);
-  color: var(--white);
-  text-align: center;
-  font-size: 0.82rem;
-  font-weight: 600;
-  padding: 0.45rem 1rem;
 }
 
 .section-head {
