@@ -362,6 +362,19 @@ h3,
   animation-delay: -4s;
 }
 
+.hero__mist--trail {
+  left: 35%;
+  top: 28%;
+  width: min(55vw, 520px);
+  height: min(40vh, 320px);
+  opacity: 0.4;
+  background:
+    radial-gradient(ellipse at 30% 60%, rgba(71, 189, 104, 0.45), transparent 55%),
+    radial-gradient(ellipse at 70% 40%, rgba(109, 255, 150, 0.25), transparent 50%);
+  filter: blur(56px);
+  animation: mistDrift 18s ease-in-out infinite alternate-reverse;
+}
+
 .hero__orbs {
   position: absolute;
   inset: 0;
@@ -381,28 +394,53 @@ h3,
   left: 0;
   right: 0;
   bottom: 0;
-  height: 42%;
+  height: 48%;
   background:
-    linear-gradient(180deg, transparent 0%, rgba(5, 12, 18, 0.55) 35%, rgba(3, 8, 12, 0.92) 100%),
+    linear-gradient(180deg, transparent 0%, rgba(5, 12, 18, 0.35) 20%, rgba(3, 8, 12, 0.95) 100%),
+    linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(71, 189, 104, 0.04) 40%,
+      rgba(71, 189, 104, 0.08) 55%,
+      transparent 75%
+    ),
     repeating-linear-gradient(
       90deg,
-      rgba(71, 189, 104, 0.03) 0 1px,
-      transparent 1px 48px
+      rgba(255, 255, 255, 0.015) 0 1px,
+      transparent 1px 56px
     );
-  mask-image: linear-gradient(180deg, transparent, black 40%);
+  mask-image: linear-gradient(180deg, transparent, black 38%);
+}
+
+.hero__floor::before {
+  content: "";
+  position: absolute;
+  left: 8%;
+  right: 8%;
+  bottom: 22%;
+  height: 55%;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.06) 0%,
+    transparent 45%
+  );
+  filter: blur(20px);
+  opacity: 0.5;
+  transform: scaleY(-1);
+  transform-origin: bottom;
 }
 
 .hero__floor::after {
   content: "";
   position: absolute;
   left: 50%;
-  bottom: 18%;
-  width: min(70%, 640px);
-  height: 28px;
+  bottom: 16%;
+  width: min(72%, 680px);
+  height: 36px;
   transform: translateX(-50%);
-  background: radial-gradient(ellipse, rgba(71, 189, 104, 0.35), transparent 70%);
-  filter: blur(16px);
-  opacity: 0.7;
+  background: radial-gradient(ellipse, rgba(71, 189, 104, 0.42), transparent 70%);
+  filter: blur(18px);
+  opacity: 0.8;
 }
 
 .hero__candles {
@@ -411,9 +449,9 @@ h3,
   top: 18%;
   width: min(58vw, 560px);
   height: auto;
-  opacity: 0.72;
-  filter: blur(0.4px) saturate(1.2);
-  mask-image: radial-gradient(ellipse at 55% 45%, black 25%, transparent 78%);
+  opacity: 0.78;
+  filter: blur(1.2px) saturate(1.35) drop-shadow(0 0 28px rgba(71, 189, 104, 0.45));
+  mask-image: radial-gradient(ellipse at 55% 45%, black 20%, transparent 78%);
   animation: candleFloat 12s ease-in-out infinite alternate;
 }
 
@@ -431,23 +469,40 @@ h3,
   overflow: hidden;
   background:
     linear-gradient(
-      145deg,
-      rgba(255, 255, 255, 0.22) 0%,
-      rgba(255, 255, 255, 0.08) 42%,
-      rgba(255, 255, 255, 0.04) 100%
+      155deg,
+      rgba(255, 255, 255, 0.28) 0%,
+      rgba(255, 255, 255, 0.12) 28%,
+      rgba(180, 220, 200, 0.06) 58%,
+      rgba(255, 255, 255, 0.05) 100%
     );
-  border: 1px solid rgba(255, 255, 255, 0.28);
+  border: 1px solid rgba(255, 255, 255, 0.38);
   box-shadow:
-    0 40px 100px rgba(0, 0, 0, 0.45),
-    0 8px 32px rgba(0, 0, 0, 0.3),
-    0 0 0 1px rgba(71, 189, 104, 0.12),
-    inset 0 1px 0 rgba(255, 255, 255, 0.55),
-    inset 0 -1px 0 rgba(255, 255, 255, 0.08),
-    inset 1px 0 0 rgba(255, 255, 255, 0.18);
-  backdrop-filter: blur(36px) saturate(1.65);
-  -webkit-backdrop-filter: blur(36px) saturate(1.65);
+    0 50px 120px rgba(0, 0, 0, 0.55),
+    0 12px 40px rgba(0, 0, 0, 0.35),
+    0 0 0 1px rgba(71, 189, 104, 0.14),
+    inset 0 1.5px 0 rgba(255, 255, 255, 0.7),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.1),
+    inset 1.5px 0 0 rgba(255, 255, 255, 0.28),
+    inset -1px 0 0 rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(42px) saturate(1.8) brightness(1.08);
+  -webkit-backdrop-filter: blur(42px) saturate(1.8) brightness(1.08);
   opacity: 0;
   animation: glassFloatIn 1.15s 0.15s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.hero__glass::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  border-radius: inherit;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.14) 0%,
+    transparent 32%,
+    transparent 70%,
+    rgba(71, 189, 104, 0.05) 100%
+  );
+  pointer-events: none;
 }
 
 .hero__glass-shine {
@@ -456,14 +511,15 @@ h3,
   border-radius: inherit;
   background:
     linear-gradient(
-      115deg,
-      rgba(255, 255, 255, 0.38) 0%,
-      rgba(255, 255, 255, 0.08) 18%,
-      transparent 42%
-    );
+      118deg,
+      rgba(255, 255, 255, 0.5) 0%,
+      rgba(255, 255, 255, 0.16) 14%,
+      transparent 38%
+    ),
+    radial-gradient(ellipse 80% 50% at 15% -10%, rgba(255, 255, 255, 0.35), transparent 55%);
   pointer-events: none;
   mix-blend-mode: screen;
-  opacity: 0.85;
+  opacity: 0.9;
 }
 
 .hero__glass-edge {
