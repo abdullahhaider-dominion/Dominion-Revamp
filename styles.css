@@ -950,16 +950,6 @@ h3,
   }
 }
 
-.focus-stat__icon {
-  display: grid;
-  place-items: center;
-  flex: 0 0 auto;
-  width: 38px;
-  height: 38px;
-  border-radius: 12px;
-  background: rgba(71, 189, 104, 0.1);
-}
-
 .focus-stat strong {
   display: block;
   font-family: "Poppins", sans-serif;
