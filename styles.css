@@ -38,6 +38,7 @@ body {
   background: var(--mist-2);
   line-height: 1.55;
   overflow-x: hidden;
+  padding-top: calc(var(--nav-h) + 2.1rem);
 }
 
 img,
@@ -140,22 +141,42 @@ h3,
   color: var(--navy);
 }
 
-/* ——— Nav ——— */
-.site-nav {
+/* ——— Fixed chrome (nav + mock banner, no top gap) ——— */
+.site-chrome {
   position: fixed;
-  inset: 0 0 auto;
+  top: 0;
+  left: 0;
+  right: 0;
   z-index: 50;
+}
+
+.site-nav {
+  position: relative;
+  inset: auto;
   height: var(--nav-h);
   display: flex;
   align-items: center;
-  transition: background 0.35s ease, backdrop-filter 0.35s ease, border-color 0.35s ease;
-  border-bottom: 1px solid transparent;
+  background: rgba(29, 51, 71, 0.92);
+  backdrop-filter: blur(18px) saturate(1.2);
+  -webkit-backdrop-filter: blur(18px) saturate(1.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  transition: background 0.35s ease;
 }
 
 .site-nav.is-scrolled {
-  background: rgba(29, 51, 71, 0.72);
-  backdrop-filter: blur(18px) saturate(1.2);
-  border-bottom-color: rgba(255, 255, 255, 0.08);
+  background: rgba(29, 51, 71, 0.97);
+}
+
+.mock-banner {
+  position: relative;
+  top: auto;
+  z-index: 1;
+  background: rgba(71, 189, 104, 0.95);
+  color: var(--white);
+  text-align: center;
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 0.45rem 1rem;
 }
 
 .site-nav__inner {
@@ -228,10 +249,10 @@ h3,
 /* ——— Hero ——— */
 .hero {
   position: relative;
-  min-height: 100svh;
+  min-height: calc(100svh - var(--nav-h) - 2.1rem);
   display: grid;
   place-items: center;
-  padding: calc(var(--nav-h) + 2rem) 0 4rem;
+  padding: 2.5rem 0 4rem;
   background:
     radial-gradient(ellipse 80% 60% at 70% 20%, rgba(71, 189, 104, 0.28), transparent 55%),
     radial-gradient(ellipse 60% 50% at 15% 80%, rgba(71, 189, 104, 0.12), transparent 50%),
