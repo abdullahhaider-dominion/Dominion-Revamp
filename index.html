@@ -16,7 +16,7 @@
     />
     <link rel="icon" type="image/png" href="./assets/logo/logo-isotype-app.png" />
     <link rel="apple-touch-icon" href="./assets/logo/logo-isotype-app.png" />
-    <link rel="stylesheet" href="./styles.css?v=13" />
+    <link rel="stylesheet" href="./styles.css?v=14" />
   </head>
   <body>
     <header class="site-chrome" id="site-chrome">
@@ -33,6 +33,7 @@
           </a>
           <nav class="nav__links" aria-label="Primary">
             <a href="#markets">Trade</a>
+            <a href="#quotes">Quotes</a>
             <a href="#sessions">Sessions</a>
             <a href="#accounts">Accounts</a>
             <a href="#platforms">Platforms</a>
@@ -422,6 +423,75 @@
                 <div class="up">+0.42%</div>
               </header>
               <canvas id="market-chart" class="chart-canvas" width="640" height="220"></canvas>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="quotes" id="quotes" aria-labelledby="quotes-title">
+        <div class="quotes__atmosphere" aria-hidden="true"></div>
+        <div class="container quotes__inner">
+          <header class="quotes__head reveal">
+            <p class="eyebrow">Live pricing</p>
+            <h2 class="quotes__title" id="quotes-title">Live market quotes</h2>
+            <p class="quotes__lead">
+              Indicative pricing across major instruments — tap a category to explore. Values update
+              live in this mockup (demo data, not an exchange feed).
+            </p>
+          </header>
+
+          <div class="quotes__tabs reveal" role="tablist" aria-label="Instrument categories">
+            <button class="quotes__tab is-active" type="button" role="tab" aria-selected="true" data-quotes-tab="fx">
+              <span class="quotes__tab-icon" aria-hidden="true">↻</span>
+              Currency Pairs
+            </button>
+            <button class="quotes__tab" type="button" role="tab" aria-selected="false" data-quotes-tab="indices">
+              <span class="quotes__tab-icon" aria-hidden="true">▥</span>
+              Indices
+            </button>
+            <button class="quotes__tab" type="button" role="tab" aria-selected="false" data-quotes-tab="crypto">
+              <span class="quotes__tab-icon" aria-hidden="true">₿</span>
+              Cryptos
+            </button>
+            <button class="quotes__tab" type="button" role="tab" aria-selected="false" data-quotes-tab="shares">
+              <span class="quotes__tab-icon" aria-hidden="true">◷</span>
+              Shares
+            </button>
+          </div>
+
+          <div class="quotes__grid reveal" data-quotes-grid aria-live="polite"></div>
+
+          <p class="quotes__disclaimer reveal">
+            Quotes are indicative and for informational purposes only.
+          </p>
+
+          <div class="quotes__apps reveal">
+            <div class="quotes__apps-rule" aria-hidden="true"></div>
+            <div class="quotes__apps-title">
+              <span class="quotes__apps-phone" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+                  <rect x="7" y="3" width="10" height="18" rx="2.2" stroke="currentColor" stroke-width="1.7" />
+                  <path d="M10 18.5h4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+                </svg>
+              </span>
+              <h3>Trading on the go</h3>
+            </div>
+            <p>Access global markets anytime with our iOS and Android apps.</p>
+            <div class="quotes__store">
+              <a class="quotes__store-btn" href="#final-cta" aria-label="Download on the App Store">
+                <span aria-hidden="true"></span>
+                <span>
+                  <small>Download on the</small>
+                  App Store
+                </span>
+              </a>
+              <a class="quotes__store-btn" href="#final-cta" aria-label="Get it on Google Play">
+                <span aria-hidden="true">▶</span>
+                <span>
+                  <small>Get it on</small>
+                  Google Play
+                </span>
+              </a>
             </div>
           </div>
         </div>
