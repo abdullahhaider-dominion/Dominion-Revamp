@@ -16,7 +16,7 @@
     />
     <link rel="icon" type="image/png" href="./assets/logo/logo-isotype-app.png" />
     <link rel="apple-touch-icon" href="./assets/logo/logo-isotype-app.png" />
-    <link rel="stylesheet" href="./styles.css?v=10" />
+    <link rel="stylesheet" href="./styles.css?v=11" />
   </head>
   <body>
     <header class="site-chrome" id="site-chrome">
@@ -154,7 +154,16 @@
 
       <section class="sessions" id="sessions" aria-labelledby="sessions-title">
         <div class="sessions__atmosphere" aria-hidden="true"></div>
-        <div class="sessions__map" aria-hidden="true"></div>
+        <div class="sessions__map" aria-hidden="true">
+          <img
+            class="sessions__map-img"
+            src="./assets/sessions/world-map-bg.jpg"
+            alt=""
+            width="1600"
+            height="900"
+            loading="lazy"
+          />
+        </div>
         <div class="container sessions__inner">
           <header class="sessions__head reveal">
             <div class="sessions__intro">
@@ -193,12 +202,7 @@
                 <div class="session-card__body">
                   <header class="session-card__top">
                     <span class="session-card__icon" aria-hidden="true">
-                      <svg viewBox="0 0 32 32" width="26" height="26" fill="none">
-                        <path d="M15 28V10l1-6 1 6v18" stroke="currentColor" stroke-width="1.55" stroke-linecap="round"/>
-                        <path d="M12 14h8M11 18h10M12 22h8" stroke="currentColor" stroke-width="1.55" stroke-linecap="round"/>
-                        <path d="M10 28h12" stroke="currentColor" stroke-width="1.55" stroke-linecap="round"/>
-                        <path d="M14 10c0-2 .7-4 2-5.5C17.3 6 18 8 18 10" stroke="currentColor" stroke-width="1.45"/>
-                      </svg>
+                      <svg class="session-card__glyph" viewBox="0 0 32 32" width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.5 2.5h1v2.2h2.2v1.6H18v1.3h-4V6.3h.7V4.7h2.2V2.5h-1.4z" stroke="#47BD68" stroke-width="1.35" stroke-linejoin="round"/><path d="M11.5 9.2h9v2.2h-9V9.2zM10.2 11.4h11.6V29H10.2V11.4z" stroke="#47BD68" stroke-width="1.35" stroke-linejoin="round"/><path d="M12.4 13.2v13.8M14.6 13.2v13.8M17.4 13.2v13.8M19.6 13.2v13.8" stroke="#47BD68" stroke-width="1.1" stroke-linecap="round"/><path d="M9 29h14" stroke="#47BD68" stroke-width="1.35" stroke-linecap="round"/></svg>
                     </span>
                     <div class="session-card__identity">
                       <h3 class="session-card__city">New York</h3>
@@ -219,8 +223,10 @@
                     </div>
                   </div>
                   <footer class="session-card__foot" data-foot>
-                    <span class="session-card__live-icon" aria-hidden="true"></span>
-                    <span data-foot-text>Live market</span>
+                    <div class="session-card__foot-pill">
+                      <span class="session-card__live-icon" aria-hidden="true"></span>
+                      <span data-foot-text>Live market</span>
+                    </div>
                   </footer>
                 </div>
               </article>
@@ -249,11 +255,7 @@
                 <div class="session-card__body">
                   <header class="session-card__top">
                     <span class="session-card__icon" aria-hidden="true">
-                      <svg viewBox="0 0 32 32" width="26" height="26" fill="none">
-                        <path d="M11 28V13l5-7 5 7v15" stroke="currentColor" stroke-width="1.55" stroke-linejoin="round"/>
-                        <path d="M14.5 28V19h3v9M12.5 13h7M16 6v3.5" stroke="currentColor" stroke-width="1.55" stroke-linecap="round"/>
-                        <circle cx="16" cy="11.5" r="1.2" fill="currentColor"/>
-                      </svg>
+                      <svg class="session-card__glyph" viewBox="0 0 32 32" width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.2 3.2h3.6L19 5.2v1.4h-6V5.2l1.2-2z" stroke="#47BD68" stroke-width="1.35" stroke-linejoin="round"/><path d="M12.4 6.6h7.2v3.2h-7.2V6.6z" stroke="#47BD68" stroke-width="1.35" stroke-linejoin="round"/><circle cx="16" cy="8.2" r="1.55" stroke="#47BD68" stroke-width="1.2"/><path d="M16 8.2v-1.1M16 8.2h1.05" stroke="#47BD68" stroke-width="1.1" stroke-linecap="round"/><path d="M13.1 9.8h5.8V29H13.1V9.8z" stroke="#47BD68" stroke-width="1.35" stroke-linejoin="round"/><path d="M14.5 12.2v14M17.5 12.2v14" stroke="#47BD68" stroke-width="1.1" stroke-linecap="round"/><path d="M11.5 29h9" stroke="#47BD68" stroke-width="1.35" stroke-linecap="round"/><path d="M14.8 4.2h2.4" stroke="#47BD68" stroke-width="1.1" stroke-linecap="round"/></svg>
                     </span>
                     <div class="session-card__identity">
                       <h3 class="session-card__city">London</h3>
@@ -274,8 +276,10 @@
                     </div>
                   </div>
                   <footer class="session-card__foot" data-foot>
-                    <span class="session-card__live-icon" aria-hidden="true"></span>
-                    <span data-foot-text>Live market</span>
+                    <div class="session-card__foot-pill">
+                      <span class="session-card__live-icon" aria-hidden="true"></span>
+                      <span data-foot-text>Live market</span>
+                    </div>
                   </footer>
                 </div>
               </article>
@@ -304,13 +308,7 @@
                 <div class="session-card__body">
                   <header class="session-card__top">
                     <span class="session-card__icon" aria-hidden="true">
-                      <svg viewBox="0 0 32 32" width="26" height="26" fill="none">
-                        <path d="M16 5v23" stroke="currentColor" stroke-width="1.55" stroke-linecap="round"/>
-                        <path d="M10 28h12" stroke="currentColor" stroke-width="1.55" stroke-linecap="round"/>
-                        <circle cx="16" cy="12" r="3.2" stroke="currentColor" stroke-width="1.55"/>
-                        <circle cx="16" cy="18.5" r="4.6" stroke="currentColor" stroke-width="1.55"/>
-                        <path d="M11.5 12h9M9.5 18.5h13" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
-                      </svg>
+                      <svg class="session-card__glyph" viewBox="0 0 32 32" width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 2.4v4.2" stroke="#47BD68" stroke-width="1.35" stroke-linecap="round"/><circle cx="16" cy="9.2" r="2.6" stroke="#47BD68" stroke-width="1.35"/><path d="M16 11.8v3.4" stroke="#47BD68" stroke-width="1.35" stroke-linecap="round"/><circle cx="16" cy="19.4" r="4.1" stroke="#47BD68" stroke-width="1.35"/><path d="M12.8 22.8 10.4 29M19.2 22.8 21.6 29M16 23.5V29" stroke="#47BD68" stroke-width="1.35" stroke-linecap="round"/><path d="M9.2 29h13.6" stroke="#47BD68" stroke-width="1.35" stroke-linecap="round"/><path d="M13.6 19.4h4.8M14.4 9.2h3.2" stroke="#47BD68" stroke-width="1.1" stroke-linecap="round"/></svg>
                     </span>
                     <div class="session-card__identity">
                       <h3 class="session-card__city">Asia</h3>
@@ -331,8 +329,10 @@
                     </div>
                   </div>
                   <footer class="session-card__foot" data-foot>
-                    <span class="session-card__live-icon" aria-hidden="true"></span>
-                    <span data-foot-text>Live market</span>
+                    <div class="session-card__foot-pill">
+                      <span class="session-card__live-icon" aria-hidden="true"></span>
+                      <span data-foot-text>Live market</span>
+                    </div>
                   </footer>
                 </div>
               </article>
