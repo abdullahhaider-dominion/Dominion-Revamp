@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dominion Markets — Floating Sanctuary UI Mockup</title>
+    <meta
+      name="description"
+      content="Hi-fi UI mockup for Dominion Markets Floating Sanctuary homepage redesign."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="mock-banner">
+      Hi-fi UI mockup · Floating Sanctuary · not production
+    </div>
+
+    <header class="site-nav" id="site-nav">
+      <div class="site-nav__inner">
+        <a class="nav__logo" href="#top" aria-label="Dominion Markets home">
+          <svg viewBox="0 0 32 32" aria-hidden="true">
+            <rect x="4" y="18" width="4" height="10" rx="1" fill="#47BD68" />
+            <rect x="11" y="12" width="4" height="16" rx="1" fill="#47BD68" />
+            <rect x="18" y="8" width="4" height="20" rx="1" fill="#47BD68" />
+            <path
+              d="M8 10l8-6 8 4"
+              fill="none"
+              stroke="#fff"
+              stroke-width="2.2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          Dominion Markets
+        </a>
+        <nav class="nav__links" aria-label="Primary">
+          <a href="#markets">Trade</a>
+          <a href="#accounts">Accounts</a>
+          <a href="#platforms">Platforms</a>
+          <a href="#ecosystem">Tools</a>
+          <a href="#trust">About</a>
+        </nav>
+        <div class="nav__cta">
+          <a class="btn btn--ghost" href="#final-cta" style="min-height: 42px; padding: 0.55rem 1.1rem"
+            >Log in</a
+          >
+          <a
+            class="btn btn--primary"
+            href="#final-cta"
+            style="min-height: 42px; padding: 0.55rem 1.1rem"
+            >Open Account</a
+          >
+        </div>
+        <button class="nav__menu" type="button" aria-label="Menu">☰</button>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero" id="hero">
+        <div class="hero__aurora" aria-hidden="true"></div>
+        <div class="hero__grid" aria-hidden="true"></div>
+        <svg class="hero__chart-glow" viewBox="0 0 640 280" aria-hidden="true">
+          <defs>
+            <linearGradient id="hg" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#47BD68" stop-opacity="0.5" />
+              <stop offset="100%" stop-color="#47BD68" stop-opacity="0" />
+            </linearGradient>
+          </defs>
+          <path
+            d="M0 210 C80 190 120 140 180 150 C240 160 260 90 320 100 C390 112 420 60 480 70 C540 80 580 40 640 55 L640 280 L0 280 Z"
+            fill="url(#hg)"
+          />
+          <path
+            d="M0 210 C80 190 120 140 180 150 C240 160 260 90 320 100 C390 112 420 60 480 70 C540 80 580 40 640 55"
+            fill="none"
+            stroke="#47BD68"
+            stroke-width="3"
+            stroke-linecap="round"
+          />
+        </svg>
+
+        <div class="hero__content">
+          <p class="hero__brand">Dominion Markets</p>
+          <h1 class="hero__title">Your Trading Sanctuary</h1>
+          <div class="hero__glass">
+            <p class="hero__support">Trade smarter. Trade with confidence.</p>
+            <div class="hero__actions">
+              <a class="btn btn--primary" href="#final-cta">Open Account</a>
+              <a class="btn btn--ghost" href="#platforms">Try Demo</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="proof" id="proof">
+        <div class="container proof__row reveal">
+          <div class="proof__item"><span>50,000+</span> clients</div>
+          <div class="proof__item"><span>200+</span> instruments</div>
+          <div class="proof__item"><span>~30 ms</span> execution</div>
+          <div class="proof__item"><span>500:1</span> max leverage</div>
+          <div class="proof__item"><span>FSC</span> Mauritius</div>
+        </div>
+      </section>
+
+      <section class="section section--mist" id="markets">
+        <div class="container split">
+          <div class="reveal">
+            <p class="eyebrow">Markets</p>
+            <h2 class="section-title">Access global markets</h2>
+            <p class="section-copy">
+              Trade Forex, Indices, Commodities, Stocks, and Cryptocurrencies with
+              transparent conditions and convenient funding methods.
+            </p>
+            <ul class="market-list">
+              <li><span class="dot"></span> Forex — majors, minors, exotics</li>
+              <li><span class="dot"></span> Indices — S&amp;P 500, NASDAQ, FTSE</li>
+              <li><span class="dot"></span> Commodities — Gold, Silver, Oil</li>
+              <li><span class="dot"></span> Stocks &amp; crypto CFDs</li>
+            </ul>
+          </div>
+          <div class="glass-panel reveal reveal-delay-2">
+            <div class="glass-panel__body chart-frame">
+              <header>
+                <h3>EUR/USD preview</h3>
+                <div class="up">+0.42%</div>
+              </header>
+              <canvas id="market-chart" class="chart-canvas" width="640" height="220"></canvas>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--soft" id="how-it-works">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow">Get started</p>
+            <h2 class="section-title">Start in three steps</h2>
+            <p class="section-copy">
+              From first registration to live markets — clear, guided, and built for focus.
+            </p>
+          </div>
+          <div class="steps" style="margin-top: 2rem">
+            <article class="step-card reveal">
+              <div class="step-num">1</div>
+              <h3>Register</h3>
+              <p>Open your Dominion Markets account in minutes.</p>
+            </article>
+            <article class="step-card reveal reveal-delay-1">
+              <div class="step-num">2</div>
+              <h3>Fund</h3>
+              <p>Deposit with secure, convenient funding methods.</p>
+            </article>
+            <article class="step-card reveal reveal-delay-2">
+              <div class="step-num">3</div>
+              <h3>Trade</h3>
+              <p>Access 200+ instruments on MT5 or cTrader.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--mist" id="accounts">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow">Accounts</p>
+            <h2 class="section-title">Choose your account</h2>
+            <p class="section-copy">
+              Flexible account types designed for every level of trader — milky glass modules,
+              readable and precise.
+            </p>
+          </div>
+          <div class="accounts-grid">
+            <article class="account-card reveal">
+              <h3>Standard STP</h3>
+              <div class="best">Best for beginner to intermediate</div>
+              <ul>
+                <li>Competitive spreads, no commissions</li>
+                <li>Full market access</li>
+                <li>Simple, efficient trading environment</li>
+              </ul>
+            </article>
+            <article class="account-card reveal reveal-delay-1">
+              <h3>ECN</h3>
+              <div class="best">Best for active &amp; experienced traders</div>
+              <ul>
+                <li>Raw spreads + transparent commission</li>
+                <li>Direct market access positioning</li>
+                <li>Built for precise execution</li>
+              </ul>
+            </article>
+            <article class="account-card reveal reveal-delay-2">
+              <h3>ECN Institutional</h3>
+              <div class="best">Best for professional traders</div>
+              <ul>
+                <li>From $3.0 commission one way</li>
+                <li>Minimum deposit $20,000</li>
+                <li>MetaTrader 5 only</li>
+              </ul>
+            </article>
+            <article class="account-card reveal reveal-delay-3">
+              <h3>Islamic</h3>
+              <div class="best">Sharia-compliant trading</div>
+              <ul>
+                <li>100% swap-free structure</li>
+                <li>All instruments available</li>
+                <li>Full platform features</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--soft" id="platforms">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow">Platforms</p>
+            <h2 class="section-title">Trade on platforms you trust</h2>
+            <p class="section-copy">
+              Professional-grade MetaTrader 5 and cTrader — desktop, web, and mobile — with
+              advanced charting and algo support.
+            </p>
+          </div>
+          <div class="glass-panel platform-panel reveal">
+            <div class="video-shell" id="platform-video">
+              <canvas id="platform-viz" width="960" height="540" aria-hidden="true"></canvas>
+              <div class="video-shell__ui">
+                <button class="play-btn" type="button" aria-label="Play platform walkthrough">
+                  ▶
+                </button>
+                <div>Platform walkthrough · MT5 / cTrader</div>
+                <small style="opacity: 0.75">Mock playback — real video asset later</small>
+              </div>
+            </div>
+            <div class="platform-meta">
+              <span class="chip">70+ indicators</span>
+              <span class="chip">~30 ms routing</span>
+              <span class="chip">cAlgo / EA support</span>
+              <span class="chip">Multi-device</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--mist" id="dashboard">
+        <div class="container split">
+          <div class="reveal">
+            <p class="eyebrow">Dashboard</p>
+            <h2 class="section-title">Your trading command center</h2>
+            <p class="section-copy">
+              A fully integrated CRM for serious traders — journal, sessions, statistics, risk
+              rules, projections, and news calendar in one place.
+            </p>
+          </div>
+          <div class="glass-panel reveal reveal-delay-2">
+            <div class="dash-mock">
+              <div class="dash-row">
+                <div class="dash-tile">
+                  <span>Win rate</span>
+                  <strong>62%</strong>
+                  <div class="dash-bar"><i></i></div>
+                </div>
+                <div class="dash-tile">
+                  <span>Profit factor</span>
+                  <strong>1.84</strong>
+                  <div class="dash-bar"><i style="width: 74%"></i></div>
+                </div>
+              </div>
+              <div class="dash-tile">
+                <span>Session focus · London</span>
+                <strong style="font-size: 1.05rem; font-weight: 600"
+                  >Risk rules &amp; daily limits active</strong
+                >
+                <div class="dash-bar"><i style="width: 52%"></i></div>
+              </div>
+              <div class="video-shell" style="aspect-ratio: 16 / 7; border-radius: 16px">
+                <div class="video-shell__ui">
+                  <button class="play-btn" type="button" aria-label="Play dashboard demo" style="width:56px;height:56px">
+                    ▶
+                  </button>
+                  <div>Dashboard UI demo</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--soft" id="ecosystem">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow">Ecosystem</p>
+            <h2 class="section-title">Trade more. Unlock more.</h2>
+            <p class="section-copy">
+              Commission Incentives Program — tools, education, and bonuses tied to your activity.
+            </p>
+          </div>
+          <div class="bento">
+            <article class="tile reveal">
+              <h3>Magic Keys</h3>
+              <p>Chart-based order management, one-click execution, and risk calculators.</p>
+            </article>
+            <article class="tile reveal reveal-delay-1">
+              <h3>MT5 Simulator</h3>
+              <p>Test strategies in a full MetaTrader 5 simulated environment.</p>
+            </article>
+            <article class="tile reveal">
+              <h3>Education</h3>
+              <p>Structured courses, live sessions, and market analysis.</p>
+            </article>
+            <article class="tile reveal reveal-delay-1">
+              <h3>Deposit bonus</h3>
+              <p>50% bonus on qualifying deposits — terms apply.</p>
+            </article>
+            <article class="tile reveal reveal-delay-2">
+              <h3>Discord</h3>
+              <p>Community discussions, insights, and shared analysis.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--mist" id="copy-trading">
+        <div class="container split">
+          <div class="reveal">
+            <p class="eyebrow">Copy trading</p>
+            <h2 class="section-title">Copy expert traders in real time</h2>
+            <p class="section-copy">
+              Choose masters, set your allocation and risk limits, copy automatically, and monitor
+              anytime.
+            </p>
+            <div class="masters">
+              <div class="master">
+                <div>
+                  <strong>Frances Poh</strong>
+                  <small>Malaysia · illustrative example</small>
+                </div>
+                <div class="pct">110%</div>
+              </div>
+              <div class="master">
+                <div>
+                  <strong>Alex Charles</strong>
+                  <small>United Kingdom · illustrative example</small>
+                </div>
+                <div class="pct">88%</div>
+              </div>
+              <div class="master">
+                <div>
+                  <strong>Ignas</strong>
+                  <small>United Kingdom · illustrative example</small>
+                </div>
+                <div class="pct">64%</div>
+              </div>
+            </div>
+            <p class="disclaimer">
+              Example master-trader figures are illustrative only. Past performance is not
+              indicative of future results.
+            </p>
+          </div>
+          <div class="glass-panel reveal reveal-delay-2">
+            <div class="glass-panel__body chart-frame">
+              <header>
+                <h3>Copied portfolio curve</h3>
+                <div class="up">Illustrative</div>
+              </header>
+              <canvas id="copy-chart" class="chart-canvas" width="640" height="220"></canvas>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section trust" id="trust">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow">Trust</p>
+            <h2 class="section-title">Regulated. Transparent. Client-first.</h2>
+          </div>
+          <div class="trust-grid">
+            <article class="trust-card reveal">
+              <h3>FSC Mauritius</h3>
+              <p>
+                Dominion Markets Ltd — Investment Dealer. Licence No.
+                <strong>T2023340</strong>.
+              </p>
+            </article>
+            <article class="trust-card reveal reveal-delay-1">
+              <h3>CMA UAE affiliate</h3>
+              <p>
+                Dominion Financial Services L.L.C. — Category 5 (Introduction). Licence No.
+                <strong>20200000425</strong>.
+              </p>
+            </article>
+            <article class="trust-card reveal reveal-delay-2">
+              <h3>Operating pillars</h3>
+              <p>Technology, transparency, and incentives — authority without hype.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="final-cta" id="final-cta">
+        <div class="final-cta__glass reveal">
+          <h2 class="section-title">Ready to trade with clarity?</h2>
+          <p>Open an account or talk to our team — Dubai headquarters, global support.</p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#final-cta">Open Account</a>
+            <a class="btn btn--ghost" href="mailto:info@dominionmarkets.com">Contact us</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="footer">
+      <div class="container site-footer__grid">
+        <div>
+          <a class="nav__logo" href="#top" style="margin-bottom: 0.75rem">
+            <svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true">
+              <rect x="4" y="18" width="4" height="10" rx="1" fill="#47BD68" />
+              <rect x="11" y="12" width="4" height="16" rx="1" fill="#47BD68" />
+              <rect x="18" y="8" width="4" height="20" rx="1" fill="#47BD68" />
+              <path
+                d="M8 10l8-6 8 4"
+                fill="none"
+                stroke="#fff"
+                stroke-width="2.2"
+                stroke-linecap="round"
+              />
+            </svg>
+            Dominion Markets
+          </a>
+          <p>Dubai, United Arab Emirates</p>
+          <p>
+            <a href="mailto:info@dominionmarkets.com">info@dominionmarkets.com</a>
+            +971 4 570 4324
+          </p>
+        </div>
+        <div>
+          <h3>Explore</h3>
+          <a href="#markets">Markets</a>
+          <a href="#accounts">Accounts</a>
+          <a href="#platforms">Platforms</a>
+          <a href="#copy-trading">Copy trading</a>
+        </div>
+        <div>
+          <h3>Company</h3>
+          <a href="#trust">Regulation</a>
+          <a href="#ecosystem">Tools</a>
+          <a href="#dashboard">Dashboard</a>
+        </div>
+      </div>
+      <div class="container risk">
+        Trading CFDs and leveraged financial instruments involves a high level of risk and may not
+        be suitable for all investors. Clients may lose more than their initial deposit where
+        permitted by applicable law. Past performance is not indicative of future results.
+        <br /><br />
+        © 2026 Dominion Markets Ltd
+      </div>
+    </footer>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
