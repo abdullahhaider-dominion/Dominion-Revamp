@@ -700,42 +700,48 @@ h3,
 }
 
 .focus-stat__icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  position: relative;
+  display: block;
   flex: 0 0 auto;
-  width: 40px;
-  height: 40px;
-  border-radius: 12px;
-  background: rgba(71, 189, 104, 0.1);
-  line-height: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: rgba(71, 189, 104, 0.12);
+  overflow: hidden;
 }
 
 .focus-stat__icon svg {
-  display: block;
-  width: 20px;
-  height: 20px;
-  flex-shrink: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 26px !important;
+  height: 26px !important;
+  max-width: none !important;
+  margin: 0;
+  transform: translate(-50%, -50%);
 }
 
 .focus-feature__icon {
+  position: relative;
   flex: 0 0 auto;
-  width: 42px;
-  height: 42px;
-  border-radius: 12px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  display: block;
   background: rgba(71, 189, 104, 0.12);
   border: 1px solid rgba(71, 189, 104, 0.2);
-  line-height: 0;
+  overflow: hidden;
 }
 
 .focus-feature__icon svg {
-  display: block;
-  width: 20px;
-  height: 20px;
-  flex-shrink: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 24px !important;
+  height: 24px !important;
+  max-width: none !important;
+  margin: 0;
+  transform: translate(-50%, -50%);
 }
 
 .focus-feature strong {
