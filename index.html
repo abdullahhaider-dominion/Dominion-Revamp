@@ -16,7 +16,7 @@
     />
     <link rel="icon" type="image/png" href="./assets/logo/logo-isotype-app.png" />
     <link rel="apple-touch-icon" href="./assets/logo/logo-isotype-app.png" />
-    <link rel="stylesheet" href="./styles.css?v=7" />
+    <link rel="stylesheet" href="./styles.css?v=8" />
   </head>
   <body>
     <header class="site-chrome" id="site-chrome">
@@ -33,6 +33,7 @@
           </a>
           <nav class="nav__links" aria-label="Primary">
             <a href="#markets">Trade</a>
+            <a href="#sessions">Sessions</a>
             <a href="#accounts">Accounts</a>
             <a href="#platforms">Platforms</a>
             <a href="#ecosystem">Tools</a>
@@ -148,6 +149,300 @@
           <div class="proof__item"><span>~30 ms</span> execution</div>
           <div class="proof__item"><span>500:1</span> max leverage</div>
           <div class="proof__item"><span>FSC</span> Mauritius</div>
+        </div>
+      </section>
+
+      <section class="sessions" id="sessions" aria-labelledby="sessions-title">
+        <div class="sessions__atmosphere" aria-hidden="true"></div>
+        <div class="sessions__map" aria-hidden="true"></div>
+        <div class="container sessions__inner">
+          <header class="sessions__head reveal">
+            <div class="sessions__intro">
+              <p class="eyebrow sessions__eyebrow">Global market access</p>
+              <h2 class="sessions__title" id="sessions-title">Trade assets from global markets.</h2>
+            </div>
+            <p class="sessions__lead">
+              Capitalize on every opportunity with the world’s most popular assets — and see which
+              major sessions are live right now.
+            </p>
+          </header>
+
+          <div class="sessions__viewport reveal">
+            <div class="sessions__track" data-sessions-track tabindex="0" aria-label="Market sessions">
+              <article
+                class="session-card"
+                data-session="newyork"
+                data-open="13"
+                data-close="22"
+                data-label="New York"
+                data-region="United States"
+              >
+                <div class="session-card__shine" aria-hidden="true"></div>
+                <div class="session-card__edge" aria-hidden="true"></div>
+                <header class="session-card__top">
+                  <span class="session-card__icon" aria-hidden="true">
+                    <svg viewBox="0 0 32 32" width="28" height="28" fill="none">
+                      <path
+                        d="M16 4l1.2 7.2L24 9l-5.2 4.4L22 22l-6-3.6L10 22l3.2-8.6L8 9l6.8 2.2L16 4z"
+                        stroke="currentColor"
+                        stroke-width="1.6"
+                        stroke-linejoin="round"
+                      />
+                      <path d="M12 26h8M14 22v4M18 20v6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+                    </svg>
+                  </span>
+                  <div class="session-card__identity">
+                    <h3 class="session-card__city">New York</h3>
+                    <span class="session-card__badge" data-badge>
+                      <span class="session-card__dot" aria-hidden="true"></span>
+                      <span data-badge-text>Open</span>
+                    </span>
+                  </div>
+                </header>
+
+                <div class="session-card__timer">
+                  <p class="session-card__timer-label" data-timer-label>Market closes in</p>
+                  <div class="session-card__clock" aria-live="polite">
+                    <div>
+                      <strong data-h>00</strong>
+                      <span>Hrs</span>
+                    </div>
+                    <span class="session-card__colon" aria-hidden="true">:</span>
+                    <div>
+                      <strong data-m>00</strong>
+                      <span>Mins</span>
+                    </div>
+                    <span class="session-card__colon" aria-hidden="true">:</span>
+                    <div>
+                      <strong data-s>00</strong>
+                      <span>Secs</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="session-card__visual" aria-hidden="true">
+                  <svg class="session-card__spark" viewBox="0 0 240 48" preserveAspectRatio="none">
+                    <path
+                      d="M0 36 C28 34 40 20 60 22 C84 24 96 10 120 14 C148 18 160 8 180 12 C204 16 220 6 240 10"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                  <svg class="session-card__skyline" viewBox="0 0 320 90" preserveAspectRatio="xMidYMax meet">
+                    <path
+                      fill="currentColor"
+                      d="M0 90V58h18V40h12v18h14V28h10v12h8V18h16v40h12V36h20v54H0zm120 0V34h10v-8h8v8h10V22h14v12h8V48h12v42h-62zm78 0V42h16V20h12v10h10V8h18v34h14v48H198z"
+                    />
+                  </svg>
+                </div>
+
+                <footer class="session-card__foot" data-foot>
+                  <span class="session-card__live-icon" aria-hidden="true"></span>
+                  <span data-foot-text>Live market</span>
+                </footer>
+              </article>
+
+              <article
+                class="session-card"
+                data-session="london"
+                data-open="8"
+                data-close="17"
+                data-label="London"
+                data-region="United Kingdom"
+              >
+                <div class="session-card__shine" aria-hidden="true"></div>
+                <div class="session-card__edge" aria-hidden="true"></div>
+                <header class="session-card__top">
+                  <span class="session-card__icon" aria-hidden="true">
+                    <svg viewBox="0 0 32 32" width="28" height="28" fill="none">
+                      <path d="M10 28V12l6-6 6 6v16" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+                      <path d="M14 28V18h4v10M12 12h8M16 6v4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+                    </svg>
+                  </span>
+                  <div class="session-card__identity">
+                    <h3 class="session-card__city">London</h3>
+                    <span class="session-card__badge" data-badge>
+                      <span class="session-card__dot" aria-hidden="true"></span>
+                      <span data-badge-text>Open</span>
+                    </span>
+                  </div>
+                </header>
+
+                <div class="session-card__timer">
+                  <p class="session-card__timer-label" data-timer-label>Market closes in</p>
+                  <div class="session-card__clock" aria-live="polite">
+                    <div>
+                      <strong data-h>00</strong>
+                      <span>Hrs</span>
+                    </div>
+                    <span class="session-card__colon" aria-hidden="true">:</span>
+                    <div>
+                      <strong data-m>00</strong>
+                      <span>Mins</span>
+                    </div>
+                    <span class="session-card__colon" aria-hidden="true">:</span>
+                    <div>
+                      <strong data-s>00</strong>
+                      <span>Secs</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="session-card__visual" aria-hidden="true">
+                  <svg class="session-card__spark" viewBox="0 0 240 48" preserveAspectRatio="none">
+                    <path
+                      d="M0 30 C24 28 36 18 54 20 C78 22 90 12 112 16 C138 20 150 8 172 14 C196 20 214 10 240 12"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                  <svg class="session-card__skyline" viewBox="0 0 320 90" preserveAspectRatio="xMidYMax meet">
+                    <path
+                      fill="currentColor"
+                      d="M0 90V50h22V34h14v16h18V44h20v46H0zm86 0V38h16V16h10v8h8V10h12v14h8v14h14v52H86zm90 0V48h18V28h12v8h10V18h16v30h14v42H176z"
+                    />
+                  </svg>
+                </div>
+
+                <footer class="session-card__foot" data-foot>
+                  <span class="session-card__live-icon" aria-hidden="true"></span>
+                  <span data-foot-text>Live market</span>
+                </footer>
+              </article>
+
+              <article
+                class="session-card"
+                data-session="asia"
+                data-open="0"
+                data-close="9"
+                data-label="Asia"
+                data-region="Asia Pacific"
+              >
+                <div class="session-card__shine" aria-hidden="true"></div>
+                <div class="session-card__edge" aria-hidden="true"></div>
+                <header class="session-card__top">
+                  <span class="session-card__icon" aria-hidden="true">
+                    <svg viewBox="0 0 32 32" width="28" height="28" fill="none">
+                      <path d="M8 28V16l8-10 8 10v12" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+                      <path d="M12 28v-8h8v8M16 6v4M10 18h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+                    </svg>
+                  </span>
+                  <div class="session-card__identity">
+                    <h3 class="session-card__city">Asia</h3>
+                    <span class="session-card__badge" data-badge>
+                      <span class="session-card__dot" aria-hidden="true"></span>
+                      <span data-badge-text>Open</span>
+                    </span>
+                  </div>
+                </header>
+
+                <div class="session-card__timer">
+                  <p class="session-card__timer-label" data-timer-label>Market closes in</p>
+                  <div class="session-card__clock" aria-live="polite">
+                    <div>
+                      <strong data-h>00</strong>
+                      <span>Hrs</span>
+                    </div>
+                    <span class="session-card__colon" aria-hidden="true">:</span>
+                    <div>
+                      <strong data-m>00</strong>
+                      <span>Mins</span>
+                    </div>
+                    <span class="session-card__colon" aria-hidden="true">:</span>
+                    <div>
+                      <strong data-s>00</strong>
+                      <span>Secs</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="session-card__visual" aria-hidden="true">
+                  <svg class="session-card__spark" viewBox="0 0 240 48" preserveAspectRatio="none">
+                    <path
+                      d="M0 34 C22 32 38 22 58 24 C82 26 98 14 120 18 C146 22 162 10 184 16 C208 22 222 12 240 14"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                  <svg class="session-card__skyline" viewBox="0 0 320 90" preserveAspectRatio="xMidYMax meet">
+                    <path
+                      fill="currentColor"
+                      d="M0 90V52h20V36h16v16h18V46h22v44H0zm88 0V40h14V22h12v10h10V14h14v26h12v50H88zm84 0V44h20V24h14v12h12V16h18v28h16v46H172z"
+                    />
+                  </svg>
+                </div>
+
+                <footer class="session-card__foot" data-foot>
+                  <span class="session-card__live-icon" aria-hidden="true"></span>
+                  <span data-foot-text>Live market</span>
+                </footer>
+              </article>
+            </div>
+
+            <div class="sessions__dots" data-sessions-dots aria-hidden="true">
+              <button type="button" class="sessions__dot is-active" data-dot="0" aria-label="Show New York session"></button>
+              <button type="button" class="sessions__dot" data-dot="1" aria-label="Show London session"></button>
+              <button type="button" class="sessions__dot" data-dot="2" aria-label="Show Asia session"></button>
+            </div>
+          </div>
+
+          <ul class="sessions__features reveal">
+            <li>
+              <span class="sessions__feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+                  <path d="M12 3l7 3v5c0 4.4-2.9 7.4-7 9-4.1-1.6-7-4.6-7-9V6l7-3z" stroke="currentColor" stroke-width="1.7" />
+                </svg>
+              </span>
+              <div>
+                <strong>Regulated &amp; Secure</strong>
+                <span>Licensed oversight and protected client experience.</span>
+              </div>
+            </li>
+            <li>
+              <span class="sessions__feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+                  <path d="M13 3L5.5 13h6.2L10.4 21 18.5 11h-6.1L13 3z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" />
+                </svg>
+              </span>
+              <div>
+                <strong>Lightning Fast Execution</strong>
+                <span>Institutional routing with low-latency fills.</span>
+              </div>
+            </li>
+            <li>
+              <span class="sessions__feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+                  <circle cx="12" cy="12" r="7.25" stroke="currentColor" stroke-width="1.7" />
+                  <ellipse cx="12" cy="12" rx="3" ry="7.25" stroke="currentColor" stroke-width="1.7" />
+                  <path d="M4.8 12h14.4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+                </svg>
+              </span>
+              <div>
+                <strong>Global Market Access</strong>
+                <span>Trade major sessions across FX, indices, and more.</span>
+              </div>
+            </li>
+            <li>
+              <span class="sessions__feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+                  <path d="M4 15a5 5 0 0 1 5-5h1a4 4 0 0 1 4 4v5H4v-4z" stroke="currentColor" stroke-width="1.7" />
+                  <path d="M14 12a4 4 0 0 1 6 0v7h-6v-7z" stroke="currentColor" stroke-width="1.7" />
+                  <circle cx="9" cy="7" r="2.2" stroke="currentColor" stroke-width="1.7" />
+                  <circle cx="17" cy="7.5" r="2" stroke="currentColor" stroke-width="1.7" />
+                </svg>
+              </span>
+              <div>
+                <strong>Premium Support</strong>
+                <span>Human help when you need clarity, not noise.</span>
+              </div>
+            </li>
+          </ul>
         </div>
       </section>
 
