@@ -617,10 +617,38 @@ h3,
   background:
     linear-gradient(
       180deg,
-      rgba(244, 247, 249, 0.28) 0%,
-      rgba(232, 238, 242, 0.18) 40%,
-      rgba(244, 247, 249, 0.35) 100%
+      rgba(20, 36, 51, 0.32) 0%,
+      rgba(20, 36, 51, 0.24) 45%,
+      rgba(20, 36, 51, 0.36) 100%
     );
+}
+
+.clarity-brand__text {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.clarity-title {
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(2.2rem, 5vw, 3.35rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin: 0 0 0.9rem;
+  color: #ffffff;
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.25);
+}
+
+.clarity-sub {
+  margin: 0 auto;
+  max-width: 38rem;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 1.02rem;
+  line-height: 1.6;
 }
 
 .clarity-accounts__inner {
