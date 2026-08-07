@@ -1031,8 +1031,8 @@ h3,
 }
 
 .session-card__icon {
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
   border-radius: 0;
   display: grid;
   place-items: center;
@@ -1046,10 +1046,12 @@ h3,
 }
 
 .session-card__glyph {
-  width: 28px;
-  height: 28px;
+  width: 32px;
+  height: 32px;
   display: block;
-  filter: drop-shadow(0 1px 0 rgba(255, 255, 255, 0.35));
+  object-fit: contain;
+  object-position: center;
+  filter: drop-shadow(0 1px 1px rgba(255, 255, 255, 0.4));
 }
 
 .session-card__identity {
