@@ -39,9 +39,9 @@ assert.match(
   html,
   /Trading CFDs and leveraged financial instruments involves a high level of risk/i
 );
-assert.doesNotMatch(html, /get rich quick/i);
+assert.doesNotMatch(html, /get rich/i);
 assert.doesNotMatch(html, /guaranteed profits/i);
-assert.doesNotMatch(html, /risk-free trading/i);
+assert.doesNotMatch(html, /risk-free/i);
 
 // Hero must not contain proof metrics inside #hero
 const heroMatch = html.match(/id="hero"[\s\S]*?(?=<section id="proof"|<section id="markets")/);
