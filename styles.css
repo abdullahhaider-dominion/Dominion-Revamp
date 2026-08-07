@@ -78,12 +78,10 @@ h3,
 }
 
 .logo--hero {
-  width: clamp(200px, 42vw, 280px);
+  width: clamp(180px, 38vw, 260px);
   height: auto;
-  margin: 0 auto 1.25rem;
+  margin: 0 0 1.35rem;
   min-width: 120px;
-  opacity: 0;
-  animation: riseIn 0.9s 0.1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 .logo--clarity {
@@ -284,96 +282,236 @@ h3,
   }
 }
 
+.btn--glow {
+  box-shadow:
+    0 0 0 1px rgba(71, 189, 104, 0.35),
+    0 10px 28px rgba(71, 189, 104, 0.35),
+    0 0 42px rgba(71, 189, 104, 0.28);
+}
+
+.btn--glow:hover {
+  box-shadow:
+    0 0 0 1px rgba(71, 189, 104, 0.5),
+    0 14px 36px rgba(71, 189, 104, 0.45),
+    0 0 56px rgba(71, 189, 104, 0.38);
+}
+
 /* ——— Hero ——— */
 .hero {
   position: relative;
+  isolation: isolate;
   min-height: calc(100svh - var(--nav-h) - 2.1rem);
   display: grid;
   place-items: center;
-  padding: 2.5rem 0 4rem;
-  background:
-    radial-gradient(ellipse 80% 60% at 70% 20%, rgba(71, 189, 104, 0.28), transparent 55%),
-    radial-gradient(ellipse 60% 50% at 15% 80%, rgba(71, 189, 104, 0.12), transparent 50%),
-    linear-gradient(160deg, var(--navy-deep) 0%, var(--navy) 45%, #243f56 100%);
+  padding: clamp(2.5rem, 6vw, 4.5rem) 0 clamp(3.5rem, 8vw, 5.5rem);
   color: var(--white);
   overflow: hidden;
+  background: #070e14;
+}
+
+.hero__stage {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 70% 55% at 72% 38%, rgba(71, 189, 104, 0.38), transparent 58%),
+    radial-gradient(ellipse 50% 45% at 18% 70%, rgba(71, 189, 104, 0.14), transparent 55%),
+    radial-gradient(ellipse 80% 60% at 50% 100%, rgba(20, 40, 55, 0.9), transparent 50%),
+    linear-gradient(165deg, #050a0f 0%, #0c1822 35%, #122738 70%, #0a1520 100%);
+}
+
+.hero__vignette {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 75% 70% at 50% 45%, transparent 35%, rgba(0, 0, 0, 0.55) 100%);
 }
 
 .hero__aurora {
   position: absolute;
-  inset: -20%;
+  inset: -25%;
   background:
-    radial-gradient(circle at 30% 40%, rgba(71, 189, 104, 0.2), transparent 35%),
-    radial-gradient(circle at 75% 60%, rgba(120, 180, 210, 0.12), transparent 40%);
-  animation: auroraDrift 18s ease-in-out infinite alternate;
-  pointer-events: none;
+    radial-gradient(circle at 68% 35%, rgba(71, 189, 104, 0.32), transparent 32%),
+    radial-gradient(circle at 30% 55%, rgba(40, 120, 90, 0.18), transparent 38%),
+    radial-gradient(circle at 80% 70%, rgba(100, 200, 150, 0.12), transparent 30%);
+  filter: blur(8px);
+  animation: auroraDrift 16s ease-in-out infinite alternate;
 }
 
-.hero__grid {
+.hero__mist {
+  position: absolute;
+  width: min(70vw, 720px);
+  height: min(55vh, 480px);
+  border-radius: 50%;
+  filter: blur(48px);
+  opacity: 0.55;
+  animation: mistDrift 14s ease-in-out infinite alternate;
+}
+
+.hero__mist--left {
+  left: -12%;
+  bottom: 8%;
+  background: radial-gradient(circle, rgba(71, 189, 104, 0.35), transparent 68%);
+}
+
+.hero__mist--right {
+  right: -8%;
+  top: 12%;
+  background: radial-gradient(circle, rgba(109, 255, 150, 0.28), transparent 70%);
+  animation-delay: -4s;
+}
+
+.hero__orbs {
   position: absolute;
   inset: 0;
-  opacity: 0.14;
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
-  background-size: 64px 64px;
-  mask-image: radial-gradient(ellipse at center, black 20%, transparent 75%);
-  pointer-events: none;
+    radial-gradient(circle, rgba(109, 255, 150, 0.55) 0 1.5px, transparent 2px),
+    radial-gradient(circle, rgba(71, 189, 104, 0.4) 0 1px, transparent 2px),
+    radial-gradient(circle, rgba(255, 255, 255, 0.35) 0 1px, transparent 2px);
+  background-size: 180px 180px, 120px 120px, 90px 90px;
+  background-position: 70% 20%, 82% 35%, 60% 10%;
+  opacity: 0.45;
+  mask-image: radial-gradient(ellipse at 75% 30%, black 10%, transparent 55%);
+  animation: orbTwinkle 8s ease-in-out infinite alternate;
 }
 
-.hero__chart-glow {
+.hero__floor {
   position: absolute;
-  right: -5%;
-  bottom: 8%;
-  width: min(58vw, 680px);
-  opacity: 0.35;
-  pointer-events: none;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 42%;
+  background:
+    linear-gradient(180deg, transparent 0%, rgba(5, 12, 18, 0.55) 35%, rgba(3, 8, 12, 0.92) 100%),
+    repeating-linear-gradient(
+      90deg,
+      rgba(71, 189, 104, 0.03) 0 1px,
+      transparent 1px 48px
+    );
+  mask-image: linear-gradient(180deg, transparent, black 40%);
+}
+
+.hero__floor::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 18%;
+  width: min(70%, 640px);
+  height: 28px;
+  transform: translateX(-50%);
+  background: radial-gradient(ellipse, rgba(71, 189, 104, 0.35), transparent 70%);
+  filter: blur(16px);
+  opacity: 0.7;
+}
+
+.hero__candles {
+  position: absolute;
+  right: max(-4%, -20px);
+  top: 18%;
+  width: min(58vw, 560px);
+  height: auto;
+  opacity: 0.72;
+  filter: blur(0.4px) saturate(1.2);
+  mask-image: radial-gradient(ellipse at 55% 45%, black 25%, transparent 78%);
+  animation: candleFloat 12s ease-in-out infinite alternate;
 }
 
 .hero__content {
   position: relative;
   z-index: 1;
-  width: min(100% - 2rem, 720px);
-  text-align: center;
-}
-
-.hero__title {
-  font-size: clamp(2.6rem, 8vw, 4.6rem);
-  font-weight: 800;
-  line-height: 1.05;
-  letter-spacing: -0.03em;
-  margin: 0 0 1rem;
-  opacity: 0;
-  animation: riseIn 0.9s 0.25s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  width: min(100% - 1.75rem, 720px);
 }
 
 .hero__glass {
-  margin-top: 1.75rem;
-  padding: 1.5rem 1.35rem;
-  border-radius: var(--radius);
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.06));
+  position: relative;
+  padding: clamp(1.75rem, 4.5vw, 2.85rem) clamp(1.45rem, 4vw, 2.6rem);
+  border-radius: clamp(28px, 4vw, 40px);
+  text-align: left;
+  overflow: hidden;
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.22) 0%,
+      rgba(255, 255, 255, 0.08) 42%,
+      rgba(255, 255, 255, 0.04) 100%
+    );
   border: 1px solid rgba(255, 255, 255, 0.28);
   box-shadow:
-    0 30px 80px rgba(0, 0, 0, 0.25),
-    0 0 0 1px rgba(71, 189, 104, 0.2),
-    inset 0 1px 0 rgba(255, 255, 255, 0.35);
-  backdrop-filter: blur(28px) saturate(1.45);
-  -webkit-backdrop-filter: blur(28px) saturate(1.45);
+    0 40px 100px rgba(0, 0, 0, 0.45),
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    0 0 0 1px rgba(71, 189, 104, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.55),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.08),
+    inset 1px 0 0 rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(36px) saturate(1.65);
+  -webkit-backdrop-filter: blur(36px) saturate(1.65);
   opacity: 0;
-  animation: glassFloatIn 1.1s 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation: glassFloatIn 1.15s 0.15s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.hero__glass-shine {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background:
+    linear-gradient(
+      115deg,
+      rgba(255, 255, 255, 0.38) 0%,
+      rgba(255, 255, 255, 0.08) 18%,
+      transparent 42%
+    );
+  pointer-events: none;
+  mix-blend-mode: screen;
+  opacity: 0.85;
+}
+
+.hero__glass-edge {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.12),
+    inset 0 18px 40px rgba(255, 255, 255, 0.06);
+}
+
+.hero__glass .logo--hero,
+.hero__title,
+.hero__support,
+.hero__actions {
+  position: relative;
+  z-index: 1;
+}
+
+.hero__title {
+  font-size: clamp(2.15rem, 6.2vw, 3.55rem);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  margin: 0 0 0.85rem;
+  max-width: 12ch;
+  opacity: 0;
+  animation: riseIn 0.9s 0.35s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 .hero__support {
-  margin: 0 0 1.25rem;
+  margin: 0 0 1.65rem;
   color: rgba(255, 255, 255, 0.82);
-  font-size: 1.05rem;
+  font-size: clamp(0.98rem, 2.2vw, 1.12rem);
+  line-height: 1.55;
+  max-width: 34rem;
+  opacity: 0;
+  animation: riseIn 0.9s 0.48s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 .hero__actions {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
-  justify-content: center;
+  justify-content: flex-start;
+  opacity: 0;
+  animation: riseIn 0.9s 0.58s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 @keyframes riseIn {
@@ -390,7 +528,7 @@ h3,
 @keyframes glassFloatIn {
   from {
     opacity: 0;
-    transform: translateY(28px) scale(0.97);
+    transform: translateY(32px) scale(0.96);
   }
   to {
     opacity: 1;
@@ -403,15 +541,63 @@ h3,
     transform: translate(-2%, -1%) scale(1);
   }
   to {
-    transform: translate(3%, 2%) scale(1.05);
+    transform: translate(3%, 2%) scale(1.06);
+  }
+}
+
+@keyframes mistDrift {
+  from {
+    transform: translate(0, 0) scale(1);
+  }
+  to {
+    transform: translate(4%, -3%) scale(1.08);
+  }
+}
+
+@keyframes candleFloat {
+  from {
+    transform: translateY(0) translateX(0);
+    opacity: 0.65;
+  }
+  to {
+    transform: translateY(-10px) translateX(-6px);
+    opacity: 0.85;
+  }
+}
+
+@keyframes orbTwinkle {
+  from {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 0.55;
+  }
+}
+
+@media (min-width: 900px) {
+  .hero__content {
+    width: min(100% - 2rem, 680px);
+    margin-right: auto;
+    margin-left: max(1rem, calc((100% - var(--max)) / 2));
+  }
+
+  .hero__candles {
+    right: 2%;
+    top: 14%;
+    width: min(48vw, 540px);
+    opacity: 0.8;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .logo--hero,
   .hero__title,
+  .hero__support,
+  .hero__actions,
   .hero__glass,
   .hero__aurora,
+  .hero__mist,
+  .hero__candles,
+  .hero__orbs,
   .reveal {
     animation: none !important;
     opacity: 1 !important;

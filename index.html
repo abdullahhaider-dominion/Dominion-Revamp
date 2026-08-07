@@ -16,7 +16,7 @@
     />
     <link rel="icon" type="image/png" href="./assets/logo/logo-isotype-app.png" />
     <link rel="apple-touch-icon" href="./assets/logo/logo-isotype-app.png" />
-    <link rel="stylesheet" href="./styles.css?v=5" />
+    <link rel="stylesheet" href="./styles.css?v=6" />
   </head>
   <body>
     <header class="site-chrome" id="site-chrome">
@@ -59,41 +59,81 @@
 
     <main id="top">
       <section class="hero" id="hero">
-        <div class="hero__aurora" aria-hidden="true"></div>
-        <div class="hero__grid" aria-hidden="true"></div>
-        <svg class="hero__chart-glow" viewBox="0 0 640 280" aria-hidden="true">
-          <defs>
-            <linearGradient id="hg" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stop-color="#47BD68" stop-opacity="0.5" />
-              <stop offset="100%" stop-color="#47BD68" stop-opacity="0" />
-            </linearGradient>
-          </defs>
-          <path
-            d="M0 210 C80 190 120 140 180 150 C240 160 260 90 320 100 C390 112 420 60 480 70 C540 80 580 40 640 55 L640 280 L0 280 Z"
-            fill="url(#hg)"
-          />
-          <path
-            d="M0 210 C80 190 120 140 180 150 C240 160 260 90 320 100 C390 112 420 60 480 70 C540 80 580 40 640 55"
-            fill="none"
-            stroke="#47BD68"
-            stroke-width="3"
-            stroke-linecap="round"
-          />
-        </svg>
+        <div class="hero__stage" aria-hidden="true">
+          <div class="hero__vignette"></div>
+          <div class="hero__aurora"></div>
+          <div class="hero__mist hero__mist--left"></div>
+          <div class="hero__mist hero__mist--right"></div>
+          <div class="hero__orbs"></div>
+          <div class="hero__floor"></div>
+          <svg class="hero__candles" viewBox="0 0 520 360" fill="none">
+            <defs>
+              <filter id="candleGlow" x="-40%" y="-40%" width="180%" height="180%">
+                <feGaussianBlur stdDeviation="6" result="b" />
+                <feMerge>
+                  <feMergeNode in="b" />
+                  <feMergeNode in="SourceGraphic" />
+                </feMerge>
+              </filter>
+              <linearGradient id="candleFill" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#6dff96" stop-opacity="0.95" />
+                <stop offset="100%" stop-color="#47BD68" stop-opacity="0.55" />
+              </linearGradient>
+            </defs>
+            <g filter="url(#candleGlow)" opacity="0.92">
+              <path d="M48 220 v40" stroke="#47BD68" stroke-width="2" />
+              <rect x="40" y="200" width="16" height="48" rx="2" fill="url(#candleFill)" />
+              <path d="M88 160 v90" stroke="#47BD68" stroke-width="2" />
+              <rect x="80" y="170" width="16" height="55" rx="2" fill="url(#candleFill)" />
+              <path d="M128 130 v100" stroke="#47BD68" stroke-width="2" />
+              <rect x="120" y="145" width="16" height="62" rx="2" fill="url(#candleFill)" />
+              <path d="M168 190 v70" stroke="#3a9a55" stroke-width="2" />
+              <rect x="160" y="205" width="16" height="40" rx="2" fill="#2f6f48" opacity="0.7" />
+              <path d="M208 100 v130" stroke="#47BD68" stroke-width="2" />
+              <rect x="200" y="115" width="16" height="85" rx="2" fill="url(#candleFill)" />
+              <path d="M248 80 v140" stroke="#6dff96" stroke-width="2" />
+              <rect x="240" y="95" width="16" height="95" rx="2" fill="url(#candleFill)" />
+              <path d="M288 140 v110" stroke="#47BD68" stroke-width="2" />
+              <rect x="280" y="155" width="16" height="70" rx="2" fill="url(#candleFill)" />
+              <path d="M328 60 v160" stroke="#6dff96" stroke-width="2.2" />
+              <rect x="320" y="75" width="16" height="110" rx="2" fill="url(#candleFill)" />
+              <path d="M368 110 v130" stroke="#47BD68" stroke-width="2" />
+              <rect x="360" y="125" width="16" height="88" rx="2" fill="url(#candleFill)" />
+              <path d="M408 45 v170" stroke="#8dffad" stroke-width="2.4" />
+              <rect x="400" y="55" width="16" height="130" rx="2" fill="url(#candleFill)" />
+              <path d="M448 90 v140" stroke="#47BD68" stroke-width="2" />
+              <rect x="440" y="105" width="16" height="100" rx="2" fill="url(#candleFill)" />
+              <path
+                d="M36 250 C90 235 130 200 170 190 C220 178 250 140 300 125 C350 110 390 70 470 40"
+                stroke="#47BD68"
+                stroke-width="3"
+                stroke-linecap="round"
+                opacity="0.55"
+              />
+            </g>
+          </svg>
+        </div>
 
         <div class="hero__content">
-          <img
-            class="logo logo--hero"
-            src="./assets/logo/logo-horizontal-reverse.svg"
-            alt="Dominion Markets"
-            width="280"
-            height="47"
-          />
-          <h1 class="hero__title">Your Trading Sanctuary</h1>
           <div class="hero__glass">
-            <p class="hero__support">Trade smarter. Trade with confidence.</p>
+            <div class="hero__glass-shine" aria-hidden="true"></div>
+            <div class="hero__glass-edge" aria-hidden="true"></div>
+            <img
+              class="logo logo--hero"
+              src="./assets/logo/logo-horizontal-reverse.svg"
+              alt="Dominion Markets"
+              width="300"
+              height="50"
+            />
+            <h1 class="hero__title">Your Trading Sanctuary</h1>
+            <p class="hero__support">
+              Trade the world’s markets with clarity, confidence, and peace of mind.
+            </p>
             <div class="hero__actions">
-              <a class="btn btn--primary" href="#final-cta">Open Account</a>
+              <a class="btn btn--primary btn--glow" href="#final-cta">
+                Open Account
+                <span aria-hidden="true">→</span>
+              </a>
               <a class="btn btn--ghost" href="#platforms">Try Demo</a>
             </div>
           </div>
