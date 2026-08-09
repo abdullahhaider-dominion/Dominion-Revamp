@@ -4270,8 +4270,8 @@ h3,
   padding: 1.45rem 1.25rem 2.35rem;
   border-radius: 32px;
   background:
-    linear-gradient(155deg, rgba(255, 255, 255, 0.42), rgba(255, 255, 255, 0.14) 48%, rgba(255, 255, 255, 0.28)),
-    rgba(20, 36, 51, 0.28);
+    linear-gradient(155deg, rgba(255, 255, 255, 0.28), rgba(29, 51, 71, 0.45) 48%, rgba(20, 36, 51, 0.55)),
+    rgba(20, 36, 51, 0.42);
   border: 1px solid rgba(71, 189, 104, 0.72);
   box-shadow:
     0 0 0 1px rgba(71, 189, 104, 0.35),
