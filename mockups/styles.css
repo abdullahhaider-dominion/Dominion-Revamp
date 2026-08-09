@@ -4361,9 +4361,9 @@ h3,
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 18px;
-  object-fit: cover;
-  box-shadow: 0 18px 40px rgba(10, 18, 28, 0.28);
+  object-fit: contain;
+  background: transparent;
+  filter: drop-shadow(0 16px 28px rgba(10, 18, 28, 0.35));
 }
 
 .mrkt__discount {
@@ -4432,10 +4432,6 @@ h3,
 
   .mrkt__visual {
     margin-top: 0;
-  }
-
-  .mrkt__collage {
-    border-radius: 20px;
   }
 
   .mrkt__discount {
