@@ -444,27 +444,34 @@ window.addEventListener("resize", () => {
     const max = Math.max(...pts);
     const range = Math.max(max - min, item.bid * 0.0002);
     const color = item.dir >= 0 ? "#47BD68" : "#c4544a";
+    const mapped = pts.map((v, i) => ({
+      x: (i / (pts.length - 1)) * cssW,
+      y: cssH - ((v - min) / range) * (cssH - 6) - 3,
+    }));
 
     ctx.beginPath();
-    pts.forEach((v, i) => {
-      const x = (i / (pts.length - 1)) * cssW;
-      const y = cssH - ((v - min) / range) * (cssH - 6) - 3;
-      if (i === 0) ctx.moveTo(x, y);
-      else ctx.lineTo(x, y);
+    mapped.forEach((p, i) => {
+      if (i === 0) ctx.moveTo(p.x, p.y);
+      else ctx.lineTo(p.x, p.y);
+    });
+    ctx.lineTo(cssW, cssH);
+    ctx.lineTo(0, cssH);
+    ctx.closePath();
+    const grad = ctx.createLinearGradient(0, 0, 0, cssH);
+    grad.addColorStop(0, item.dir >= 0 ? "rgba(71,189,104,0.28)" : "rgba(196,84,74,0.22)");
+    grad.addColorStop(1, "rgba(255,255,255,0)");
+    ctx.fillStyle = grad;
+    ctx.fill();
+
+    ctx.beginPath();
+    mapped.forEach((p, i) => {
+      if (i === 0) ctx.moveTo(p.x, p.y);
+      else ctx.lineTo(p.x, p.y);
     });
     ctx.strokeStyle = color;
     ctx.lineWidth = 1.8;
     ctx.lineJoin = "round";
     ctx.stroke();
-
-    const grad = ctx.createLinearGradient(0, 0, 0, cssH);
-    grad.addColorStop(0, item.dir >= 0 ? "rgba(71,189,104,0.28)" : "rgba(196,84,74,0.22)");
-    grad.addColorStop(1, "rgba(71,189,104,0)");
-    ctx.lineTo(cssW, cssH);
-    ctx.lineTo(0, cssH);
-    ctx.closePath();
-    ctx.fillStyle = grad;
-    ctx.fill();
   }
 
   function tick() {
