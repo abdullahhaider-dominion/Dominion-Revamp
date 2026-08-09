@@ -16,7 +16,7 @@
     />
     <link rel="icon" type="image/png" href="./assets/logo/logo-isotype-app.png" />
     <link rel="apple-touch-icon" href="./assets/logo/logo-isotype-app.png" />
-    <link rel="stylesheet" href="./styles.css?v=18" />
+    <link rel="stylesheet" href="./styles.css?v=19" />
   </head>
   <body>
     <header class="site-chrome" id="site-chrome">
@@ -1152,32 +1152,95 @@
         </div>
       </section>
 
-      <section class="section section--soft" id="platforms">
-        <div class="container">
-          <div class="section-head reveal">
-            <p class="eyebrow">Platforms</p>
-            <h2 class="section-title">Trade on platforms you trust</h2>
-            <p class="section-copy">
-              Professional-grade MetaTrader 5 and cTrader — desktop, web, and mobile — with
-              advanced charting and algo support.
+      <section class="platforms" id="platforms" aria-labelledby="platforms-title">
+        <div class="platforms__atmosphere" aria-hidden="true">
+          <img
+            class="platforms__bg"
+            src="./assets/platforms/platforms-mist-water-hero.jpg"
+            alt=""
+            width="1920"
+            height="1080"
+          />
+        </div>
+        <div class="container platforms__inner">
+          <header class="platforms__head reveal">
+            <p class="platforms__eyebrow">
+              Platforms
+              <span class="platforms__eyebrow-line" aria-hidden="true"></span>
             </p>
-          </div>
-          <div class="glass-panel platform-panel reveal">
-            <div class="video-shell" id="platform-video">
-              <canvas id="platform-viz" width="960" height="540" aria-hidden="true"></canvas>
-              <div class="video-shell__ui">
-                <button class="play-btn" type="button" aria-label="Play platform walkthrough">
-                  ▶
-                </button>
-                <div>Platform walkthrough · MT5 / cTrader</div>
-                <small style="opacity: 0.75">Mock playback — real video asset later</small>
+            <h2 class="platforms__title" id="platforms-title">Trade on platforms you trust</h2>
+            <p class="platforms__lead">Choose the platform that fits your trading style.</p>
+          </header>
+
+          <div class="platforms__modules">
+            <div class="platforms__float reveal">
+              <article class="platforms__module">
+                <div class="platforms__logo">
+                  <img
+                    src="./assets/platforms/ctrader-official.png"
+                    alt="cTrader"
+                    width="120"
+                    height="120"
+                  />
+                  <p class="platforms__wordmark platforms__wordmark--ctrader" aria-hidden="true">
+                    <span>c</span>TRADER
+                  </p>
+                </div>
+                <span class="platforms__rule" aria-hidden="true"></span>
+                <p class="platforms__caption">Advanced execution</p>
+              </article>
+              <div class="platforms__reflection" aria-hidden="true">
+                <div class="platforms__module platforms__module--mirror">
+                  <div class="platforms__logo">
+                    <img
+                      src="./assets/platforms/ctrader-official.png"
+                      alt=""
+                      width="120"
+                      height="120"
+                    />
+                    <p class="platforms__wordmark platforms__wordmark--ctrader">
+                      <span>c</span>TRADER
+                    </p>
+                  </div>
+                  <span class="platforms__rule"></span>
+                  <p class="platforms__caption">Advanced execution</p>
+                </div>
               </div>
             </div>
-            <div class="platform-meta">
-              <span class="chip">70+ indicators</span>
-              <span class="chip">~30 ms routing</span>
-              <span class="chip">cAlgo / EA support</span>
-              <span class="chip">Multi-device</span>
+
+            <div class="platforms__float reveal reveal-delay-2">
+              <article class="platforms__module">
+                <div class="platforms__logo">
+                  <img
+                    src="./assets/platforms/mt5-official.png"
+                    alt="MetaTrader 5"
+                    width="120"
+                    height="120"
+                  />
+                  <p class="platforms__wordmark platforms__wordmark--mt5" aria-hidden="true">
+                    MetaTrader <span>5</span>
+                  </p>
+                </div>
+                <span class="platforms__rule" aria-hidden="true"></span>
+                <p class="platforms__caption">Industry standard</p>
+              </article>
+              <div class="platforms__reflection" aria-hidden="true">
+                <div class="platforms__module platforms__module--mirror">
+                  <div class="platforms__logo">
+                    <img
+                      src="./assets/platforms/mt5-official.png"
+                      alt=""
+                      width="120"
+                      height="120"
+                    />
+                    <p class="platforms__wordmark platforms__wordmark--mt5">
+                      MetaTrader <span>5</span>
+                    </p>
+                  </div>
+                  <span class="platforms__rule"></span>
+                  <p class="platforms__caption">Industry standard</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
