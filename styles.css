@@ -4705,15 +4705,15 @@ h3,
 .edge__tile-media {
   border-radius: 16px;
   overflow: hidden;
-  background: rgba(0, 0, 0, 0.2);
+  background: transparent;
 }
 
 .edge__tile-media img {
   width: 100%;
   height: auto;
   display: block;
-  object-fit: cover;
-  max-height: 220px;
+  object-fit: contain;
+  max-height: 240px;
 }
 
 .edge__platforms {
@@ -4824,7 +4824,8 @@ h3,
     max-height: none;
     height: 100%;
     min-height: 220px;
-    object-fit: cover;
+    object-fit: contain;
+    object-position: center bottom;
   }
 
   .edge__tile--media {
