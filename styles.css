@@ -6952,10 +6952,14 @@ h3,
   gap: 0.75rem;
 }
 
-.awards__feature,
-.awards__card {
+.award-seal {
   position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 168px;
+  padding: 1.15rem 1rem 1.25rem;
   border-radius: 24px;
+  overflow: hidden;
   background: linear-gradient(
     155deg,
     rgba(255, 255, 255, 0.42) 0%,
@@ -6970,11 +6974,9 @@ h3,
     inset 0 -1px 0 rgba(29, 51, 71, 0.04);
   backdrop-filter: blur(28px) saturate(1.55) brightness(1.05);
   -webkit-backdrop-filter: blur(28px) saturate(1.55) brightness(1.05);
-  overflow: hidden;
 }
 
-.awards__feature::before,
-.awards__card::before {
+.award-seal::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -6987,8 +6989,7 @@ h3,
   opacity: 0.85;
 }
 
-.awards__feature::after,
-.awards__card::after {
+.award-seal::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -7011,38 +7012,91 @@ h3,
   -webkit-mask-composite: xor;
 }
 
-.awards__feature {
-  display: grid;
-  place-items: center;
-  padding: 1.25rem 1.1rem;
-  min-height: 160px;
+.award-seal__wreath {
+  position: absolute;
+  inset: 8% 4%;
+  width: 92%;
+  height: 84%;
+  margin: auto;
+  object-fit: contain;
+  opacity: 0.55;
+  pointer-events: none;
+  z-index: 0;
 }
 
-.awards__badge {
+.award-seal__body {
   position: relative;
   z-index: 1;
-  width: 100%;
-  height: auto;
-  max-width: 320px;
-  object-fit: contain;
-  display: block;
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  gap: 0.35rem;
+  max-width: 16ch;
+  padding: 0.35rem 0.5rem;
 }
 
-.awards__badge--feature {
-  max-width: 360px;
+.award-seal__org {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #5a7184;
+  line-height: 1.25;
+}
+
+.award-seal__rule {
+  display: block;
+  width: 2.75rem;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, transparent, var(--green), transparent);
+  margin: 0.1rem 0;
+}
+
+.award-seal__name {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.98rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  color: var(--navy);
+}
+
+.award-seal__year {
+  margin: 0.15rem 0 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--green);
+}
+
+.award-seal--feature {
+  min-height: 220px;
+  padding: 1.5rem 1.2rem;
+}
+
+.award-seal--feature .award-seal__body {
+  max-width: 18ch;
+}
+
+.award-seal--feature .award-seal__org {
+  font-size: 0.74rem;
+}
+
+.award-seal--feature .award-seal__name {
+  font-size: 1.25rem;
+}
+
+.award-seal--feature .award-seal__year {
+  font-size: 1.2rem;
 }
 
 .awards__grid {
   display: grid;
   gap: 0.7rem;
-}
-
-/* Mobile B1 — stacked real badge rows */
-.awards__card {
-  display: grid;
-  place-items: center;
-  padding: 0.95rem 1rem;
-  min-height: 112px;
 }
 
 @media (min-width: 900px) {
@@ -7068,14 +7122,14 @@ h3,
     align-items: stretch;
   }
 
-  .awards__feature {
+  .award-seal--feature {
     min-height: 100%;
-    padding: 1.6rem 1.25rem;
     border-radius: 28px;
+    padding: 1.75rem 1.35rem;
   }
 
-  .awards__badge--feature {
-    max-width: 100%;
+  .award-seal--feature .award-seal__name {
+    font-size: 1.4rem;
   }
 
   .awards__grid {
@@ -7083,13 +7137,8 @@ h3,
     gap: 0.85rem;
   }
 
-  .awards__card {
-    padding: 1.1rem 0.9rem;
+  .award-seal {
+    min-height: 168px;
     border-radius: 22px;
-    min-height: 150px;
-  }
-
-  .awards__badge {
-    max-width: 100%;
   }
 }
