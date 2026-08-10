@@ -5882,11 +5882,13 @@ h3,
 /*
   Keep glass readable — never put transform on these cards.
   Even translateY(0) from .reveal breaks backdrop-filter.
+  Force opacity visible so stacked tiles never stay invisible off-screen.
 */
 .blogs .reveal,
 .blogs .reveal.is-visible {
+  opacity: 1;
   transform: none;
-  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: none;
   animation: none;
 }
 
