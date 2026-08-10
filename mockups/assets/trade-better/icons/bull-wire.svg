@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Educational Seminars">
+  <g fill="none" stroke="#47BD68" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round">
+    <!-- body -->
+    <path d="M28 78 L46 52 L72 46 L96 58 L104 78 L92 92 L48 94 Z"/>
+    <!-- head -->
+    <path d="M96 58 L112 50 L118 62 L110 74 L96 70"/>
+    <!-- horn -->
+    <path d="M108 48 L118 34 L122 46"/>
+    <!-- ear -->
+    <path d="M100 54 L106 46"/>
+    <!-- legs -->
+    <path d="M48 94 L44 112"/>
+    <path d="M60 94 L62 112"/>
+    <path d="M78 93 L80 112"/>
+    <path d="M90 92 L96 110"/>
+    <!-- internal mesh -->
+    <path d="M46 52 L60 78 L72 46" opacity="0.7"/>
+    <path d="M60 78 L92 92" opacity="0.55"/>
+    <path d="M72 46 L92 70" opacity="0.55"/>
+    <circle cx="112" cy="58" r="2.2" fill="#47BD68" stroke="none"/>
+  </g>
+</svg>
