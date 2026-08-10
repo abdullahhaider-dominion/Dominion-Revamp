@@ -16,7 +16,7 @@
     />
     <link rel="icon" type="image/png" href="./assets/logo/logo-isotype-app.png" />
     <link rel="apple-touch-icon" href="./assets/logo/logo-isotype-app.png" />
-    <link rel="stylesheet" href="./styles.css?v=50" />
+    <link rel="stylesheet" href="./styles.css?v=51" />
   </head>
   <body>
     <header class="site-chrome" id="site-chrome">
@@ -75,8 +75,20 @@
                 height="720"
                 fetchpriority="high"
               />
-              <!-- YouTube background video is injected here by main.js (skipped under reduced-motion) -->
-              <div class="xhero__media-video" data-xhero-video data-yt-id="1GA1aK3TgbA" aria-hidden="true"></div>
+              <!-- Self-hosted background video (muted, looping). If the file is
+                   missing, or under reduced-motion, the poster / image below
+                   shows instead. Place your file at assets/hero/hero.mp4. -->
+              <video
+                class="xhero__media-video-el"
+                data-xhero-video
+                src="./assets/hero/hero.mp4"
+                poster="./assets/hero/hero-media.png"
+                muted
+                loop
+                playsinline
+                preload="metadata"
+                aria-hidden="true"
+              ></video>
               <div class="xhero__media-veil" aria-hidden="true"></div>
             </div>
 
@@ -2253,6 +2265,6 @@
     </footer>
 
 
-    <script src="./main.js?v=50"></script>
+    <script src="./main.js?v=51"></script>
   </body>
 </html>
