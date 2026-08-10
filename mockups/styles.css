@@ -6883,19 +6883,8 @@ h3,
 #trust         { order: 140; }
 #final-cta     { order: 150; }
 
-/* 2) Parked sections (duplicates / overlaps). Delete an id to bring it back.
-      - #quotes         -> live-quotes overlaps Markets + Sessions
-      - #markets-reach   -> another markets/benefits grid
-      - #mrkt            -> "Why Dominion Markets?" benefits grid  (kept #why-dominion instead)
-      - #trade-better    -> "Trade better." benefits grid          (kept #why-dominion instead)
-      - #accounts-focus  -> features/stats overlap Proof + Accounts + Edge
-      - #mt5-simulator   -> duplicated by the MT5 Simulator card in #ecosystem */
-#quotes,
-#markets-reach,
-#mrkt,
-#trade-better,
-#accounts-focus,
-#mt5-simulator { display: none !important; }
+/* 2) (All previously-parked sections are now RESTORED per request — their
+      order + unified-background treatment live in block 6 at the end.) */
 
 /* 3) One continuous sanctuary field for the whole light body -------------
    IMPORTANT: the milky cards use very translucent fills + heavy
@@ -6994,4 +6983,35 @@ body::before {
     0 0 0 1px rgba(71, 189, 104, 0.16),
     inset 0 1px 0 rgba(255, 255, 255, 0.85);
 }
+
+/* 6) Restored sections — slot into the IA + fold into the unified system ---
+   All six previously-parked sections are shown again and integrated so their
+   backgrounds stay consistent (light field, or navy band where the section
+   uses light text) instead of re-introducing their original photos. */
+#quotes         { order: 45; }   /* live quotes, in the markets cluster */
+#markets-reach  { order: 47; }   /* markets coverage grid */
+#accounts-focus { order: 65; }   /* right after the Accounts tiers */
+#mrkt           { order: 95; }   /* "Why Dominion Markets?", by the edge grid */
+#trade-better   { order: 105; }  /* "Trade better.", by the edge grid */
+#mt5-simulator  { order: 115; }  /* MT5 Simulator, by the ecosystem */
+
+/* Navy-text section -> navy brand band (matches #why-dominion / #blogs) */
+#trade-better .better__bg { display: none !important; }
+#trade-better {
+  background:
+    radial-gradient(ellipse 85% 60% at 50% -12%, rgba(71, 189, 104, 0.12), transparent 60%),
+    radial-gradient(ellipse 55% 45% at 12% 85%, rgba(71, 189, 104, 0.06), transparent 55%),
+    linear-gradient(180deg, #0c1822 0%, #122738 58%, #0d1a26 100%) !important;
+}
+
+/* Navy-text-on-navy sections fold onto the light field -> drop photos + tint */
+#quotes,
+#markets-reach,
+#mrkt,
+#accounts-focus,
+#mt5-simulator { background: transparent !important; }
+#markets-reach .markets-reach__bg,
+#mrkt .mrkt__bg,
+#accounts-focus .focus-accounts__bg,
+#mt5-simulator .mt5-sim__bg { display: none !important; }
 
