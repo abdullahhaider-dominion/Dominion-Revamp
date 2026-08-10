@@ -16,7 +16,7 @@
     />
     <link rel="icon" type="image/png" href="./assets/logo/logo-isotype-app.png" />
     <link rel="apple-touch-icon" href="./assets/logo/logo-isotype-app.png" />
-    <link rel="stylesheet" href="./styles.css?v=26" />
+    <link rel="stylesheet" href="./styles.css?v=27" />
   </head>
   <body>
     <header class="site-chrome" id="site-chrome">
@@ -969,31 +969,80 @@
         </div>
       </section>
 
-      <section class="section section--soft" id="how-it-works">
-        <div class="container">
-          <div class="section-head reveal">
-            <p class="eyebrow">Get started</p>
-            <h2 class="section-title">Start in three steps</h2>
-            <p class="section-copy">
-              From first registration to live markets — clear, guided, and built for focus.
-            </p>
+      <section class="how-start" id="how-it-works" aria-labelledby="how-start-title">
+        <div class="how-start__atmosphere" aria-hidden="true">
+          <img
+            class="how-start__bg"
+            src="./assets/how-start/mist-bg.jpg"
+            alt=""
+            width="1920"
+            height="1080"
+          />
+        </div>
+        <div class="container how-start__inner">
+          <header class="how-start__head reveal">
+            <h2 class="how-start__title" id="how-start-title">How to Start?</h2>
+          </header>
+
+          <div class="how-start__grid">
+            <article class="how-start__card reveal">
+              <div class="how-start__card-top">
+                <h3>Register</h3>
+                <img
+                  class="how-start__icon"
+                  src="./assets/how-start/register.png"
+                  alt=""
+                  width="56"
+                  height="56"
+                />
+              </div>
+              <p>Select your preferred account type and swiftly complete our secure registration form.</p>
+            </article>
+
+            <article class="how-start__card reveal reveal-delay-1">
+              <div class="how-start__card-top">
+                <h3>Fund</h3>
+                <img
+                  class="how-start__icon"
+                  src="./assets/how-start/funding.png"
+                  alt=""
+                  width="56"
+                  height="56"
+                />
+              </div>
+              <p>Easily deposit funds into your trading account through diverse payment options.</p>
+            </article>
+
+            <article class="how-start__card reveal reveal-delay-2">
+              <div class="how-start__card-top">
+                <h3>Trade</h3>
+                <img
+                  class="how-start__icon"
+                  src="./assets/how-start/trade.png"
+                  alt=""
+                  width="56"
+                  height="56"
+                />
+              </div>
+              <p>Start trading on your live account.</p>
+            </article>
           </div>
-          <div class="steps" style="margin-top: 2rem">
-            <article class="step-card reveal">
-              <div class="step-num">1</div>
-              <h3>Register</h3>
-              <p>Open your Dominion Markets account in minutes.</p>
-            </article>
-            <article class="step-card reveal reveal-delay-1">
-              <div class="step-num">2</div>
-              <h3>Fund</h3>
-              <p>Deposit with secure, convenient funding methods.</p>
-            </article>
-            <article class="step-card reveal reveal-delay-2">
-              <div class="step-num">3</div>
-              <h3>Trade</h3>
-              <p>Access 200+ instruments on MT5 or cTrader.</p>
-            </article>
+
+          <div class="how-start__ctas reveal">
+            <a
+              class="how-start__cta how-start__cta--primary"
+              href="https://app.dominionmarkets.com/register"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Register Now</a
+            >
+            <a
+              class="how-start__cta how-start__cta--ghost"
+              href="https://app.dominionmarkets.com/login"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Client Login</a
+            >
           </div>
         </div>
       </section>
