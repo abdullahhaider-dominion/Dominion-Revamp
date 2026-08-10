@@ -5382,3 +5382,309 @@ h3,
 .how-start .reveal.is-visible {
   animation: how-start-rise 0.7s ease both;
 }
+
+/* ——— Trade Better / Spotlight Strip (Option C + Mobile Icon Rail) ——— */
+.better {
+  position: relative;
+  isolation: isolate;
+  padding: clamp(3.5rem, 7vw, 5.5rem) 0 clamp(3.25rem, 6vw, 4.75rem);
+  overflow: hidden;
+  color: #f4f7f9;
+}
+
+.better__atmosphere {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.better__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.95;
+}
+
+.better__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    radial-gradient(ellipse 70% 55% at 50% 20%, rgba(71, 189, 104, 0.1), transparent 55%),
+    rgba(8, 16, 24, 0.55);
+}
+
+.better__inner {
+  position: relative;
+  z-index: 2;
+}
+
+.better__head {
+  text-align: center;
+  margin-bottom: clamp(1.75rem, 4vw, 2.75rem);
+}
+
+.better__eyebrow {
+  margin: 0 0 0.55rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--green);
+}
+
+.better__title {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(2.2rem, 5.5vw, 3.4rem);
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 1.05;
+  color: #fff;
+}
+
+.better__lead {
+  margin: 0.75rem auto 0;
+  max-width: 34ch;
+  font-size: 0.98rem;
+  line-height: 1.45;
+  color: rgba(244, 247, 249, 0.72);
+}
+
+.better__lead--mobile {
+  display: block;
+}
+
+/* Desktop spotlights */
+.better__spotlights {
+  display: none;
+}
+
+.better__spot {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  gap: 0.7rem;
+  padding: 1.5rem 1.15rem 1.35rem;
+  border-radius: 24px;
+  background:
+    linear-gradient(165deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.03)),
+    rgba(18, 30, 42, 0.55);
+  border: 1px solid rgba(71, 189, 104, 0.28);
+  box-shadow:
+    0 20px 44px rgba(0, 0, 0, 0.35),
+    0 0 28px rgba(71, 189, 104, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(18px) saturate(1.2);
+  -webkit-backdrop-filter: blur(18px) saturate(1.2);
+}
+
+.better__badge {
+  width: 84px;
+  height: 84px;
+  display: grid;
+  place-items: center;
+  filter: drop-shadow(0 0 18px rgba(71, 189, 104, 0.35));
+}
+
+.better__badge img {
+  width: 72px;
+  height: 72px;
+}
+
+.better__badge--bull {
+  background: rgba(10, 22, 32, 0.55);
+  border-radius: 20px;
+  border: 1px solid rgba(71, 189, 104, 0.4);
+  box-shadow: 0 0 22px rgba(71, 189, 104, 0.22);
+}
+
+.better__badge--bull img {
+  width: 58px;
+  height: 58px;
+}
+
+.better__badge--sm {
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+}
+
+.better__badge--sm img {
+  width: 48px;
+  height: 48px;
+}
+
+.better__badge--sm.better__badge--bull {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+}
+
+.better__badge--sm.better__badge--bull img {
+  width: 34px;
+  height: 34px;
+}
+
+.better__spot h3,
+.better__rail-row h3 {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.015em;
+}
+
+.better__spot p,
+.better__rail-row p {
+  margin: 0;
+  max-width: 24ch;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: rgba(244, 247, 249, 0.72);
+}
+
+.better__runway {
+  display: none;
+}
+
+/* Mobile icon rail */
+.better__rail {
+  display: grid;
+  gap: 0;
+  border-radius: 24px;
+  overflow: hidden;
+  background:
+    linear-gradient(165deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.03)),
+    rgba(18, 30, 42, 0.62);
+  border: 1px solid rgba(71, 189, 104, 0.32);
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.32),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(18px) saturate(1.2);
+  -webkit-backdrop-filter: blur(18px) saturate(1.2);
+}
+
+.better__rail-row {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.9rem;
+  align-items: center;
+  padding: 1.05rem 1.15rem;
+}
+
+.better__rail-row + .better__rail-row {
+  border-top: 1px solid rgba(71, 189, 104, 0.18);
+}
+
+.better__rail-row p {
+  max-width: none;
+  margin-top: 0.2rem;
+  font-size: 0.86rem;
+}
+
+.better__cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.better__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0.75rem 1.7rem;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #56c976 0%, #3fb05e 100%);
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  box-shadow: 0 14px 32px rgba(71, 189, 104, 0.35);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.better__btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 38px rgba(71, 189, 104, 0.45);
+}
+
+@media (min-width: 860px) {
+  .better__lead--mobile {
+    display: none;
+  }
+
+  .better__rail {
+    display: none;
+  }
+
+  .better__spotlights {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.15rem;
+    align-items: stretch;
+    padding-bottom: 1.25rem;
+  }
+
+  .better__runway {
+    display: block;
+    position: absolute;
+    left: 4%;
+    right: 4%;
+    bottom: 0;
+    height: 42px;
+    border-radius: 18px;
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.03)),
+      rgba(20, 36, 48, 0.55);
+    border: 1px solid rgba(71, 189, 104, 0.35);
+    box-shadow:
+      0 0 40px rgba(71, 189, 104, 0.18),
+      0 18px 40px rgba(0, 0, 0, 0.35),
+      inset 0 1px 0 rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+  }
+
+  .better__spot {
+    min-height: 250px;
+    padding: 1.75rem 1.35rem 1.6rem;
+  }
+
+  .better__spot h3 {
+    font-size: 1.25rem;
+  }
+
+  .better__spot p {
+    font-size: 0.95rem;
+  }
+}
+
+@keyframes better-rise {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.better .reveal.is-visible {
+  animation: better-rise 0.7s ease both;
+}
