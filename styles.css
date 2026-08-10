@@ -5025,11 +5025,18 @@ h3,
   border-radius: 999px;
   display: grid;
   place-items: center;
-  color: var(--green);
-  background: rgba(255, 255, 255, 0.14);
-  border: 1px solid rgba(71, 189, 104, 0.45);
+  color: #fff;
+  background: linear-gradient(180deg, #56c976 0%, #3fb05e 100%);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow:
+    0 6px 14px rgba(71, 189, 104, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.35);
   flex-shrink: 0;
   margin-top: 0.05rem;
+}
+
+.mt5-sim__check svg {
+  display: block;
 }
 
 .mt5-sim__actions {
@@ -5074,8 +5081,8 @@ h3,
   height: auto;
   display: block;
   border-radius: 16px;
-  background: #0a1018;
-  box-shadow: 0 16px 36px rgba(8, 14, 22, 0.35);
+  background: transparent;
+  box-shadow: none;
 }
 
 @media (min-width: 900px) {
