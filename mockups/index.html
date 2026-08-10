@@ -16,7 +16,7 @@
     />
     <link rel="icon" type="image/png" href="./assets/logo/logo-isotype-app.png" />
     <link rel="apple-touch-icon" href="./assets/logo/logo-isotype-app.png" />
-    <link rel="stylesheet" href="./styles.css?v=52" />
+    <link rel="stylesheet" href="./styles.css?v=53" />
   </head>
   <body>
     <header class="site-chrome" id="site-chrome">
@@ -968,48 +968,52 @@
             <h2 class="how-start__title" id="how-start-title">How to Start?</h2>
           </header>
 
-          <div class="how-start__grid">
-            <article class="how-start__card reveal">
-              <div class="how-start__card-top">
-                <h3>Register</h3>
-                <img
-                  class="how-start__icon"
-                  src="./assets/how-start/register.png"
-                  alt=""
-                  width="56"
-                  height="56"
-                />
-              </div>
-              <p>Select your preferred account type and swiftly complete our secure registration form.</p>
-            </article>
-
-            <article class="how-start__card reveal reveal-delay-1">
-              <div class="how-start__card-top">
-                <h3>Fund</h3>
-                <img
-                  class="how-start__icon"
-                  src="./assets/how-start/funding.png"
-                  alt=""
-                  width="56"
-                  height="56"
-                />
-              </div>
-              <p>Easily deposit funds into your trading account through diverse payment options.</p>
-            </article>
-
-            <article class="how-start__card reveal reveal-delay-2">
-              <div class="how-start__card-top">
-                <h3>Trade</h3>
-                <img
-                  class="how-start__icon"
-                  src="./assets/how-start/trade.png"
-                  alt=""
-                  width="56"
-                  height="56"
-                />
-              </div>
-              <p>Start trading on your live account.</p>
-            </article>
+          <!-- Interactive Timeline (vanilla port of 3d-interactive-timeline.tsx),
+               using the current How-to-Start steps. Cards are liquid glass, so
+               (per this repo's backdrop-filter note) no transforms are applied to
+               them; the 3D mouse-tilt is adapted to a glass-safe hover lift. -->
+          <div class="tl-wrap">
+            <div class="tl__orbs" aria-hidden="true">
+              <span></span><span></span><span></span><span></span>
+            </div>
+            <ol class="tl" role="list">
+              <li class="tl__item tl__item--left reveal">
+                <span class="tl__node" aria-hidden="true">1</span>
+                <article class="tl__card">
+                  <div class="tl__card-head">
+                    <span class="tl__step"><span class="tl__dot" aria-hidden="true"></span>Step 01</span>
+                    <img class="tl__icon" src="./assets/how-start/register.png" alt="" width="34" height="34" />
+                  </div>
+                  <h3 class="tl__title">Register</h3>
+                  <p class="tl__desc">Select your preferred account type and swiftly complete our secure registration form.</p>
+                  <span class="tl__bar" aria-hidden="true"></span>
+                </article>
+              </li>
+              <li class="tl__item tl__item--right reveal reveal-delay-1">
+                <span class="tl__node" aria-hidden="true">2</span>
+                <article class="tl__card">
+                  <div class="tl__card-head">
+                    <span class="tl__step"><span class="tl__dot" aria-hidden="true"></span>Step 02</span>
+                    <img class="tl__icon" src="./assets/how-start/funding.png" alt="" width="34" height="34" />
+                  </div>
+                  <h3 class="tl__title">Fund</h3>
+                  <p class="tl__desc">Easily deposit funds into your trading account through diverse payment options.</p>
+                  <span class="tl__bar" aria-hidden="true"></span>
+                </article>
+              </li>
+              <li class="tl__item tl__item--left reveal reveal-delay-2">
+                <span class="tl__node" aria-hidden="true">3</span>
+                <article class="tl__card">
+                  <div class="tl__card-head">
+                    <span class="tl__step"><span class="tl__dot" aria-hidden="true"></span>Step 03</span>
+                    <img class="tl__icon" src="./assets/how-start/trade.png" alt="" width="34" height="34" />
+                  </div>
+                  <h3 class="tl__title">Trade</h3>
+                  <p class="tl__desc">Start trading on your live account.</p>
+                  <span class="tl__bar" aria-hidden="true"></span>
+                </article>
+              </li>
+            </ol>
           </div>
 
           <div class="how-start__ctas reveal">
