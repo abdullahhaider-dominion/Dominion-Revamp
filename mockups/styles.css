@@ -5163,8 +5163,8 @@ h3,
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(180deg, rgba(244, 248, 251, 0.62) 0%, rgba(244, 248, 251, 0.3) 45%, rgba(232, 240, 246, 0.52) 100%),
-    radial-gradient(ellipse 70% 50% at 50% 0%, rgba(255, 255, 255, 0.55), transparent 55%);
+    linear-gradient(180deg, rgba(244, 248, 251, 0.28) 0%, rgba(244, 248, 251, 0.08) 48%, rgba(232, 240, 246, 0.26) 100%),
+    radial-gradient(ellipse 70% 50% at 50% 0%, rgba(255, 255, 255, 0.28), transparent 55%);
 }
 
 .how-start__inner {
@@ -5193,6 +5193,18 @@ h3,
   gap: 0.75rem;
 }
 
+/*
+  Liquid glass needs a live backdrop-filter sample of the mist photo.
+  Do NOT put transform on these cards (or their ancestors) — even
+  translateY(0) from .reveal breaks backdrop-filter and leaves opaque slabs.
+*/
+.how-start .reveal,
+.how-start .reveal.is-visible {
+  transform: none;
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  animation: none;
+}
+
 /* Mobile A2 — compact icon-left rows */
 .how-start__card {
   position: relative;
@@ -5205,17 +5217,37 @@ h3,
   row-gap: 0.2rem;
   align-items: start;
   padding: 1rem 1.05rem;
-  border-radius: 20px;
+  border-radius: 22px;
   background:
-    linear-gradient(155deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.42) 50%, rgba(255, 255, 255, 0.55)),
-    rgba(255, 255, 255, 0.5);
-  border: 1px solid rgba(255, 255, 255, 0.85);
+    linear-gradient(
+      155deg,
+      rgba(255, 255, 255, 0.42) 0%,
+      rgba(255, 255, 255, 0.1) 42%,
+      rgba(255, 255, 255, 0.22) 100%
+    ),
+    rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.68);
   box-shadow:
-    0 14px 34px rgba(20, 36, 51, 0.08),
-    0 1px 0 rgba(255, 255, 255, 0.95) inset;
-  backdrop-filter: blur(18px) saturate(1.3);
-  -webkit-backdrop-filter: blur(18px) saturate(1.3);
+    0 22px 48px rgba(20, 36, 51, 0.14),
+    0 0 0 1px rgba(71, 189, 104, 0.14),
+    inset 0 1px 0 rgba(255, 255, 255, 0.88),
+    inset 0 -1px 0 rgba(29, 51, 71, 0.05);
+  backdrop-filter: blur(32px) saturate(1.65) brightness(1.06);
+  -webkit-backdrop-filter: blur(32px) saturate(1.65) brightness(1.06);
   overflow: hidden;
+  transition:
+    box-shadow 0.35s ease,
+    border-color 0.35s ease,
+    background 0.35s ease;
+}
+
+.how-start__card:hover {
+  border-color: rgba(255, 255, 255, 0.82);
+  box-shadow:
+    0 28px 56px rgba(20, 36, 51, 0.16),
+    0 0 0 1px rgba(71, 189, 104, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.95),
+    inset 0 -1px 0 rgba(29, 51, 71, 0.04);
 }
 
 .how-start__card::before {
@@ -5224,7 +5256,37 @@ h3,
   inset: 0;
   border-radius: inherit;
   pointer-events: none;
-  background: radial-gradient(circle at 12% 0%, rgba(255, 255, 255, 0.75), transparent 40%);
+  z-index: 0;
+  background:
+    radial-gradient(circle at 14% 8%, rgba(255, 255, 255, 0.55), transparent 34%),
+    radial-gradient(circle at 88% 18%, rgba(255, 255, 255, 0.18), transparent 26%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.16), transparent 38%);
+}
+
+/* Specular rim — green → white liquid edge */
+.how-start__card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 0;
+  padding: 1px;
+  background: linear-gradient(
+    135deg,
+    rgba(71, 189, 104, 0.7),
+    rgba(255, 255, 255, 0.75) 32%,
+    rgba(71, 189, 104, 0.18) 58%,
+    rgba(255, 255, 255, 0.35)
+  );
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
 }
 
 .how-start__card-top {
@@ -5325,7 +5387,7 @@ h3,
     flex-direction: column;
     gap: 0.85rem;
     padding: 1.45rem 1.35rem 1.5rem;
-    border-radius: 24px;
+    border-radius: 26px;
     min-height: 200px;
   }
 
@@ -5368,20 +5430,7 @@ h3,
   }
 }
 
-@keyframes how-start-rise {
-  from {
-    opacity: 0;
-    transform: translateY(16px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.how-start .reveal.is-visible {
-  animation: how-start-rise 0.7s ease both;
-}
+/* Opacity-only reveal kept above — transform would kill liquid glass. */
 
 /* ——— Trade Better / Spotlight Strip (Option C + Mobile Icon Rail) ——— */
 .better {
