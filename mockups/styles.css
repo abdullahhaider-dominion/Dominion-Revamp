@@ -3359,12 +3359,14 @@ h3,
     gap: 0.9rem;
   }
 
-  .site-footer__module--contact {
-    grid-column: auto;
-  }
-
   .site-footer__module {
     padding: 1.15rem 1rem 1.25rem;
+    min-height: 320px;
+  }
+
+  .site-footer__module--contact {
+    grid-column: auto;
+    min-height: 320px;
   }
 
   .site-footer__legal-grid {
