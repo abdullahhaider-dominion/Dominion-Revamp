@@ -531,6 +531,26 @@ window.addEventListener("resize", () => {
     return;
   }
 
+  // Mount the YouTube background video (muted + looping) into the media window.
+  const vmount = hero.querySelector("[data-xhero-video]");
+  if (vmount && !vmount.querySelector("iframe")) {
+    const id = vmount.getAttribute("data-yt-id");
+    if (id) {
+      const params =
+        "autoplay=1&mute=1&loop=1&controls=0&playsinline=1&rel=0&modestbranding=1&showinfo=0&disablekb=1&fs=0&iv_load_policy=3&playlist=" +
+        id;
+      const iframe = document.createElement("iframe");
+      iframe.src = "https://www.youtube.com/embed/" + id + "?" + params;
+      iframe.title = "Dominion Markets ambient background";
+      iframe.setAttribute("allow", "autoplay; encrypted-media; picture-in-picture");
+      iframe.setAttribute("frameborder", "0");
+      iframe.setAttribute("tabindex", "-1");
+      iframe.setAttribute("aria-hidden", "true");
+      vmount.appendChild(iframe);
+      hero.classList.add("xhero--hasvideo");
+    }
+  }
+
   const isMobile = () => window.innerWidth < 768;
   let ticking = false;
 
@@ -543,8 +563,8 @@ window.addEventListener("resize", () => {
 
     const vw = window.innerWidth;
     const vh = window.innerHeight;
-    const startW = isMobile() ? 260 : 340;
-    const startH = isMobile() ? 360 : 460;
+    const startW = isMobile() ? 300 : 560;
+    const startH = startW * (9 / 16); // 16:9 window so the video is not distorted
     const shiftMax = isMobile() ? 26 : 18; // vw
 
     hero.style.setProperty("--xw", startW + p * (vw - startW) + "px");
