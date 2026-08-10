@@ -515,3 +515,60 @@ window.addEventListener("resize", () => {
   const interval = reduceMotion ? null : setInterval(tick, 1600);
   window.addEventListener("beforeunload", () => interval && clearInterval(interval));
 })();
+
+/* ——— Scroll-Expansion Hero (vanilla port of scroll-expansion-hero.tsx) ———
+   A sticky scroll track drives a 0..1 progress: the media window expands, the
+   split title slides apart and fades, the background dims, then the brand CTA
+   panel reveals. Native scroll (no wheel hijack) so it is robust on desktop,
+   touch, and keyboard. Falls back to a static hero under reduced-motion. */
+(function initScrollHero() {
+  const hero = document.querySelector("[data-xhero]");
+  if (!hero) return;
+
+  const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (prefersReduced) {
+    hero.classList.add("xhero--static", "xhero--revealed");
+    return;
+  }
+
+  const isMobile = () => window.innerWidth < 768;
+  let ticking = false;
+
+  const update = () => {
+    ticking = false;
+    const track = hero.offsetHeight - window.innerHeight;
+    const rect = hero.getBoundingClientRect();
+    let p = track > 0 ? -rect.top / track : 0;
+    p = Math.min(1, Math.max(0, p));
+
+    const vw = window.innerWidth;
+    const vh = window.innerHeight;
+    const startW = isMobile() ? 260 : 340;
+    const startH = isMobile() ? 360 : 460;
+    const shiftMax = isMobile() ? 26 : 18; // vw
+
+    hero.style.setProperty("--xw", startW + p * (vw - startW) + "px");
+    hero.style.setProperty("--xh", startH + p * (vh - startH) + "px");
+    hero.style.setProperty("--xr", 6 + 18 * (1 - p) + "px");
+    hero.style.setProperty("--xshift", shiftMax * p + "vw");
+    hero.style.setProperty("--xtitle", String(Math.max(0, 1 - p * 2.2)));
+    hero.style.setProperty("--xmeta", String(Math.max(0, 1 - p * 3)));
+    hero.style.setProperty("--xbg", String(1 - p));
+    hero.style.setProperty("--xveil", String(0.55 - p * 0.28));
+
+    const panel = Math.max(0, Math.min(1, (p - 0.7) / 0.22));
+    hero.style.setProperty("--xpanel", String(panel));
+    hero.classList.toggle("xhero--revealed", panel > 0.5);
+  };
+
+  const onScroll = () => {
+    if (!ticking) {
+      ticking = true;
+      requestAnimationFrame(update);
+    }
+  };
+
+  window.addEventListener("scroll", onScroll, { passive: true });
+  window.addEventListener("resize", onScroll, { passive: true });
+  update();
+})();

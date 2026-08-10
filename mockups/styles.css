@@ -7015,3 +7015,178 @@ body::before {
 #accounts-focus .focus-accounts__bg,
 #mt5-simulator .mt5-sim__bg { display: none !important; }
 
+/* ==================================================================
+   SCROLL-EXPANSION HERO  (vanilla port of scroll-expansion-hero.tsx)
+   Driven by JS via CSS custom properties on #hero:
+     --xw/--xh (media size)  --xr (radius)  --xshift (title split, vw)
+     --xtitle/--xmeta/--xbg/--xveil/--xpanel (opacities)
+   ================================================================== */
+.xhero {
+  position: relative;
+  height: 220vh;                 /* scroll track that drives the expansion */
+  margin-top: calc(-1 * (var(--nav-h) + 2.1rem)); /* pull under the fixed nav = full-bleed */
+  background: #070e14;
+  color: #fff;
+  isolation: isolate;
+  overflow: clip;
+  --xw: 340px; --xh: 460px; --xr: 24px; --xshift: 0vw;
+  --xtitle: 1; --xmeta: 1; --xbg: 1; --xveil: 0.55; --xpanel: 0;
+}
+.xhero__sticky {
+  position: sticky;
+  top: 0;
+  height: 100dvh;
+  overflow: hidden;
+}
+.xhero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  opacity: var(--xbg);
+  background:
+    radial-gradient(ellipse 70% 55% at 72% 36%, rgba(71, 189, 104, 0.30), transparent 58%),
+    radial-gradient(ellipse 60% 45% at 18% 72%, rgba(71, 189, 104, 0.14), transparent 55%),
+    radial-gradient(ellipse 80% 60% at 50% 100%, rgba(20, 40, 55, 0.9), transparent 50%),
+    linear-gradient(165deg, #050a0f 0%, #0c1822 35%, #122738 70%, #0a1520 100%);
+}
+.xhero__stage {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+.xhero__media {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: var(--xw);
+  height: var(--xh);
+  max-width: 94vw;
+  max-height: 86dvh;
+  border-radius: var(--xr);
+  overflow: hidden;
+  box-shadow:
+    0 50px 120px -30px rgba(0, 0, 0, 0.75),
+    0 0 0 1px rgba(255, 255, 255, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  will-change: width, height;
+}
+.xhero__media-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.xhero__media-veil {
+  position: absolute;
+  inset: 0;
+  opacity: var(--xveil);
+  background: linear-gradient(180deg, rgba(5, 12, 18, 0.30), rgba(5, 12, 18, 0.60));
+}
+.xhero__titles {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.1rem;
+  opacity: var(--xtitle);
+  pointer-events: none;
+}
+.xhero__word {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.02;
+  font-size: clamp(2.4rem, 8vw, 5rem);
+  color: #ffffff;
+  text-shadow: 0 2px 40px rgba(0, 0, 0, 0.55), 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+.xhero__word--first { transform: translateX(calc(var(--xshift) * -1)); }
+.xhero__word--rest { transform: translateX(var(--xshift)); }
+.xhero__meta {
+  position: absolute;
+  left: 50%;
+  bottom: 8%;
+  transform: translateX(-50%);
+  z-index: 2;
+  text-align: center;
+  opacity: var(--xmeta);
+}
+.xhero__eyebrow {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.28em;
+  font-size: 0.72rem;
+  color: rgba(180, 220, 200, 0.9);
+  margin: 0 0 0.5rem;
+}
+.xhero__hint {
+  margin: 0;
+  font-weight: 600;
+  color: rgba(219, 231, 255, 0.85);
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+  justify-content: center;
+}
+.xhero__hint span { animation: xheroBounce 1.6s ease-in-out infinite; }
+@keyframes xheroBounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(4px); } }
+
+.xhero__panel {
+  position: absolute;
+  z-index: 3;
+  left: 50%;
+  top: 50%;
+  width: min(100% - 2rem, 640px);
+  transform: translate(-50%, -50%) translateY(calc((1 - var(--xpanel)) * 26px));
+  opacity: var(--xpanel);
+  pointer-events: none;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: clamp(1.6rem, 4vw, 2.6rem);
+  border-radius: 28px;
+  background: linear-gradient(155deg, rgba(18, 39, 56, 0.74) 0%, rgba(10, 21, 32, 0.64) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow:
+    0 44px 100px -32px rgba(0, 0, 0, 0.72),
+    0 0 0 1px rgba(71, 189, 104, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(18px) saturate(1.35);
+  -webkit-backdrop-filter: blur(18px) saturate(1.35);
+}
+.xhero.xhero--revealed .xhero__panel { pointer-events: auto; }
+.xhero__panel .logo--hero { margin: 0 0 1.15rem; }
+.xhero__panel-title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin: 0 0 0.65rem;
+  color: #fff;
+}
+.xhero__panel-support {
+  color: rgba(219, 231, 255, 0.85);
+  max-width: 38rem;
+  margin: 0 0 1.4rem;
+}
+.xhero__actions { justify-content: center; }
+
+/* Fallback: no JS / reduced motion -> a calm static hero (media expanded,
+   split title collapsed, panel shown), no long scroll track. */
+.xhero.xhero--static { height: 100dvh; }
+.xhero.xhero--static .xhero__media { width: 94vw; height: 82dvh; border-radius: 20px; }
+.xhero.xhero--static .xhero__media-veil { opacity: 0.4; }
+.xhero.xhero--static .xhero__titles,
+.xhero.xhero--static .xhero__meta,
+.xhero.xhero--static .xhero__bg { opacity: 0; }
+.xhero.xhero--static .xhero__panel { opacity: 1; transform: translate(-50%, -50%); pointer-events: auto; }
+
+@media (max-width: 767px) {
+  .xhero__word { font-size: clamp(2rem, 11vw, 3.2rem); }
+}
+
