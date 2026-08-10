@@ -1,6 +1,9 @@
 # Dominion Markets — Hi-fi UI Mockups
 
-Floating Sanctuary homepage visual mockup (HTML/CSS/JS). Structure matches the approved wireframes; this layer adds liquid glass, motion, charts, and video shells.
+**Version 0.1** — Floating Sanctuary homepage visual mockup (HTML/CSS/JS).  
+Structure matches the approved wireframes; this layer adds liquid glass, motion, charts, and video shells.
+
+> **Not final.** Sections may be removed, replaced, or polished in later iterations. Treat this branch as a design checkpoint, not production-ready UI.
 
 ## Preview
 
@@ -17,3 +20,4 @@ Open `http://localhost:4174`.
 - Body: milky glass with readable navy type
 - Charts: canvas illustrations (replace with live widgets in production)
 - Video: mock play shells (replace with real assets later)
+- Concepts (optional): `mockups/concepts/` for A/B/C option exports used during redesign
