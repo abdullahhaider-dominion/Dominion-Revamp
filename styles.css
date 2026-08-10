@@ -3072,6 +3072,7 @@ h3,
   flex-direction: column;
   padding: 1.05rem 1rem 1.15rem;
   min-height: 100%;
+  min-width: 0;
 }
 
 .site-footer__module--contact {
@@ -3146,22 +3147,35 @@ h3,
   padding: 0;
   display: grid;
   gap: 0.7rem;
+  min-width: 0;
 }
 
 .site-footer__contact li {
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: auto minmax(0, 1fr);
   gap: 0.55rem;
   align-items: start;
+  min-width: 0;
 }
 
 .site-footer__contact strong,
 .site-footer__contact span,
 .site-footer__contact a {
   display: block;
-  font-size: 0.84rem;
+  font-size: 0.8rem;
   line-height: 1.4;
   color: var(--navy);
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  hyphens: auto;
+  max-width: 100%;
+}
+
+.site-footer__contact li > div {
+  min-width: 0;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .site-footer__contact strong {
@@ -3355,18 +3369,25 @@ h3,
   }
 
   .site-footer__modules {
-    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1.22fr);
     gap: 0.9rem;
   }
 
   .site-footer__module {
-    padding: 1.15rem 1rem 1.25rem;
+    padding: 1.15rem 0.95rem 1.25rem;
     min-height: 320px;
   }
 
   .site-footer__module--contact {
     grid-column: auto;
     min-height: 320px;
+    padding-inline: 0.9rem;
+  }
+
+  .site-footer__contact strong,
+  .site-footer__contact span,
+  .site-footer__contact a {
+    font-size: 0.78rem;
   }
 
   .site-footer__legal-grid {
