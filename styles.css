@@ -5729,13 +5729,16 @@ h3,
   }
 
   .better__icon--bull {
-    width: 112px;
-    height: 112px;
+    width: 132px;
+    height: 132px;
+    filter: drop-shadow(0 0 28px rgba(120, 80, 255, 0.35))
+      drop-shadow(0 0 22px rgba(71, 189, 104, 0.4));
   }
 
   .better__icon--bull img {
-    width: 108px;
-    height: 108px;
+    width: 132px;
+    height: 132px;
+    object-fit: contain;
   }
 
   .better__card h3 {
