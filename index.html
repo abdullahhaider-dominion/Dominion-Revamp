@@ -16,11 +16,7 @@
     />
     <link rel="icon" type="image/png" href="./assets/logo/logo-isotype-app.png" />
     <link rel="apple-touch-icon" href="./assets/logo/logo-isotype-app.png" />
-<<<<<<< HEAD
-    <link rel="stylesheet" href="./styles.css?v=37" />
-=======
-    <link rel="stylesheet" href="./styles.css?v=33" />
->>>>>>> 4122c0a (feat: rebuild footer as modular glass ribbons with exact live sections)
+    <link rel="stylesheet" href="./styles.css?v=40" />
   </head>
   <body>
     <header class="site-chrome" id="site-chrome">
@@ -2100,7 +2096,7 @@
       <div class="site-footer__atmosphere" aria-hidden="true">
         <img
           class="site-footer__bg"
-          src="./assets/how-start/mist-bg.jpg"
+          src="./assets/platforms/platforms-mist-water.jpg"
           alt=""
           width="1920"
           height="1080"
@@ -2109,263 +2105,185 @@
       </div>
 
       <div class="container site-footer__inner">
-        <!-- Top CTA ribbon -->
-        <div class="site-footer__ribbon site-footer__ribbon--cta reveal">
-          <a class="site-footer__brand" href="#top" aria-label="Dominion Markets home">
-            <img
-              class="logo logo--footer"
-              src="./assets/logo/logo-horizontal-color-transparent.png"
-              alt="Dominion Markets"
-              width="200"
-              height="36"
-            />
-            <span class="site-footer__tagline">Your Trading Sanctuary</span>
-          </a>
-          <div class="site-footer__cta">
-            <p class="site-footer__cta-copy">
-              Take a step forward, open an account with us
-            </p>
-            <a class="site-footer__register" href="#accounts">Register Now</a>
+        <div class="site-footer__glass site-footer__ribbon site-footer__ribbon--cta">
+          <div class="site-footer__brand-row">
+            <a class="site-footer__brand" href="#top" aria-label="Dominion Markets home">
+              <img
+                class="logo logo--footer"
+                src="./assets/logo/logo-horizontal-color-transparent.png"
+                alt="Dominion Markets"
+                width="200"
+                height="36"
+              />
+            </a>
+            <span class="site-footer__brand-divider" aria-hidden="true"></span>
+            <span class="site-footer__sanctuary">Floating Sanctuary</span>
           </div>
+          <a class="site-footer__register" href="#accounts">
+            Register Now
+            <span aria-hidden="true">→</span>
+          </a>
         </div>
 
-        <!-- Five exact columns — desktop C modules / mobile B 2-up -->
-        <div class="site-footer__modules reveal" aria-label="Footer navigation">
-          <nav class="site-footer__module" aria-labelledby="footer-links">
-            <h3 id="footer-links">Links</h3>
-            <ul>
-              <li><a href="#about">About us</a></li>
-              <li><a href="#faqs">FAQs</a></li>
-              <li><a href="#contact">Contact</a></li>
-              <li><a href="#legal">Legal Documents</a></li>
+        <div class="site-footer__modules" aria-label="Footer navigation">
+          <nav class="site-footer__glass site-footer__module" aria-labelledby="footer-links">
+            <div class="site-footer__module-head">
+              <span class="site-footer__module-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none"><path d="M10 14a5 5 0 0 0 7.07 0l2.12-2.12a5 5 0 0 0-7.07-7.07L11 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M14 10a5 5 0 0 0-7.07 0L4.81 12.12a5 5 0 0 0 7.07 7.07L13 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+              </span>
+              <h3 id="footer-links">Links</h3>
+            </div>
+            <ul class="site-footer__links">
+              <li><a href="#about">About us<span aria-hidden="true">›</span></a></li>
+              <li><a href="#faqs">FAQs<span aria-hidden="true">›</span></a></li>
+              <li><a href="#contact">Contact<span aria-hidden="true">›</span></a></li>
+              <li><a href="#legal">Legal Documents<span aria-hidden="true">›</span></a></li>
             </ul>
           </nav>
 
-          <nav class="site-footer__module" aria-labelledby="footer-trading">
-            <h3 id="footer-trading">Trading</h3>
-            <ul>
-              <li><a href="#accounts">Accounts overview</a></li>
-              <li><a href="#ecosystem">Commission incentives</a></li>
-              <li><a href="#copy-trading">Copy Trading and Social Trading</a></li>
-              <li><a href="#accounts">Open an account</a></li>
-              <li><a href="#dashboard">Client area</a></li>
+          <nav class="site-footer__glass site-footer__module" aria-labelledby="footer-trading">
+            <div class="site-footer__module-head">
+              <span class="site-footer__module-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none"><path d="M6 18V10M12 18V6M18 18v-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M4 18h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+              </span>
+              <h3 id="footer-trading">Trading</h3>
+            </div>
+            <ul class="site-footer__links">
+              <li><a href="#accounts">Accounts overview<span aria-hidden="true">›</span></a></li>
+              <li><a href="#ecosystem">Commission incentives<span aria-hidden="true">›</span></a></li>
+              <li><a href="#copy-trading">Copy Trading and Social Trading<span aria-hidden="true">›</span></a></li>
+              <li><a href="#accounts">Open an account<span aria-hidden="true">›</span></a></li>
+              <li><a href="#dashboard">Client area<span aria-hidden="true">›</span></a></li>
             </ul>
           </nav>
 
-          <nav class="site-footer__module" aria-labelledby="footer-education">
-            <h3 id="footer-education">Education</h3>
-            <ul>
-              <li><a href="#trade-better">Market Analysis</a></li>
-              <li><a href="#sessions">Best times to trade</a></li>
-              <li><a href="#markets">Pairs to trade</a></li>
-              <li><a href="#blogs">Blogs</a></li>
-              <li><a href="#careers">Careers</a></li>
+          <nav class="site-footer__glass site-footer__module" aria-labelledby="footer-education">
+            <div class="site-footer__module-head">
+              <span class="site-footer__module-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none"><path d="M3 9.5 12 5l9 4.5-9 4.5L3 9.5z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M6.5 12.2v4.3c0 .8 2.4 2.5 5.5 2.5s5.5-1.7 5.5-2.5v-4.3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+              </span>
+              <h3 id="footer-education">Education</h3>
+            </div>
+            <ul class="site-footer__links">
+              <li><a href="#trade-better">Market Analysis<span aria-hidden="true">›</span></a></li>
+              <li><a href="#sessions">Best times to trade<span aria-hidden="true">›</span></a></li>
+              <li><a href="#markets">Pairs to trade<span aria-hidden="true">›</span></a></li>
+              <li><a href="#blogs">Blogs<span aria-hidden="true">›</span></a></li>
+              <li><a href="#careers">Careers<span aria-hidden="true">›</span></a></li>
             </ul>
           </nav>
 
-          <nav class="site-footer__module" aria-labelledby="footer-platforms">
-            <h3 id="footer-platforms">Platforms</h3>
-            <ul>
-              <li><a href="#platforms">Meta Trader 5</a></li>
-              <li><a href="#platforms">Meta Trader 5 Web Trader</a></li>
-              <li><a href="#platforms">Meta Trader 5 iOS</a></li>
-              <li><a href="#platforms">Meta Trader 5 Android</a></li>
-              <li><a href="#platforms">cTrader</a></li>
-              <li><a href="#platforms">cTrader iOS</a></li>
-              <li><a href="#platforms">cTrader Android</a></li>
+          <nav class="site-footer__glass site-footer__module" aria-labelledby="footer-platforms">
+            <div class="site-footer__module-head">
+              <span class="site-footer__module-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none"><rect x="3.5" y="5" width="17" height="11" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M8 19h8M12 16v3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+              </span>
+              <h3 id="footer-platforms">Platforms</h3>
+            </div>
+            <ul class="site-footer__links">
+              <li><a href="#platforms">Meta Trader 5<span aria-hidden="true">›</span></a></li>
+              <li><a href="#platforms">Meta Trader 5 Web Trader<span aria-hidden="true">›</span></a></li>
+              <li><a href="#platforms">Meta Trader 5 iOS<span aria-hidden="true">›</span></a></li>
+              <li><a href="#platforms">Meta Trader 5 Android<span aria-hidden="true">›</span></a></li>
+              <li><a href="#platforms">cTrader<span aria-hidden="true">›</span></a></li>
+              <li><a href="#platforms">cTrader iOS<span aria-hidden="true">›</span></a></li>
+              <li><a href="#platforms">cTrader Android<span aria-hidden="true">›</span></a></li>
             </ul>
           </nav>
 
-          <div class="site-footer__module site-footer__module--contact" aria-labelledby="footer-contact">
-            <h3 id="footer-contact">Contact</h3>
+          <div class="site-footer__glass site-footer__module site-footer__module--contact" aria-labelledby="footer-contact">
+            <div class="site-footer__module-head">
+              <span class="site-footer__module-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none"><rect x="3.5" y="6" width="17" height="12" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M4 7.5 12 13l8-5.5" stroke="currentColor" stroke-width="1.8"/></svg>
+              </span>
+              <h3 id="footer-contact">Contact</h3>
+            </div>
             <ul class="site-footer__contact">
               <li>
-                <span class="site-footer__icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none">
-                    <path
-                      d="M12 21s7-5.4 7-11a7 7 0 1 0-14 0c0 5.6 7 11 7 11z"
-                      stroke="currentColor"
-                      stroke-width="1.8"
-                    />
-                    <circle cx="12" cy="10" r="2.2" stroke="currentColor" stroke-width="1.8" />
-                  </svg>
-                </span>
+                <span class="site-footer__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="none"><path d="M12 21s7-5.4 7-11a7 7 0 1 0-14 0c0 5.6 7 11 7 11z" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="10" r="2.2" stroke="currentColor" stroke-width="1.8"/></svg></span>
                 <div>
                   <strong>Management Office:</strong>
                   <span>Office-4f-B-04 345-Sh. Zayed Road Dubai, UAE</span>
                 </div>
               </li>
               <li>
-                <span class="site-footer__icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none">
-                    <path
-                      d="M12 21s7-5.4 7-11a7 7 0 1 0-14 0c0 5.6 7 11 7 11z"
-                      stroke="currentColor"
-                      stroke-width="1.8"
-                    />
-                    <circle cx="12" cy="10" r="2.2" stroke="currentColor" stroke-width="1.8" />
-                  </svg>
-                </span>
+                <span class="site-footer__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="none"><path d="M12 21s7-5.4 7-11a7 7 0 1 0-14 0c0 5.6 7 11 7 11z" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="10" r="2.2" stroke="currentColor" stroke-width="1.8"/></svg></span>
                 <div>
                   <strong>Registered Office:</strong>
                   <span>Office 133, Ebene Junction, Rue De La Democratie, Ebene, Mauritius</span>
                 </div>
               </li>
               <li>
-                <span class="site-footer__icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none">
-                    <path
-                      d="M6.5 5.5h3l1.5 4-2 1.2a12 12 0 0 0 5.3 5.3l1.2-2 4 1.5v3A2 2 0 0 1 17.5 20 13.5 13.5 0 0 1 4 6.5a2 2 0 0 1 2.5-1z"
-                      stroke="currentColor"
-                      stroke-width="1.8"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </span>
+                <span class="site-footer__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="none"><path d="M6.5 5.5h3l1.5 4-2 1.2a12 12 0 0 0 5.3 5.3l1.2-2 4 1.5v3A2 2 0 0 1 17.5 20 13.5 13.5 0 0 1 4 6.5a2 2 0 0 1 2.5-1z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span>
                 <div>
                   <a href="tel:+97145704324">+(971) 4 570 4324</a>
                   <span>(Hours: 10am - 6pm GMT +4)</span>
                 </div>
               </li>
               <li>
-                <span class="site-footer__icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none">
-                    <circle cx="12" cy="12" r="8.5" stroke="currentColor" stroke-width="1.8" />
-                    <path
-                      d="M9.2 14.8V9.2h2.4c1.5 0 2.5.8 2.5 2.1s-1 2.1-2.5 2.1H11v1.4H9.2zm1.8-2.8h.5c.6 0 1-.3 1-.9s-.4-.9-1-.9h-.5v1.8z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                </span>
-                <div>
-                  <span>License No. GB24203525</span>
-                </div>
+                <span class="site-footer__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="none"><circle cx="12" cy="12" r="8.5" stroke="currentColor" stroke-width="1.8"/><path d="M9.2 14.8V9.2h2.4c1.5 0 2.5.8 2.5 2.1s-1 2.1-2.5 2.1H11v1.4H9.2zm1.8-2.8h.5c.6 0 1-.3 1-.9s-.4-.9-1-.9h-.5v1.8z" fill="currentColor"/></svg></span>
+                <div><span>License No. GB24203525</span></div>
               </li>
               <li>
-                <span class="site-footer__icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none">
-                    <rect
-                      x="3.5"
-                      y="6"
-                      width="17"
-                      height="12"
-                      rx="2"
-                      stroke="currentColor"
-                      stroke-width="1.8"
-                    />
-                    <path d="M4 7.5 12 13l8-5.5" stroke="currentColor" stroke-width="1.8" />
-                  </svg>
-                </span>
-                <div>
-                  <a href="mailto:info@dominionmarkets.com">info@dominionmarkets.com</a>
-                </div>
+                <span class="site-footer__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="none"><rect x="3.5" y="6" width="17" height="12" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M4 7.5 12 13l8-5.5" stroke="currentColor" stroke-width="1.8"/></svg></span>
+                <div><a href="mailto:info@dominionmarkets.com">info@dominionmarkets.com</a></div>
               </li>
             </ul>
-
+            <div class="site-footer__social-line" aria-hidden="true"></div>
             <p class="site-footer__social-label">Our Social Media</p>
             <div class="site-footer__social">
-              <a href="https://www.instagram.com/" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
-                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
-                  <path
-                    d="M7.5 3h9A4.5 4.5 0 0 1 21 7.5v9A4.5 4.5 0 0 1 16.5 21h-9A4.5 4.5 0 0 1 3 16.5v-9A4.5 4.5 0 0 1 7.5 3zm0 1.7A2.8 2.8 0 0 0 4.7 7.5v9a2.8 2.8 0 0 0 2.8 2.8h9a2.8 2.8 0 0 0 2.8-2.8v-9a2.8 2.8 0 0 0-2.8-2.8h-9zm9.2 1.3a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2zM12 7.2A4.8 4.8 0 1 1 7.2 12 4.8 4.8 0 0 1 12 7.2zm0 1.7A3.1 3.1 0 1 0 15.1 12 3.1 3.1 0 0 0 12 8.9z"
-                  />
-                </svg>
-              </a>
-              <a href="https://x.com/" aria-label="X" target="_blank" rel="noopener noreferrer">
-                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
-                  <path
-                    d="M4 4h4.1l4.1 5.7L16.8 4H20l-6.1 7.3L20.2 20h-4.1l-4.5-6.2L7.2 20H4l6.5-7.8L4 4z"
-                  />
-                </svg>
-              </a>
-              <a href="https://www.youtube.com/" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
-                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
-                  <path
-                    d="M22 12.2c0-2.3-.2-3.9-.5-4.8-.3-.9-.9-1.5-1.8-1.8C18.4 5.2 12 5.2 12 5.2s-6.4 0-7.7.4c-.9.3-1.5.9-1.8 1.8-.3.9-.5 2.5-.5 4.8s.2 3.9.5 4.8c.3.9.9 1.5 1.8 1.8 1.3.4 7.7.4 7.7.4s6.4 0 7.7-.4c.9-.3 1.5-.9 1.8-1.8.3-.9.5-2.5.5-4.8zM10.2 15.3V9.1l5.2 3.1-5.2 3.1z"
-                  />
-                </svg>
-              </a>
+              <a href="https://www.instagram.com/" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M7.5 3h9A4.5 4.5 0 0 1 21 7.5v9A4.5 4.5 0 0 1 16.5 21h-9A4.5 4.5 0 0 1 3 16.5v-9A4.5 4.5 0 0 1 7.5 3zm0 1.7A2.8 2.8 0 0 0 4.7 7.5v9a2.8 2.8 0 0 0 2.8 2.8h9a2.8 2.8 0 0 0 2.8-2.8v-9a2.8 2.8 0 0 0-2.8-2.8h-9zm9.2 1.3a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2zM12 7.2A4.8 4.8 0 1 1 7.2 12 4.8 4.8 0 0 1 12 7.2zm0 1.7A3.1 3.1 0 1 0 15.1 12 3.1 3.1 0 0 0 12 8.9z"/></svg></a>
+              <a href="https://x.com/" aria-label="X" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M4 4h4.1l4.1 5.7L16.8 4H20l-6.1 7.3L20.2 20h-4.1l-4.5-6.2L7.2 20H4l6.5-7.8L4 4z"/></svg></a>
+              <a href="https://www.youtube.com/" aria-label="YouTube" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M22 12.2c0-2.3-.2-3.9-.5-4.8-.3-.9-.9-1.5-1.8-1.8C18.4 5.2 12 5.2 12 5.2s-6.4 0-7.7.4c-.9.3-1.5.9-1.8 1.8-.3.9-.5 2.5-.5 4.8s.2 3.9.5 4.8c.3.9.9 1.5 1.8 1.8 1.3.4 7.7.4 7.7.4s6.4 0 7.7-.4c.9-.3 1.5-.9 1.8-1.8.3-.9.5-2.5.5-4.8zM10.2 15.3V9.1l5.2 3.1-5.2 3.1z"/></svg></a>
             </div>
           </div>
         </div>
 
-        <!-- Legal ribbon — exact disclosures -->
-        <div class="site-footer__ribbon site-footer__ribbon--legal reveal">
-          <div class="site-footer__legal-copy">
-            <p>
-              Dominion Markets Ltd is incorporated in the Republic of Mauritius and licensed and
-              regulated by the Financial Services Commission of Mauritius as an Investment Dealer
-              (Full Service Dealer, Excluding Underwriting), under Licence No. GB24203525, with
-              registered office at Office 133, Ebene Junction, Rue De La Democratie, Ebene,
-              Mauritius.
-            </p>
-            <p>
-              In the UAE, Dominion Financial Services L.L.C. is incorporated with limited liability
-              under the laws of Dubai in the United Arab Emirates (UAE), and the federal laws of the
-              UAE under registration number 1583018. Dominion Financial Services L.L.C. is regulated
-              by UAE’s Capital Market Authority (CMA), formerly known as Securities and Commodities
-              Authority (SCA), (License No. 20200000425) and holds a category 5 license: Ranking and
-              Advice, and is not authorised to hold client assets or client money. The registered
-              office is at Office-4f-B-04 345-Sh. Zayed Road Dubai, UAE. Dominion Financial Services
-              L.L.C. is responsible for facilitating the opening of trading accounts and offering of
-              CFD services by Dominion Markets.
-            </p>
-            <p>
-              Dominion Markets LTD is a company duly incorporated and registered in Cyprus with
-              Registration Number HE460499, having its registered office at Kyklaminon 16A,
-              Parekklisia, 4520, Limassol, Cyprus.
-            </p>
-            <p>
-              Dominion Markets LLC is a limited liability company incorporated and registered under
-              the laws of Comoros Union, with company number HY00723020 and a registered address at
-              Bonovo Road – Fomboni Island of Mohéli – Comoros Union.
-            </p>
-            <p>
-              The Company is authorised and licensed under INTERNATIONAL BROKERAGE and CLEARING HOUSE
-              LICENSE, IBC REGULATION ACT 2014 license number T2023340 for the provision of Currency
-              Trading (FOREX), Stock and Securities Brokerage, Financial Advisory, Asset and Fund
-              Management, Custody Services, Transaction Clearing, Payment Processing, Issuance and
-              Underwriting of Securities, and the others.
-            </p>
-            <p>
-              The domain
-              <a class="site-footer__domain" href="https://www.dominionmarkets.com/"
-                >dominionmarkets.com</a
-              >
-              is registered under our company, Dominion Markets Limited.
-            </p>
-            <p>
-              <strong>Risk Warning:</strong> Trading foreign exchange, CFDs, commodities, indices,
-              precious metals, share CFDs, futures CFDs, and other leveraged instruments on margin
-              carries a high level of risk and may not be suitable for all investors. The high degree
-              of leverage can work against you as well as for you. Before deciding to trade, you
-              should carefully consider your investment objectives, level of experience, financial
-              situation, and risk appetite. You may lose some or all of your invested capital and
-              should not trade with money you cannot afford to lose. You should ensure that you fully
-              understand the risks involved and seek independent financial, legal, tax, or
-              professional advice where necessary.
-            </p>
-            <p>
-              <strong>Restrictions:</strong> Dominion Markets Ltd does not offer its services to
-              residents of, persons located in, nationals or citizens of, or entities incorporated,
-              registered, or operating in restricted or prohibited jurisdictions, including but not
-              limited to Afghanistan, Côte d’Ivoire, Cuba, Iran, Libya, Myanmar, North Korea, Puerto
-              Rico, Russia, Sudan, Syria, Yemen, the United States of America, and any other
-              jurisdiction where the Company is not authorised or permitted to operate, or where the
-              provision of services would breach applicable laws, sanctions requirements, regulatory
-              requirements, payment processor rules, card scheme rules, or the Company’s internal
-              risk policy.
-            </p>
+        <div class="site-footer__glass site-footer__ribbon site-footer__ribbon--legal">
+          <div class="site-footer__legal-grid">
+            <section class="site-footer__legal-col" aria-labelledby="footer-regulated">
+              <div class="site-footer__legal-head">
+                <span class="site-footer__module-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none"><path d="M12 3.5 20 7v5.2c0 4.4-3.4 7.6-8 9.3-4.6-1.7-8-4.9-8-9.3V7l8-3.5z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span>
+                <h3 id="footer-regulated">Multi-Jurisdictional Regulated</h3>
+              </div>
+              <p>Dominion Markets Ltd is incorporated in Mauritius and licensed by the Financial Services Commission as an Investment Dealer (Licence No. GB24203525). In the UAE, Dominion Financial Services L.L.C. is regulated by the CMA (License No. 20200000425). Also registered in Cyprus (HE460499) and Comoros Union (HY00723020). IBC license number T2023340.</p>
+              <p class="site-footer__licenses">FSC Mauritius · CMA UAE · Cyprus · Comoros · T2023340</p>
+              <p>The domain <a class="site-footer__domain" href="https://www.dominionmarkets.com/">dominionmarkets.com</a> is registered under Dominion Markets Limited.</p>
+            </section>
+            <section class="site-footer__legal-col" aria-labelledby="footer-risk">
+              <div class="site-footer__legal-head">
+                <span class="site-footer__module-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none"><path d="M12 4.5 21 19.5H3L12 4.5z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M12 10v4.5M12 17.2h.01" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+                <h3 id="footer-risk">Risk Warning</h3>
+              </div>
+              <p>Trading foreign exchange, CFDs, commodities, indices, precious metals, share CFDs, futures CFDs, and other leveraged instruments on margin carries a high level of risk and may not be suitable for all investors. The high degree of leverage can work against you as well as for you. Before deciding to trade, you should carefully consider your investment objectives, level of experience, financial situation, and risk appetite. You may lose some or all of your invested capital and should not trade with money you cannot afford to lose. You should ensure that you fully understand the risks involved and seek independent financial, legal, tax, or professional advice where necessary.</p>
+            </section>
+            <section class="site-footer__legal-col" aria-labelledby="footer-restrictions">
+              <div class="site-footer__legal-head">
+                <span class="site-footer__module-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none"><circle cx="12" cy="12" r="8.5" stroke="currentColor" stroke-width="1.8"/><path d="M3.5 12h17M12 3.5c2.6 2.8 3.9 5.6 3.9 8.5S14.6 17.7 12 20.5C9.4 17.7 8.1 14.9 8.1 12S9.4 6.3 12 3.5z" stroke="currentColor" stroke-width="1.8"/></svg></span>
+                <h3 id="footer-restrictions">Restrictions</h3>
+              </div>
+              <p>Dominion Markets Ltd does not offer its services to residents of, persons located in, nationals or citizens of, or entities incorporated, registered, or operating in restricted or prohibited jurisdictions, including but not limited to Afghanistan, Côte d’Ivoire, Cuba, Iran, Libya, Myanmar, North Korea, Puerto Rico, Russia, Sudan, Syria, Yemen, the United States of America, and any other jurisdiction where the Company is not authorised or permitted to operate, or where the provision of services would breach applicable laws, sanctions requirements, regulatory requirements, payment processor rules, card scheme rules, or the Company’s internal risk policy.</p>
+            </section>
           </div>
+
+          <details class="site-footer__full-legal">
+            <summary>Full entity disclosures</summary>
+            <div class="site-footer__full-legal-body">
+              <p>Dominion Markets Ltd is incorporated in the Republic of Mauritius and licensed and regulated by the Financial Services Commission of Mauritius as an Investment Dealer (Full Service Dealer, Excluding Underwriting), under Licence No. GB24203525, with registered office at Office 133, Ebene Junction, Rue De La Democratie, Ebene, Mauritius.</p>
+              <p>In the UAE, Dominion Financial Services L.L.C. is incorporated with limited liability under the laws of Dubai in the United Arab Emirates (UAE), and the federal laws of the UAE under registration number 1583018. Dominion Financial Services L.L.C. is regulated by UAE’s Capital Market Authority (CMA), formerly known as Securities and Commodities Authority (SCA), (License No. 20200000425) and holds a category 5 license: Ranking and Advice, and is not authorised to hold client assets or client money. The registered office is at Office-4f-B-04 345-Sh. Zayed Road Dubai, UAE. Dominion Financial Services L.L.C. is responsible for facilitating the opening of trading accounts and offering of CFD services by Dominion Markets.</p>
+              <p>Dominion Markets LTD is a company duly incorporated and registered in Cyprus with Registration Number HE460499, having its registered office at Kyklaminon 16A, Parekklisia, 4520, Limassol, Cyprus.</p>
+              <p>Dominion Markets LLC is a limited liability company incorporated and registered under the laws of Comoros Union, with company number HY00723020 and a registered address at Bonovo Road – Fomboni Island of Mohéli – Comoros Union.</p>
+              <p>The Company is authorised and licensed under INTERNATIONAL BROKERAGE and CLEARING HOUSE LICENSE, IBC REGULATION ACT 2014 license number T2023340 for the provision of Currency Trading (FOREX), Stock and Securities Brokerage, Financial Advisory, Asset and Fund Management, Custody Services, Transaction Clearing, Payment Processing, Issuance and Underwriting of Securities, and the others.</p>
+            </div>
+          </details>
+
           <div class="site-footer__copyright">
-            <p>
-              Copyright ©2026
-              <span class="site-footer__brand-name">Dominion Markets LTD</span>. All Rights Reserved.
-            </p>
+            <p>Copyright ©2026 <span class="site-footer__brand-name">Dominion Markets LTD</span>. All Rights Reserved.</p>
           </div>
         </div>
       </div>
     </footer>
+
 
     <script src="./main.js"></script>
   </body>
