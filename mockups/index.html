@@ -16,7 +16,7 @@
     />
     <link rel="icon" type="image/png" href="./assets/logo/logo-isotype-app.png" />
     <link rel="apple-touch-icon" href="./assets/logo/logo-isotype-app.png" />
-    <link rel="stylesheet" href="./styles.css?v=51" />
+    <link rel="stylesheet" href="./styles.css?v=52" />
   </head>
   <body>
     <header class="site-chrome" id="site-chrome">
@@ -127,12 +127,15 @@
       </section>
 
       <section class="proof" id="proof">
-        <div class="container proof__row reveal">
-          <div class="proof__item"><span>50,000+</span> clients</div>
-          <div class="proof__item"><span>200+</span> instruments</div>
-          <div class="proof__item"><span>~30 ms</span> execution</div>
-          <div class="proof__item"><span>500:1</span> max leverage</div>
-          <div class="proof__item"><span>FSC</span> Mauritius</div>
+        <!-- Marquee (vanilla port of marquee.tsx) — current proof stats, looped -->
+        <div class="marquee" data-marquee data-pause-on-hover aria-label="Key facts">
+          <div class="marquee__track">
+            <div class="proof__item"><span>50,000+</span> clients</div>
+            <div class="proof__item"><span>200+</span> instruments</div>
+            <div class="proof__item"><span>~30 ms</span> execution</div>
+            <div class="proof__item"><span>500:1</span> max leverage</div>
+            <div class="proof__item"><span>FSC</span> Mauritius</div>
+          </div>
         </div>
       </section>
 
@@ -2265,6 +2268,6 @@
     </footer>
 
 
-    <script src="./main.js?v=51"></script>
+    <script src="./main.js?v=52"></script>
   </body>
 </html>

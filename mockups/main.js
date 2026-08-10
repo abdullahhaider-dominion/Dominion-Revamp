@@ -581,3 +581,53 @@ window.addEventListener("resize", () => {
   window.addEventListener("resize", onScroll, { passive: true });
   update();
 })();
+
+/* ——— Marquee (vanilla port of marquee.tsx) ———
+   Duplicates the track's item set enough times that each half is at least a
+   viewport wide, so the CSS translateX(-50%) loop is always seamless and the
+   strip fills the screen. Duration is derived for a constant scroll speed. */
+(function initMarquees() {
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const SPEED = 60; // px per second
+
+  document.querySelectorAll("[data-marquee]").forEach((marquee) => {
+    const track = marquee.querySelector(".marquee__track");
+    if (!track) return;
+    const originals = Array.from(track.children);
+    if (!originals.length) return;
+    if (reduce) return; // CSS shows a centered static set under reduced-motion
+
+    const build = () => {
+      // Measure one set
+      track.innerHTML = "";
+      originals.forEach((el) => track.appendChild(el.cloneNode(true)));
+      const oneSet = track.scrollWidth;
+      const containerW = marquee.getBoundingClientRect().width || window.innerWidth;
+
+      // Copies per half so each half spans the container, then two halves total
+      const perHalf = Math.max(1, Math.ceil((containerW + 80) / Math.max(1, oneSet)));
+      track.innerHTML = "";
+      for (let i = 0; i < perHalf * 2; i++) {
+        originals.forEach((el) => {
+          const clone = el.cloneNode(true);
+          if (i > 0) clone.setAttribute("aria-hidden", "true");
+          track.appendChild(clone);
+        });
+      }
+      const halfWidth = oneSet * perHalf;
+      track.style.setProperty("--duration", halfWidth / SPEED + "s");
+    };
+
+    build();
+    let rt;
+    window.addEventListener(
+      "resize",
+      () => {
+        clearTimeout(rt);
+        rt = setTimeout(build, 200);
+      },
+      { passive: true }
+    );
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(build);
+  });
+})();
