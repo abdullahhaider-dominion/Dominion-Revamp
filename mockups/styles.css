@@ -7289,8 +7289,21 @@ body::before {
   transform: translateX(-50%);
   width: 3px;
   border-radius: 3px;
-  background: linear-gradient(180deg, rgba(71, 189, 104, 0.12), #47bd68 12%, #47bd68 88%, rgba(71, 189, 104, 0.12));
-  box-shadow: 0 0 18px rgba(71, 189, 104, 0.4);
+  background: rgba(29, 51, 71, 0.14);
+}
+/* Bright green fill that grows with scroll progress (set by main.js) */
+.tl__progress {
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3px;
+  height: 0;
+  border-radius: 3px;
+  background: linear-gradient(180deg, #6dff96, #47bd68);
+  box-shadow: 0 0 18px rgba(71, 189, 104, 0.6);
+  z-index: 1;
+  will-change: height;
 }
 .tl__item {
   position: relative;
@@ -7316,11 +7329,19 @@ body::before {
   border: 4px solid #eaf1f6;
   box-shadow: 0 8px 20px rgba(29, 51, 71, 0.25), 0 0 0 1px rgba(71, 189, 104, 0.3);
   z-index: 2;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transform: scale(0.82);
+  opacity: 0.55;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease, opacity 0.35s ease;
 }
 .tl__item--left .tl__node { right: -23px; }
 .tl__item--right .tl__node { left: -23px; }
-.tl__item:hover .tl__node { transform: scale(1.14); box-shadow: 0 10px 26px rgba(29, 51, 71, 0.3), 0 0 24px rgba(71, 189, 104, 0.6); }
+/* Node lights up once the scroll progress line reaches it (set by main.js) */
+.tl__node.is-active {
+  transform: scale(1);
+  opacity: 1;
+  box-shadow: 0 10px 24px rgba(29, 51, 71, 0.3), 0 0 26px rgba(71, 189, 104, 0.65);
+}
+.tl__item:hover .tl__node { transform: scale(1.14); opacity: 1; box-shadow: 0 10px 26px rgba(29, 51, 71, 0.3), 0 0 24px rgba(71, 189, 104, 0.6); }
 
 .tl__card {
   position: relative;
@@ -7363,12 +7384,30 @@ body::before {
 .tl__bar { position: absolute; left: 0; bottom: 0; height: 3px; width: 0; background: linear-gradient(90deg, #47bd68, #6dff96); transition: width 0.5s ease; }
 .tl__card:hover .tl__bar { width: 100%; }
 
+/* Scroll-reveal: cards slide in from their side, then settle to transform:none
+   so the frosted glass is intact at rest. (.tl--anim added by main.js; without
+   JS the cards are simply visible.) */
+@keyframes tlSlideL { from { opacity: 0; transform: translateX(46px); } to { opacity: 1; transform: none; } }
+@keyframes tlSlideR { from { opacity: 0; transform: translateX(-46px); } to { opacity: 1; transform: none; } }
+.tl.tl--anim .tl__card { opacity: 0; }
+.tl.tl--anim .tl__item.is-in .tl__card { animation: tlSlideL 0.75s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+.tl.tl--anim .tl__item--right.is-in .tl__card { animation-name: tlSlideR; }
+
 @media (max-width: 767px) {
   .tl { max-width: 520px; }
   .tl::before { left: 23px; transform: none; }
+  .tl__progress { left: 23px; transform: none; }
   .tl__item { width: 100%; left: 0 !important; text-align: left; padding: 0 0 2rem 60px; }
   .tl__item .tl__node { left: 0 !important; right: auto !important; }
   .tl__item--left .tl__card,
   .tl__card { margin-left: 0; max-width: none; }
+  /* Mobile cards slide up (from below) rather than sideways */
+  .tl.tl--anim .tl__item.is-in .tl__card,
+  .tl.tl--anim .tl__item--right.is-in .tl__card { animation-name: tlSlideL; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tl__progress { transition: none; }
+  .tl.tl--anim .tl__card { opacity: 1; animation: none; }
 }
 

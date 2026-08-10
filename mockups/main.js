@@ -631,3 +631,62 @@ window.addEventListener("resize", () => {
     if (document.fonts && document.fonts.ready) document.fonts.ready.then(build);
   });
 })();
+
+/* ——— Interactive Timeline scroll behaviour ———
+   Grows the green progress line with scroll, lights up each node as the line
+   reaches it, and slides cards in from their side as they enter view. */
+(function initTimeline() {
+  const tl = document.querySelector(".tl");
+  if (!tl) return;
+
+  const progress = tl.querySelector(".tl__progress");
+  const nodes = Array.from(tl.querySelectorAll(".tl__node"));
+  const items = Array.from(tl.querySelectorAll(".tl__item"));
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  if (reduce) {
+    if (progress) progress.style.height = "100%";
+    nodes.forEach((n) => n.classList.add("is-active"));
+    items.forEach((i) => i.classList.add("is-in"));
+    return;
+  }
+
+  // Slide cards in as they enter the viewport
+  tl.classList.add("tl--anim");
+  const io = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.classList.add("is-in");
+          io.unobserve(e.target);
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
+  items.forEach((i) => io.observe(i));
+
+  // Scroll-linked progress fill + node activation
+  let ticking = false;
+  const update = () => {
+    ticking = false;
+    const rect = tl.getBoundingClientRect();
+    const vh = window.innerHeight;
+    let p = (vh * 0.5 - rect.top) / Math.max(1, rect.height);
+    p = Math.min(1, Math.max(0, p));
+    if (progress) progress.style.height = p * 100 + "%";
+    nodes.forEach((n) => {
+      const nr = n.getBoundingClientRect();
+      n.classList.toggle("is-active", nr.top + nr.height / 2 < vh * 0.55);
+    });
+  };
+  const onScroll = () => {
+    if (!ticking) {
+      ticking = true;
+      requestAnimationFrame(update);
+    }
+  };
+  window.addEventListener("scroll", onScroll, { passive: true });
+  window.addEventListener("resize", onScroll, { passive: true });
+  update();
+})();
