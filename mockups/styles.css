@@ -6851,3 +6851,128 @@ h3,
     font-size: 0.95rem;
   }
 }
+
+/* ==================================================================
+   HOMEPAGE LAYOUT ITERATION v2  (appended — fully reversible)
+   Purpose:
+     1. Re-order sections into the Floating-Sanctuary IA without moving
+        any HTML (CSS `order` on the <main> flex column).
+     2. Park duplicate / overlapping sections (kept in the DOM so they
+        can be restored by deleting one line).
+     3. Unify every light section onto ONE continuous "sanctuary" field
+        so backgrounds stop clashing section-to-section.
+     4. Subtle liquid-glass polish (keeps the existing system).
+   To revert this whole iteration: delete everything below this banner.
+   ================================================================== */
+
+/* 1) Section order (increments of 10 so gaps are easy to reshuffle) */
+#top { display: flex; flex-direction: column; }
+#hero          { order: 10; }
+#proof         { order: 20; }
+#sessions      { order: 30; }
+#markets       { order: 40; }
+#how-it-works  { order: 50; }
+#accounts      { order: 60; }
+#funding       { order: 70; }
+#platforms     { order: 80; }
+#dashboard     { order: 90; }
+#why-dominion  { order: 100; }
+#ecosystem     { order: 110; }
+#copy-trading  { order: 120; }
+#blogs         { order: 130; }
+#trust         { order: 140; }
+#final-cta     { order: 150; }
+
+/* 2) Parked sections (duplicates / overlaps). Delete an id to bring it back.
+      - #quotes         -> live-quotes overlaps Markets + Sessions
+      - #markets-reach   -> another markets/benefits grid
+      - #mrkt            -> "Why Dominion Markets?" benefits grid  (kept #why-dominion instead)
+      - #trade-better    -> "Trade better." benefits grid          (kept #why-dominion instead)
+      - #accounts-focus  -> features/stats overlap Proof + Accounts + Edge
+      - #mt5-simulator   -> duplicated by the MT5 Simulator card in #ecosystem */
+#quotes,
+#markets-reach,
+#mrkt,
+#trade-better,
+#accounts-focus,
+#mt5-simulator { display: none !important; }
+
+/* 3) One continuous sanctuary field for the whole light body ------------- */
+body {
+  background:
+    radial-gradient(1200px 620px at 12% -6%, rgba(71, 189, 104, 0.055), transparent 60%),
+    radial-gradient(1100px 720px at 100% 6%, rgba(29, 51, 71, 0.06), transparent 55%),
+    linear-gradient(180deg, #eef4f8 0%, #f4f7f9 26%, #f5f8fa 62%, #e9f0f5 100%) fixed;
+}
+/* Light sections float on the shared field instead of painting their own bg */
+#proof,
+#sessions,
+#markets,
+#how-it-works,
+#funding,
+#platforms,
+#dashboard,
+#why-dominion,
+#ecosystem,
+#copy-trading,
+#blogs,
+#trust { background: transparent !important; }
+
+/* Proof reads as a clean floating chip row (drop the hard band borders) */
+#proof { border-block: 0 !important; }
+
+/* Fold the lone photo "Accounts" band into the field for background
+   consistency (its milky cards already use navy text). */
+#accounts .clarity-accounts__bg,
+#accounts .clarity-accounts__veil { display: none !important; }
+#accounts .clarity-title { color: var(--navy) !important; text-shadow: none !important; }
+#accounts .clarity-sub { color: var(--ink-soft) !important; }
+
+/* 3b) Neutralize the remaining stray photo/dark section backgrounds so the
+       whole page reads as ONE system: a light "sanctuary" field punctuated by
+       brand-navy bands — no more assorted mountain photos mid-page. */
+/* Light-veiled photo sections -> fold straight into the field (dark text). */
+#how-it-works .how-start__bg,
+#funding .funding__bg { display: none !important; }
+
+/* Trade-with-an-edge / News use light text, so keep them as intentional
+   NAVY bands, but swap the mountain photos for a consistent Dominion-navy
+   field that echoes the hero. */
+#why-dominion .edge__bg,
+#blogs .blogs__bg { display: none !important; }
+#why-dominion,
+#blogs {
+  background:
+    radial-gradient(ellipse 85% 60% at 50% -12%, rgba(71, 189, 104, 0.12), transparent 60%),
+    radial-gradient(ellipse 55% 45% at 12% 85%, rgba(71, 189, 104, 0.06), transparent 55%),
+    linear-gradient(180deg, #0c1822 0%, #122738 58%, #0d1a26 100%) !important;
+}
+
+/* Platforms is a LIGHT section (it has a dark demo card inside), so fold it
+   into the field like the others — drop its photo AND dark overlay so the
+   dark-navy heading stays readable. */
+#platforms .platforms__bg,
+#platforms .platforms__overlay { display: none !important; }
+
+/* 4) Liquid-glass polish — subtle, keeps the system ---------------------- */
+:root {
+  --shadow-soft:
+    0 26px 60px -24px rgba(20, 36, 51, 0.35),
+    0 10px 26px -14px rgba(20, 36, 51, 0.16);
+}
+/* Proof chips: give the flat pills the same frosted specular as other glass */
+#proof .proof__item {
+  background: linear-gradient(155deg, rgba(255, 255, 255, 0.86), rgba(255, 255, 255, 0.62));
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow:
+    0 14px 30px -18px rgba(20, 36, 51, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+/* Session cards: slightly richer edge + depth to feel more premium */
+#sessions .session-card {
+  box-shadow:
+    0 30px 60px -28px rgba(20, 36, 51, 0.38),
+    0 0 0 1px rgba(71, 189, 104, 0.16),
+    inset 0 1px 0 rgba(255, 255, 255, 0.85);
+}
+
