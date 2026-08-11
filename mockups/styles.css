@@ -7287,8 +7287,8 @@ body::before {
   bottom: 6px;
   left: 50%;
   transform: translateX(-50%);
-  width: 3px;
-  border-radius: 3px;
+  width: 4px;
+  border-radius: 4px;
   background: rgba(29, 51, 71, 0.14);
 }
 /* Bright green fill that grows with scroll progress (set by main.js) */
@@ -7297,14 +7297,29 @@ body::before {
   top: 6px;
   left: 50%;
   transform: translateX(-50%);
-  width: 3px;
+  width: 4px;
   height: 0;
-  border-radius: 3px;
+  border-radius: 4px;
   background: linear-gradient(180deg, #6dff96, #47bd68);
-  box-shadow: 0 0 18px rgba(71, 189, 104, 0.6);
+  box-shadow: 0 0 20px rgba(71, 189, 104, 0.7);
   z-index: 1;
   will-change: height;
 }
+/* Glowing "comet head" at the tip of the fill — makes the growth obvious */
+.tl__progress::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -7px;
+  transform: translateX(-50%);
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #e6fff0, #47bd68 58%, transparent 72%);
+  box-shadow: 0 0 18px 5px rgba(71, 189, 104, 0.8);
+}
+.tl__progress[style*="height: 0"]::after,
+.tl__progress[style*="height:0"]::after { opacity: 0; }
 .tl__item {
   position: relative;
   width: 50%;
@@ -7329,9 +7344,10 @@ body::before {
   border: 4px solid #eaf1f6;
   box-shadow: 0 8px 20px rgba(29, 51, 71, 0.25), 0 0 0 1px rgba(71, 189, 104, 0.3);
   z-index: 2;
-  transform: scale(0.82);
-  opacity: 0.55;
-  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease, opacity 0.35s ease;
+  transform: scale(0.62);
+  opacity: 0.4;
+  filter: saturate(0.55);
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.35s ease, opacity 0.35s ease, filter 0.35s ease;
 }
 .tl__item--left .tl__node { right: -23px; }
 .tl__item--right .tl__node { left: -23px; }
@@ -7339,7 +7355,8 @@ body::before {
 .tl__node.is-active {
   transform: scale(1);
   opacity: 1;
-  box-shadow: 0 10px 24px rgba(29, 51, 71, 0.3), 0 0 26px rgba(71, 189, 104, 0.65);
+  filter: none;
+  box-shadow: 0 10px 24px rgba(29, 51, 71, 0.3), 0 0 30px rgba(71, 189, 104, 0.8), 0 0 0 6px rgba(71, 189, 104, 0.14);
 }
 .tl__item:hover .tl__node { transform: scale(1.14); opacity: 1; box-shadow: 0 10px 26px rgba(29, 51, 71, 0.3), 0 0 24px rgba(71, 189, 104, 0.6); }
 
@@ -7387,8 +7404,8 @@ body::before {
 /* Scroll-reveal: cards slide in from their side, then settle to transform:none
    so the frosted glass is intact at rest. (.tl--anim added by main.js; without
    JS the cards are simply visible.) */
-@keyframes tlSlideL { from { opacity: 0; transform: translateX(46px); } to { opacity: 1; transform: none; } }
-@keyframes tlSlideR { from { opacity: 0; transform: translateX(-46px); } to { opacity: 1; transform: none; } }
+@keyframes tlSlideL { from { opacity: 0; transform: translateX(80px); } to { opacity: 1; transform: none; } }
+@keyframes tlSlideR { from { opacity: 0; transform: translateX(-80px); } to { opacity: 1; transform: none; } }
 .tl.tl--anim .tl__card { opacity: 0; }
 .tl.tl--anim .tl__item.is-in .tl__card { animation: tlSlideL 0.75s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
 .tl.tl--anim .tl__item--right.is-in .tl__card { animation-name: tlSlideR; }
