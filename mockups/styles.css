@@ -6852,6 +6852,588 @@ h3,
   }
 }
 
+/* ==================================================================
+   HOMEPAGE LAYOUT ITERATION v2  (appended — fully reversible)
+   Purpose:
+     1. Re-order sections into the Floating-Sanctuary IA without moving
+        any HTML (CSS `order` on the <main> flex column).
+     2. Park duplicate / overlapping sections (kept in the DOM so they
+        can be restored by deleting one line).
+     3. Unify every light section onto ONE continuous "sanctuary" field
+        so backgrounds stop clashing section-to-section.
+     4. Subtle liquid-glass polish (keeps the existing system).
+   To revert this whole iteration: delete everything below this banner.
+   ================================================================== */
+
+/* 1) Section order (increments of 10 so gaps are easy to reshuffle) */
+#top { display: flex; flex-direction: column; }
+#hero          { order: 10; }
+#proof         { order: 20; }
+#sessions      { order: 30; }
+#markets       { order: 40; }
+#how-it-works  { order: 50; }
+#accounts      { order: 60; }
+#funding       { order: 70; }
+#platforms     { order: 80; }
+#dashboard     { order: 90; }
+#why-dominion  { order: 100; }
+#ecosystem     { order: 110; }
+#copy-trading  { order: 120; }
+#blogs         { order: 130; }
+#trust         { order: 140; }
+#final-cta     { order: 150; }
+
+/* 2) (All previously-parked sections are now RESTORED per request — their
+      order + unified-background treatment live in block 6 at the end.) */
+
+/* 3) One continuous sanctuary field for the whole light body -------------
+   IMPORTANT: the milky cards use very translucent fills + heavy
+   backdrop-filter(blur + saturate) — they were built to REFRACT a mist photo.
+   A flat field gives the frost nothing to sample, so cards read as plain
+   slabs. So the unified field is a rich, brand-tinted "liquid" mesh (colour
+   pools + light) that every glass card can refract — consistent AND glassy. */
+body {
+  background:
+    radial-gradient(46% 42% at 12% 12%, rgba(71, 189, 104, 0.20), transparent 62%),
+    radial-gradient(44% 40% at 88% 16%, rgba(52, 150, 150, 0.16), transparent 62%),
+    radial-gradient(54% 48% at 84% 66%, rgba(29, 51, 71, 0.18), transparent 64%),
+    radial-gradient(48% 44% at 14% 82%, rgba(96, 170, 214, 0.16), transparent 62%),
+    radial-gradient(40% 34% at 52% 44%, rgba(255, 255, 255, 0.60), transparent 60%),
+    linear-gradient(180deg, #e6eef5 0%, #eef4f8 46%, #e6eef4 100%);
+  background-attachment: fixed;
+}
+/* Fine grain so the frost has texture to sample (very subtle) */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.5;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+}
+/* Light sections float on the shared field instead of painting their own bg */
+#proof,
+#sessions,
+#markets,
+#how-it-works,
+#funding,
+#platforms,
+#dashboard,
+#why-dominion,
+#ecosystem,
+#copy-trading,
+#blogs,
+#trust { background: transparent !important; }
+
+/* Proof reads as a clean floating chip row (drop the hard band borders) */
+#proof { border-block: 0 !important; }
+
+/* Fold the lone photo "Accounts" band into the field for background
+   consistency (its milky cards already use navy text). */
+#accounts .clarity-accounts__bg,
+#accounts .clarity-accounts__veil { display: none !important; }
+#accounts .clarity-title { color: var(--navy) !important; text-shadow: none !important; }
+#accounts .clarity-sub { color: var(--ink-soft) !important; }
+
+/* 3b) Neutralize the remaining stray photo/dark section backgrounds so the
+       whole page reads as ONE system: a light "sanctuary" field punctuated by
+       brand-navy bands — no more assorted mountain photos mid-page. */
+/* Light-veiled photo sections -> fold straight into the field (dark text). */
+#how-it-works .how-start__bg,
+#funding .funding__bg { display: none !important; }
+
+/* Trade-with-an-edge / News use light text, so keep them as intentional
+   NAVY bands, but swap the mountain photos for a consistent Dominion-navy
+   field that echoes the hero. */
+#why-dominion .edge__bg,
+#blogs .blogs__bg { display: none !important; }
+#why-dominion,
+#blogs {
+  background:
+    radial-gradient(ellipse 85% 60% at 50% -12%, rgba(71, 189, 104, 0.12), transparent 60%),
+    radial-gradient(ellipse 55% 45% at 12% 85%, rgba(71, 189, 104, 0.06), transparent 55%),
+    linear-gradient(180deg, #0c1822 0%, #122738 58%, #0d1a26 100%) !important;
+}
+
+/* Platforms is a LIGHT section (it has a dark demo card inside), so fold it
+   into the field like the others — drop its photo AND dark overlay so the
+   dark-navy heading stays readable. */
+#platforms .platforms__bg,
+#platforms .platforms__overlay { display: none !important; }
+
+/* 4) Liquid-glass polish — subtle, keeps the system ---------------------- */
+:root {
+  --shadow-soft:
+    0 26px 60px -24px rgba(20, 36, 51, 0.35),
+    0 10px 26px -14px rgba(20, 36, 51, 0.16);
+}
+/* Proof chips: give the flat pills the same frosted specular as other glass */
+#proof .proof__item {
+  background: linear-gradient(155deg, rgba(255, 255, 255, 0.86), rgba(255, 255, 255, 0.62));
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow:
+    0 14px 30px -18px rgba(20, 36, 51, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+/* Session cards: slightly richer edge + depth to feel more premium */
+#sessions .session-card {
+  box-shadow:
+    0 30px 60px -28px rgba(20, 36, 51, 0.38),
+    0 0 0 1px rgba(71, 189, 104, 0.16),
+    inset 0 1px 0 rgba(255, 255, 255, 0.85);
+}
+
+/* 6) Restored sections — slot into the IA + fold into the unified system ---
+   All six previously-parked sections are shown again and integrated so their
+   backgrounds stay consistent (light field, or navy band where the section
+   uses light text) instead of re-introducing their original photos. */
+#quotes         { order: 45; }   /* live quotes, in the markets cluster */
+#markets-reach  { order: 47; }   /* markets coverage grid */
+#accounts-focus { order: 65; }   /* right after the Accounts tiers */
+#mrkt           { order: 95; }   /* "Why Dominion Markets?", by the edge grid */
+#trade-better   { order: 105; }  /* "Trade better.", by the edge grid */
+#mt5-simulator  { order: 115; }  /* MT5 Simulator, by the ecosystem */
+
+/* Navy-text section -> navy brand band (matches #why-dominion / #blogs) */
+#trade-better .better__bg { display: none !important; }
+#trade-better {
+  background:
+    radial-gradient(ellipse 85% 60% at 50% -12%, rgba(71, 189, 104, 0.12), transparent 60%),
+    radial-gradient(ellipse 55% 45% at 12% 85%, rgba(71, 189, 104, 0.06), transparent 55%),
+    linear-gradient(180deg, #0c1822 0%, #122738 58%, #0d1a26 100%) !important;
+}
+
+/* Navy-text-on-navy sections fold onto the light field -> drop photos + tint */
+#quotes,
+#markets-reach,
+#mrkt,
+#accounts-focus,
+#mt5-simulator { background: transparent !important; }
+#markets-reach .markets-reach__bg,
+#mrkt .mrkt__bg,
+#accounts-focus .focus-accounts__bg,
+#mt5-simulator .mt5-sim__bg { display: none !important; }
+
+/* Awards section (merged in from the base branch) — keep its early placement
+   just after the proof marquee, and fold it into the unified light field
+   (drop its photo bg) so it matches the rest of the page. */
+#awards { order: 25; background: transparent !important; }
+#awards .awards__bg { display: none !important; }
+
+/* ==================================================================
+   SCROLL-EXPANSION HERO  (vanilla port of scroll-expansion-hero.tsx)
+   Driven by JS via CSS custom properties on #hero:
+     --xw/--xh (media size)  --xr (radius)  --xshift (title split, vw)
+     --xtitle/--xmeta/--xbg/--xveil/--xpanel (opacities)
+   ================================================================== */
+.xhero {
+  position: relative;
+  height: 220vh;                 /* scroll track that drives the expansion */
+  margin-top: calc(-1 * (var(--nav-h) + 2.1rem)); /* pull under the fixed nav = full-bleed */
+  background: #070e14;
+  color: #fff;
+  isolation: isolate;
+  overflow: clip;
+  --xw: 340px; --xh: 460px; --xr: 24px; --xshift: 0vw;
+  --xtitle: 1; --xmeta: 1; --xbg: 1; --xveil: 0.55; --xpanel: 0;
+}
+.xhero__sticky {
+  position: sticky;
+  top: 0;
+  height: 100dvh;
+  overflow: hidden;
+}
+.xhero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  opacity: var(--xbg);
+  background:
+    radial-gradient(ellipse 70% 55% at 72% 36%, rgba(71, 189, 104, 0.30), transparent 58%),
+    radial-gradient(ellipse 60% 45% at 18% 72%, rgba(71, 189, 104, 0.14), transparent 55%),
+    radial-gradient(ellipse 80% 60% at 50% 100%, rgba(20, 40, 55, 0.9), transparent 50%),
+    linear-gradient(165deg, #050a0f 0%, #0c1822 35%, #122738 70%, #0a1520 100%);
+}
+.xhero__stage {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+.xhero__media {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: var(--xw);
+  height: var(--xh);
+  max-width: 94vw;
+  max-height: 86dvh;
+  border-radius: var(--xr);
+  overflow: hidden;
+  box-shadow:
+    0 50px 120px -30px rgba(0, 0, 0, 0.75),
+    0 0 0 1px rgba(255, 255, 255, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  will-change: width, height;
+}
+.xhero__media-img {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.xhero__media-video-el {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;        /* native <video> covers the window cleanly */
+  object-position: center;
+  pointer-events: none;     /* let scroll drive the hero through the video */
+}
+.xhero__media-veil {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  opacity: var(--xveil);
+  background: linear-gradient(180deg, rgba(5, 12, 18, 0.30), rgba(5, 12, 18, 0.60));
+}
+.xhero__titles {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.1rem;
+  opacity: var(--xtitle);
+  pointer-events: none;
+}
+.xhero__word {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.02;
+  font-size: clamp(2.4rem, 8vw, 5rem);
+  color: #ffffff;
+  text-shadow: 0 2px 40px rgba(0, 0, 0, 0.55), 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+.xhero__word--first { transform: translateX(calc(var(--xshift) * -1)); }
+.xhero__word--rest { transform: translateX(var(--xshift)); }
+.xhero__meta {
+  position: absolute;
+  left: 50%;
+  bottom: 8%;
+  transform: translateX(-50%);
+  z-index: 2;
+  text-align: center;
+  opacity: var(--xmeta);
+}
+.xhero__eyebrow {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.28em;
+  font-size: 0.72rem;
+  color: rgba(180, 220, 200, 0.9);
+  margin: 0 0 0.5rem;
+}
+.xhero__hint {
+  margin: 0;
+  font-weight: 600;
+  color: rgba(219, 231, 255, 0.85);
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+  justify-content: center;
+}
+.xhero__hint span { animation: xheroBounce 1.6s ease-in-out infinite; }
+@keyframes xheroBounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(4px); } }
+
+.xhero__panel {
+  position: absolute;
+  z-index: 3;
+  left: 50%;
+  top: 50%;
+  width: min(100% - 2rem, 640px);
+  transform: translate(-50%, -50%) translateY(calc((1 - var(--xpanel)) * 26px));
+  opacity: var(--xpanel);
+  pointer-events: none;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: clamp(1.6rem, 4vw, 2.6rem);
+  border-radius: 28px;
+  background: linear-gradient(155deg, rgba(18, 39, 56, 0.74) 0%, rgba(10, 21, 32, 0.64) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow:
+    0 44px 100px -32px rgba(0, 0, 0, 0.72),
+    0 0 0 1px rgba(71, 189, 104, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(18px) saturate(1.35);
+  -webkit-backdrop-filter: blur(18px) saturate(1.35);
+}
+.xhero.xhero--revealed .xhero__panel { pointer-events: auto; }
+.xhero__panel .logo--hero { margin: 0 0 1.15rem; }
+.xhero__panel-title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin: 0 0 0.65rem;
+  color: #fff;
+}
+.xhero__panel-support {
+  color: rgba(219, 231, 255, 0.85);
+  max-width: 38rem;
+  margin: 0 0 1.4rem;
+}
+.xhero__actions { justify-content: center; }
+
+/* Fallback: no JS / reduced motion -> a calm static hero (media expanded,
+   split title collapsed, panel shown), no long scroll track. */
+.xhero.xhero--static { height: 100dvh; }
+.xhero.xhero--static .xhero__media { width: 94vw; height: 82dvh; border-radius: 20px; }
+.xhero.xhero--static .xhero__media-veil { opacity: 0.4; }
+.xhero.xhero--static .xhero__titles,
+.xhero.xhero--static .xhero__meta,
+.xhero.xhero--static .xhero__bg { opacity: 0; }
+.xhero.xhero--static .xhero__panel { opacity: 1; transform: translate(-50%, -50%); pointer-events: auto; }
+
+@media (max-width: 767px) {
+  .xhero__word { font-size: clamp(2rem, 11vw, 3.2rem); }
+}
+
+/* ==================================================================
+   MARQUEE  (vanilla port of marquee.tsx)
+   JS (main.js) fills .marquee__track with enough duplicated sets for a
+   seamless -50% loop and sets --duration for a constant speed.
+   ================================================================== */
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  padding: 0.35rem 0;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent);
+}
+.marquee__track {
+  display: flex;
+  flex-wrap: nowrap;
+  width: max-content;
+  will-change: transform;
+  animation: marquee var(--duration, 32s) linear infinite;
+}
+.marquee[data-pause-on-hover] .marquee__track:hover { animation-play-state: paused; }
+.marquee .proof__item {
+  flex: 0 0 auto;
+  margin: 0 0.55rem;
+}
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee {
+    overflow-x: auto;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+  .marquee__track {
+    animation: none;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+}
+
+/* ==================================================================
+   INTERACTIVE TIMELINE  (vanilla port of 3d-interactive-timeline.tsx)
+   Glass-safe: no transforms on the frosted cards (this repo's backdrop-
+   filter breaks under transform); hover uses elevation instead of tilt.
+   Scroll-reveal reuses the page's .reveal / IntersectionObserver.
+   ================================================================== */
+.tl-wrap { position: relative; margin-top: 2.5rem; }
+.tl__orbs { position: absolute; inset: -6% 0; z-index: 0; overflow: hidden; pointer-events: none; }
+.tl__orbs span {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(26px);
+  opacity: 0.18;
+  will-change: transform;
+}
+.tl__orbs span:nth-child(1) { width: 180px; height: 180px; left: 6%; top: 8%; background: radial-gradient(circle, #47bd68, transparent 70%); animation: tlFloat 22s ease-in-out infinite; }
+.tl__orbs span:nth-child(2) { width: 140px; height: 140px; right: 8%; top: 26%; background: radial-gradient(circle, #1d3347, transparent 70%); animation: tlFloat 26s ease-in-out infinite reverse; }
+.tl__orbs span:nth-child(3) { width: 220px; height: 220px; left: 12%; bottom: 6%; background: radial-gradient(circle, #6dff96, transparent 70%); animation: tlFloat 30s ease-in-out infinite; }
+.tl__orbs span:nth-child(4) { width: 120px; height: 120px; right: 14%; bottom: 18%; background: radial-gradient(circle, #47bd68, transparent 70%); animation: tlFloat 24s ease-in-out infinite reverse; }
+@keyframes tlFloat {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(24px, -18px) scale(1.12); }
+  66% { transform: translate(-18px, 20px) scale(0.95); }
+}
+
+.tl {
+  position: relative;
+  z-index: 1;
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 900px;
+}
+.tl::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  bottom: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  border-radius: 4px;
+  background: rgba(29, 51, 71, 0.14);
+}
+/* Bright green fill that grows with scroll progress (set by main.js) */
+.tl__progress {
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 0;
+  border-radius: 4px;
+  background: linear-gradient(180deg, #6dff96, #47bd68);
+  box-shadow: 0 0 20px rgba(71, 189, 104, 0.7);
+  z-index: 1;
+  will-change: height;
+}
+/* Glowing "comet head" at the tip of the fill — makes the growth obvious */
+.tl__progress::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -7px;
+  transform: translateX(-50%);
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #e6fff0, #47bd68 58%, transparent 72%);
+  box-shadow: 0 0 18px 5px rgba(71, 189, 104, 0.8);
+}
+.tl__progress[style*="height: 0"]::after,
+.tl__progress[style*="height:0"]::after { opacity: 0; }
+.tl__item {
+  position: relative;
+  width: 50%;
+  box-sizing: border-box;
+  padding: 0 2.75rem 2.6rem;
+}
+.tl__item--left { left: 0; text-align: right; }
+.tl__item--right { left: 50%; text-align: left; }
+
+.tl__node {
+  position: absolute;
+  top: 2px;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  color: #fff;
+  background: linear-gradient(160deg, #64d888, #47bd68);
+  border: 4px solid #eaf1f6;
+  box-shadow: 0 8px 20px rgba(29, 51, 71, 0.25), 0 0 0 1px rgba(71, 189, 104, 0.3);
+  z-index: 2;
+  transform: scale(0.62);
+  opacity: 0.4;
+  filter: saturate(0.55);
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.35s ease, opacity 0.35s ease, filter 0.35s ease;
+}
+.tl__item--left .tl__node { right: -23px; }
+.tl__item--right .tl__node { left: -23px; }
+/* Node lights up once the scroll progress line reaches it (set by main.js) */
+.tl__node.is-active {
+  transform: scale(1);
+  opacity: 1;
+  filter: none;
+  box-shadow: 0 10px 24px rgba(29, 51, 71, 0.3), 0 0 30px rgba(71, 189, 104, 0.8), 0 0 0 6px rgba(71, 189, 104, 0.14);
+}
+.tl__item:hover .tl__node { transform: scale(1.14); opacity: 1; box-shadow: 0 10px 26px rgba(29, 51, 71, 0.3), 0 0 24px rgba(71, 189, 104, 0.6); }
+
+.tl__card {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 360px;
+  text-align: left;
+  padding: 1.25rem 1.35rem 1.45rem;
+  border-radius: 20px;
+  overflow: hidden;
+  background: linear-gradient(155deg, rgba(255, 255, 255, 0.62) 0%, rgba(255, 255, 255, 0.34) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 0 24px 50px -24px rgba(20, 36, 51, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(22px) saturate(1.3);
+  -webkit-backdrop-filter: blur(22px) saturate(1.3);
+  transition: box-shadow 0.35s ease, border-color 0.35s ease;
+}
+.tl__item--left .tl__card { margin-left: auto; }
+.tl__card:hover {
+  box-shadow: 0 32px 62px -24px rgba(20, 36, 51, 0.42), 0 0 0 1px rgba(71, 189, 104, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.95);
+  border-color: rgba(71, 189, 104, 0.42);
+}
+.tl__card-head { display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; margin-bottom: 0.5rem; }
+.tl__step {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #3a9a55;
+}
+.tl__dot { width: 8px; height: 8px; border-radius: 50%; background: #47bd68; box-shadow: 0 0 0 rgba(71, 189, 104, 0.5); animation: tlDot 2s ease-in-out infinite; }
+@keyframes tlDot { 0%, 100% { transform: scale(1); opacity: 0.7; } 50% { transform: scale(1.4); opacity: 1; } }
+.tl__icon { width: 34px; height: 34px; object-fit: contain; flex: 0 0 auto; }
+.tl__title { font-family: "Poppins", sans-serif; font-size: 1.4rem; font-weight: 700; color: var(--navy); margin: 0.1rem 0 0.4rem; }
+.tl__desc { color: var(--ink-soft); font-size: 0.96rem; line-height: 1.55; margin: 0; }
+.tl__bar { position: absolute; left: 0; bottom: 0; height: 3px; width: 0; background: linear-gradient(90deg, #47bd68, #6dff96); transition: width 0.5s ease; }
+.tl__card:hover .tl__bar { width: 100%; }
+
+/* Scroll-reveal: cards slide in from their side, then settle to transform:none
+   so the frosted glass is intact at rest. (.tl--anim added by main.js; without
+   JS the cards are simply visible.) */
+@keyframes tlSlideL { from { opacity: 0; transform: translateX(80px); } to { opacity: 1; transform: none; } }
+@keyframes tlSlideR { from { opacity: 0; transform: translateX(-80px); } to { opacity: 1; transform: none; } }
+.tl.tl--anim .tl__card { opacity: 0; }
+.tl.tl--anim .tl__item.is-in .tl__card { animation: tlSlideL 0.75s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+.tl.tl--anim .tl__item--right.is-in .tl__card { animation-name: tlSlideR; }
+
+@media (max-width: 767px) {
+  .tl { max-width: 520px; }
+  .tl::before { left: 23px; transform: none; }
+  .tl__progress { left: 23px; transform: none; }
+  .tl__item { width: 100%; left: 0 !important; text-align: left; padding: 0 0 2rem 60px; }
+  .tl__item .tl__node { left: 0 !important; right: auto !important; }
+  .tl__item--left .tl__card,
+  .tl__card { margin-left: 0; max-width: none; }
+  /* Mobile cards slide up (from below) rather than sideways */
+  .tl.tl--anim .tl__item.is-in .tl__card,
+  .tl.tl--anim .tl__item--right.is-in .tl__card { animation-name: tlSlideL; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tl__progress { transition: none; }
+  .tl.tl--anim .tl__card { opacity: 1; animation: none; }
+}
+
 /* ——— Awards (Option B mist-split + Mobile B1 stacked) ——— */
 .awards {
   position: relative;

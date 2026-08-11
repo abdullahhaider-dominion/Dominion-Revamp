@@ -16,7 +16,7 @@
     />
     <link rel="icon" type="image/png" href="./assets/logo/logo-isotype-app.png" />
     <link rel="apple-touch-icon" href="./assets/logo/logo-isotype-app.png" />
-<link rel="stylesheet" href="./styles.css?v=45" />
+    <link rel="stylesheet" href="./styles.css?v=56" />
   </head>
   <body>
     <header class="site-chrome" id="site-chrome">
@@ -32,15 +32,11 @@
             />
           </a>
           <nav class="nav__links" aria-label="Primary">
-            <a href="#markets">Trade</a>
-            <a href="#quotes">Quotes</a>
-            <a href="#funding">Funding</a>
-            <a href="#sessions">Sessions</a>
+            <a href="#markets">Markets</a>
             <a href="#accounts">Accounts</a>
             <a href="#platforms">Platforms</a>
-            <a href="#why-dominion">Why us</a>
-            <a href="#trade-better">Tools</a>
-            <a href="#ecosystem">More</a>
+            <a href="#dashboard">Tools</a>
+            <a href="#copy-trading">Copy Trading</a>
             <a href="#trust">About</a>
           </nav>
           <div class="nav__cta">
@@ -63,96 +59,83 @@
     </header>
 
     <main id="top">
-      <section class="hero" id="hero">
-        <div class="hero__stage" aria-hidden="true">
-          <div class="hero__vignette"></div>
-          <div class="hero__aurora"></div>
-          <div class="hero__mist hero__mist--left"></div>
-          <div class="hero__mist hero__mist--right"></div>
-          <div class="hero__mist hero__mist--trail"></div>
-          <div class="hero__orbs"></div>
-          <div class="hero__floor"></div>
-          <svg class="hero__candles" viewBox="0 0 520 360" fill="none">
-            <defs>
-              <filter id="candleGlow" x="-40%" y="-40%" width="180%" height="180%">
-                <feGaussianBlur stdDeviation="6" result="b" />
-                <feMerge>
-                  <feMergeNode in="b" />
-                  <feMergeNode in="SourceGraphic" />
-                </feMerge>
-              </filter>
-              <linearGradient id="candleFill" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stop-color="#6dff96" stop-opacity="0.95" />
-                <stop offset="100%" stop-color="#47BD68" stop-opacity="0.55" />
-              </linearGradient>
-            </defs>
-            <g filter="url(#candleGlow)" opacity="0.92">
-              <path d="M48 220 v40" stroke="#47BD68" stroke-width="2" />
-              <rect x="40" y="200" width="16" height="48" rx="2" fill="url(#candleFill)" />
-              <path d="M88 160 v90" stroke="#47BD68" stroke-width="2" />
-              <rect x="80" y="170" width="16" height="55" rx="2" fill="url(#candleFill)" />
-              <path d="M128 130 v100" stroke="#47BD68" stroke-width="2" />
-              <rect x="120" y="145" width="16" height="62" rx="2" fill="url(#candleFill)" />
-              <path d="M168 190 v70" stroke="#3a9a55" stroke-width="2" />
-              <rect x="160" y="205" width="16" height="40" rx="2" fill="#2f6f48" opacity="0.7" />
-              <path d="M208 100 v130" stroke="#47BD68" stroke-width="2" />
-              <rect x="200" y="115" width="16" height="85" rx="2" fill="url(#candleFill)" />
-              <path d="M248 80 v140" stroke="#6dff96" stroke-width="2" />
-              <rect x="240" y="95" width="16" height="95" rx="2" fill="url(#candleFill)" />
-              <path d="M288 140 v110" stroke="#47BD68" stroke-width="2" />
-              <rect x="280" y="155" width="16" height="70" rx="2" fill="url(#candleFill)" />
-              <path d="M328 60 v160" stroke="#6dff96" stroke-width="2.2" />
-              <rect x="320" y="75" width="16" height="110" rx="2" fill="url(#candleFill)" />
-              <path d="M368 110 v130" stroke="#47BD68" stroke-width="2" />
-              <rect x="360" y="125" width="16" height="88" rx="2" fill="url(#candleFill)" />
-              <path d="M408 45 v170" stroke="#8dffad" stroke-width="2.4" />
-              <rect x="400" y="55" width="16" height="130" rx="2" fill="url(#candleFill)" />
-              <path d="M448 90 v140" stroke="#47BD68" stroke-width="2" />
-              <rect x="440" y="105" width="16" height="100" rx="2" fill="url(#candleFill)" />
-              <path
-                d="M36 250 C90 235 130 200 170 190 C220 178 250 140 300 125 C350 110 390 70 470 40"
-                stroke="#47BD68"
-                stroke-width="3"
-                stroke-linecap="round"
-                opacity="0.55"
+      <!-- Scroll-Expansion Hero — vanilla port of scroll-expansion-hero.tsx.
+           A sticky scroll track drives progress: the media window expands, the
+           split title slides apart, then the brand CTA panel reveals. -->
+      <section class="xhero" id="hero" data-xhero>
+        <div class="xhero__sticky">
+          <div class="xhero__bg" aria-hidden="true"></div>
+          <div class="xhero__stage">
+            <div class="xhero__media" data-xhero-media>
+              <img
+                class="xhero__media-img"
+                src="./assets/hero/hero-media.png"
+                alt=""
+                width="1280"
+                height="720"
+                fetchpriority="high"
               />
-            </g>
-          </svg>
-        </div>
+              <!-- Self-hosted background video (muted, looping). If the file is
+                   missing, or under reduced-motion, the poster / image below
+                   shows instead. Place your file at assets/hero/hero.mp4. -->
+              <video
+                class="xhero__media-video-el"
+                data-xhero-video
+                src="./assets/hero/hero.mp4"
+                poster="./assets/hero/hero-media.png"
+                muted
+                loop
+                playsinline
+                preload="metadata"
+                aria-hidden="true"
+              ></video>
+              <div class="xhero__media-veil" aria-hidden="true"></div>
+            </div>
 
-        <div class="hero__content">
-          <div class="hero__glass">
-            <div class="hero__glass-shine" aria-hidden="true"></div>
-            <div class="hero__glass-edge" aria-hidden="true"></div>
-            <img
-              class="logo logo--hero"
-              src="./assets/logo/logo-horizontal-reverse.svg"
-              alt="Dominion Markets"
-              width="300"
-              height="50"
-            />
-            <h1 class="hero__title">Your Trading Sanctuary</h1>
-            <p class="hero__support">
-              Trade the world’s markets with clarity, confidence, and peace of mind.
-            </p>
-            <div class="hero__actions">
-              <a class="btn btn--primary btn--glow" href="#final-cta">
-                Open Account
-                <span aria-hidden="true">→</span>
-              </a>
-              <a class="btn btn--ghost" href="#platforms">Try Demo</a>
+            <div class="xhero__titles" data-xhero-titles aria-hidden="true">
+              <span class="xhero__word xhero__word--first">Your</span>
+              <span class="xhero__word xhero__word--rest">Trading Sanctuary</span>
+            </div>
+
+            <div class="xhero__meta" data-xhero-meta>
+              <p class="xhero__eyebrow">Dominion Markets</p>
+              <p class="xhero__hint">Scroll to enter <span aria-hidden="true">↓</span></p>
+            </div>
+
+            <div class="xhero__panel" data-xhero-panel>
+              <img
+                class="logo logo--hero"
+                src="./assets/logo/logo-horizontal-reverse.svg"
+                alt="Dominion Markets"
+                width="300"
+                height="50"
+              />
+              <h1 class="xhero__panel-title">Your Trading Sanctuary</h1>
+              <p class="xhero__panel-support">
+                Trade the world’s markets with clarity, confidence, and peace of mind.
+              </p>
+              <div class="hero__actions xhero__actions">
+                <a class="btn btn--primary btn--glow" href="#final-cta">
+                  Open Account
+                  <span aria-hidden="true">→</span>
+                </a>
+                <a class="btn btn--ghost" href="#platforms">Try Demo</a>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       <section class="proof" id="proof">
-        <div class="container proof__row reveal">
-          <div class="proof__item"><span>50,000+</span> clients</div>
-          <div class="proof__item"><span>200+</span> instruments</div>
-          <div class="proof__item"><span>~30 ms</span> execution</div>
-          <div class="proof__item"><span>500:1</span> max leverage</div>
-          <div class="proof__item"><span>FSC</span> Mauritius</div>
+        <!-- Marquee (vanilla port of marquee.tsx) — current proof stats, looped -->
+        <div class="marquee" data-marquee data-pause-on-hover aria-label="Key facts">
+          <div class="marquee__track">
+            <div class="proof__item"><span>50,000+</span> clients</div>
+            <div class="proof__item"><span>200+</span> instruments</div>
+            <div class="proof__item"><span>~30 ms</span> execution</div>
+            <div class="proof__item"><span>500:1</span> max leverage</div>
+            <div class="proof__item"><span>FSC</span> Mauritius</div>
+          </div>
         </div>
       </section>
 
@@ -1093,48 +1076,53 @@
             <h2 class="how-start__title" id="how-start-title">How to Start?</h2>
           </header>
 
-          <div class="how-start__grid">
-            <article class="how-start__card reveal">
-              <div class="how-start__card-top">
-                <h3>Register</h3>
-                <img
-                  class="how-start__icon"
-                  src="./assets/how-start/register.png"
-                  alt=""
-                  width="56"
-                  height="56"
-                />
-              </div>
-              <p>Select your preferred account type and swiftly complete our secure registration form.</p>
-            </article>
-
-            <article class="how-start__card reveal reveal-delay-1">
-              <div class="how-start__card-top">
-                <h3>Fund</h3>
-                <img
-                  class="how-start__icon"
-                  src="./assets/how-start/funding.png"
-                  alt=""
-                  width="56"
-                  height="56"
-                />
-              </div>
-              <p>Easily deposit funds into your trading account through diverse payment options.</p>
-            </article>
-
-            <article class="how-start__card reveal reveal-delay-2">
-              <div class="how-start__card-top">
-                <h3>Trade</h3>
-                <img
-                  class="how-start__icon"
-                  src="./assets/how-start/trade.png"
-                  alt=""
-                  width="56"
-                  height="56"
-                />
-              </div>
-              <p>Start trading on your live account.</p>
-            </article>
+          <!-- Interactive Timeline (vanilla port of 3d-interactive-timeline.tsx),
+               using the current How-to-Start steps. Cards are liquid glass, so
+               (per this repo's backdrop-filter note) no transforms are applied to
+               them; the 3D mouse-tilt is adapted to a glass-safe hover lift. -->
+          <div class="tl-wrap">
+            <div class="tl__orbs" aria-hidden="true">
+              <span></span><span></span><span></span><span></span>
+            </div>
+            <ol class="tl" role="list">
+              <span class="tl__progress" aria-hidden="true"></span>
+              <li class="tl__item tl__item--left">
+                <span class="tl__node" aria-hidden="true">1</span>
+                <article class="tl__card">
+                  <div class="tl__card-head">
+                    <span class="tl__step"><span class="tl__dot" aria-hidden="true"></span>Step 01</span>
+                    <img class="tl__icon" src="./assets/how-start/register.png" alt="" width="34" height="34" />
+                  </div>
+                  <h3 class="tl__title">Register</h3>
+                  <p class="tl__desc">Select your preferred account type and swiftly complete our secure registration form.</p>
+                  <span class="tl__bar" aria-hidden="true"></span>
+                </article>
+              </li>
+              <li class="tl__item tl__item--right">
+                <span class="tl__node" aria-hidden="true">2</span>
+                <article class="tl__card">
+                  <div class="tl__card-head">
+                    <span class="tl__step"><span class="tl__dot" aria-hidden="true"></span>Step 02</span>
+                    <img class="tl__icon" src="./assets/how-start/funding.png" alt="" width="34" height="34" />
+                  </div>
+                  <h3 class="tl__title">Fund</h3>
+                  <p class="tl__desc">Easily deposit funds into your trading account through diverse payment options.</p>
+                  <span class="tl__bar" aria-hidden="true"></span>
+                </article>
+              </li>
+              <li class="tl__item tl__item--left">
+                <span class="tl__node" aria-hidden="true">3</span>
+                <article class="tl__card">
+                  <div class="tl__card-head">
+                    <span class="tl__step"><span class="tl__dot" aria-hidden="true"></span>Step 03</span>
+                    <img class="tl__icon" src="./assets/how-start/trade.png" alt="" width="34" height="34" />
+                  </div>
+                  <h3 class="tl__title">Trade</h3>
+                  <p class="tl__desc">Start trading on your live account.</p>
+                  <span class="tl__bar" aria-hidden="true"></span>
+                </article>
+              </li>
+            </ol>
           </div>
 
           <div class="how-start__ctas reveal">
@@ -2273,7 +2261,7 @@
               <h3 id="footer-education">Education</h3>
             </div>
             <ul class="site-footer__links">
-              <li><a href="#trade-better">Market Analysis<span aria-hidden="true">›</span></a></li>
+              <li><a href="#markets">Market Analysis<span aria-hidden="true">›</span></a></li>
               <li><a href="#sessions">Best times to trade<span aria-hidden="true">›</span></a></li>
               <li><a href="#markets">Pairs to trade<span aria-hidden="true">›</span></a></li>
               <li><a href="#blogs">Blogs<span aria-hidden="true">›</span></a></li>
@@ -2393,6 +2381,6 @@
     </footer>
 
 
-    <script src="./main.js"></script>
+    <script src="./main.js?v=54"></script>
   </body>
 </html>
