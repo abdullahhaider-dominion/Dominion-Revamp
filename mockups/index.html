@@ -16,7 +16,7 @@
     />
     <link rel="icon" type="image/png" href="./assets/logo/logo-isotype-app.png" />
     <link rel="apple-touch-icon" href="./assets/logo/logo-isotype-app.png" />
-<link rel="stylesheet" href="./styles.css?v=45" />
+    <link rel="stylesheet" href="./styles.css?v=141" />
   </head>
   <body>
     <header class="site-chrome" id="site-chrome">
@@ -32,140 +32,127 @@
             />
           </a>
           <nav class="nav__links" aria-label="Primary">
-            <a href="#markets">Trade</a>
-            <a href="#quotes">Quotes</a>
-            <a href="#funding">Funding</a>
-            <a href="#sessions">Sessions</a>
+            <a href="#markets">Markets</a>
             <a href="#accounts">Accounts</a>
             <a href="#platforms">Platforms</a>
-            <a href="#why-dominion">Why us</a>
-            <a href="#trade-better">Tools</a>
-            <a href="#ecosystem">More</a>
+            <a href="#dashboard">Tools</a>
+            <a href="#copy-trading">Copy Trading</a>
             <a href="#trust">About</a>
           </nav>
           <div class="nav__cta">
-            <a class="btn btn--ghost" href="#final-cta" style="min-height: 42px; padding: 0.55rem 1.1rem"
-              >Log in</a
-            >
-            <a
-              class="btn btn--primary"
-              href="#final-cta"
-              style="min-height: 42px; padding: 0.55rem 1.1rem"
-              >Open Account</a
-            >
+            <a class="btn btn--ghost" href="#final-cta">Log in</a>
+            <a class="btn btn--primary" href="#final-cta">Open Account</a>
           </div>
-          <button class="nav__menu" type="button" aria-label="Menu">☰</button>
+          <button
+            class="nav__menu"
+            id="nav-menu-btn"
+            type="button"
+            aria-label="Open menu"
+            aria-expanded="false"
+            aria-controls="nav-drawer"
+          >
+            <span class="nav__menu-icon" aria-hidden="true"></span>
+          </button>
         </div>
       </div>
-      <div class="mock-banner">
-        Hi-fi UI mockup · Floating Sanctuary · not production
+      <div class="nav-drawer" id="nav-drawer" hidden>
+        <nav class="nav-drawer__links" aria-label="Mobile">
+          <a href="#markets">Markets</a>
+          <a href="#accounts">Accounts</a>
+          <a href="#platforms">Platforms</a>
+          <a href="#dashboard">Tools</a>
+          <a href="#copy-trading">Copy Trading</a>
+          <a href="#trust">About</a>
+        </nav>
+        <div class="nav-drawer__cta">
+          <a class="btn btn--ghost" href="#final-cta">Log in</a>
+          <a class="btn btn--primary" href="#final-cta">Open Account</a>
+        </div>
       </div>
     </header>
 
     <main id="top">
-      <section class="hero" id="hero">
-        <div class="hero__stage" aria-hidden="true">
-          <div class="hero__vignette"></div>
-          <div class="hero__aurora"></div>
-          <div class="hero__mist hero__mist--left"></div>
-          <div class="hero__mist hero__mist--right"></div>
-          <div class="hero__mist hero__mist--trail"></div>
-          <div class="hero__orbs"></div>
-          <div class="hero__floor"></div>
-          <svg class="hero__candles" viewBox="0 0 520 360" fill="none">
-            <defs>
-              <filter id="candleGlow" x="-40%" y="-40%" width="180%" height="180%">
-                <feGaussianBlur stdDeviation="6" result="b" />
-                <feMerge>
-                  <feMergeNode in="b" />
-                  <feMergeNode in="SourceGraphic" />
-                </feMerge>
-              </filter>
-              <linearGradient id="candleFill" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stop-color="#6dff96" stop-opacity="0.95" />
-                <stop offset="100%" stop-color="#47BD68" stop-opacity="0.55" />
-              </linearGradient>
-            </defs>
-            <g filter="url(#candleGlow)" opacity="0.92">
-              <path d="M48 220 v40" stroke="#47BD68" stroke-width="2" />
-              <rect x="40" y="200" width="16" height="48" rx="2" fill="url(#candleFill)" />
-              <path d="M88 160 v90" stroke="#47BD68" stroke-width="2" />
-              <rect x="80" y="170" width="16" height="55" rx="2" fill="url(#candleFill)" />
-              <path d="M128 130 v100" stroke="#47BD68" stroke-width="2" />
-              <rect x="120" y="145" width="16" height="62" rx="2" fill="url(#candleFill)" />
-              <path d="M168 190 v70" stroke="#3a9a55" stroke-width="2" />
-              <rect x="160" y="205" width="16" height="40" rx="2" fill="#2f6f48" opacity="0.7" />
-              <path d="M208 100 v130" stroke="#47BD68" stroke-width="2" />
-              <rect x="200" y="115" width="16" height="85" rx="2" fill="url(#candleFill)" />
-              <path d="M248 80 v140" stroke="#6dff96" stroke-width="2" />
-              <rect x="240" y="95" width="16" height="95" rx="2" fill="url(#candleFill)" />
-              <path d="M288 140 v110" stroke="#47BD68" stroke-width="2" />
-              <rect x="280" y="155" width="16" height="70" rx="2" fill="url(#candleFill)" />
-              <path d="M328 60 v160" stroke="#6dff96" stroke-width="2.2" />
-              <rect x="320" y="75" width="16" height="110" rx="2" fill="url(#candleFill)" />
-              <path d="M368 110 v130" stroke="#47BD68" stroke-width="2" />
-              <rect x="360" y="125" width="16" height="88" rx="2" fill="url(#candleFill)" />
-              <path d="M408 45 v170" stroke="#8dffad" stroke-width="2.4" />
-              <rect x="400" y="55" width="16" height="130" rx="2" fill="url(#candleFill)" />
-              <path d="M448 90 v140" stroke="#47BD68" stroke-width="2" />
-              <rect x="440" y="105" width="16" height="100" rx="2" fill="url(#candleFill)" />
-              <path
-                d="M36 250 C90 235 130 200 170 190 C220 178 250 140 300 125 C350 110 390 70 470 40"
-                stroke="#47BD68"
-                stroke-width="3"
-                stroke-linecap="round"
-                opacity="0.55"
+      <!-- Scroll-Expansion Hero — vanilla port of scroll-expansion-hero.tsx.
+           A sticky scroll track drives progress: the media window expands, the
+           split title slides apart, then the brand CTA panel reveals. -->
+      <section class="xhero" id="hero" data-xhero>
+        <div class="xhero__sticky">
+          <div class="xhero__bg" aria-hidden="true"></div>
+          <div class="xhero__stage">
+            <div class="xhero__media" data-xhero-media>
+              <img
+                class="xhero__media-img"
+                src="./assets/hero/hero-media.png"
+                alt=""
+                width="1280"
+                height="720"
+                fetchpriority="high"
               />
-            </g>
-          </svg>
-        </div>
+              <!-- Self-hosted background video (muted, looping). If the file is
+                   missing, or under reduced-motion, the poster / image below
+                   shows instead. Place your file at assets/hero/hero.mp4. -->
+              <video
+                class="xhero__media-video-el"
+                data-xhero-video
+                src="./assets/hero/hero.mp4"
+                poster="./assets/hero/hero-media.png"
+                muted
+                loop
+                playsinline
+                preload="metadata"
+                aria-hidden="true"
+              ></video>
+              <div class="xhero__media-veil" aria-hidden="true"></div>
+            </div>
 
-        <div class="hero__content">
-          <div class="hero__glass">
-            <div class="hero__glass-shine" aria-hidden="true"></div>
-            <div class="hero__glass-edge" aria-hidden="true"></div>
-            <img
-              class="logo logo--hero"
-              src="./assets/logo/logo-horizontal-reverse.svg"
-              alt="Dominion Markets"
-              width="300"
-              height="50"
-            />
-            <h1 class="hero__title">Your Trading Sanctuary</h1>
-            <p class="hero__support">
-              Trade the world’s markets with clarity, confidence, and peace of mind.
-            </p>
-            <div class="hero__actions">
-              <a class="btn btn--primary btn--glow" href="#final-cta">
-                Open Account
-                <span aria-hidden="true">→</span>
-              </a>
-              <a class="btn btn--ghost" href="#platforms">Try Demo</a>
+            <div class="xhero__titles" data-xhero-titles aria-hidden="true">
+              <span class="xhero__word xhero__word--first">Your</span>
+              <span class="xhero__word xhero__word--rest">Trading Sanctuary</span>
+            </div>
+
+            <div class="xhero__meta" data-xhero-meta>
+              <p class="xhero__eyebrow">Dominion Markets</p>
+              <p class="xhero__hint">Scroll to enter <span aria-hidden="true">↓</span></p>
+            </div>
+
+            <div class="xhero__panel" data-xhero-panel>
+              <img
+                class="logo logo--hero"
+                src="./assets/logo/logo-horizontal-reverse.svg"
+                alt="Dominion Markets"
+                width="300"
+                height="50"
+              />
+              <h1 class="xhero__panel-title">Your Trading Sanctuary</h1>
+              <p class="xhero__panel-support">
+                Trade the world’s markets with clarity, confidence, and peace of mind.
+              </p>
+              <div class="hero__actions xhero__actions">
+                <a class="btn btn--primary btn--glow" href="#final-cta">
+                  Open Account
+                  <span aria-hidden="true">→</span>
+                </a>
+                <a class="btn btn--ghost" href="#platforms">Try Demo</a>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       <section class="proof" id="proof">
-        <div class="container proof__row reveal">
-          <div class="proof__item"><span>50,000+</span> clients</div>
-          <div class="proof__item"><span>200+</span> instruments</div>
-          <div class="proof__item"><span>~30 ms</span> execution</div>
-          <div class="proof__item"><span>500:1</span> max leverage</div>
-          <div class="proof__item"><span>FSC</span> Mauritius</div>
+        <!-- Marquee (vanilla port of marquee.tsx) — current proof stats, looped -->
+        <div class="marquee" data-marquee data-pause-on-hover aria-label="Key facts">
+          <div class="marquee__track">
+            <div class="proof__item"><span>50,000+</span> clients</div>
+            <div class="proof__item"><span>200+</span> instruments</div>
+            <div class="proof__item"><span>~30 ms</span> execution</div>
+            <div class="proof__item"><span>500:1</span> max leverage</div>
+            <div class="proof__item"><span>FSC</span> Mauritius</div>
+          </div>
         </div>
       </section>
 
       <section class="awards" id="awards" aria-labelledby="awards-title">
-        <div class="awards__atmosphere" aria-hidden="true">
-          <img
-            class="awards__bg"
-            src="./assets/awards/mist-bg.jpg"
-            alt=""
-            width="1920"
-            height="1080"
-          />
-        </div>
         <div class="container awards__inner">
           <div class="awards__layout">
             <header class="awards__copy reveal">
@@ -177,8 +164,8 @@
               <a class="awards__link" href="#trust">View credentials →</a>
             </header>
 
-            <div class="awards__showcase">
-              <article class="award-seal award-seal--feature reveal">
+            <div class="awards__showcase" data-awards-track role="list">
+              <article class="award-seal award-seal--feature reveal" role="listitem">
                 <img
                   class="award-seal__wreath"
                   src="./assets/awards/laurel-wreath.svg"
@@ -194,7 +181,7 @@
                 </div>
               </article>
 
-              <div class="awards__grid" role="list">
+              <div class="awards__grid">
                 <article class="award-seal reveal reveal-delay-1" role="listitem">
                   <img
                     class="award-seal__wreath"
@@ -259,6 +246,14 @@
                   </div>
                 </article>
               </div>
+            </div>
+
+            <div class="awards__dots" data-awards-dots aria-label="Award slides">
+              <button type="button" class="awards__dot is-active" data-awards-dot="0" aria-label="Show award 1"></button>
+              <button type="button" class="awards__dot" data-awards-dot="1" aria-label="Show award 2"></button>
+              <button type="button" class="awards__dot" data-awards-dot="2" aria-label="Show award 3"></button>
+              <button type="button" class="awards__dot" data-awards-dot="3" aria-label="Show award 4"></button>
+              <button type="button" class="awards__dot" data-awards-dot="4" aria-label="Show award 5"></button>
             </div>
           </div>
         </div>
@@ -511,30 +506,210 @@
         </div>
       </section>
 
-      <section class="section section--mist" id="markets">
-        <div class="container split">
-          <div class="reveal">
-            <p class="eyebrow">Markets</p>
-            <h2 class="section-title">Access global markets</h2>
-            <p class="section-copy">
-              Trade Forex, Indices, Commodities, Stocks, and Cryptocurrencies with
-              transparent conditions and convenient funding methods.
-            </p>
-            <ul class="market-list">
-              <li><span class="dot"></span> Forex — majors, minors, exotics</li>
-              <li><span class="dot"></span> Indices — S&amp;P 500, NASDAQ, FTSE</li>
-              <li><span class="dot"></span> Commodities — Gold, Silver, Oil</li>
-              <li><span class="dot"></span> Stocks &amp; crypto CFDs</li>
-            </ul>
-          </div>
-          <div class="glass-panel reveal reveal-delay-2">
-            <div class="glass-panel__body chart-frame">
-              <header>
-                <h3>EUR/USD preview</h3>
-                <div class="up">+0.42%</div>
-              </header>
-              <canvas id="market-chart" class="chart-canvas" width="640" height="220"></canvas>
+      <section class="markets-platforms section section--mist" id="markets" aria-labelledby="markets-title">
+        <div class="container markets-platforms__inner">
+          <div class="markets-platforms__layout">
+            <div class="markets-platforms__copy reveal">
+              <p class="eyebrow">Trading Platforms</p>
+              <h2 class="section-title" id="markets-title">Global markets. Professional platforms.</h2>
+              <p class="section-copy">
+                Access Forex, indices, commodities, stocks and cryptocurrency CFDs through
+                MetaTrader 5 and cTrader—across desktop, web and mobile.
+              </p>
+
+              <div
+                class="markets-platforms__tabs"
+                role="tablist"
+                aria-label="Trading platforms"
+              >
+                <button
+                  class="markets-platforms__tab is-active"
+                  type="button"
+                  role="tab"
+                  id="markets-tab-mt5"
+                  aria-selected="true"
+                  aria-controls="markets-panel"
+                  data-platform="mt5"
+                >
+                  <img
+                    src="./assets/platforms/mt5-official.png"
+                    alt=""
+                    width="22"
+                    height="22"
+                  />
+                  MetaTrader 5
+                </button>
+                <button
+                  class="markets-platforms__tab"
+                  type="button"
+                  role="tab"
+                  id="markets-tab-ctrader"
+                  aria-selected="false"
+                  aria-controls="markets-panel"
+                  tabindex="-1"
+                  data-platform="ctrader"
+                >
+                  <img
+                    src="./assets/platforms/ctrader-official.png"
+                    alt=""
+                    width="22"
+                    height="22"
+                  />
+                  cTrader
+                </button>
+              </div>
+
+              <div
+                class="markets-platforms__chips marquee"
+                data-marquee
+                data-pause-on-hover
+                aria-label="Market categories"
+              >
+                <div class="marquee__track">
+                  <span class="markets-platforms__chip">Forex</span>
+                  <span class="markets-platforms__chip">Indices</span>
+                  <span class="markets-platforms__chip">Commodities</span>
+                  <span class="markets-platforms__chip">Stocks</span>
+                  <span class="markets-platforms__chip">Crypto CFDs</span>
+                </div>
+              </div>
+
+              <div class="markets-platforms__actions">
+                <a class="btn btn--primary" href="#platforms">Explore Platforms</a>
+                <a class="btn btn--ghost-dark" href="https://app.dominionmarkets.com/register">Open an Account</a>
+              </div>
             </div>
+
+            <div
+              class="markets-platforms__showcase reveal reveal-delay-2"
+              id="markets-panel"
+              role="tabpanel"
+              aria-labelledby="markets-tab-mt5"
+              data-platform-panel
+            >
+              <div class="markets-platforms__stage" data-platform-stage>
+                <article class="markets-platforms__desktop" aria-label="Illustrative desktop trading terminal preview">
+                  <div class="markets-platforms__desktop-chrome">
+                    <span class="markets-platforms__traffic" aria-hidden="true"></span>
+                    <p class="markets-platforms__desktop-title">
+                      <span data-platform-name>MetaTrader 5</span>
+                      <span class="markets-platforms__illustrative">Illustrative preview</span>
+                    </p>
+                    <span class="markets-platforms__badge">
+                      <img
+                        data-platform-badge
+                        src="./assets/platforms/mt5-official.png"
+                        alt=""
+                        width="18"
+                        height="18"
+                      />
+                      <span data-platform-badge-label>MT5</span>
+                    </span>
+                  </div>
+                  <div class="markets-platforms__desktop-body">
+                    <aside class="markets-platforms__watchlist" aria-hidden="true">
+                      <p class="markets-platforms__pane-label">Watchlist</p>
+                      <ul data-platform-watchlist>
+                        <li><span>EURUSD</span><span class="is-up">1.0847</span></li>
+                        <li><span>GBPUSD</span><span class="is-up">1.2634</span></li>
+                        <li><span>USDJPY</span><span class="is-down">149.84</span></li>
+                        <li><span>XAUUSD</span><span class="is-up">2342.1</span></li>
+                        <li><span>US500</span><span class="is-up">5284.5</span></li>
+                      </ul>
+                    </aside>
+                    <div class="markets-platforms__chart-pane">
+                      <header class="markets-platforms__chart-head">
+                        <div>
+                          <strong data-platform-symbol>EURUSD</strong>
+                          <span data-platform-symbol-meta>Euro / US Dollar · M15</span>
+                        </div>
+                        <div class="markets-platforms__chart-change is-up" data-platform-change>+0.18%</div>
+                      </header>
+                      <canvas
+                        id="market-chart"
+                        class="markets-platforms__chart"
+                        width="640"
+                        height="220"
+                        aria-label="Illustrative price chart"
+                      ></canvas>
+                      <p class="markets-platforms__chart-note">Indicative mock chart — not live market data.</p>
+                    </div>
+                    <aside class="markets-platforms__order" aria-hidden="true">
+                      <p class="markets-platforms__pane-label">Order</p>
+                      <div class="markets-platforms__order-row">
+                        <span>Volume</span>
+                        <span>0.10</span>
+                      </div>
+                      <div class="markets-platforms__order-row">
+                        <span>Type</span>
+                        <span data-platform-order-type>Market</span>
+                      </div>
+                      <div class="markets-platforms__order-actions">
+                        <span class="markets-platforms__sell">Sell</span>
+                        <span class="markets-platforms__buy">Buy</span>
+                      </div>
+                    </aside>
+                  </div>
+                </article>
+
+                <article class="markets-platforms__mobile" aria-label="Illustrative mobile trading app preview">
+                  <div class="markets-platforms__mobile-notch" aria-hidden="true"></div>
+                  <div class="markets-platforms__mobile-screen">
+                    <header class="markets-platforms__mobile-head">
+                      <strong data-platform-mobile-name>MT5</strong>
+                      <span class="is-up" data-platform-mobile-change>+0.18%</span>
+                    </header>
+                    <p class="markets-platforms__mobile-pair" data-platform-mobile-pair>EURUSD</p>
+                    <div class="markets-platforms__mobile-chart" aria-hidden="true">
+                      <svg viewBox="0 0 120 48" preserveAspectRatio="none">
+                        <path
+                          data-platform-mobile-path
+                          d="M2 36 C18 34 28 20 42 22 C56 24 64 12 78 14 C92 16 104 8 118 10"
+                          fill="none"
+                          stroke="#47BD68"
+                          stroke-width="2.2"
+                          stroke-linecap="round"
+                        />
+                      </svg>
+                    </div>
+                    <div class="markets-platforms__mobile-actions" aria-hidden="true">
+                      <span>Sell</span>
+                      <span>Buy</span>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <ul class="markets-platforms__benefits reveal">
+              <li>
+                <span class="markets-platforms__benefit-icon" aria-hidden="true">
+                  <img src="./assets/features/icons/sliders.svg" alt="" width="22" height="22" />
+                </span>
+                <div>
+                  <strong>Advanced Charting</strong>
+                  <span>Professional analysis and trading tools</span>
+                </div>
+              </li>
+              <li>
+                <span class="markets-platforms__benefit-icon" aria-hidden="true">
+                  <img src="./assets/features/icons/bolt.svg" alt="" width="22" height="22" />
+                </span>
+                <div>
+                  <strong>Fast Execution</strong>
+                  <span>Technology built for responsive order execution</span>
+                </div>
+              </li>
+              <li>
+                <span class="markets-platforms__benefit-icon" aria-hidden="true">
+                  <img src="./assets/features/icons/devices.svg" alt="" width="22" height="22" />
+                </span>
+                <div>
+                  <strong>Multi-Device Access</strong>
+                  <span>Trade across desktop, web and mobile</span>
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
@@ -857,222 +1032,637 @@
         </div>
       </section>
 
-      <section class="markets-reach" id="markets-reach" aria-labelledby="markets-reach-title">
-        <div class="markets-reach__atmosphere" aria-hidden="true">
-          <img
-            class="markets-reach__bg"
-            src="./assets/markets-reach/mist-bg.jpg"
-            alt=""
-            width="1920"
-            height="1080"
-          />
-        </div>
-        <div class="container markets-reach__inner">
-          <header class="markets-reach__head reveal">
-            <h2 class="markets-reach__title" id="markets-reach-title">
-              Tap into global markets, all within reach
-            </h2>
-          </header>
+      <section
+        class="trader-community"
+        id="trader-community"
+        aria-labelledby="trader-community-title"
+      >
+        <div class="container trader-community__inner">
+          <div class="trader-community__layout">
+            <div class="trader-community__visual reveal" aria-hidden="true">
+              <div class="community-network">
+                <div class="community-network__atmosphere"></div>
+                <div class="community-network__rings">
+                  <span class="community-network__ring community-network__ring--lg"></span>
+                  <span class="community-network__ring community-network__ring--md"></span>
+                </div>
 
-          <div class="markets-reach__grid">
-            <article class="markets-reach__card reveal">
-              <div class="markets-reach__icon" aria-hidden="true">
-                <img
-                  src="./assets/markets-reach/currencies.svg"
-                  alt=""
-                  width="160"
-                  height="96"
-                />
-              </div>
-              <div class="markets-reach__body">
-                <h3>Currencies</h3>
-                <p>Access the world's largest markets with spreads as low as 0 pips</p>
-              </div>
-            </article>
+                <svg
+                  class="community-network__lines"
+                  viewBox="0 0 420 380"
+                  xmlns="http://www.w3.org/2000/svg"
+                  focusable="false"
+                >
+                  <g fill="none" stroke="rgba(180,205,220,0.28)" stroke-width="1.15">
+                    <path d="M96 78 L210 190" />
+                    <path d="M318 64 L210 190" />
+                    <path d="M62 198 L210 190" />
+                    <path d="M356 210 L210 190" />
+                    <path d="M118 318 L210 190" />
+                    <path d="M302 322 L210 190" />
+                    <path d="M96 78 L62 198" />
+                    <path d="M318 64 L356 210" />
+                    <path d="M118 318 L302 322" />
+                  </g>
+                  <g fill="#47BD68">
+                    <circle cx="153" cy="134" r="2.6" />
+                    <circle cx="264" cy="127" r="2.6" />
+                    <circle cx="136" cy="194" r="2.6" />
+                    <circle cx="283" cy="200" r="2.6" />
+                    <circle cx="164" cy="254" r="2.6" />
+                    <circle cx="256" cy="256" r="2.6" />
+                  </g>
+                </svg>
 
-            <article class="markets-reach__card reveal reveal-delay-1">
-              <div class="markets-reach__icon" aria-hidden="true">
-                <img
-                  src="./assets/markets-reach/commodities.svg"
-                  alt=""
-                  width="150"
-                  height="96"
-                />
-              </div>
-              <div class="markets-reach__body">
-                <h3>Commodities and Metals</h3>
-                <p>Broaden your portfolio by trading oil, gold and other metals</p>
-              </div>
-            </article>
+                <div class="community-network__chip community-network__chip--forex">
+                  <img src="./assets/trader-community/icons/forex.svg" alt="" width="14" height="14" />
+                  Forex
+                </div>
+                <div class="community-network__chip community-network__chip--indices">
+                  <img src="./assets/trader-community/icons/indices.svg" alt="" width="14" height="14" />
+                  Indices
+                </div>
+                <div class="community-network__chip community-network__chip--commodities">
+                  <img
+                    src="./assets/trader-community/icons/commodities.svg"
+                    alt=""
+                    width="14"
+                    height="14"
+                  />
+                  Commodities
+                </div>
+                <div class="community-network__chip community-network__chip--stocks">
+                  <img src="./assets/trader-community/icons/stocks.svg" alt="" width="14" height="14" />
+                  Stocks
+                </div>
 
-            <article class="markets-reach__card markets-reach__card--community reveal reveal-delay-2">
-              <div class="markets-reach__discord-badge" aria-hidden="true">
+                <div class="community-network__node community-network__node--a">
+                  <img
+                    class="community-network__avatar"
+                    src="./assets/trader-community/avatars/avatar-1.jpg"
+                    alt=""
+                    width="56"
+                    height="56"
+                    decoding="async"
+                  />
+                  <span class="community-network__status community-network__status--pulse"></span>
+                </div>
+                <div class="community-network__node community-network__node--b">
+                  <img
+                    class="community-network__avatar"
+                    src="./assets/trader-community/avatars/avatar-2.jpg"
+                    alt=""
+                    width="56"
+                    height="56"
+                    decoding="async"
+                  />
+                  <span class="community-network__status"></span>
+                </div>
+                <div class="community-network__node community-network__node--c">
+                  <img
+                    class="community-network__avatar"
+                    src="./assets/trader-community/avatars/avatar-3.jpg"
+                    alt=""
+                    width="56"
+                    height="56"
+                    decoding="async"
+                  />
+                  <span class="community-network__status community-network__status--pulse"></span>
+                </div>
+                <div class="community-network__node community-network__node--d">
+                  <img
+                    class="community-network__avatar"
+                    src="./assets/trader-community/avatars/avatar-4.jpg"
+                    alt=""
+                    width="56"
+                    height="56"
+                    decoding="async"
+                  />
+                  <span class="community-network__status"></span>
+                </div>
+                <div class="community-network__node community-network__node--e">
+                  <img
+                    class="community-network__avatar"
+                    src="./assets/trader-community/avatars/avatar-5.jpg"
+                    alt=""
+                    width="56"
+                    height="56"
+                    decoding="async"
+                  />
+                  <span class="community-network__status"></span>
+                </div>
+                <div class="community-network__node community-network__node--f">
+                  <img
+                    class="community-network__avatar"
+                    src="./assets/trader-community/avatars/avatar-6.jpg"
+                    alt=""
+                    width="56"
+                    height="56"
+                    decoding="async"
+                  />
+                  <span class="community-network__status community-network__status--pulse"></span>
+                </div>
+
+                <div class="community-network__hub">
+                  <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true" focusable="false">
+                    <path
+                      fill="#fff"
+                      d="M19.3 5.2A17.4 17.4 0 0 0 15.1 4l-.2.4c1.5.4 2.8 1 4 1.9-1.7-1.3-3.9-2.1-6.2-2.1H11.3c-2.3 0-4.5.8-6.2 2.1 1.2-.9 2.5-1.5 4-1.9L9 4A17.4 17.4 0 0 0 4.7 5.2C2.5 8.7 1.8 12.1 2 15.5a17.6 17.6 0 0 0 5.3 2.7l.7-1.1a11.2 11.2 0 0 1-2-.9l.5-.4a12.6 12.6 0 0 0 11.1 0l.5.4c-.6.4-1.3.7-2 .9l.7 1.1a17.6 17.6 0 0 0 5.3-2.7c.3-4-.5-7.4-2.8-10.3ZM9.2 13.8c-.8 0-1.5-.8-1.5-1.7s.7-1.7 1.5-1.7 1.5.8 1.5 1.7-.7 1.7-1.5 1.7Zm5.6 0c-.8 0-1.5-.8-1.5-1.7s.7-1.7 1.5-1.7 1.5.8 1.5 1.7-.7 1.7-1.5 1.7Z"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <div class="trader-community__content reveal reveal-delay-1">
+              <p class="trader-community__eyebrow">Trader Community</p>
+              <h2 class="trader-community__title" id="trader-community-title">
+                Markets move together. Traders shouldn’t work alone.
+              </h2>
+              <p class="trader-community__copy">
+                Join the Dominion Markets community to connect with other traders, exchange
+                perspectives and take part in conversations across global markets.
+              </p>
+              <p class="trader-community__tagline">Connect. Share. Stay informed.</p>
+
+              <div class="trader-community__actions">
+                <!-- TODO: Replace href with the official Dominion Markets Discord invite URL when available. -->
+                <a
+                  class="btn btn--primary trader-community__discord"
+                  href="https://discord.gg/REPLACE_WITH_INVITE"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Join our Discord community (opens in a new tab)"
+                >
+                  <svg
+                    class="trader-community__discord-icon"
+                    viewBox="0 0 24 24"
+                    width="20"
+                    height="20"
+                    aria-hidden="true"
+                    focusable="false"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M19.3 5.2A17.4 17.4 0 0 0 15.1 4l-.2.4c1.5.4 2.8 1 4 1.9-1.7-1.3-3.9-2.1-6.2-2.1H11.3c-2.3 0-4.5.8-6.2 2.1 1.2-.9 2.5-1.5 4-1.9L9 4A17.4 17.4 0 0 0 4.7 5.2C2.5 8.7 1.8 12.1 2 15.5a17.6 17.6 0 0 0 5.3 2.7l.7-1.1a11.2 11.2 0 0 1-2-.9l.5-.4a12.6 12.6 0 0 0 11.1 0l.5.4c-.6.4-1.3.7-2 .9l.7 1.1a17.6 17.6 0 0 0 5.3-2.7c.3-4-.5-7.4-2.8-10.3ZM9.2 13.8c-.8 0-1.5-.8-1.5-1.7s.7-1.7 1.5-1.7 1.5.8 1.5 1.7-.7 1.7-1.5 1.7Zm5.6 0c-.8 0-1.5-.8-1.5-1.7s.7-1.7 1.5-1.7 1.5.8 1.5 1.7-.7 1.7-1.5 1.7Z"
+                    />
+                  </svg>
+                  Join Our Discord
+                </a>
+                <!-- TODO: Replace href with the internal community page route when available. -->
+                <a class="trader-community__secondary" href="#community-route-placeholder">
+                  Explore the Community
+                  <span aria-hidden="true">→</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="trader-community__chips marquee reveal reveal-delay-2"
+            data-marquee
+            data-pause-on-hover
+            aria-label="Market categories"
+          >
+            <div class="marquee__track">
+              <span class="trader-community__chip">
+                <img src="./assets/trader-community/icons/forex.svg" alt="" width="18" height="18" />
+                Forex
+              </span>
+              <span class="trader-community__chip">
+                <img src="./assets/trader-community/icons/indices.svg" alt="" width="18" height="18" />
+                Indices
+              </span>
+              <span class="trader-community__chip">
                 <img
-                  src="./assets/markets-reach/discord.svg"
+                  src="./assets/trader-community/icons/commodities.svg"
                   alt=""
-                  width="72"
-                  height="56"
+                  width="18"
+                  height="18"
                 />
-              </div>
-              <div class="markets-reach__community-copy">
-                <h3>Never trade alone!</h3>
-                <p>
-                  Join our Discord community of exceptional traders and connect with like-minded
-                  people.
-                </p>
-                <a class="markets-reach__cta" href="#final-cta">Learn More</a>
-              </div>
-            </article>
+                Commodities
+              </span>
+              <span class="trader-community__chip">
+                <img src="./assets/trader-community/icons/stocks.svg" alt="" width="18" height="18" />
+                Stocks
+              </span>
+              <span class="trader-community__chip">
+                <img src="./assets/trader-community/icons/crypto.svg" alt="" width="18" height="18" />
+                Crypto CFDs
+              </span>
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="mrkt" id="mrkt" aria-labelledby="mrkt-title">
-        <div class="mrkt__atmosphere" aria-hidden="true">
-          <img
-            class="mrkt__bg"
-            src="./assets/mrkt/mist-bg.jpg"
-            alt=""
-            width="1920"
-            height="1080"
-          />
-        </div>
-        <div class="container mrkt__inner">
-          <header class="mrkt__head reveal">
-            <h2 class="mrkt__title" id="mrkt-title">Why Dominion Markets?</h2>
-          </header>
-
-          <div class="mrkt__banner reveal">
-            <div class="mrkt__glow" aria-hidden="true"></div>
-            <div class="mrkt__glass">
-              <div class="mrkt__content">
-                <p class="mrkt__eyebrow">We just partnered with</p>
-                <p class="mrkt__brand">MRKT</p>
-                <p class="mrkt__copy">
-                  MRKT is an AI-driven platform that gives traders smart insights and real-time market
-                  data.
+      <section
+        class="exclusive-intel section"
+        id="mrkt"
+        aria-labelledby="exclusive-intel-title"
+      >
+        <div class="container exclusive-intel__inner">
+          <div class="exclusive-intel__layout">
+            <div class="exclusive-intel__copy reveal">
+              <div class="exclusive-intel__brand">
+                <img
+                  class="exclusive-intel__brand-mark"
+                  src="./assets/mrkt/mrktedge-mark.svg"
+                  alt=""
+                  width="36"
+                  height="36"
+                  aria-hidden="true"
+                />
+                <p class="exclusive-intel__brand-name">
+                  <span>MRKT</span>
+                  <span>EDGE</span>
                 </p>
+              </div>
+
+              <p class="eyebrow">Exclusive Client Benefit</p>
+              <h2 class="section-title" id="exclusive-intel-title">
+                Trade with deeper market intelligence.
+              </h2>
+              <p class="section-copy exclusive-intel__lead">
+                Dominion Markets clients receive exclusive access to AI-powered market insights through
+                MRKTEDGE.ai—at 50% off.
+              </p>
+
+              <aside
+                class="exclusive-intel__offer"
+                aria-label="Exclusive Dominion client offer: 50% off"
+              >
+                <p class="exclusive-intel__offer-eyebrow">Exclusive Dominion Client Offer</p>
+                <p class="exclusive-intel__offer-amount">50% OFF</p>
+                <p class="exclusive-intel__offer-copy">
+                  Access MRKTEDGE.ai intelligence tools at an exclusive client rate.
+                </p>
+              </aside>
+
+              <ul class="exclusive-intel__benefits">
+                <li class="exclusive-intel__benefit">
+                  <div class="exclusive-intel__benefit-icon" aria-hidden="true">
+                    <img src="./assets/features/icons/bolt.svg" alt="" width="28" height="28" />
+                  </div>
+                  <div class="exclusive-intel__benefit-text">
+                    <strong>AI-Powered Insights</strong>
+                    <p>Turn complex market information into clearer, actionable intelligence.</p>
+                  </div>
+                </li>
+                <li class="exclusive-intel__benefit">
+                  <div class="exclusive-intel__benefit-icon" aria-hidden="true">
+                    <img src="./assets/features/icons/sliders.svg" alt="" width="28" height="28" />
+                  </div>
+                  <div class="exclusive-intel__benefit-text">
+                    <!-- Wording adjusted from “real-time” per approved content constraints -->
+                    <strong>Market Intelligence</strong>
+                    <p>Monitor market movements and opportunities through one focused interface.</p>
+                  </div>
+                </li>
+                <li class="exclusive-intel__benefit">
+                  <div class="exclusive-intel__benefit-icon" aria-hidden="true">
+                    <img src="./assets/features/icons/percent.svg" alt="" width="28" height="28" />
+                  </div>
+                  <div class="exclusive-intel__benefit-text">
+                    <strong>Exclusive Client Access</strong>
+                    <p>Dominion Markets clients receive 50% off MRKTEDGE.ai access.</p>
+                  </div>
+                </li>
+              </ul>
+
+              <div class="exclusive-intel__actions">
                 <a
-                  class="mrkt__cta"
+                  class="btn btn--primary"
                   href="https://www.mrktedge.ai/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Start Now
-                  <span aria-hidden="true">→</span>
+                  Access MRKTEDGE
                 </a>
-              </div>
-
-              <div class="mrkt__visual">
-                <img
-                  class="mrkt__collage"
-                  src="./assets/mrkt/product-collage.png"
-                  alt="MRKT AI trading dashboards showing market sentiment and overview"
-                  width="960"
-                  height="540"
-                />
+                <!-- Learn More: no distinct secondary destination found beyond https://www.mrktedge.ai/ -->
               </div>
             </div>
 
-            <p class="mrkt__discount">
-              Dominion Markets clients get a <strong>50% discount</strong> on their MRKTEDGE.ai
-              membership.
-            </p>
+            <div
+              class="exclusive-intel__visual reveal reveal-delay-2"
+              aria-label="MRKTEDGE.ai intelligence platform preview"
+            >
+              <p class="exclusive-intel__visual-label">MRKTEDGE.ai Intelligence Platform</p>
+              <div class="intel-dash" aria-hidden="true">
+                <div class="intel-dash__top">
+                  <article class="intel-dash__panel intel-dash__panel--overview">
+                    <header class="intel-dash__panel-head">
+                      <span>Market Overview</span>
+                      <span class="intel-dash__pill">Preview</span>
+                    </header>
+                    <div class="intel-dash__gauges">
+                      <div class="intel-dash__gauge">
+                        <svg viewBox="0 0 72 44" width="72" height="44">
+                          <path d="M8 40 A28 28 0 0 1 64 40" stroke="rgba(255,255,255,0.12)" stroke-width="6" fill="none" stroke-linecap="round"/>
+                          <path d="M8 40 A28 28 0 0 1 36 12" stroke="#e35d5d" stroke-width="6" fill="none" stroke-linecap="round"/>
+                          <path d="M36 12 A28 28 0 0 1 64 40" stroke="#47BD68" stroke-width="6" fill="none" stroke-linecap="round"/>
+                          <line x1="36" y1="40" x2="28" y2="18" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <strong>EURUSD</strong>
+                        <span>Neutral</span>
+                      </div>
+                      <div class="intel-dash__gauge">
+                        <svg viewBox="0 0 72 44" width="72" height="44">
+                          <path d="M8 40 A28 28 0 0 1 64 40" stroke="rgba(255,255,255,0.12)" stroke-width="6" fill="none" stroke-linecap="round"/>
+                          <path d="M8 40 A28 28 0 0 1 30 14" stroke="#e35d5d" stroke-width="6" fill="none" stroke-linecap="round"/>
+                          <path d="M30 14 A28 28 0 0 1 64 40" stroke="#47BD68" stroke-width="6" fill="none" stroke-linecap="round"/>
+                          <line x1="36" y1="40" x2="48" y2="18" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <strong>GBPJPY</strong>
+                        <span class="is-up">Bullish</span>
+                      </div>
+                      <div class="intel-dash__gauge intel-dash__gauge--hide-sm">
+                        <svg viewBox="0 0 72 44" width="72" height="44">
+                          <path d="M8 40 A28 28 0 0 1 64 40" stroke="rgba(255,255,255,0.12)" stroke-width="6" fill="none" stroke-linecap="round"/>
+                          <path d="M8 40 A28 28 0 0 1 40 12" stroke="#e35d5d" stroke-width="6" fill="none" stroke-linecap="round"/>
+                          <path d="M40 12 A28 28 0 0 1 64 40" stroke="#47BD68" stroke-width="6" fill="none" stroke-linecap="round"/>
+                          <line x1="36" y1="40" x2="34" y2="16" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <strong>XAUUSD</strong>
+                        <span>Neutral</span>
+                      </div>
+                    </div>
+                  </article>
+
+                  <article class="intel-dash__panel intel-dash__panel--watch">
+                    <header class="intel-dash__panel-head">
+                      <span>Watchlist</span>
+                    </header>
+                    <ul class="intel-dash__watch">
+                      <li><span>EURUSD</span><strong class="is-up">+0.18%</strong></li>
+                      <li><span>GBPJPY</span><strong class="is-up">+0.42%</strong></li>
+                      <li><span>XAUUSD</span><strong class="is-down">−0.11%</strong></li>
+                      <li class="intel-dash__watch-extra"><span>NAS100</span><strong class="is-up">+0.27%</strong></li>
+                    </ul>
+                  </article>
+                </div>
+
+                <div class="intel-dash__mid">
+                  <article class="intel-dash__panel intel-dash__panel--insight">
+                    <header class="intel-dash__panel-head">
+                      <span>AI Insight Summary</span>
+                      <span class="intel-dash__dot"></span>
+                    </header>
+                    <p>
+                      Momentum remains constructive on GBPJPY while EURUSD holds a neutral range.
+                      Focus on London–New York overlap for clearer directional cues.
+                    </p>
+                  </article>
+
+                  <article class="intel-dash__panel intel-dash__panel--chart">
+                    <header class="intel-dash__panel-head">
+                      <span>EURUSD</span>
+                      <span class="is-up">1.0842</span>
+                    </header>
+                    <svg class="intel-dash__spark" viewBox="0 0 220 72" preserveAspectRatio="none" width="220" height="72">
+                      <defs>
+                        <linearGradient id="intelSparkFill" x1="0" y1="0" x2="0" y2="1">
+                          <stop offset="0%" stop-color="#47BD68" stop-opacity="0.35"/>
+                          <stop offset="100%" stop-color="#47BD68" stop-opacity="0"/>
+                        </linearGradient>
+                      </defs>
+                      <path d="M0 48 L18 44 L36 50 L54 34 L72 38 L90 28 L108 32 L126 22 L144 26 L162 18 L180 24 L198 16 L220 20 L220 72 L0 72 Z" fill="url(#intelSparkFill)"/>
+                      <path d="M0 48 L18 44 L36 50 L54 34 L72 38 L90 28 L108 32 L126 22 L144 26 L162 18 L180 24 L198 16 L220 20" fill="none" stroke="#47BD68" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </article>
+                </div>
+
+                <article class="intel-dash__panel intel-dash__panel--instrument">
+                  <header class="intel-dash__panel-head">
+                    <span>Selected Instrument</span>
+                    <span>EURUSD</span>
+                  </header>
+                  <div class="intel-dash__instrument">
+                    <div>
+                      <span>Bias</span>
+                      <strong>Neutral / Range</strong>
+                    </div>
+                    <div>
+                      <span>Volatility</span>
+                      <strong>Moderate</strong>
+                    </div>
+                    <div class="intel-dash__instrument-extra">
+                      <span>Session Focus</span>
+                      <strong>London</strong>
+                    </div>
+                  </div>
+                </article>
+
+                <p class="intel-dash__note">Illustrative interface preview — not live market data</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="mt5-sim" id="mt5-simulator" aria-labelledby="mt5-sim-title">
-        <div class="mt5-sim__atmosphere" aria-hidden="true">
-          <img
-            class="mt5-sim__bg"
-            src="./assets/mt5-sim/mist-bg.jpg"
-            alt=""
-            width="1920"
-            height="1080"
-          />
-        </div>
-        <div class="container mt5-sim__inner">
-          <header class="mt5-sim__head reveal">
-            <h2 class="mt5-sim__title" id="mt5-sim-title">Practice with MT5 Simulator</h2>
-          </header>
+      <section class="sim-xp" id="mt5-simulator" aria-labelledby="sim-xp-title" data-sim-xp>
+        <div class="container sim-xp__inner">
+          <div class="sim-xp__layout">
+            <div class="sim-xp__intro reveal">
+              <p class="sim-xp__eyebrow">MT5 Simulator</p>
+              <h2 class="sim-xp__title" id="sim-xp-title">Practise strategies before entering live markets.</h2>
+              <p class="sim-xp__lead">
+                Replay historical market conditions, test your approach and develop familiarity with
+                MetaTrader 5 in a simulated environment.
+              </p>
+            </div>
 
-          <div class="mt5-sim__banner reveal">
-            <div class="mt5-sim__glass">
-              <div class="mt5-sim__content">
-                <ul class="mt5-sim__checks">
-                  <li>
-                    <span class="mt5-sim__check" aria-hidden="true">
-                      <svg viewBox="0 0 24 24" width="16" height="16" fill="none">
-                        <path
-                          d="M6.5 12.5l3.5 3.5 7.5-8"
-                          stroke="currentColor"
-                          stroke-width="2.4"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </svg>
-                    </span>
-                    <span>Trade Smarter with MT5 Simulator</span>
-                  </li>
-                  <li>
-                    <span class="mt5-sim__check" aria-hidden="true">
-                      <svg viewBox="0 0 24 24" width="16" height="16" fill="none">
-                        <path
-                          d="M6.5 12.5l3.5 3.5 7.5-8"
-                          stroke="currentColor"
-                          stroke-width="2.4"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </svg>
-                    </span>
-                    <span>1 Month Free Trial</span>
-                  </li>
-                  <li>
-                    <span class="mt5-sim__check" aria-hidden="true">
-                      <svg viewBox="0 0 24 24" width="16" height="16" fill="none">
-                        <path
-                          d="M6.5 12.5l3.5 3.5 7.5-8"
-                          stroke="currentColor"
-                          stroke-width="2.4"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </svg>
-                    </span>
-                    <span>Experience risk-free trading with Dominion Markets!</span>
-                  </li>
-                </ul>
+            <ul class="sim-xp__benefits reveal">
+              <li>
+                <span class="sim-xp__benefit-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none">
+                    <circle cx="12" cy="12" r="8.25" stroke="currentColor" stroke-width="1.7" />
+                    <path d="M8.2 12.2l2.5 2.5 5.1-5.4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+                <span>Replay historical market conditions</span>
+              </li>
+              <li>
+                <span class="sim-xp__benefit-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none">
+                    <circle cx="12" cy="12" r="8.25" stroke="currentColor" stroke-width="1.7" />
+                    <path d="M8.2 12.2l2.5 2.5 5.1-5.4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+                <span>Test strategies at your own pace</span>
+              </li>
+              <li>
+                <span class="sim-xp__benefit-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none">
+                    <circle cx="12" cy="12" r="8.25" stroke="currentColor" stroke-width="1.7" />
+                    <path d="M8.2 12.2l2.5 2.5 5.1-5.4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+                <span>Practise using familiar MT5 tools</span>
+              </li>
+            </ul>
 
-                <div class="mt5-sim__actions">
-                  <img
-                    class="mt5-sim__logo"
-                    src="./assets/mt5-sim/mt5Logo-transparent.png"
-                    alt="MT5 Simulator"
-                    width="200"
-                    height="76"
-                  />
-                  <a
-                    class="mt5-sim__cta"
-                    href="https://www.dominionmarkets.com/videos/mt5-simulator.mp4"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Preview
-                  </a>
+            <div class="sim-xp__actions reveal">
+              <!-- TODO: Replace href="#" with official MT5 Simulator product/app URL when available -->
+              <a class="btn btn--primary sim-xp__btn" href="#">
+                Explore the Simulator
+                <span aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none">
+                    <path d="M5 12h12M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+              </a>
+              <a
+                class="btn btn--ghost sim-xp__btn sim-xp__btn--ghost"
+                href="https://www.dominionmarkets.com/videos/mt5-simulator.mp4"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="sim-xp__play-ico" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="16" height="16"><path d="M9 7.5v9l7.5-4.5L9 7.5z" fill="currentColor"/></svg>
+                </span>
+                Watch How It Works
+              </a>
+            </div>
+
+            <p class="sim-xp__disclaimer reveal">
+              <span aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none">
+                  <path d="M12 3.5 19.5 7v5.2c0 4.5-3 7.6-7.5 8.8C7.5 19.8 4.5 16.7 4.5 12.2V7L12 3.5z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+                </svg>
+              </span>
+              Simulation results do not guarantee future live-trading performance.
+            </p>
+
+            <div class="sim-xp__stage reveal reveal-delay-1">
+              <article class="sim-xp__terminal" aria-label="Illustrative MT5 Simulator interface">
+                <header class="sim-xp__terminal-bar">
+                  <div class="sim-xp__terminal-title">
+                    <strong>MT5 Simulator</strong>
+                    <span class="sim-xp__badge">Simulated Environment</span>
+                  </div>
+                  <div class="sim-xp__terminal-actions">
+                    <button
+                      class="sim-xp__scenario-toggle"
+                      type="button"
+                      data-sim-scenario-toggle
+                      aria-expanded="false"
+                      aria-controls="sim-xp-scenario"
+                    >
+                      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" aria-hidden="true">
+                        <rect x="3.5" y="5" width="17" height="15" rx="2" stroke="currentColor" stroke-width="1.7" />
+                        <path d="M8 3.5v3M16 3.5v3M3.5 10h17" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+                      </svg>
+                      <span>Scenario</span>
+                    </button>
+                    <div class="sim-xp__terminal-tools" aria-hidden="true">
+                      <span></span><span></span><span></span>
+                    </div>
+                  </div>
+                </header>
+
+                <div class="sim-xp__terminal-body">
+                  <aside class="sim-xp__watch" aria-hidden="true">
+                    <p class="sim-xp__pane-label">Market Watch</p>
+                    <ul>
+                      <li class="is-active"><span>EUR/USD</span><span>1.08950</span></li>
+                      <li><span>GBP/USD</span><span>1.26340</span></li>
+                      <li><span>USD/JPY</span><span>149.820</span></li>
+                      <li><span>XAU/USD</span><span>2341.6</span></li>
+                    </ul>
+                  </aside>
+
+                  <div class="sim-xp__chart-wrap">
+                    <div class="sim-xp__chart-toolbar">
+                      <span>EUR/USD</span>
+                      <span>H1</span>
+                      <span class="sim-xp__chart-note">Illustrative chart</span>
+                    </div>
+                    <canvas
+                      id="sim-xp-chart"
+                      class="sim-xp__chart"
+                      width="720"
+                      height="280"
+                      aria-label="Illustrative historical candlestick chart"
+                    ></canvas>
+                  </div>
+
+                  <aside class="sim-xp__order" aria-label="Practice order panel">
+                    <p class="sim-xp__pane-label">Practice Order</p>
+                    <label class="sim-xp__field">
+                      <span>Volume</span>
+                      <input type="text" value="1.00" readonly tabindex="-1" />
+                    </label>
+                    <label class="sim-xp__field">
+                      <span>Stop Loss</span>
+                      <input type="text" value="1.08400" readonly tabindex="-1" />
+                    </label>
+                    <label class="sim-xp__field">
+                      <span>Take Profit</span>
+                      <input type="text" value="1.09600" readonly tabindex="-1" />
+                    </label>
+                    <div class="sim-xp__order-actions">
+                      <button class="sim-xp__sell" type="button" aria-label="Practice sell — illustrative only">Sell</button>
+                      <button class="sim-xp__buy" type="button" aria-label="Practice buy — illustrative only">Buy</button>
+                    </div>
+                    <p class="sim-xp__practice-note">Practice controls — no live orders</p>
+                  </aside>
                 </div>
-              </div>
 
-              <div class="mt5-sim__visual">
-                <img
-                  class="mt5-sim__product"
-                  src="./assets/mt5-sim/mt5_trading.png?v=3"
-                  alt="MT5 Simulator trading platform and control panel"
-                  width="870"
-                  height="457"
-                />
-              </div>
+                <aside
+                  class="sim-xp__scenario"
+                  id="sim-xp-scenario"
+                  aria-label="Historical scenario"
+                  hidden
+                >
+                  <div class="sim-xp__scenario-head">
+                    <p class="sim-xp__scenario-label">Historical Scenario</p>
+                    <button
+                      class="sim-xp__scenario-close"
+                      type="button"
+                      data-sim-scenario-close
+                      aria-label="Hide historical scenario"
+                    >
+                      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" aria-hidden="true">
+                        <path d="M7 7l10 10M17 7 7 17" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                      </svg>
+                    </button>
+                  </div>
+                  <p class="sim-xp__scenario-pair">EUR/USD · London Session</p>
+                  <ul>
+                    <li><span>Date</span><strong>16 May 2024</strong></li>
+                    <li><span>Time</span><strong>08:30 (GMT+1)</strong></li>
+                    <li><span>Scenario</span><strong>London Open</strong></li>
+                  </ul>
+                  <button class="sim-xp__scenario-btn" type="button" data-sim-scenario aria-pressed="true">
+                    Change Scenario
+                  </button>
+                </aside>
+
+                <div class="sim-xp__playback">
+                  <p class="sim-xp__timestamp" data-sim-time>16 May 2024 08:30:00 GMT+1</p>
+                  <div class="sim-xp__controls">
+                    <button class="sim-xp__ctrl" type="button" data-sim-step="-1" aria-label="Step backward">
+                      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" aria-hidden="true"><path d="M14.5 7 9 12l5.5 5M8 7v10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <button class="sim-xp__play" type="button" data-sim-play aria-pressed="false" aria-label="Play historical replay">
+                      <svg class="sim-xp__icon-play" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M8 6.5v11l9-5.5-9-5.5z" fill="currentColor"/></svg>
+                      <svg class="sim-xp__icon-pause" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M8 6h3v12H8V6zm5 0h3v12h-3V6z" fill="currentColor"/></svg>
+                    </button>
+                    <button class="sim-xp__ctrl" type="button" data-sim-step="1" aria-label="Step forward">
+                      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" aria-hidden="true"><path d="M9.5 7 15 12l-5.5 5M16 7v10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                  </div>
+                  <label class="sim-xp__scrub">
+                    <span class="visually-hidden">Replay progress</span>
+                    <input type="range" min="0" max="100" value="28" data-sim-scrub aria-valuetext="28 percent through historical replay" />
+                  </label>
+                  <div class="sim-xp__speed" role="group" aria-label="Playback speed">
+                    <button type="button" data-sim-speed="1" class="is-active" aria-pressed="true">1x</button>
+                    <button type="button" data-sim-speed="2" aria-pressed="false">2x</button>
+                    <button type="button" data-sim-speed="4" aria-pressed="false">4x</button>
+                  </div>
+                </div>
+              </article>
             </div>
           </div>
         </div>
@@ -1093,48 +1683,53 @@
             <h2 class="how-start__title" id="how-start-title">How to Start?</h2>
           </header>
 
-          <div class="how-start__grid">
-            <article class="how-start__card reveal">
-              <div class="how-start__card-top">
-                <h3>Register</h3>
-                <img
-                  class="how-start__icon"
-                  src="./assets/how-start/register.png"
-                  alt=""
-                  width="56"
-                  height="56"
-                />
-              </div>
-              <p>Select your preferred account type and swiftly complete our secure registration form.</p>
-            </article>
-
-            <article class="how-start__card reveal reveal-delay-1">
-              <div class="how-start__card-top">
-                <h3>Fund</h3>
-                <img
-                  class="how-start__icon"
-                  src="./assets/how-start/funding.png"
-                  alt=""
-                  width="56"
-                  height="56"
-                />
-              </div>
-              <p>Easily deposit funds into your trading account through diverse payment options.</p>
-            </article>
-
-            <article class="how-start__card reveal reveal-delay-2">
-              <div class="how-start__card-top">
-                <h3>Trade</h3>
-                <img
-                  class="how-start__icon"
-                  src="./assets/how-start/trade.png"
-                  alt=""
-                  width="56"
-                  height="56"
-                />
-              </div>
-              <p>Start trading on your live account.</p>
-            </article>
+          <!-- Interactive Timeline (vanilla port of 3d-interactive-timeline.tsx),
+               using the current How-to-Start steps. Cards are liquid glass, so
+               (per this repo's backdrop-filter note) no transforms are applied to
+               them; the 3D mouse-tilt is adapted to a glass-safe hover lift. -->
+          <div class="tl-wrap">
+            <div class="tl__orbs" aria-hidden="true">
+              <span></span><span></span><span></span><span></span>
+            </div>
+            <ol class="tl" role="list">
+              <span class="tl__progress" aria-hidden="true"></span>
+              <li class="tl__item tl__item--left">
+                <span class="tl__node" aria-hidden="true">1</span>
+                <article class="tl__card">
+                  <div class="tl__card-head">
+                    <span class="tl__step"><span class="tl__dot" aria-hidden="true"></span>Step 01</span>
+                    <img class="tl__icon" src="./assets/how-start/register.png" alt="" width="34" height="34" />
+                  </div>
+                  <h3 class="tl__title">Register</h3>
+                  <p class="tl__desc">Select your preferred account type and swiftly complete our secure registration form.</p>
+                  <span class="tl__bar" aria-hidden="true"></span>
+                </article>
+              </li>
+              <li class="tl__item tl__item--right">
+                <span class="tl__node" aria-hidden="true">2</span>
+                <article class="tl__card">
+                  <div class="tl__card-head">
+                    <span class="tl__step"><span class="tl__dot" aria-hidden="true"></span>Step 02</span>
+                    <img class="tl__icon" src="./assets/how-start/funding.png" alt="" width="34" height="34" />
+                  </div>
+                  <h3 class="tl__title">Fund</h3>
+                  <p class="tl__desc">Easily deposit funds into your trading account through diverse payment options.</p>
+                  <span class="tl__bar" aria-hidden="true"></span>
+                </article>
+              </li>
+              <li class="tl__item tl__item--left">
+                <span class="tl__node" aria-hidden="true">3</span>
+                <article class="tl__card">
+                  <div class="tl__card-head">
+                    <span class="tl__step"><span class="tl__dot" aria-hidden="true"></span>Step 03</span>
+                    <img class="tl__icon" src="./assets/how-start/trade.png" alt="" width="34" height="34" />
+                  </div>
+                  <h3 class="tl__title">Trade</h3>
+                  <p class="tl__desc">Start trading on your live account.</p>
+                  <span class="tl__bar" aria-hidden="true"></span>
+                </article>
+              </li>
+            </ol>
           </div>
 
           <div class="how-start__ctas reveal">
@@ -1375,13 +1970,6 @@
         <div class="clarity-accounts__veil" aria-hidden="true"></div>
         <div class="container clarity-accounts__inner">
           <header class="clarity-head reveal">
-            <img
-              class="logo logo--clarity"
-              src="./assets/logo/logo-horizontal-reverse.svg"
-              alt="Dominion Markets"
-              width="220"
-              height="37"
-            />
             <h2 class="clarity-title">Trade with clarity</h2>
             <p class="clarity-sub">
               Three account types. One commitment – transparent pricing, institutional execution,
@@ -1729,45 +2317,192 @@
         </div>
       </section>
 
-      <section class="section section--mist" id="dashboard">
-        <div class="container split">
-          <div class="reveal">
-            <p class="eyebrow">Dashboard</p>
-            <h2 class="section-title">Your trading command center</h2>
-            <p class="section-copy">
-              A fully integrated CRM for serious traders — journal, sessions, statistics, risk
-              rules, projections, and news calendar in one place.
-            </p>
-          </div>
-          <div class="glass-panel reveal reveal-delay-2">
-            <div class="dash-mock">
-              <div class="dash-row">
-                <div class="dash-tile">
-                  <span>Win rate</span>
-                  <strong>62%</strong>
-                  <div class="dash-bar"><i></i></div>
-                </div>
-                <div class="dash-tile">
-                  <span>Profit factor</span>
-                  <strong>1.84</strong>
-                  <div class="dash-bar"><i style="width: 74%"></i></div>
-                </div>
-              </div>
-              <div class="dash-tile">
-                <span>Session focus · London</span>
-                <strong style="font-size: 1.05rem; font-weight: 600"
-                  >Risk rules &amp; daily limits active</strong
+      <section
+        class="dominion-dashboard section section--mist"
+        id="dashboard"
+        aria-labelledby="dashboard-title"
+      >
+        <div class="container dominion-dashboard__inner">
+          <div class="dominion-dashboard__layout">
+            <div class="dominion-dashboard__copy reveal">
+              <p class="eyebrow">Dominion Dashboard</p>
+              <h2 class="section-title" id="dashboard-title">
+                Your entire trading ecosystem. One connected dashboard.
+              </h2>
+              <p class="section-copy dominion-dashboard__lead">
+                Monitor global markets, manage funds and trading accounts, review active sessions,
+                maintain your trading journal and access Dominion’s complete trading ecosystem from
+                one place.
+              </p>
+
+              <div
+                class="dominion-dashboard__tabs"
+                role="tablist"
+                aria-label="Dashboard features"
+              >
+                <button
+                  class="dominion-dashboard__tab is-active"
+                  type="button"
+                  role="tab"
+                  id="dash-tab-overview"
+                  aria-selected="true"
+                  aria-controls="dash-feature-panel"
+                  tabindex="0"
+                  data-dash-feature="overview"
                 >
-                <div class="dash-bar"><i style="width: 52%"></i></div>
+                  Overview
+                </button>
+                <button
+                  class="dominion-dashboard__tab"
+                  type="button"
+                  role="tab"
+                  id="dash-tab-sessions"
+                  aria-selected="false"
+                  aria-controls="dash-feature-panel"
+                  tabindex="-1"
+                  data-dash-feature="sessions"
+                >
+                  Trading Sessions
+                </button>
+                <button
+                  class="dominion-dashboard__tab"
+                  type="button"
+                  role="tab"
+                  id="dash-tab-money"
+                  aria-selected="false"
+                  aria-controls="dash-feature-panel"
+                  tabindex="-1"
+                  data-dash-feature="money"
+                >
+                  Money Management
+                </button>
+                <button
+                  class="dominion-dashboard__tab"
+                  type="button"
+                  role="tab"
+                  id="dash-tab-journal"
+                  aria-selected="false"
+                  aria-controls="dash-feature-panel"
+                  tabindex="-1"
+                  data-dash-feature="journal"
+                >
+                  Journal
+                </button>
+                <button
+                  class="dominion-dashboard__tab"
+                  type="button"
+                  role="tab"
+                  id="dash-tab-copy"
+                  aria-selected="false"
+                  aria-controls="dash-feature-panel"
+                  tabindex="-1"
+                  data-dash-feature="copy"
+                >
+                  Copy Trading
+                </button>
               </div>
-              <div class="video-shell" style="aspect-ratio: 16 / 7; border-radius: 16px">
-                <div class="video-shell__ui">
-                  <button class="play-btn" type="button" aria-label="Play dashboard demo" style="width:56px;height:56px">
-                    ▶
-                  </button>
-                  <div>Dashboard UI demo</div>
+
+              <p
+                class="dominion-dashboard__feature-copy"
+                id="dash-feature-panel"
+                role="tabpanel"
+                aria-labelledby="dash-tab-overview"
+                data-dash-feature-copy
+              >
+                View market activity, account information, trading sessions and quick access tools
+                from one central overview.
+              </p>
+
+              <div class="dominion-dashboard__actions">
+                <!-- Client area entry — verified login URL used as dashboard access point -->
+                <a
+                  class="btn btn--primary"
+                  href="https://app.dominionmarkets.com/login"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Explore the Dashboard
+                </a>
+                <a
+                  class="btn btn--ghost-dark"
+                  href="https://app.dominionmarkets.com/register"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Open an Account
+                </a>
+              </div>
+            </div>
+
+            <div class="dominion-dashboard__preview reveal reveal-delay-2">
+              <p class="dominion-dashboard__preview-label">Dashboard Preview</p>
+              <figure class="dominion-dashboard__frame">
+                <div class="dominion-dashboard__chrome" aria-hidden="true">
+                  <span></span><span></span><span></span>
                 </div>
-              </div>
+                <div class="dominion-dashboard__shot">
+                  <picture>
+                    <source
+                      srcset="./assets/dashboard/dashboard-preview.webp"
+                      type="image/webp"
+                    />
+                    <img
+                      id="dashboard-preview-img"
+                      src="./assets/dashboard/dashboard-preview.jpg"
+                      alt="Dominion Dashboard showing Market Overview, Deposit and Withdrawal, and Trading Sessions widgets"
+                      width="1024"
+                      height="520"
+                      decoding="async"
+                      loading="lazy"
+                    />
+                  </picture>
+                </div>
+                <figcaption class="dominion-dashboard__caption">
+                  Illustrative dashboard data
+                </figcaption>
+              </figure>
+              <button
+                class="dominion-dashboard__expand"
+                type="button"
+                data-dashboard-expand
+                aria-haspopup="dialog"
+                aria-controls="dashboard-lightbox"
+              >
+                View Full Dashboard
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="dominion-dashboard__lightbox"
+          id="dashboard-lightbox"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="dashboard-lightbox-title"
+          hidden
+        >
+          <div class="dominion-dashboard__lightbox-backdrop" data-dashboard-close tabindex="-1"></div>
+          <div class="dominion-dashboard__lightbox-panel" role="document">
+            <div class="dominion-dashboard__lightbox-bar">
+              <h3 id="dashboard-lightbox-title">Dominion Dashboard</h3>
+              <button
+                class="dominion-dashboard__lightbox-close"
+                type="button"
+                data-dashboard-close
+                aria-label="Close dashboard preview"
+              >
+                Close
+              </button>
+            </div>
+            <div class="dominion-dashboard__lightbox-scroll">
+              <img
+                src="./assets/dashboard/dashboard-preview.jpg"
+                alt="Full-size Dominion Dashboard preview showing Market Overview, Deposit and Withdrawal, and Trading Sessions"
+                width="1024"
+                height="520"
+                decoding="async"
+              />
             </div>
           </div>
         </div>
@@ -2076,125 +2811,645 @@
         </div>
       </section>
 
-      <section class="section section--soft" id="ecosystem">
-        <div class="container">
-          <div class="section-head reveal">
-            <p class="eyebrow">Ecosystem</p>
-            <h2 class="section-title">Trade more. Unlock more.</h2>
-            <p class="section-copy">
-              Commission Incentives Program — tools, education, and bonuses tied to your activity.
-            </p>
-          </div>
-          <div class="bento">
-            <article class="tile reveal">
-              <h3>Magic Keys</h3>
-              <p>Chart-based order management, one-click execution, and risk calculators.</p>
-            </article>
-            <article class="tile reveal reveal-delay-1">
-              <h3>MT5 Simulator</h3>
-              <p>Test strategies in a full MetaTrader 5 simulated environment.</p>
-            </article>
-            <article class="tile reveal">
-              <h3>Education</h3>
-              <p>Structured courses, live sessions, and market analysis.</p>
-            </article>
-            <article class="tile reveal reveal-delay-1">
-              <h3>Deposit bonus</h3>
-              <p>50% bonus on qualifying deposits — terms apply.</p>
-            </article>
-            <article class="tile reveal reveal-delay-2">
-              <h3>Discord</h3>
-              <p>Community discussions, insights, and shared analysis.</p>
-            </article>
-          </div>
-        </div>
-      </section>
+      <section class="eco-hub" id="ecosystem" aria-labelledby="eco-hub-title">
+        <div class="container eco-hub__inner">
+          <div class="eco-hub__main">
+            <div class="eco-hub__diagram reveal" data-eco-diagram aria-label="Dominion ecosystem hub">
+              <svg class="eco-hub__connectors" viewBox="0 0 560 560" aria-hidden="true" focusable="false">
+                <g class="eco-hub__connector-group" data-eco-connectors>
+                  <line class="eco-hub__line" data-eco-line="education" x1="280" y1="280" x2="280" y2="88" />
+                  <line class="eco-hub__line" data-eco-line="simulator" x1="280" y1="280" x2="472" y2="280" />
+                  <line class="eco-hub__line" data-eco-line="tools" x1="280" y1="280" x2="280" y2="472" />
+                  <line class="eco-hub__line" data-eco-line="community" x1="280" y1="280" x2="88" y2="280" />
+                </g>
+              </svg>
 
-      <section class="section section--mist" id="copy-trading">
-        <div class="container split">
-          <div class="reveal">
-            <p class="eyebrow">Copy trading</p>
-            <h2 class="section-title">Copy expert traders in real time</h2>
-            <p class="section-copy">
-              Choose masters, set your allocation and risk limits, copy automatically, and monitor
-              anytime.
-            </p>
-            <div class="masters">
-              <div class="master">
-                <div>
-                  <strong>Frances Poh</strong>
-                  <small>Malaysia · illustrative example</small>
-                </div>
-                <div class="pct">110%</div>
+              <div class="eco-hub__core" aria-hidden="true">
+                <img
+                  class="eco-hub__core-logo"
+                  src="./assets/logo/logo-isotype.png"
+                  alt=""
+                  width="48"
+                  height="48"
+                />
+                <p class="eco-hub__core-label">Dominion Hub</p>
+                <p class="eco-hub__core-text">One connected ecosystem</p>
               </div>
-              <div class="master">
-                <div>
-                  <strong>Alex Charles</strong>
-                  <small>United Kingdom · illustrative example</small>
-                </div>
-                <div class="pct">88%</div>
-              </div>
-              <div class="master">
-                <div>
-                  <strong>Ignas</strong>
-                  <small>United Kingdom · illustrative example</small>
-                </div>
-                <div class="pct">64%</div>
+
+              <div class="eco-hub__modules" role="tablist" aria-label="Ecosystem modules">
+                <button
+                  class="eco-hub__module is-active"
+                  type="button"
+                  role="tab"
+                  id="eco-tab-education"
+                  aria-selected="true"
+                  aria-controls="eco-hub-detail"
+                  data-eco-module="education"
+                >
+                  <span class="eco-hub__module-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+                      <path d="M3 9.5 12 5l9 4.5-9 4.5L3 9.5z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" />
+                      <path d="M6.5 12v4.2c0 .8 2.4 2.4 5.5 2.4s5.5-1.6 5.5-2.4V12" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+                    </svg>
+                  </span>
+                  <span class="eco-hub__module-copy">
+                    <span class="eco-hub__module-name">Education</span>
+                    <span class="eco-hub__module-meta">Market Fluidity</span>
+                    <span class="eco-hub__module-title">Build your knowledge</span>
+                    <span class="eco-hub__module-desc">Access courses, live sessions and practical market analysis through Market Fluidity.</span>
+                  </span>
+                </button>
+
+                <button
+                  class="eco-hub__module"
+                  type="button"
+                  role="tab"
+                  id="eco-tab-simulator"
+                  aria-selected="false"
+                  aria-controls="eco-hub-detail"
+                  tabindex="-1"
+                  data-eco-module="simulator"
+                >
+                  <span class="eco-hub__module-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+                      <rect x="3.5" y="4.5" width="17" height="12" rx="2" stroke="currentColor" stroke-width="1.7" />
+                      <path d="M8 19.5h8M12 16.5v3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+                      <path d="M7 12.5 10 9.5l3 2.5 3.5-4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </span>
+                  <span class="eco-hub__module-copy">
+                    <span class="eco-hub__module-name">Simulator</span>
+                    <span class="eco-hub__module-meta">MT5 Simulator</span>
+                    <span class="eco-hub__module-title">Test before you trade</span>
+                    <span class="eco-hub__module-desc">Practise strategies in a realistic simulated environment with the MT5 Simulator.</span>
+                  </span>
+                </button>
+
+                <button
+                  class="eco-hub__module"
+                  type="button"
+                  role="tab"
+                  id="eco-tab-tools"
+                  aria-selected="false"
+                  aria-controls="eco-hub-detail"
+                  tabindex="-1"
+                  data-eco-module="tools"
+                >
+                  <span class="eco-hub__module-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+                      <path d="M4 7h10M18 7h2M14 5v4M4 17h6M14 17h6M10 15v4M4 12h4M12 12h8M8 10v4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+                    </svg>
+                  </span>
+                  <span class="eco-hub__module-copy">
+                    <span class="eco-hub__module-name">Trading Tools</span>
+                    <span class="eco-hub__module-meta">Magic Keys</span>
+                    <span class="eco-hub__module-title">Trade with greater control</span>
+                    <span class="eco-hub__module-desc">Manage orders, position sizes and risk using Magic Keys.</span>
+                  </span>
+                </button>
+
+                <button
+                  class="eco-hub__module"
+                  type="button"
+                  role="tab"
+                  id="eco-tab-community"
+                  aria-selected="false"
+                  aria-controls="eco-hub-detail"
+                  tabindex="-1"
+                  data-eco-module="community"
+                >
+                  <span class="eco-hub__module-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+                      <circle cx="9" cy="9" r="3" stroke="currentColor" stroke-width="1.7" />
+                      <circle cx="16.5" cy="10" r="2.4" stroke="currentColor" stroke-width="1.7" />
+                      <path d="M3.8 18c.7-2.4 2.7-3.6 5.2-3.6s4.5 1.2 5.2 3.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+                      <path d="M14.2 14.6c1.5-.4 3.1 0 4.2 1.4.7.9 1.1 2 1.2 3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+                    </svg>
+                  </span>
+                  <span class="eco-hub__module-copy">
+                    <span class="eco-hub__module-name">Community</span>
+                    <span class="eco-hub__module-meta">Trader Community</span>
+                    <span class="eco-hub__module-title">Learn alongside active traders</span>
+                    <span class="eco-hub__module-desc">Exchange insights and access ongoing support through the Dominion trader community.</span>
+                  </span>
+                </button>
               </div>
             </div>
-            <p class="disclaimer">
-              Example master-trader figures are illustrative only. Past performance is not
-              indicative of future results.
-            </p>
-          </div>
-          <div class="glass-panel reveal reveal-delay-2">
-            <div class="glass-panel__body chart-frame">
-              <header>
-                <h3>Copied portfolio curve</h3>
-                <div class="up">Illustrative</div>
-              </header>
-              <canvas id="copy-chart" class="chart-canvas" width="640" height="220"></canvas>
+
+            <div class="eco-hub__panel reveal reveal-delay-1">
+              <p class="eyebrow">Beyond the Platform</p>
+              <h2 class="section-title" id="eco-hub-title">One account. A complete trading ecosystem.</h2>
+              <p class="section-copy">
+                From structured education and strategy testing to execution tools and an active
+                trading community, Dominion connects the resources traders need in one complete
+                ecosystem.
+              </p>
+
+              <article
+                class="eco-hub__detail"
+                id="eco-hub-detail"
+                role="tabpanel"
+                aria-labelledby="eco-tab-education"
+                data-eco-detail
+              >
+                <div class="eco-hub__detail-icon" aria-hidden="true" data-eco-detail-icon>
+                  <svg viewBox="0 0 24 24" width="24" height="24" fill="none">
+                    <path d="M3 9.5 12 5l9 4.5-9 4.5L3 9.5z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" />
+                    <path d="M6.5 12v4.2c0 .8 2.4 2.4 5.5 2.4s5.5-1.6 5.5-2.4V12" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+                  </svg>
+                </div>
+                <p class="eco-hub__detail-category" data-eco-detail-category>Education</p>
+                <h3 class="eco-hub__detail-title" data-eco-detail-title>Build your knowledge</h3>
+                <p class="eco-hub__detail-copy" data-eco-detail-copy>
+                  Access courses, live sessions and practical market analysis through Market Fluidity.
+                </p>
+                <!-- Education destination: blogs / analysis area until Market Fluidity has a dedicated URL -->
+                <a class="eco-hub__detail-link" href="#blogs" data-eco-detail-link>Explore Education →</a>
+              </article>
+
+              <div class="eco-hub__actions">
+                <!-- Ecosystem overview currently maps to the connected dashboard section -->
+                <a class="btn btn--primary" href="#dashboard">Explore the Ecosystem</a>
+                <a class="btn btn--ghost-dark" href="https://app.dominionmarkets.com/register">Open an Account</a>
+              </div>
             </div>
           </div>
+
+          <aside class="eco-hub__rewards reveal" aria-labelledby="eco-rewards-title">
+            <div class="eco-hub__rewards-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+                <path d="M12 3.5 13.8 8h4.7l-3.8 2.9 1.4 4.6L12 13.3 7.9 15.5l1.4-4.6L5.5 8h4.7L12 3.5z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <div class="eco-hub__rewards-copy">
+              <p class="eco-hub__rewards-label">Commission Incentives Programme</p>
+              <h3 class="eco-hub__rewards-title" id="eco-rewards-title">Unlock more as you progress</h3>
+              <p class="eco-hub__rewards-text">
+                Eligible clients may access additional rewards and promotions through Dominion’s
+                incentive programme. Terms and eligibility apply.
+              </p>
+            </div>
+            <!-- TODO: Replace with official programme terms URL when available -->
+            <a class="eco-hub__rewards-cta" href="#">View Programme Terms</a>
+          </aside>
         </div>
       </section>
 
-      <section class="section trust" id="trust">
-        <div class="container">
-          <div class="section-head reveal">
-            <p class="eyebrow">Trust</p>
-            <h2 class="section-title">Regulated. Transparent. Client-first.</h2>
-          </div>
-          <div class="trust-grid">
-            <article class="trust-card reveal">
-              <h3>FSC Mauritius</h3>
-              <p>
-                Dominion Markets Ltd — Investment Dealer. Licence No.
-                <strong>T2023340</strong>.
+      <section class="copy-ctrl" id="copy-trading" aria-labelledby="copy-ctrl-title" data-copy-ctrl>
+        <div class="container copy-ctrl__inner">
+          <div class="copy-ctrl__layout">
+            <div class="copy-ctrl__intro reveal">
+              <p class="copy-ctrl__eyebrow">Copy Trading</p>
+              <h2 class="copy-ctrl__title" id="copy-ctrl-title">Follow strategies. Stay in control.</h2>
+              <p class="copy-ctrl__lead">
+                Discover experienced trading strategies, choose how much to allocate, define your
+                risk limits, and monitor copied positions from one place.
               </p>
-            </article>
-            <article class="trust-card reveal reveal-delay-1">
-              <h3>CMA UAE affiliate</h3>
-              <p>
-                Dominion Financial Services L.L.C. — Category 5 (Introduction). Licence No.
-                <strong>20200000425</strong>.
-              </p>
-            </article>
-            <article class="trust-card reveal reveal-delay-2">
-              <h3>Operating pillars</h3>
-              <p>Technology, transparency, and incentives — authority without hype.</p>
-            </article>
+            </div>
+
+            <ul class="copy-ctrl__benefits reveal">
+              <li>
+                <span class="copy-ctrl__benefit-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none">
+                    <circle cx="12" cy="12" r="7.25" stroke="currentColor" stroke-width="1.7" />
+                    <circle cx="12" cy="12" r="2.2" stroke="currentColor" stroke-width="1.7" />
+                    <path d="M12 3.5v2.2M12 18.3v2.2M3.5 12h2.2M18.3 12h2.2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+                  </svg>
+                </span>
+                <span>
+                  <strong>Choose a strategy</strong>
+                  <small>Explore available trading approaches.</small>
+                </span>
+              </li>
+              <li>
+                <span class="copy-ctrl__benefit-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none">
+                    <rect x="3.5" y="6.5" width="17" height="12" rx="2.2" stroke="currentColor" stroke-width="1.7" />
+                    <path d="M3.5 10.5h17M8 14h3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+                  </svg>
+                </span>
+                <span>
+                  <strong>Set your allocation</strong>
+                  <small>Decide how much capital you want to assign.</small>
+                </span>
+              </li>
+              <li>
+                <span class="copy-ctrl__benefit-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none">
+                    <path d="M12 3.5 19.5 7v5.2c0 4.5-3 7.6-7.5 8.8C7.5 19.8 4.5 16.7 4.5 12.2V7L12 3.5z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" />
+                    <path d="M9.2 12.1l1.9 1.9 3.8-4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+                <span>
+                  <strong>Define risk limits</strong>
+                  <small>Set boundaries that match your risk tolerance.</small>
+                </span>
+              </li>
+              <li>
+                <span class="copy-ctrl__benefit-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none">
+                    <circle cx="12" cy="12" r="8.25" stroke="currentColor" stroke-width="1.7" />
+                    <path d="M10 9v6M14 9v6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                  </svg>
+                </span>
+                <span>
+                  <strong>Pause or stop anytime</strong>
+                  <small>Stay in control of copied activity.</small>
+                </span>
+              </li>
+            </ul>
+
+            <div class="copy-ctrl__actions reveal">
+              <!-- TODO: Replace with official Copy Trading product/app URL when available -->
+              <a class="btn btn--primary copy-ctrl__btn" href="#">
+                Explore Copy Trading
+                <span aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none">
+                    <path d="M5 12h12M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+              </a>
+              <a class="btn btn--ghost copy-ctrl__btn copy-ctrl__btn--ghost" href="#how-it-works">
+                How It Works
+                <span aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none">
+                    <path d="M5 12h12M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+              </a>
+            </div>
+
+            <div class="copy-ctrl__stage reveal reveal-delay-1">
+              <p class="copy-ctrl__preview-label">Illustrative preview</p>
+
+              <article class="copy-ctrl__dash" aria-label="Illustrative copy trading control dashboard">
+                <header class="copy-ctrl__dash-head">
+                  <div>
+                    <h3>Copy Trading Control</h3>
+                    <p class="copy-ctrl__dash-sub">Illustrative settings only — not a live account</p>
+                  </div>
+                  <span class="copy-ctrl__status" data-copy-status>
+                    <span class="copy-ctrl__status-dot" aria-hidden="true"></span>
+                    Active
+                  </span>
+                </header>
+
+                <div class="copy-ctrl__dash-grid">
+                  <div class="copy-ctrl__panel copy-ctrl__panel--strategy">
+                    <div class="copy-ctrl__field-label-row">
+                      <label class="copy-ctrl__field-label" for="copy-strategy">Selected strategy</label>
+                    </div>
+                    <div class="copy-ctrl__strategy">
+                      <span class="copy-ctrl__strategy-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none">
+                          <path d="M4 16l4-5 3.5 3L17 7" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M15 7h3v3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                      </span>
+                      <div class="copy-ctrl__strategy-copy">
+                        <select id="copy-strategy" data-copy-strategy>
+                          <option value="balanced" selected>Balanced Strategy</option>
+                          <option value="conservative">Conservative Strategy</option>
+                          <option value="growth">Growth Strategy</option>
+                        </select>
+                        <p class="copy-ctrl__strategy-meta" data-copy-strategy-meta>Moderate risk · Forex &amp; Indices</p>
+                      </div>
+                      <span class="copy-ctrl__chip" data-copy-chip>
+                        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" aria-hidden="true">
+                          <circle cx="12" cy="12" r="7.25" stroke="currentColor" stroke-width="1.7" />
+                          <path d="M8.5 12.2l2.3 2.3 4.7-5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        Copying active
+                      </span>
+                    </div>
+                  </div>
+
+                  <div class="copy-ctrl__panel copy-ctrl__panel--positions">
+                    <p class="copy-ctrl__field-label">Open copied positions</p>
+                    <p class="copy-ctrl__positions" data-copy-positions>4</p>
+                    <p class="copy-ctrl__positions-note">Illustrative count</p>
+                  </div>
+
+                  <div class="copy-ctrl__panel copy-ctrl__panel--alloc">
+                    <label class="copy-ctrl__field-label" for="copy-alloc">Capital allocation</label>
+                    <div class="copy-ctrl__value-row">
+                      <output class="copy-ctrl__value" id="copy-alloc-output" for="copy-alloc" data-copy-alloc-out>$2,500</output>
+                      <span class="copy-ctrl__hint" data-copy-alloc-pct>25% of available balance</span>
+                    </div>
+                    <input
+                      id="copy-alloc"
+                      class="copy-ctrl__slider"
+                      type="range"
+                      min="500"
+                      max="10000"
+                      step="100"
+                      value="2500"
+                      data-copy-alloc
+                      aria-valuetext="2500 dollars allocated"
+                    />
+                    <div class="copy-ctrl__bar" aria-hidden="true">
+                      <span class="copy-ctrl__bar-fill" data-copy-bar style="width: 25%"></span>
+                    </div>
+                    <div class="copy-ctrl__bar-legend" aria-hidden="true">
+                      <span>Allocated <strong data-copy-alloc-share>25%</strong></span>
+                      <span>Available <strong data-copy-avail-share>75%</strong></span>
+                    </div>
+                  </div>
+
+                  <div class="copy-ctrl__panel copy-ctrl__panel--risk">
+                    <label class="copy-ctrl__field-label" for="copy-loss">Maximum-loss limit</label>
+                    <div class="copy-ctrl__value-row">
+                      <output class="copy-ctrl__value" id="copy-loss-output" for="copy-loss" data-copy-loss-out>10%</output>
+                    </div>
+                    <input
+                      id="copy-loss"
+                      class="copy-ctrl__slider"
+                      type="range"
+                      min="5"
+                      max="30"
+                      step="1"
+                      value="10"
+                      data-copy-loss
+                      aria-valuetext="10 percent maximum loss"
+                    />
+                    <p class="copy-ctrl__risk-note">Copying pauses if this limit is reached.</p>
+                  </div>
+
+                  <div class="copy-ctrl__panel copy-ctrl__panel--status" aria-live="polite">
+                    <p class="copy-ctrl__field-label">Copying status</p>
+                    <ul class="copy-ctrl__status-list">
+                      <li><span>State</span><strong data-copy-state-label>Copying active</strong></li>
+                      <li><span>Strategy</span><strong data-copy-status-strategy>Balanced Strategy</strong></li>
+                      <li><span>Allocated</span><strong data-copy-status-alloc>$2,500</strong></li>
+                      <li><span>Open positions</span><strong data-copy-status-positions>4</strong></li>
+                      <li><span>Last updated</span><strong>Illustrative</strong></li>
+                    </ul>
+                  </div>
+
+                  <div class="copy-ctrl__controls">
+                    <button class="copy-ctrl__pause" type="button" data-copy-pause aria-pressed="false">
+                      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" aria-hidden="true">
+                        <path d="M9 7v10M15 7v10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                      </svg>
+                      Pause Copying
+                    </button>
+                    <button class="copy-ctrl__stop" type="button" data-copy-stop aria-pressed="false">
+                      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" aria-hidden="true">
+                        <rect x="7" y="7" width="10" height="10" rx="1.5" stroke="currentColor" stroke-width="1.7" />
+                      </svg>
+                      Stop Copying
+                    </button>
+                  </div>
+                </div>
+
+                <ol class="copy-ctrl__process">
+                  <li class="is-done">
+                    <span class="copy-ctrl__step-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" width="16" height="16" fill="none">
+                        <path d="M8 7h8M8 12h8M8 17h5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+                      </svg>
+                    </span>
+                    <span>
+                      <strong>Strategy</strong>
+                      <small>Choose a strategy to follow</small>
+                    </span>
+                  </li>
+                  <li class="is-current">
+                    <span class="copy-ctrl__step-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" width="16" height="16" fill="none">
+                        <path d="M12 3.5 19.5 7v5.2c0 4.5-3 7.6-7.5 8.8C7.5 19.8 4.5 16.7 4.5 12.2V7L12 3.5z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" />
+                      </svg>
+                    </span>
+                    <span>
+                      <strong>Your risk settings</strong>
+                      <small>Set allocation and risk limits</small>
+                    </span>
+                  </li>
+                  <li>
+                    <span class="copy-ctrl__step-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" width="16" height="16" fill="none">
+                        <circle cx="12" cy="9" r="3.2" stroke="currentColor" stroke-width="1.7" />
+                        <path d="M6.5 18.5c1.2-2.4 3.1-3.6 5.5-3.6s4.3 1.2 5.5 3.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+                      </svg>
+                    </span>
+                    <span>
+                      <strong>Your account</strong>
+                      <small>Monitor copied positions</small>
+                    </span>
+                  </li>
+                </ol>
+              </article>
+            </div>
+
+            <p class="copy-ctrl__disclosure reveal">
+              <span aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none">
+                  <path d="M12 3.5 19.5 7v5.2c0 4.5-3 7.6-7.5 8.8C7.5 19.8 4.5 16.7 4.5 12.2V7L12 3.5z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+                </svg>
+              </span>
+              Copy trading does not guarantee profits. You remain responsible for your account and risk settings.
+            </p>
           </div>
         </div>
       </section>
 
-      <section class="final-cta" id="final-cta">
-        <div class="final-cta__glass reveal">
-          <h2 class="section-title">Ready to trade with clarity?</h2>
-          <p>Open an account or talk to our team — Dubai headquarters, global support.</p>
-          <div class="hero__actions">
-            <a class="btn btn--primary" href="#final-cta">Open Account</a>
-            <a class="btn btn--ghost" href="mailto:info@dominionmarkets.com">Contact us</a>
+      <section class="reg-foot" id="trust" aria-labelledby="reg-foot-title">
+        <div class="container reg-foot__inner">
+          <header class="reg-foot__intro reveal">
+            <p class="reg-foot__eyebrow">Global Regulatory Footprint</p>
+            <h2 class="reg-foot__title" id="reg-foot-title">Structured for trust across markets.</h2>
+            <p class="reg-foot__lead">
+              Dominion operates through established entities designed to support transparent,
+              responsible access to global financial markets.
+            </p>
+          </header>
+
+          <div class="reg-foot__visual reveal reveal-delay-1">
+            <div class="reg-foot__map-stage">
+              <div class="reg-foot__map" aria-hidden="true">
+                <img
+                  class="reg-foot__map-img"
+                  src="./assets/regulatory/world-map.svg"
+                  alt=""
+                  width="1000"
+                  height="500"
+                  decoding="async"
+                />
+                <svg class="reg-foot__overlay" viewBox="0 0 1000 500" preserveAspectRatio="xMidYMid meet" focusable="false">
+                  <path
+                    class="reg-foot__connector"
+                    d="M653.5 207 C 640 255, 645 310, 659.7 367.4"
+                    fill="none"
+                    stroke="#47BD68"
+                    stroke-width="1.6"
+                    stroke-dasharray="4 5"
+                    stroke-linecap="round"
+                  />
+                  <g class="reg-foot__pin" transform="translate(653.5 207)">
+                    <circle r="14" fill="rgba(71,189,104,0.16)" />
+                    <circle r="5.5" fill="#47BD68" />
+                    <circle r="2.2" fill="#ffffff" />
+                  </g>
+                  <g class="reg-foot__pin" transform="translate(659.7 367.4)">
+                    <circle r="14" fill="rgba(71,189,104,0.16)" />
+                    <circle r="5.5" fill="#47BD68" />
+                    <circle r="2.2" fill="#ffffff" />
+                  </g>
+                  <text class="reg-foot__pin-label reg-foot__pin-label--uae" x="670" y="202" fill="#1D3347">UAE</text>
+                  <text class="reg-foot__pin-label reg-foot__pin-label--mu" x="676" y="372" fill="#1D3347">Mauritius</text>
+                  <line class="reg-foot__leader reg-foot__leader--mu" x1="290" y1="390" x2="645" y2="367" />
+                  <line class="reg-foot__leader reg-foot__leader--uae" x1="720" y1="220" x2="800" y2="220" />
+                </svg>
+              </div>
+
+              <article class="reg-foot__card reg-foot__card--mu">
+                <p class="reg-foot__card-loc">Mauritius</p>
+                <h3 class="reg-foot__card-name">Dominion Markets Ltd</h3>
+                <p class="reg-foot__card-type">Investment Dealer</p>
+                <p class="reg-foot__card-copy">
+                  <span class="reg-foot__card-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none">
+                      <path d="M12 3.5 19.5 7v5.2c0 4.5-3 7.6-7.5 8.8C7.5 19.8 4.5 16.7 4.5 12.2V7L12 3.5z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" />
+                      <path d="M9.1 12.1l2 2 3.9-4.1" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </span>
+                  <span>Regulatory oversight and international market operations.</span>
+                </p>
+              </article>
+
+              <article class="reg-foot__card reg-foot__card--uae">
+                <p class="reg-foot__card-loc">United Arab Emirates</p>
+                <h3 class="reg-foot__card-name">Dominion Financial Services L.L.C.</h3>
+                <p class="reg-foot__card-type">Category 5 — Introduction</p>
+                <p class="reg-foot__card-copy">
+                  <span class="reg-foot__card-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none">
+                      <path d="M4.5 19.5h15M6.5 19.5V8.5l5-3.5 5 3.5v11" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" />
+                      <path d="M10 19.5v-4h4v4M10 11h.01M14 11h.01M10 14.5h.01M14 14.5h.01" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+                    </svg>
+                  </span>
+                  <span>Regional presence supporting client introductions.</span>
+                </p>
+              </article>
+            </div>
+          </div>
+
+          <nav class="reg-foot__links reveal" aria-label="Regulatory and legal resources">
+            <!-- TODO: Replace with official Regulatory Information URL when available -->
+            <a class="reg-foot__link" href="#">
+              <span>Regulatory Information</span>
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" aria-hidden="true">
+                <path d="M8 16 16 8M10 8h6v6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </a>
+            <a
+              class="reg-foot__link"
+              href="https://www.dominionmarkets.com/legal-documents/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span>Legal Documents</span>
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" aria-hidden="true">
+                <path d="M8 16 16 8M10 8h6v6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </a>
+            <!-- Risk Disclosure Notice is published under Legal Documents; dedicated URL not found -->
+            <a
+              class="reg-foot__link"
+              href="https://www.dominionmarkets.com/legal-documents/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span>Risk Disclosure</span>
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" aria-hidden="true">
+                <path d="M8 16 16 8M10 8h6v6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </a>
+          </nav>
+        </div>
+      </section>
+
+      <section class="sanctuary-close" id="final-cta" aria-labelledby="sanctuary-close-title">
+        <div class="sanctuary-close__media" aria-hidden="true">
+          <div class="sanctuary-close__bg" role="presentation"></div>
+          <div class="sanctuary-close__veil"></div>
+        </div>
+
+        <div class="container sanctuary-close__inner">
+          <div class="sanctuary-close__content reveal">
+            <p class="sanctuary-close__eyebrow">YOUR TRADING SANCTUARY</p>
+            <h2 class="sanctuary-close__title" id="sanctuary-close-title">
+              Your next move<br />starts with clarity.
+            </h2>
+            <p class="sanctuary-close__lead">
+              Access 200+ instruments through MT5 and cTrader, with transparent trading conditions
+              and support when you need it.
+            </p>
+
+            <div class="sanctuary-close__actions">
+              <a
+                class="btn btn--primary sanctuary-close__btn"
+                href="https://app.dominionmarkets.com/register"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Open an Account
+              </a>
+              <a class="btn sanctuary-close__btn sanctuary-close__btn--secondary" href="#accounts">
+                Compare Account Types
+              </a>
+            </div>
+
+            <a class="sanctuary-close__team" href="mailto:info@dominionmarkets.com">
+              Talk to Our Team
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" aria-hidden="true">
+                <path d="M8 16 16 8M10 8h6v6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </a>
+
+            <ul class="sanctuary-close__proofs">
+              <li>
+                <span class="sanctuary-close__proof-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none">
+                    <path d="M5 8h6M8 5v6M13 12h6M16 9v6M5 16h6M8 13v6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+                  </svg>
+                </span>
+                <span>200+ Instruments</span>
+              </li>
+              <li>
+                <span class="sanctuary-close__proof-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none">
+                    <rect x="3.5" y="5" width="17" height="12.5" rx="1.8" stroke="currentColor" stroke-width="1.7" />
+                    <path d="M8 14.5l2.2-3 1.8 2.2L15.5 9.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+                <span>MT5 &amp; cTrader</span>
+              </li>
+              <li>
+                <span class="sanctuary-close__proof-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none">
+                    <circle cx="12" cy="12" r="8.25" stroke="currentColor" stroke-width="1.7" />
+                    <path d="M12 8v4.2l2.8 1.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+                <span>24/5 Market Access</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="sanctuary-close__risk">
+          <div class="container sanctuary-close__risk-inner">
+            <span class="sanctuary-close__risk-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none">
+                <path d="M12 4.5 20.5 19H3.5L12 4.5z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" />
+                <path d="M12 10v4.2M12 16.8h.01" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+              </svg>
+            </span>
+            <p>
+              Trading leveraged instruments carries a high level of risk and may not be suitable for
+              all investors.
+            </p>
           </div>
         </div>
       </section>
@@ -2202,13 +3457,7 @@
 
     <footer class="site-footer" id="footer">
       <div class="site-footer__atmosphere" aria-hidden="true">
-        <img
-          class="site-footer__bg"
-          src="./assets/platforms/platforms-mist-water.jpg"
-          alt=""
-          width="1920"
-          height="1080"
-        />
+        <div class="site-footer__bg" role="presentation"></div>
         <div class="site-footer__overlay"></div>
       </div>
 
@@ -2218,7 +3467,7 @@
             <a class="site-footer__brand" href="#top" aria-label="Dominion Markets home">
               <img
                 class="logo logo--footer"
-                src="./assets/logo/logo-horizontal-color-transparent.png"
+                src="./assets/logo/logo-horizontal-reverse.svg"
                 alt="Dominion Markets"
                 width="200"
                 height="36"
@@ -2273,7 +3522,7 @@
               <h3 id="footer-education">Education</h3>
             </div>
             <ul class="site-footer__links">
-              <li><a href="#trade-better">Market Analysis<span aria-hidden="true">›</span></a></li>
+              <li><a href="#markets">Market Analysis<span aria-hidden="true">›</span></a></li>
               <li><a href="#sessions">Best times to trade<span aria-hidden="true">›</span></a></li>
               <li><a href="#markets">Pairs to trade<span aria-hidden="true">›</span></a></li>
               <li><a href="#blogs">Blogs<span aria-hidden="true">›</span></a></li>
@@ -2393,6 +3642,6 @@
     </footer>
 
 
-    <script src="./main.js"></script>
+    <script src="./main.js?v=76"></script>
   </body>
 </html>
