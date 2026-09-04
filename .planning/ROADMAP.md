@@ -15,7 +15,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 1: Track Web App** - Commit `web/` source into git with safe ignores
 - [x] **Phase 2: Asset Inventory** - Produce a reference-proven keep/delete list for `web/public`
 - [x] **Phase 3: Safe Orphan Deletes** - Remove dead CSS mirror and root hero PNG duplicate
-- [ ] **Phase 4: Minimal React Unlock** - Change callers only if needed to free large unused assets
+- [x] **Phase 4: Minimal React Unlock** - Change callers only if needed to free large unused assets
 - [ ] **Phase 5: Prune Public Assets** - Delete inventory-proven unused files under `web/public`
 - [ ] **Phase 6: Parity Verification** - Confirm remaining homepage look/behavior matches pre-cleanup
 - [ ] **Phase 7: Archive Mockups** - Preserve `mockups/` history in a separate repo or long-lived branch
@@ -76,7 +76,7 @@ Plans:
 **UI hint**: yes
 
 Plans:
-- [ ] 04-01-PLAN.md — Verify-only rescan of 55 delete candidates; write 04-UNLOCK.md for Phase 5 clearance (no app edits expected)
+- [x] 04-01-PLAN.md — Verify-only rescan of 55 delete candidates; write 04-UNLOCK.md for Phase 5 clearance (no app edits expected)
 
 ### Phase 5: Prune Public Assets
 **Goal**: All inventory-proven unused `web/public` assets are deleted; referenced assets remain
@@ -149,7 +149,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8 →
 | 1. Track Web App | 1/1 | Complete | 2026-09-05 |
 | 2. Asset Inventory | 1/1 | Complete | 2026-09-05 |
 | 3. Safe Orphan Deletes | 1/1 | Complete | 2026-09-05 |
-| 4. Minimal React Unlock | 0/1 | Not started | - |
+| 4. Minimal React Unlock | 1/1 | Complete | 2026-09-05 |
 | 5. Prune Public Assets | 0/TBD | Not started | - |
 | 6. Parity Verification | 0/TBD | Not started | - |
 | 7. Archive Mockups | 0/TBD | Not started | - |

@@ -22,7 +22,7 @@ Requirements for this milestone. Each maps to roadmap phases.
 
 ### Minimal React
 
-- [ ] **REACT-01**: Change React/HTML callers only when required to unlock safe deletion of large unused assets
+- [x] **REACT-01**: Change React/HTML callers only when required to unlock safe deletion of large unused assets
 
 ### Production Readiness
 
@@ -68,7 +68,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | MOCK-01 | Phase 7 | Pending |
 | MOCK-02 | Phase 8 | Pending |
 | MOCK-03 | Phase 9 | Pending |
-| REACT-01 | Phase 4 | Pending |
+| REACT-01 | Phase 4 | Complete |
 | PROD-01 | Phase 6 | Pending |
 | PROD-02 | Phase 1 | Complete |
 | PROD-03 | Phase 10 | Pending |

@@ -5,46 +5,43 @@
 See: .planning/PROJECT.md (updated 2026-09-05)
 
 **Core value:** Ship a clean production Next.js site that keeps every asset and behavior the live site actually uses — never delete something still referenced.
-**Current focus:** Phase 4 — Minimal React Unlock
+**Current focus:** Phase 5 — Prune Public Assets
 
 ## Current Position
 
-Phase: 4 of 10 (Minimal React Unlock)
+Phase: 5 of 10 (Prune Public Assets)
 Plan: — of — in current phase
-Status: Phase 3 complete — ready to discuss/plan Phase 4
-Last activity: 2026-09-05 — Phase 3: removed dead src mockups.css + root hero PNG; build OK (00481ed)
+Status: Phase 4 complete — VERIFY_ONLY_CLEAR; Phase 5 may delete all 55 inventory deletes
+Last activity: 2026-09-05 — Phase 4: 55/55 still_unreferenced, 0 keep_exceptions; 04-UNLOCK.md clearance written
 
-Progress: [███░░░░░░░] 30%
+Progress: [████░░░░░░] 40%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 3
-- Average duration: ~
-- Total execution time: ~
+- Total plans completed: 4
 
 **By Phase:**
 
-| Phase | Plans | Total | Avg/Plan |
-|-------|-------|-------|----------|
-| 1. Track Web App | 1 | 1 | ~1 min |
-| 2. Asset Inventory | 1 | 1 | ~15 min |
-| 3. Safe Orphan Deletes | 1 | 1 | ~3 min |
+| Phase | Plans | Total | Status |
+|-------|-------|-------|--------|
+| 1. Track Web App | 1 | 1 | Complete |
+| 2. Asset Inventory | 1 | 1 | Complete |
+| 3. Safe Orphan Deletes | 1 | 1 | Complete |
+| 4. Minimal React Unlock | 1 | 1 | Complete |
 
 ## Accumulated Context
 
 ### Decisions
 
-- Phase 1–3 complete: web tracked, inventory 82/55, orphans removed
-- Phase 5 will delete from `02-INVENTORY.json` delete class after Phase 4 unlock if needed
+- Phase 4: no React changes needed; Phase 5 cleared to delete all 55 paths from 02-INVENTORY delete class (~32.6 MB)
 
 ### Blockers/Concerns
 
-- Phase 4: only change callers if needed to unlock large deletes
-- Phase 5: prune ~32.6MB from inventory delete list
+- Phase 5 must delete only paths listed as still_unreferenced in 04-UNLOCK / 04-RESCAN + matching 02-INVENTORY delete class
 
 ## Session Continuity
 
 Last session: 2026-09-05
-Stopped at: Phase 3 complete; next `/gsd-discuss-phase 4`
+Stopped at: Phase 4 complete; next `/gsd-discuss-phase 5` or `/gsd-plan-phase 5`
 Resume file: None
