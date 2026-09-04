@@ -1,0 +1,284 @@
+{
+  "source_inventory": ".planning/phases/02-asset-inventory/02-INVENTORY.json",
+  "scan_sources": [
+    "web/src",
+    "web/public/mockups.css"
+  ],
+  "candidates": [
+    {
+      "path": "web/public/.DS_Store",
+      "status": "still_unreferenced",
+      "evidence": "no match in web/src + mockups.css"
+    },
+    {
+      "path": "web/public/assets/.DS_Store",
+      "status": "still_unreferenced",
+      "evidence": "no match in web/src + mockups.css"
+    },
+    {
+      "path": "web/public/assets/awards/laurel.svg",
+      "status": "still_unreferenced",
+      "evidence": "no match in web/src + mockups.css"
+    },
+    {
+      "path": "web/public/assets/awards/mist-bg.jpg",
+      "status": "still_unreferenced",
+      "evidence": "no match in web/src + mockups.css"
+    },
+    {
+      "path": "web/public/assets/blogs/mist-bg.png",
+      "status": "still_unreferenced",
+      "evidence": "no match in web/src + mockups.css"
+    },
+    {
+      "path": "web/public/assets/hero/hero-media.png",
+      "status": "still_unreferenced",
+      "evidence": "no match in web/src + mockups.css"
+    },
+    {
+      "path": "web/public/assets/hero/hero.mp4",
+      "status": "still_unreferenced",
+      "evidence": "no match in web/src + mockups.css"
+    },
+    {
+      "path": "web/public/assets/logo/logo-horizontal-color.png",
+      "status": "still_unreferenced",
+      "evidence": "no match in web/src + mockups.css"
+    },
+    {
+      "path": "web/public/assets/markets-reach/commodities.svg",
+      "status": "still_unreferenced",
+      "evidence": "no match in web/src + mockups.css"
+    },
+    {
+      "path": "web/public/assets/markets-reach/currencies.svg",
+      "status": "still_unreferenced",
+      "evidence": "no match in web/src + mockups.css"
+    },
+    {
+      "path": "web/public/assets/markets-reach/discord.svg",
+      "status": "still_unreferenced",
+      "evidence": "no match in web/src + mockups.css"
+    },
+    {
+      "path": "web/public/assets/markets-reach/mist-bg.jpg",
+      "status": "still_unreferenced",
+      "evidence": "no match in web/src + mockups.css"
+    },
+    {
+      "path": "web/public/assets/mrkt/mist-bg.jpg",
+      "status": "still_unreferenced",
+      "evidence": "no match in web/src + mockups.css"
+    },
+    {
+      "path": "web/public/assets/mrkt/product-collage.png",
+      "status": "still_unreferenced",
+      "evidence": "no match in web/src + mockups.css"
+    },
+    {
+      "path": "web/public/assets/mrkt/product-collage.webp",
+      "status": "still_unreferenced",
+      "evidence": "no match in web/src + mockups.css"
+    },
+    {
+      "path": "web/public/assets/mt5-sim/mist-bg.jpg",
+      "status": "still_unreferenced",
+      "evidence": "no match in web/src + mockups.css"
+    },
+    {
+      "path": "web/public/assets/mt5-sim/mt5Logo-transparent.png",
+      "status": "still_unreferenced",
+      "evidence": "no match in web/src + mockups.css"
+    },
+    {
+      "path": "web/public/assets/mt5-sim/mt5Logo.png",
+      "status": "still_unreferenced",
+      "evidence": "no match in web/src + mockups.css"
+    },
+    {
+      "path": "web/public/assets/mt5-sim/mt5_section.png",
+      "status": "still_unreferenced",
+      "evidence": "no match in web/src + mockups.css"
+    },
+    {
+      "path": "web/public/assets/mt5-sim/mt5_trading.png",
+      "status": "still_unreferenced",
+      "evidence": "no match in web/src + mockups.css"
+    },
+    {
+      "path": "web/public/assets/payments/bitcoin_icon.png",
+      "status": "still_unreferenced",
+      "evidence": "no match in web/src + mockups.css"
+    },
+    {
+      "path": "web/public/assets/payments/dm-payment-options-darkmode.png",
+      "status": "still_unreferenced",
+      "evidence": "no match in web/src + mockups.css"
+    },
+    {
+      "path": "web/public/assets/payments/dm-payment-options.png",
+      "status": "still_unreferenced",
+      "evidence": "no match in web/src + mockups.css"
+    },
+    {
+      "path": "web/public/assets/payments/ethereum_icon.png",
+      "status": "still_unreferenced",
+      "evidence": "no match in web/src + mockups.css"
+    },
+    {
+      "path": "web/public/assets/payments/funding.png",
+      "status": "still_unreferenced",
+      "evidence": "no match in web/src + mockups.css"
+    },
+    {
+      "path": "web/public/assets/payments/icons/crypto-pair.png",
+      "status": "still_unreferenced",
+      "evidence": "no match in web/src + mockups.css"
+    },
+    {
+      "path": "web/public/assets/payments/icons/googlepay.png",
+      "status": "still_unreferenced",
+      "evidence": "no match in web/src + mockups.css"
+    },
+    {
+      "path": "web/public/assets/payments/icons/mastercard-circles.png",
+      "status": "still_unreferenced",
+      "evidence": "no match in web/src + mockups.css"
+    },
+    {
+      "path": "web/public/assets/payments/icons/upi.png",
+      "status": "still_unreferenced",
+      "evidence": "no match in web/src + mockups.css"
+    },
+    {
+      "path": "web/public/assets/payments/mastercard-logo.png",
+      "status": "still_unreferenced",
+      "evidence": "no match in web/src + mockups.css"
+    },
+    {
+      "path": "web/public/assets/payments/mastercard.svg",
+      "status": "still_unreferenced",
+      "evidence": "no match in web/src + mockups.css"
+    },
+    {
+      "path": "web/public/assets/payments/mastercard_icon.png",
+      "status": "still_unreferenced",
+      "evidence": "no match in web/src + mockups.css"
+    },
+    {
+      "path": "web/public/assets/payments/pay-icons-01.png",
+      "status": "still_unreferenced",
+      "evidence": "no match in web/src + mockups.css"
+    },
+    {
+      "path": "web/public/assets/payments/pay-icons-darkmode-01.png",
+      "status": "still_unreferenced",
+      "evidence": "no match in web/src + mockups.css"
+    },
+    {
+      "path": "web/public/assets/payments/pay-icons-darkmode.png",
+      "status": "still_unreferenced",
+      "evidence": "no match in web/src + mockups.css"
+    },
+    {
+      "path": "web/public/assets/payments/pay-icons-new-01-00.png",
+      "status": "still_unreferenced",
+      "evidence": "no match in web/src + mockups.css"
+    },
+    {
+      "path": "web/public/assets/payments/pay-icons-new-01.png",
+      "status": "still_unreferenced",
+      "evidence": "no match in web/src + mockups.css"
+    },
+    {
+      "path": "web/public/assets/payments/pay-icons.png",
+      "status": "still_unreferenced",
+      "evidence": "no match in web/src + mockups.css"
+    },
+    {
+      "path": "web/public/assets/payments/same-day-withdrawls-03.png",
+      "status": "still_unreferenced",
+      "evidence": "no match in web/src + mockups.css"
+    },
+    {
+      "path": "web/public/assets/payments/visa-logo.png",
+      "status": "still_unreferenced",
+      "evidence": "no match in web/src + mockups.css"
+    },
+    {
+      "path": "web/public/assets/payments/visa.svg",
+      "status": "still_unreferenced",
+      "evidence": "no match in web/src + mockups.css"
+    },
+    {
+      "path": "web/public/assets/platforms/ctrader-icon.png",
+      "status": "still_unreferenced",
+      "evidence": "no match in web/src + mockups.css"
+    },
+    {
+      "path": "web/public/assets/platforms/ctrader-lockup.png",
+      "status": "still_unreferenced",
+      "evidence": "no match in web/src + mockups.css"
+    },
+    {
+      "path": "web/public/assets/platforms/ctrader-logo2.png",
+      "status": "still_unreferenced",
+      "evidence": "no match in web/src + mockups.css"
+    },
+    {
+      "path": "web/public/assets/platforms/download-ctrader-logo.png",
+      "status": "still_unreferenced",
+      "evidence": "no match in web/src + mockups.css"
+    },
+    {
+      "path": "web/public/assets/platforms/mt5-icon.png",
+      "status": "still_unreferenced",
+      "evidence": "no match in web/src + mockups.css"
+    },
+    {
+      "path": "web/public/assets/platforms/mt5-lockup.png",
+      "status": "still_unreferenced",
+      "evidence": "no match in web/src + mockups.css"
+    },
+    {
+      "path": "web/public/assets/platforms/platforms-mist-water.jpg",
+      "status": "still_unreferenced",
+      "evidence": "no match in web/src + mockups.css"
+    },
+    {
+      "path": "web/public/assets/trade-better/icons/bull-wire.svg",
+      "status": "still_unreferenced",
+      "evidence": "no match in web/src + mockups.css"
+    },
+    {
+      "path": "web/public/assets/trader-community/avatars/avatar-1.webp",
+      "status": "still_unreferenced",
+      "evidence": "no match in web/src + mockups.css"
+    },
+    {
+      "path": "web/public/assets/trader-community/avatars/avatar-2.webp",
+      "status": "still_unreferenced",
+      "evidence": "no match in web/src + mockups.css"
+    },
+    {
+      "path": "web/public/assets/trader-community/avatars/avatar-3.webp",
+      "status": "still_unreferenced",
+      "evidence": "no match in web/src + mockups.css"
+    },
+    {
+      "path": "web/public/assets/trader-community/avatars/avatar-4.webp",
+      "status": "still_unreferenced",
+      "evidence": "no match in web/src + mockups.css"
+    },
+    {
+      "path": "web/public/assets/trader-community/avatars/avatar-5.webp",
+      "status": "still_unreferenced",
+      "evidence": "no match in web/src + mockups.css"
+    },
+    {
+      "path": "web/public/assets/trader-community/avatars/avatar-6.webp",
+      "status": "still_unreferenced",
+      "evidence": "no match in web/src + mockups.css"
+    }
+  ]
+}
