@@ -56,8 +56,8 @@ Ship a clean production Next.js site that keeps every asset and behavior the liv
 
 | Decision | Rationale | Outcome |
 |----------|-----------|---------|
-| Milestone = cleanup + ship, with minimal React only if needed for deletes | User 1B + depth C — avoid full rewrite while still unblocking large asset removal | — Pending |
-| Delete bar = static scan of `web/src` + served `mockups.css` only | User 3A — safest proof before production | — Pending |
+| Milestone = cleanup + ship, with minimal React only if needed for deletes | User 1B + depth C — avoid full rewrite while still unblocking large asset removal | Validated — Phase 4 verify-only; Phase 5 pruned 55 |
+| Delete bar = static scan of `web/src` + served `mockups.css` only | User 3A — safest proof before production | Validated — inventory + rescan + prune honor bar |
 | Archive `mockups/` to separate repo/branch, then remove from this repo | User 2C + sequence C — preserve design history without bloating prod repo | — Pending |
 | Keep `docs/` / `wireframes/` unless they block prod | Small on disk; not runtime; not the main weight problem | — Pending |
 | Full homepage React cutover deferred | Explicitly out of scope for this milestone | — Pending |
