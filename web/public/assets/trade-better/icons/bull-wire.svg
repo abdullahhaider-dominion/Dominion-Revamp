@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" fill="none" role="img" aria-label="Educational Seminars">
+  <defs>
+    <filter id="bullGlow" x="-35%" y="-35%" width="170%" height="170%">
+      <feGaussianBlur stdDeviation="2.2" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <g stroke="#47BD68" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" filter="url(#bullGlow)">
+    <!-- horns -->
+    <path d="M48 58 C40 34 28 24 16 22"/>
+    <path d="M112 58 C120 34 132 24 144 22"/>
+    <path d="M48 58 C44 46 36 38 28 36"/>
+    <path d="M112 58 C116 46 124 38 132 36"/>
+    <!-- head silhouette -->
+    <path d="M48 58 C52 44 68 34 80 34 C92 34 108 44 112 58 C118 72 116 92 104 104 C96 112 88 116 80 116 C72 116 64 112 56 104 C44 92 42 72 48 58Z"/>
+    <!-- snout -->
+    <path d="M64 96 C68 108 74 114 80 114 C86 114 92 108 96 96"/>
+    <path d="M70 104 H90"/>
+    <!-- eyes as nodes -->
+    <circle cx="66" cy="72" r="3.2" fill="#47BD68" stroke="none"/>
+    <circle cx="94" cy="72" r="3.2" fill="#47BD68" stroke="none"/>
+    <!-- wire mesh -->
+    <path d="M56 66 L80 52 L104 66" opacity="0.85"/>
+    <path d="M52 78 L80 66 L108 78" opacity="0.75"/>
+    <path d="M54 90 L80 80 L106 90" opacity="0.7"/>
+    <path d="M58 100 L80 92 L102 100" opacity="0.65"/>
+    <path d="M80 52 V114" opacity="0.55"/>
+    <path d="M66 72 L80 92 L94 72" opacity="0.7"/>
+    <path d="M56 66 L66 72 L58 100" opacity="0.55"/>
+    <path d="M104 66 L94 72 L102 100" opacity="0.55"/>
+    <!-- ear nodes -->
+    <circle cx="50" cy="70" r="2" fill="#7AE8A0" stroke="none"/>
+    <circle cx="110" cy="70" r="2" fill="#7AE8A0" stroke="none"/>
+    <circle cx="80" cy="52" r="2.2" fill="#7AE8A0" stroke="none"/>
+    <circle cx="80" cy="80" r="2" fill="#7AE8A0" stroke="none"/>
+    <circle cx="80" cy="114" r="2" fill="#7AE8A0" stroke="none"/>
+    <!-- neck / shoulders hint -->
+    <path d="M56 104 C48 118 44 130 48 142" opacity="0.55"/>
+    <path d="M104 104 C112 118 116 130 112 142" opacity="0.55"/>
+    <path d="M48 142 H112" opacity="0.4"/>
+  </g>
+</svg>
