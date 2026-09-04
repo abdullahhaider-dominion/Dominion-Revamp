@@ -13,7 +13,7 @@ Brownfield cleanup of the Next.js marketing app under `web/`: get the production
 Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Track Web App** - Commit `web/` source into git with safe ignores
-- [ ] **Phase 2: Asset Inventory** - Produce a reference-proven keep/delete list for `web/public`
+- [x] **Phase 2: Asset Inventory** - Produce a reference-proven keep/delete list for `web/public`
 - [ ] **Phase 3: Safe Orphan Deletes** - Remove dead CSS mirror and root hero PNG duplicate
 - [ ] **Phase 4: Minimal React Unlock** - Change callers only if needed to free large unused assets
 - [ ] **Phase 5: Prune Public Assets** - Delete inventory-proven unused files under `web/public`
@@ -49,7 +49,7 @@ Plans:
 **Plans**: 1 plan
 
 Plans:
-- [ ] 02-01-PLAN.md — Extract refs, classify all `web/public` files, write dual inventories + CONCERNS cross-check
+- [x] 02-01-PLAN.md — Extract refs, classify all `web/public` files, write dual inventories + CONCERNS cross-check
 
 ### Phase 3: Safe Orphan Deletes
 **Goal**: Confirmed non-runtime duplicates are gone without touching served CSS or live hero art
@@ -141,7 +141,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8 →
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Track Web App | 1/1 | Complete | 2026-09-05 |
-| 2. Asset Inventory | 0/1 | Not started | - |
+| 2. Asset Inventory | 1/1 | Complete | 2026-09-05 |
 | 3. Safe Orphan Deletes | 0/TBD | Not started | - |
 | 4. Minimal React Unlock | 0/TBD | Not started | - |
 | 5. Prune Public Assets | 0/TBD | Not started | - |
