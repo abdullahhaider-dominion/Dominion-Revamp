@@ -60,7 +60,7 @@ completed: 2026-09-05
 
 1. **Task 1: Load delete list, re-scan all candidates, write 04-RESCAN.json** - `31f95ab` (docs)
 2. **Task 2: Write 04-UNLOCK.md unlock artifact from 04-RESCAN.json** - `4bc009c` (docs)
-3. **Task 3: Write SUMMARY and prove no app code changes** - _(this commit)_
+3. **Task 3: Write SUMMARY and prove no app code changes** - `c3e48b4` (docs)
 
 ## Files Created/Modified
 
