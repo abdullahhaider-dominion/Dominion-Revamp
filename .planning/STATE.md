@@ -12,7 +12,7 @@ See: .planning/PROJECT.md (updated 2026-09-05)
 Phase: 1 of 10 (Track Web App)
 Plan: — of — in current phase
 Status: Ready to plan
-Last activity: 2026-09-05 — Roadmap created for Production Cleanup milestone
+Last activity: 2026-09-05 — Phase 1 context captured (track all web/public; web/-only commit)
 
 Progress: [░░░░░░░░░░] 0%
 
