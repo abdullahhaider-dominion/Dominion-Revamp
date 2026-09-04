@@ -1,0 +1,82 @@
+# Dominion Markets — Production Cleanup
+
+## What This Is
+
+Dominion Markets’ marketing website, recently ported from vanilla HTML/CSS/JS into a Next.js App Router app under `web/`. The live experience is a hybrid: a React cinematic hero plus a large vanilla body still shipped as an HTML string, shared CSS, and ported scripts. This milestone makes that repo production-ready by removing unused weight safely and retiring the legacy mockup tree from the app repo after archive.
+
+## Core Value
+
+Ship a clean production Next.js site that keeps every asset and behavior the live site actually uses — never delete something still referenced.
+
+## Requirements
+
+### Validated
+
+- ✓ Next.js 16 + React 19 marketing app runs from `web/` — existing
+- ✓ Cinematic hero/nav implemented as React (`CinematicHero.tsx`) — existing
+- ✓ Homepage body sections still served via ported HTML string + `mockups.css` + `mockups-main.js` — existing
+- ✓ Brand/docs and hi-fi vanilla mockup exist as design artifacts (`docs/`, `mockups/`, `wireframes/`) — existing
+- ✓ Codebase map documents unused-asset candidates (~33MB under `web/public/assets/`) — existing (`.planning/codebase/`)
+
+### Active
+
+- [ ] Inventory and prune `web/public` assets proven unused by static scan of `web/src` + served `web/public/mockups.css`
+- [ ] Remove confirmed dead copies (e.g. unused `web/src/styles/mockups.css`, orphan root `Hero-background.png`) without changing live visuals
+- [ ] Archive `mockups/` to a separate repo or long-lived branch, update docs/skills that treat it as SoT, then remove `mockups/` from this production repo
+- [ ] Perform minimal React/caller updates only when required to unlock safe deletion of large unused assets (not a full section rewrite)
+- [ ] Ensure production build stays visually/behaviorally equivalent for remaining live sections
+- [ ] Leave a lean, pushable repo: tracked app code, no orphan design binaries in the production tree
+
+### Out of Scope
+
+- Full React rewrite of all homepage sections this milestone — only convert what’s needed for safe deletes
+- Deleting assets that still appear in `web/src` or served `mockups.css` — safety bar is static-scan proof only
+- Redesigning brand, layout, or section content — cleanup and readiness, not a visual relaunch
+- Adding auth, CMS, analytics backends, or new marketing features — not part of this milestone
+- Deleting `docs/` / `wireframes/` wholesale — keep unless they block production; focus is assets + `mockups/` retirement after archive
+
+## Context
+
+- Brownfield repo at `/Users/usama/Desktop/Dominion Markets/Vanilla to nextjs` (Cursor workspace may still point at an empty sibling folder — work against this path).
+- Production app: `web/` (Next.js). Design SoT today: `mockups/` (~64MB), referenced by port workflow and `.cursor/skills`, not imported at Next runtime.
+- Map findings (`.planning/codebase/CONCERNS.md`): ~53 unreferenced files (~32.6MB) under `web/public/assets/`; triple CSS copies with drift; `web/` was largely untracked at map time — ensure app source is in git as part of readiness.
+- User chose safer full-phase GSD path: map → project → phased roadmap → execute with approvals.
+
+## Constraints
+
+- **Safety**: Delete only what static analysis proves unused against `web/src` + served CSS — no guess deletes
+- **Parity**: Live site look/behavior must not regress for remaining sections
+- **Stack**: Stay on Next.js App Router in `web/` (React 19, Tailwind v4, TypeScript) — no framework migration
+- **Mockups retirement**: Archive out-of-repo (or dedicated branch) *before* deleting `mockups/` from this repo
+- **React scope**: Minimal — only as needed to unlock deletions, not a full componentization program
+- **Git**: Prefer committing planning docs; production tree should include the real `web/` app
+
+## Key Decisions
+
+| Decision | Rationale | Outcome |
+|----------|-----------|---------|
+| Milestone = cleanup + ship, with minimal React only if needed for deletes | User 1B + depth C — avoid full rewrite while still unblocking large asset removal | — Pending |
+| Delete bar = static scan of `web/src` + served `mockups.css` only | User 3A — safest proof before production | — Pending |
+| Archive `mockups/` to separate repo/branch, then remove from this repo | User 2C + sequence C — preserve design history without bloating prod repo | — Pending |
+| Keep `docs/` / `wireframes/` unless they block prod | Small on disk; not runtime; not the main weight problem | — Pending |
+| Full homepage React cutover deferred | Explicitly out of scope for this milestone | — Pending |
+
+## Evolution
+
+This document evolves at phase transitions and milestone boundaries.
+
+**After each phase transition** (via `/gsd-transition`):
+1. Requirements invalidated? → Move to Out of Scope with reason
+2. Requirements validated? → Move to Validated with phase reference
+3. New requirements emerged? → Add to Active
+4. Decisions to log? → Add to Key Decisions
+5. "What This Is" still accurate? → Update if drifted
+
+**After each milestone** (via `/gsd-complete-milestone`):
+1. Full review of all sections
+2. Core Value check — still the right priority?
+3. Audit Out of Scope — reasons still valid?
+4. Update Context with current state
+
+---
+*Last updated: 2026-09-05 after initialization*
