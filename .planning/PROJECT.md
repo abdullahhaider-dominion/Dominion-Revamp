@@ -17,13 +17,13 @@ Ship a clean production Next.js site that keeps every asset and behavior the liv
 - ✓ Homepage body sections still served via ported HTML string + `mockups.css` + `mockups-main.js` — existing
 - ✓ Brand/docs and hi-fi vanilla mockup exist as design artifacts (`docs/`, `mockups/`, `wireframes/`) — existing
 - ✓ Codebase map documents unused-asset candidates (~33MB under `web/public/assets/`) — existing (`.planning/codebase/`)
+- ✓ Inventory + prune of unused `web/public` assets (ASSET-01/02) — Validated in Phase 2 + Phase 5
+- ✓ Dead CSS mirror + root hero PNG orphan removed (ASSET-03/04) — Validated in Phase 3
+- ✓ Minimal React unlock not required; all 55 deletes cleared (REACT-01) — Validated in Phase 4
 
 ### Active
 
-- [ ] Inventory and prune `web/public` assets proven unused by static scan of `web/src` + served `web/public/mockups.css`
-- [ ] Remove confirmed dead copies (e.g. unused `web/src/styles/mockups.css`, orphan root `Hero-background.png`) without changing live visuals
 - [ ] Archive `mockups/` to a separate repo or long-lived branch, update docs/skills that treat it as SoT, then remove `mockups/` from this production repo
-- [ ] Perform minimal React/caller updates only when required to unlock safe deletion of large unused assets (not a full section rewrite)
 - [ ] Ensure production build stays visually/behaviorally equivalent for remaining live sections
 - [ ] Leave a lean, pushable repo: tracked app code, no orphan design binaries in the production tree
 
@@ -39,8 +39,9 @@ Ship a clean production Next.js site that keeps every asset and behavior the liv
 
 - Brownfield repo at `/Users/usama/Desktop/Dominion Markets/Vanilla to nextjs` (Cursor workspace may still point at an empty sibling folder — work against this path).
 - Production app: `web/` (Next.js). Design SoT today: `mockups/` (~64MB), referenced by port workflow and `.cursor/skills`, not imported at Next runtime.
-- Map findings (`.planning/codebase/CONCERNS.md`): ~53 unreferenced files (~32.6MB) under `web/public/assets/`; triple CSS copies with drift; `web/` was largely untracked at map time — ensure app source is in git as part of readiness.
+- Map findings (`.planning/codebase/CONCERNS.md`): ~53 unreferenced files (~32.6MB) under `web/public/assets/` — **Phase 5 pruned all 55 inventory deletes**; `web/` is tracked; dead CSS/root hero orphans removed in Phase 3.
 - User chose safer full-phase GSD path: map → project → phased roadmap → execute with approvals.
+- **Current state:** Phase 5 complete — next is Phase 6 parity verification, then mockups archive/retire (7–9) and lean check (10).
 
 ## Constraints
 
@@ -79,4 +80,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-09-05 after initialization*
+*Last updated: 2026-09-05 after Phase 5 — public asset prune complete*

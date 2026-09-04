@@ -10,7 +10,7 @@ Requirements for this milestone. Each maps to roadmap phases.
 ### Asset Hygiene
 
 - [x] **ASSET-01**: Inventory `web/public` files against references in `web/src` and served `web/public/mockups.css`
-- [ ] **ASSET-02**: Delete only assets proven unused by that inventory (no guess deletes)
+- [x] **ASSET-02**: Delete only assets proven unused by that inventory (no guess deletes)
 - [x] **ASSET-03**: Remove dead unused CSS copy `web/src/styles/mockups.css` after confirming nothing imports it
 - [x] **ASSET-04**: Remove orphan root `Hero-background.png` while keeping `web/public/assets/hero/Hero-background.png`
 
@@ -62,7 +62,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | Requirement | Phase | Status |
 |-------------|-------|--------|
 | ASSET-01 | Phase 2 | Complete |
-| ASSET-02 | Phase 5 | Pending |
+| ASSET-02 | Phase 5 | Complete |
 | ASSET-03 | Phase 3 | Complete |
 | ASSET-04 | Phase 3 | Complete |
 | MOCK-01 | Phase 7 | Pending |

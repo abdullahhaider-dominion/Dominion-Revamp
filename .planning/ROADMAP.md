@@ -16,7 +16,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 2: Asset Inventory** - Produce a reference-proven keep/delete list for `web/public`
 - [x] **Phase 3: Safe Orphan Deletes** - Remove dead CSS mirror and root hero PNG duplicate
 - [x] **Phase 4: Minimal React Unlock** - Change callers only if needed to free large unused assets
-- [ ] **Phase 5: Prune Public Assets** - Delete inventory-proven unused files under `web/public`
+- [x] **Phase 5: Prune Public Assets** - Delete inventory-proven unused files under `web/public` (completed 2026-09-04)
 - [ ] **Phase 6: Parity Verification** - Confirm remaining homepage look/behavior matches pre-cleanup
 - [ ] **Phase 7: Archive Mockups** - Preserve `mockups/` history in a separate repo or long-lived branch
 - [ ] **Phase 8: Retarget Design Docs** - Point skills/READMEs at the archive instead of in-repo SoT
@@ -89,7 +89,7 @@ Plans:
 **Plans**: 1 plan
 
 Plans:
-- [ ] 05-01-PLAN.md — Validate 55-path SoT, delete allowlist only (one commit), build proof + ASSET-02 SUMMARY
+- [x] 05-01-PLAN.md — Validate 55-path SoT, delete allowlist only (one commit), build proof + ASSET-02 SUMMARY
 
 ### Phase 6: Parity Verification
 **Goal**: Remaining live homepage sections match pre-cleanup look and behavior
@@ -153,7 +153,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8 →
 | 2. Asset Inventory | 1/1 | Complete | 2026-09-05 |
 | 3. Safe Orphan Deletes | 1/1 | Complete | 2026-09-05 |
 | 4. Minimal React Unlock | 1/1 | Complete | 2026-09-05 |
-| 5. Prune Public Assets | 0/1 | Not started | - |
+| 5. Prune Public Assets | 1/1 | Complete    | 2026-09-04 |
 | 6. Parity Verification | 0/TBD | Not started | - |
 | 7. Archive Mockups | 0/TBD | Not started | - |
 | 8. Retarget Design Docs | 0/TBD | Not started | - |
