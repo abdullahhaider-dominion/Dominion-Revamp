@@ -46,7 +46,10 @@ Plans:
   1. Every file under `web/public` (especially `assets/`) is classified keep or delete based on references in `web/src` and served `web/public/mockups.css` only
   2. The inventory lists sizes and paths for delete candidates (including known large orphans such as `hero.mp4`) so later phases delete by list, not guesswork
   3. Referenced assets (hero PNG, live logo paths, body media in `home-html.ts` / CSS) are explicitly marked keep and excluded from delete lists
-**Plans**: TBD
+**Plans**: 1 plan
+
+Plans:
+- [ ] 02-01-PLAN.md — Extract refs, classify all `web/public` files, write dual inventories + CONCERNS cross-check
 
 ### Phase 3: Safe Orphan Deletes
 **Goal**: Confirmed non-runtime duplicates are gone without touching served CSS or live hero art
@@ -138,7 +141,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8 →
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Track Web App | 1/1 | Complete | 2026-09-05 |
-| 2. Asset Inventory | 0/TBD | Not started | - |
+| 2. Asset Inventory | 0/1 | Not started | - |
 | 3. Safe Orphan Deletes | 0/TBD | Not started | - |
 | 4. Minimal React Unlock | 0/TBD | Not started | - |
 | 5. Prune Public Assets | 0/TBD | Not started | - |
