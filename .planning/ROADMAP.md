@@ -59,7 +59,10 @@ Plans:
   1. `web/src/styles/mockups.css` is removed after confirmation that no `web/src` module imports it
   2. Served stylesheet remains `web/public/mockups.css` linked from the app layout — live styles still load
   3. Repo-root `Hero-background.png` is removed while `web/public/assets/hero/Hero-background.png` remains and still serves the cinematic hero
-**Plans**: TBD
+**Plans**: 1 plan
+
+Plans:
+- [ ] 03-01-PLAN.md — Confirm unused, delete CSS + root PNG orphans, prove build
 
 ### Phase 4: Minimal React Unlock
 **Goal**: Any large unused asset still blocked by a live caller is unblocked with the smallest React/HTML change — or documented as not needed
@@ -142,7 +145,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8 →
 |-------|----------------|--------|-----------|
 | 1. Track Web App | 1/1 | Complete | 2026-09-05 |
 | 2. Asset Inventory | 1/1 | Complete | 2026-09-05 |
-| 3. Safe Orphan Deletes | 0/TBD | Not started | - |
+| 3. Safe Orphan Deletes | 0/1 | Not started | - |
 | 4. Minimal React Unlock | 0/TBD | Not started | - |
 | 5. Prune Public Assets | 0/TBD | Not started | - |
 | 6. Parity Verification | 0/TBD | Not started | - |
