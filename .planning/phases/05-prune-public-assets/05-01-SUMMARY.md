@@ -69,7 +69,7 @@ Each task was committed atomically:
 
 1. **Task 1: Load and validate the 55-path delete list** — `dbffc8e` (chore)
 2. **Task 2: Delete allowlisted paths only and commit once** — `c643daf` (chore) — **the prune commit**
-3. **Task 3: Build proof and write ASSET-02 SUMMARY** — (this docs commit)
+3. **Task 3: Build proof and write ASSET-02 SUMMARY** — `3095ce4` (docs)
 
 ## Files Created/Modified
 
