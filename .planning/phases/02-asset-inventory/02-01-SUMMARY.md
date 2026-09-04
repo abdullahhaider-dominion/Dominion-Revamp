@@ -63,7 +63,7 @@ completed: 2026-09-05
 
 1. **Task 1: Extract static asset references** — working `.refs-extracted.txt` (left untracked; not junk-committed)
 2. **Task 2: Diff on-disk vs refs and classify** — working `.classification.jsonl` (left untracked)
-3. **Task 3: Dual inventories + SUMMARY** — (this docs commit)
+3. **Task 3: Dual inventories + SUMMARY** — `6fc8219` (docs)
 
 _Working extracts intentionally omitted from git per plan cleanup guidance; canonical deliverables are the two inventory files + this SUMMARY._
 
