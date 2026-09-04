@@ -86,7 +86,10 @@ Plans:
   1. Every path on the Phase 2 delete list (post Phase 4 unlocks) is removed from `web/public`
   2. No file still referenced in `web/src` or served `web/public/mockups.css` was deleted
   3. Disk weight under `web/public/assets/` drops by roughly the unused set (~tens of MB of confirmed orphans) while keep-list files remain on disk
-**Plans**: TBD
+**Plans**: 1 plan
+
+Plans:
+- [ ] 05-01-PLAN.md — Validate 55-path SoT, delete allowlist only (one commit), build proof + ASSET-02 SUMMARY
 
 ### Phase 6: Parity Verification
 **Goal**: Remaining live homepage sections match pre-cleanup look and behavior
@@ -150,7 +153,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8 →
 | 2. Asset Inventory | 1/1 | Complete | 2026-09-05 |
 | 3. Safe Orphan Deletes | 1/1 | Complete | 2026-09-05 |
 | 4. Minimal React Unlock | 1/1 | Complete | 2026-09-05 |
-| 5. Prune Public Assets | 0/TBD | Not started | - |
+| 5. Prune Public Assets | 0/1 | Not started | - |
 | 6. Parity Verification | 0/TBD | Not started | - |
 | 7. Archive Mockups | 0/TBD | Not started | - |
 | 8. Retarget Design Docs | 0/TBD | Not started | - |
