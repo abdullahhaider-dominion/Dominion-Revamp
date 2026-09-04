@@ -12,7 +12,7 @@ Brownfield cleanup of the Next.js marketing app under `web/`: get the production
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Track Web App** - Commit `web/` source into git with safe ignores
+- [x] **Phase 1: Track Web App** - Commit `web/` source into git with safe ignores
 - [ ] **Phase 2: Asset Inventory** - Produce a reference-proven keep/delete list for `web/public`
 - [ ] **Phase 3: Safe Orphan Deletes** - Remove dead CSS mirror and root hero PNG duplicate
 - [ ] **Phase 4: Minimal React Unlock** - Change callers only if needed to free large unused assets
@@ -36,7 +36,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 **Plans**: 1 plan
 
 Plans:
-- [ ] 01-01-PLAN.md — Verify ignores, commit full `web/` (src + public + config), prove PROD-02
+- [x] 01-01-PLAN.md — Verify ignores, commit full `web/` (src + public + config), prove PROD-02
 
 ### Phase 2: Asset Inventory
 **Goal**: Operators have a complete, static-scan-backed keep vs delete inventory for `web/public`
@@ -137,7 +137,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8 →
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Track Web App | 0/1 | Not started | - |
+| 1. Track Web App | 1/1 | Complete | 2026-09-05 |
 | 2. Asset Inventory | 0/TBD | Not started | - |
 | 3. Safe Orphan Deletes | 0/TBD | Not started | - |
 | 4. Minimal React Unlock | 0/TBD | Not started | - |

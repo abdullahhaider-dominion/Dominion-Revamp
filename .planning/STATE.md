@@ -5,32 +5,32 @@
 See: .planning/PROJECT.md (updated 2026-09-05)
 
 **Core value:** Ship a clean production Next.js site that keeps every asset and behavior the live site actually uses — never delete something still referenced.
-**Current focus:** Phase 1 — Track Web App
+**Current focus:** Phase 2 — Asset Inventory
 
 ## Current Position
 
-Phase: 1 of 10 (Track Web App)
+Phase: 2 of 10 (Asset Inventory)
 Plan: — of — in current phase
-Status: Ready to plan
-Last activity: 2026-09-05 — Phase 1 context captured (track all web/public; web/-only commit)
+Status: Phase 1 complete — ready to discuss/plan Phase 2
+Last activity: 2026-09-05 — Phase 1 executed: `web/` tracked (157 files, commit 49e6ced, PROD-02)
 
-Progress: [░░░░░░░░░░] 0%
+Progress: [█░░░░░░░░░] 10%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 0
-- Average duration: —
-- Total execution time: 0 hours
+- Total plans completed: 1
+- Average duration: ~1 min
+- Total execution time: ~0.02 hours
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
-| - | - | - | - |
+| 1. Track Web App | 1 | 1 | ~1 min |
 
 **Recent Trend:**
-- Last 5 plans: —
+- Last 5 plans: ~1 min
 - Trend: —
 
 *Updated after each plan completion*
@@ -46,6 +46,7 @@ Recent decisions affecting current work:
 - Archive `mockups/` before removing from this repo
 - Minimal React only when required to unlock safe deletes
 - Keep `docs/` / `wireframes/` unless they block production
+- Phase 1: Tracked full `web/public` (D-01); `web/`-only commit (D-02)
 
 ### Pending Todos
 
@@ -53,8 +54,7 @@ None yet.
 
 ### Blockers/Concerns
 
-- `web/` was largely untracked at map time — Phase 1 unblocks everything else
-- ~53 unreferenced public assets (~32.6MB) are prune candidates only after inventory + optional React unlock
+- ~53 unreferenced public assets (~32.6MB) are prune candidates — Phase 2 inventory next
 - Dominion section-redesign skill still treats in-repo `mockups/` as SoT — must retarget (Phase 8) before delete (Phase 9)
 
 ## Deferred Items
@@ -69,5 +69,5 @@ Items acknowledged and carried forward from previous milestone close:
 ## Session Continuity
 
 Last session: 2026-09-05
-Stopped at: Roadmap + STATE written; awaiting `/gsd-plan-phase 1`
+Stopped at: Phase 1 complete (49e6ced); next `/gsd-discuss-phase 2` or `/gsd-plan-phase 2`
 Resume file: None
