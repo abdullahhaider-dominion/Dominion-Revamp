@@ -72,8 +72,11 @@ Plans:
   1. Inventory delete candidates that are still referenced by callers are either (a) caller-updated so the asset is unused, or (b) explicitly kept with a written reason — no silent skips
   2. React/HTML changes are limited to what unlocks safe deletes (no full section rewrite of `home-html.ts`)
   3. After any caller change, the homepage still renders the affected section without broken media or console-breaking references
-**Plans**: TBD
+**Plans**: 1 plan
 **UI hint**: yes
+
+Plans:
+- [ ] 04-01-PLAN.md — Verify-only rescan of 55 delete candidates; write 04-UNLOCK.md for Phase 5 clearance (no app edits expected)
 
 ### Phase 5: Prune Public Assets
 **Goal**: All inventory-proven unused `web/public` assets are deleted; referenced assets remain
@@ -146,7 +149,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8 →
 | 1. Track Web App | 1/1 | Complete | 2026-09-05 |
 | 2. Asset Inventory | 1/1 | Complete | 2026-09-05 |
 | 3. Safe Orphan Deletes | 1/1 | Complete | 2026-09-05 |
-| 4. Minimal React Unlock | 0/TBD | Not started | - |
+| 4. Minimal React Unlock | 0/1 | Not started | - |
 | 5. Prune Public Assets | 0/TBD | Not started | - |
 | 6. Parity Verification | 0/TBD | Not started | - |
 | 7. Archive Mockups | 0/TBD | Not started | - |
