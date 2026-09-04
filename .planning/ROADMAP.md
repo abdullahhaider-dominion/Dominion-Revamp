@@ -14,7 +14,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Track Web App** - Commit `web/` source into git with safe ignores
 - [x] **Phase 2: Asset Inventory** - Produce a reference-proven keep/delete list for `web/public`
-- [ ] **Phase 3: Safe Orphan Deletes** - Remove dead CSS mirror and root hero PNG duplicate
+- [x] **Phase 3: Safe Orphan Deletes** - Remove dead CSS mirror and root hero PNG duplicate
 - [ ] **Phase 4: Minimal React Unlock** - Change callers only if needed to free large unused assets
 - [ ] **Phase 5: Prune Public Assets** - Delete inventory-proven unused files under `web/public`
 - [ ] **Phase 6: Parity Verification** - Confirm remaining homepage look/behavior matches pre-cleanup
@@ -62,7 +62,7 @@ Plans:
 **Plans**: 1 plan
 
 Plans:
-- [ ] 03-01-PLAN.md — Confirm unused, delete CSS + root PNG orphans, prove build
+- [x] 03-01-PLAN.md — Confirm unused, delete CSS + root PNG orphans, prove build
 
 ### Phase 4: Minimal React Unlock
 **Goal**: Any large unused asset still blocked by a live caller is unblocked with the smallest React/HTML change — or documented as not needed

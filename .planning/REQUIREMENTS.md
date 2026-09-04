@@ -11,8 +11,8 @@ Requirements for this milestone. Each maps to roadmap phases.
 
 - [x] **ASSET-01**: Inventory `web/public` files against references in `web/src` and served `web/public/mockups.css`
 - [ ] **ASSET-02**: Delete only assets proven unused by that inventory (no guess deletes)
-- [ ] **ASSET-03**: Remove dead unused CSS copy `web/src/styles/mockups.css` after confirming nothing imports it
-- [ ] **ASSET-04**: Remove orphan root `Hero-background.png` while keeping `web/public/assets/hero/Hero-background.png`
+- [x] **ASSET-03**: Remove dead unused CSS copy `web/src/styles/mockups.css` after confirming nothing imports it
+- [x] **ASSET-04**: Remove orphan root `Hero-background.png` while keeping `web/public/assets/hero/Hero-background.png`
 
 ### Mockups Retirement
 
@@ -63,8 +63,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 |-------------|-------|--------|
 | ASSET-01 | Phase 2 | Complete |
 | ASSET-02 | Phase 5 | Pending |
-| ASSET-03 | Phase 3 | Pending |
-| ASSET-04 | Phase 3 | Pending |
+| ASSET-03 | Phase 3 | Complete |
+| ASSET-04 | Phase 3 | Complete |
 | MOCK-01 | Phase 7 | Pending |
 | MOCK-02 | Phase 8 | Pending |
 | MOCK-03 | Phase 9 | Pending |
