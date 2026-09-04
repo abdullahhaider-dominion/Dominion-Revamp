@@ -61,23 +61,23 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| ASSET-01 | TBD | Pending |
-| ASSET-02 | TBD | Pending |
-| ASSET-03 | TBD | Pending |
-| ASSET-04 | TBD | Pending |
-| MOCK-01 | TBD | Pending |
-| MOCK-02 | TBD | Pending |
-| MOCK-03 | TBD | Pending |
-| REACT-01 | TBD | Pending |
-| PROD-01 | TBD | Pending |
-| PROD-02 | TBD | Pending |
-| PROD-03 | TBD | Pending |
+| ASSET-01 | Phase 2 | Pending |
+| ASSET-02 | Phase 5 | Pending |
+| ASSET-03 | Phase 3 | Pending |
+| ASSET-04 | Phase 3 | Pending |
+| MOCK-01 | Phase 7 | Pending |
+| MOCK-02 | Phase 8 | Pending |
+| MOCK-03 | Phase 9 | Pending |
+| REACT-01 | Phase 4 | Pending |
+| PROD-01 | Phase 6 | Pending |
+| PROD-02 | Phase 1 | Pending |
+| PROD-03 | Phase 10 | Pending |
 
 **Coverage:**
 - v1 requirements: 11 total
-- Mapped to phases: 0
-- Unmapped: 11 ⚠️
+- Mapped to phases: 11
+- Unmapped: 0 ✓
 
 ---
 *Requirements defined: 2026-09-05*
-*Last updated: 2026-09-05 after requirements approval*
+*Last updated: 2026-09-05 after roadmap creation*
