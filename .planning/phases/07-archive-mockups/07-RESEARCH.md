@@ -235,8 +235,8 @@ git push -u origin archive/mockups
 
 ### Pitfall 1: Branch Already Exists
 **What goes wrong:** `git subtree split -b archive/mockups` fails if the branch ref exists.
-**Why it happens:** Partial prior run or name collision.
-**How to avoid:** Preflight `git show-ref --verify refs/heads/archive/mockups`; if exists from a failed attempt and tip is wrong, ask before `git branch -D` (only if we created it this phase).
+**Why it happens:** Partial prior run, research dry-run with `-b`, or name collision.
+**How to avoid:** Prefer **re-split for freshness** at execute time: if `refs/heads/archive/mockups` exists, `git branch -D archive/mockups` (local only) then split again. Never push; never delete `mockups/` from main. If sibling path exists from a partial run, remove only the locked sibling path and re-clone.
 **Warning signs:** `fatal: … already exists`
 
 ### Pitfall 2: Paths With Spaces
@@ -414,13 +414,10 @@ Fine granularity: **one plan file** is enough (fine profile ok); do not split ac
 ## Open Questions
 
 1. **Should sibling `origin` remote remain pointing at the production local path?**
-   - What we know: `git clone` of a local path sets `origin` to that path.
-   - What's unclear: Whether to `git remote remove origin` for clarity.
-   - Recommendation: Keep local `origin` (documents provenance) **or** rename to `production-local` and document in sibling README / `07-ARCHIVE.md`. Do not add GitHub remote unless user asks.
+   - **RESOLVED (2026-09-05 / 07-01-PLAN):** Keep clone `origin` pointing at the production local path (documents provenance). Optionally rename to `production-local` — either OK if documented in sibling README + `07-ARCHIVE.md`. Do not add a GitHub remote unless the user asks.
 
 2. **Re-run split if `main` gains mockups commits before execute?**
-   - What we know: Dry-run tip is valid for current tree.
-   - Recommendation: Always split at execute time; never hardcode research SHA as final without re-verify.
+   - **RESOLVED (2026-09-05 / 07-01-PLAN):** Always re-split at execute time for freshness. If `archive/mockups` already exists (research dry-run with `-b` or partial execute), `git branch -D archive/mockups` then re-split; if sibling path exists from a partial run, remove only that locked path and re-clone. Never hardcode the research dry-run tip SHA as final without re-verify.
 
 ## Environment Availability
 
