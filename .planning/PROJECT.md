@@ -43,7 +43,7 @@ Ship a clean production Next.js site that keeps every asset and behavior the liv
 - Production app: `web/` (Next.js). Hi-fi design archive: `.planning/phases/07-archive-mockups/07-ARCHIVE.md` (`archive/mockups` / sibling).
 - Map findings (`.planning/codebase/CONCERNS.md`): ~53 unreferenced files (~32.6MB) under `web/public/assets/` — **Phase 5 pruned all 55 inventory deletes**; `web/` is tracked; dead CSS/root hero orphans removed in Phase 3.
 - User chose safer full-phase GSD path: map → project → phased roadmap → execute with approvals.
-- **Current state:** Phase 9 plan 09-01 executed (in-repo `mockups/` removed) — next lean check (Phase 10); REQUIREMENTS/ROADMAP phase-close owned by verify-work.
+- **Current state:** Phase 10 plan 10-01 lean check done (PROD-03: orphans gone, keep 82/82, ignores + build green) — **push-ready ≠ pushed**; `git push` awaits explicit user request. Phase/REQUIREMENTS close owned by verify-work/orchestrator.
 
 ## Constraints
 
