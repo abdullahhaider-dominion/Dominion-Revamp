@@ -4663,6 +4663,20 @@ body.dashboard-lightbox-open {
   margin-bottom: 0.95rem;
 }
 
+.sanctuary-close__cta-risk {
+  margin: 0 0 0.85rem;
+  max-width: 42rem;
+  font-family: var(--font-montserrat), "Montserrat", sans-serif;
+  font-size: 0.72rem;
+  line-height: 1.5;
+  color: rgba(196, 214, 228, 0.82);
+}
+
+.sanctuary-close__cta-risk strong {
+  color: rgba(232, 240, 247, 0.95);
+  font-weight: 600;
+}
+
 .sanctuary-close__btn {
   position: relative;
   isolation: isolate;

@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dominion Markets — Website Compliance QA Report</title>
+    <style>
+      :root {
+        --ink: #0f2740;
+        --muted: #5b6f84;
+        --line: #d7e0ea;
+        --bg: #f5f7fa;
+        --card: #ffffff;
+        --accent: #1f7a4d;
+        --accent-soft: #e8f5ee;
+        --warn: #8a5a00;
+        --warn-soft: #fff6e5;
+        --skip: #6b7280;
+        --skip-soft: #f3f4f6;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+        color: var(--ink);
+        background: var(--bg);
+        line-height: 1.55;
+      }
+
+      .wrap {
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 2.5rem 1.25rem 4rem;
+      }
+
+      header.report-hero {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        padding: 2rem 2rem 1.6rem;
+        margin-bottom: 1.5rem;
+      }
+
+      header.report-hero h1 {
+        margin: 0 0 0.35rem;
+        font-size: 1.75rem;
+        letter-spacing: -0.02em;
+      }
+
+      header.report-hero .meta {
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      .summary {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0.75rem;
+        margin: 1.25rem 0 0;
+      }
+
+      .stat {
+        background: var(--bg);
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 0.9rem 1rem;
+      }
+
+      .stat strong {
+        display: block;
+        font-size: 1.35rem;
+        line-height: 1.1;
+      }
+
+      .stat span {
+        color: var(--muted);
+        font-size: 0.82rem;
+      }
+
+      .toc,
+      .item {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        padding: 1.35rem 1.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .toc h2,
+      .item h2 {
+        margin: 0 0 0.75rem;
+        font-size: 1.15rem;
+      }
+
+      .toc ol {
+        margin: 0;
+        padding-left: 1.2rem;
+      }
+
+      .toc li {
+        margin: 0.35rem 0;
+      }
+
+      .toc a {
+        color: var(--ink);
+        text-decoration: none;
+        border-bottom: 1px solid transparent;
+      }
+
+      .toc a:hover {
+        border-bottom-color: var(--accent);
+        color: var(--accent);
+      }
+
+      .badge {
+        display: inline-block;
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        padding: 0.2rem 0.5rem;
+        border-radius: 999px;
+        vertical-align: middle;
+        margin-left: 0.4rem;
+      }
+
+      .badge.done {
+        background: var(--accent-soft);
+        color: var(--accent);
+      }
+
+      .badge.skipped {
+        background: var(--skip-soft);
+        color: var(--skip);
+      }
+
+      .grid-2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+
+      .change-box {
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 0.85rem 1rem;
+        background: var(--bg);
+      }
+
+      .change-box h3 {
+        margin: 0 0 0.4rem;
+        font-size: 0.78rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: var(--muted);
+      }
+
+      .change-box p {
+        margin: 0;
+        font-size: 0.92rem;
+      }
+
+      .change-box.from p {
+        text-decoration: line-through;
+        color: #8a96a5;
+      }
+
+      .shot {
+        margin-top: 1rem;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        overflow: hidden;
+        background: #0b1c2e;
+      }
+
+      .shot img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      .shot figcaption {
+        background: var(--card);
+        color: var(--muted);
+        font-size: 0.82rem;
+        padding: 0.65rem 0.85rem;
+        border-top: 1px solid var(--line);
+      }
+
+      .note {
+        margin-top: 0.85rem;
+        padding: 0.75rem 0.9rem;
+        border-radius: 10px;
+        background: var(--warn-soft);
+        color: var(--warn);
+        font-size: 0.88rem;
+      }
+
+      footer.report-foot {
+        margin-top: 1.5rem;
+        color: var(--muted);
+        font-size: 0.85rem;
+        text-align: center;
+      }
+
+      @media (max-width: 800px) {
+        .summary,
+        .grid-2 {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      @media (max-width: 560px) {
+        .summary,
+        .grid-2 {
+          grid-template-columns: 1fr;
+        }
+
+        header.report-hero,
+        .toc,
+        .item {
+          padding: 1.1rem;
+        }
+      }
+
+      @media print {
+        body {
+          background: #fff;
+        }
+
+        .item,
+        .toc,
+        header.report-hero {
+          break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="report-hero">
+        <h1>Website Compliance QA Report</h1>
+        <p class="meta">
+          <strong>Dominion Markets</strong> · Client QA feedback implementation ·
+          5 September 2026
+        </p>
+        <div class="summary">
+          <div class="stat">
+            <strong>11</strong>
+            <span>QA points reviewed</span>
+          </div>
+          <div class="stat">
+            <strong>11</strong>
+            <span>Implemented</span>
+          </div>
+          <div class="stat">
+            <strong>0</strong>
+            <span>Skipped</span>
+          </div>
+          <div class="stat">
+            <strong>0</strong>
+            <span>Open blockers</span>
+          </div>
+        </div>
+      </header>
+
+      <nav class="toc" aria-label="Report contents">
+        <h2>Contents</h2>
+        <ol>
+          <li><a href="#p1">Active clients figure</a></li>
+          <li><a href="#p2">Execution speed copy</a></li>
+          <li><a href="#p3">Leverage copy</a></li>
+          <li><a href="#p4">Regulated feature messaging</a></li>
+          <li><a href="#p5">Funding section title &amp; body</a></li>
+          <li><a href="#p8">Remove T2023340 from licences strip</a></li>
+          <li><a href="#p9">Risk warning under Open an Account</a></li>
+          <li><a href="#p10">Mauritius entity disclosure</a></li>
+          <li><a href="#p11">UAE entity disclosure</a></li>
+        </ol>
+      </nav>
+
+      <article class="item" id="p1">
+        <h2>1. Active clients figure <span class="badge done">Done</span></h2>
+        <div class="grid-2">
+          <div class="change-box from">
+            <h3>Before</h3>
+            <p>200K+ Active Clients</p>
+          </div>
+          <div class="change-box">
+            <h3>After</h3>
+            <p>200+ Active Clients</p>
+          </div>
+        </div>
+        <figure class="shot">
+          <img
+            src="screenshots/01-active-clients.png"
+            alt="Focus stats showing 200+ Active Clients"
+          />
+          <figcaption>Focus / accounts stats — Active Clients updated to 200+</figcaption>
+        </figure>
+        <figure class="shot">
+          <img
+            src="screenshots/01-active-clients-strip.png"
+            alt="Full focus stats strip including 200+ Active Clients"
+          />
+          <figcaption>Focus stats strip overview</figcaption>
+        </figure>
+      </article>
+
+      <article class="item" id="p2">
+        <h2>2. Execution speed copy <span class="badge done">Done</span></h2>
+        <div class="grid-2">
+          <div class="change-box from">
+            <h3>Before</h3>
+            <p>~30 ms execution</p>
+          </div>
+          <div class="change-box">
+            <h3>After</h3>
+            <p>&lt;20ms Average Execution</p>
+          </div>
+        </div>
+        <figure class="shot">
+          <img
+            src="screenshots/02-execution-leverage-marquee.png"
+            alt="Proof marquee showing less than 20ms Average Execution and 1:500 leverage"
+          />
+          <figcaption>
+            Proof marquee — updated execution and leverage badges
+          </figcaption>
+        </figure>
+      </article>
+
+      <article class="item" id="p3">
+        <h2>3. Leverage copy <span class="badge done">Done</span></h2>
+        <div class="grid-2">
+          <div class="change-box from">
+            <h3>Before</h3>
+            <p>500:1 max leverage</p>
+          </div>
+          <div class="change-box">
+            <h3>After</h3>
+            <p>1:500 leverage (aligned to “Leverage up to 1:500”)</p>
+          </div>
+        </div>
+        <figure class="shot">
+          <img
+            src="screenshots/02-execution-leverage-marquee.png"
+            alt="Proof marquee highlighting 1:500 leverage"
+          />
+          <figcaption>Proof marquee — leverage badge updated</figcaption>
+        </figure>
+      </article>
+
+      <article class="item" id="p4">
+        <h2>4. Regulated feature messaging <span class="badge done">Done</span></h2>
+        <div class="grid-2">
+          <div class="change-box from">
+            <h3>Before</h3>
+            <p>
+              Regulated &amp; Secure — Licensed oversight and protected client
+              experience.
+            </p>
+          </div>
+          <div class="change-box">
+            <h3>After</h3>
+            <p>
+              Regulated Environment — Transparent operations supported by
+              regulatory oversight.
+            </p>
+          </div>
+        </div>
+        <figure class="shot">
+          <img
+            src="screenshots/04-regulated-card.png"
+            alt="Sessions feature card showing Regulated Environment"
+          />
+          <figcaption>Sessions feature card</figcaption>
+        </figure>
+        <figure class="shot">
+          <img
+            src="screenshots/04-regulated-focus-card.png"
+            alt="Focus accounts card showing Regulated Environment"
+          />
+          <figcaption>Focus / accounts feature card</figcaption>
+        </figure>
+      </article>
+
+      <article class="item" id="p5">
+        <h2>
+          5–7. Funding section title, body &amp; unrestricted claim
+          <span class="badge done">Done</span>
+        </h2>
+        <div class="grid-2">
+          <div class="change-box from">
+            <h3>Before</h3>
+            <p>
+              Your Funds, Your Terms<br />
+              “…trade without limits…”
+            </p>
+          </div>
+          <div class="change-box">
+            <h3>After</h3>
+            <p>
+              Flexible and Secure Funding<br />
+              Fund your account using secure payment methods and access global
+              markets with flexibility and control.
+            </p>
+          </div>
+        </div>
+        <figure class="shot">
+          <img
+            src="screenshots/05-07-funding.png"
+            alt="Funding section with Flexible and Secure Funding title and compliant body copy"
+          />
+          <figcaption>
+            Funding section — title and compliant body copy live; “trade without
+            limits” removed
+          </figcaption>
+        </figure>
+      </article>
+
+      <article class="item" id="p8">
+        <h2>8. Remove T2023340 <span class="badge done">Done</span></h2>
+        <div class="grid-2">
+          <div class="change-box from">
+            <h3>Before</h3>
+            <p>FSC Mauritius · CMA UAE · Cyprus · Comoros · T2023340</p>
+          </div>
+          <div class="change-box">
+            <h3>After</h3>
+            <p>FSC Mauritius · CMA UAE · Cyprus · Comoros</p>
+          </div>
+        </div>
+        <figure class="shot">
+          <img
+            src="screenshots/08-10-footer-regulated-col.png"
+            alt="Footer regulated column without T2023340"
+          />
+          <figcaption>
+            Footer regulated column — licence number T2023340 removed from the
+            strip and related short legal copy
+          </figcaption>
+        </figure>
+      </article>
+
+      <article class="item" id="p9">
+        <h2>
+          9. Risk warning under Open an Account
+          <span class="badge done">Done</span>
+        </h2>
+        <div class="change-box">
+          <h3>Added copy</h3>
+          <p>
+            <strong>Risk Warning:</strong> CFDs are complex leveraged instruments
+            and carry a high risk of rapid financial loss. You may lose all the
+            capital invested. Ensure you understand the risks before trading.
+          </p>
+        </div>
+        <figure class="shot">
+          <img
+            src="screenshots/09-cta-risk-closeup.png"
+            alt="Risk warning displayed directly under Open an Account and Compare Account Types buttons"
+          />
+          <figcaption>
+            Final CTA (sanctuary close) — risk warning placed under the Open an
+            Account button
+          </figcaption>
+        </figure>
+      </article>
+
+      <article class="item" id="p10">
+        <h2>10. Mauritius entity disclosure <span class="badge done">Done</span></h2>
+        <div class="change-box">
+          <h3>Updated to</h3>
+          <p>
+            Dominion Markets Ltd is incorporated in Mauritius and is licensed and
+            regulated by the Financial Services Commission of Mauritius as an
+            Investment Dealer (Full Service Dealer, Excluding Underwriting),
+            Licence No. GB24203525. Registered office: Office 133, Ebene
+            Junction, Rue de la Démocratie, Ebene, Mauritius.
+          </p>
+        </div>
+        <figure class="shot">
+          <img
+            src="screenshots/10-11-entity-disclosures.png"
+            alt="Full entity disclosures showing updated Mauritius text"
+          />
+          <figcaption>Full entity disclosures — Mauritius paragraph</figcaption>
+        </figure>
+      </article>
+
+      <article class="item" id="p11">
+        <h2>11. UAE entity disclosure <span class="badge done">Done</span></h2>
+        <div class="change-box">
+          <h3>Updated to</h3>
+          <p>
+            Dominion Financial Services L.L.C. is regulated by the UAE Capital
+            Market Authority under Licence No. 20200000425 and holds a Category 5
+            licence for Introduction. It does not execute trades or hold client
+            money or client assets. Trading services are provided by Dominion
+            Markets Ltd, subject to eligibility and the applicable client
+            agreement.
+          </p>
+        </div>
+        <figure class="shot">
+          <img
+            src="screenshots/10-11-entity-disclosures.png"
+            alt="Full entity disclosures showing updated UAE Category 5 Introduction text"
+          />
+          <figcaption>
+            Full entity disclosures — UAE paragraph (Category 5 Introduction)
+          </figcaption>
+        </figure>
+        <figure class="shot">
+          <img
+            src="screenshots/08-10-11-footer-legal.png"
+            alt="Footer legal grid with updated regulated and risk wording"
+          />
+          <figcaption>Footer legal grid overview</figcaption>
+        </figure>
+      </article>
+
+      <footer class="report-foot">
+        Prepared for Dominion Markets client QA review · Screenshots captured from
+        the local production-parity build on 5 Sep 2026 · Open this file in a
+        browser (keep the <code>screenshots/</code> folder beside it)
+      </footer>
+    </div>
+  </body>
+</html>
