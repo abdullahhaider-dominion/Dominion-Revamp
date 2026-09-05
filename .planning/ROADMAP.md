@@ -113,10 +113,10 @@ Plans:
   1. `mockups/` content exists in a separate git repo or long-lived archive branch with history intact
   2. Archive location is recorded (URL or branch name) so later phases and humans can find it
   3. Production repo still contains `mockups/` until docs are retargeted (no premature delete in this phase)
-**Plans:** 1 plan
+**Plans:** 1/1 plans complete
 
 Plans:
-- [ ] 07-01-PLAN.md — Subtree-split `archive/mockups` + sibling local repo + `07-ARCHIVE.md` (MOCK-01)
+- [x] 07-01-PLAN.md — Subtree-split `archive/mockups` + sibling local repo + `07-ARCHIVE.md` (MOCK-01)
 
 ### Phase 8: Retarget Design Docs
 **Goal**: Docs and agent skills no longer treat in-repo `mockups/` as the working SoT

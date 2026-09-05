@@ -62,7 +62,7 @@ completed: 2026-09-05
 
 1. **Task 1: Wave 0 — author archive-verify.mjs** — `786cc7e` (chore)
 2. **Task 2: Preflight + fresh subtree split** — branch-only (no production-tree file commit); tip `3e9401bd85c6848cbbf073d526e5d48ad2450834`
-3. **Task 3: Sibling + 07-ARCHIVE.md + SUMMARY** — _(this commit)_
+3. **Task 3: Sibling + 07-ARCHIVE.md + SUMMARY** — `af3f9df` (docs)
 
 **Plan metadata:** _(docs complete commit after state updates)_
 
@@ -136,6 +136,14 @@ None — push to origin deferred until explicit request (D-03).
 - Phase 9 may delete `mockups/` only after Phase 8.
 - **Do not** mark ROADMAP Phase 7 complete here (orchestrator owns).
 
-## Self-Check
+## Self-Check: PASSED
 
-_(filled after file/commit verification)_
+- FOUND: `.planning/phases/07-archive-mockups/scripts/archive-verify.mjs`
+- FOUND: `.planning/phases/07-archive-mockups/07-ARCHIVE.md`
+- FOUND: `.planning/phases/07-archive-mockups/07-01-SUMMARY.md`
+- FOUND: commit `786cc7e` (Task 1)
+- FOUND: commit `af3f9df` (Task 3)
+- FOUND: archive tip `3e9401bd85c6848cbbf073d526e5d48ad2450834`
+- FOUND: sibling path exists; HEAD matches tip
+- `archive-verify.mjs` exit 0
+- main still has 139 `mockups/` paths; no `origin/archive/mockups`

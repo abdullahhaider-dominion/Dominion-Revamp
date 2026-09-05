@@ -16,7 +16,7 @@ Requirements for this milestone. Each maps to roadmap phases.
 
 ### Mockups Retirement
 
-- [ ] **MOCK-01**: Archive `mockups/` to a separate git repo or long-lived branch (history preserved)
+- [x] **MOCK-01**: Archive `mockups/` to a separate git repo or long-lived branch (history preserved)
 - [ ] **MOCK-02**: Update docs/skills/READMEs that treat `mockups/` as SoT to point at the archive
 - [ ] **MOCK-03**: Remove `mockups/` from this production repo only after archive + doc updates
 
@@ -65,7 +65,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | ASSET-02 | Phase 5 | Complete |
 | ASSET-03 | Phase 3 | Complete |
 | ASSET-04 | Phase 3 | Complete |
-| MOCK-01 | Phase 7 | Pending |
+| MOCK-01 | Phase 7 | Complete |
 | MOCK-02 | Phase 8 | Pending |
 | MOCK-03 | Phase 9 | Pending |
 | REACT-01 | Phase 4 | Complete |
