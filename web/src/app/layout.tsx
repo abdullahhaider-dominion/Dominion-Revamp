@@ -66,7 +66,7 @@ export const metadata: Metadata = {
       "Trade with clarity on MT5 and cTrader. Regulated brokerage with transparent conditions, fast execution, and global market access.",
     images: [
       {
-        url: "/og-image.png",
+        url: "/og-share.png",
         width: 1200,
         height: 630,
         alt: "Dominion Markets",
@@ -78,7 +78,7 @@ export const metadata: Metadata = {
     title: "Dominion Markets | Your Trading Sanctuary",
     description:
       "Trade with clarity on MT5 and cTrader. Regulated brokerage with transparent conditions, fast execution, and global market access.",
-    images: ["/og-image.png"],
+    images: ["/og-share.png"],
   },
   robots: {
     index: true,
