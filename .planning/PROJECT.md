@@ -22,10 +22,11 @@ Ship a clean production Next.js site that keeps every asset and behavior the liv
 - ✓ Minimal React unlock not required; all 55 deletes cleared (REACT-01) — Validated in Phase 4
 - ✓ Homepage parity after prune (PROD-01) — Validated in Phase 6 (automated + D-02 smoke; optional visual UAT remains)
 - ✓ `mockups/` archived (MOCK-01) — Validated in Phase 7 (`archive/mockups` + sibling repo; still present on main until Phase 9)
+- ✓ Docs/skills retargeted off in-repo `mockups/` SoT (MOCK-02) — Validated in Phase 8
 
 ### Active
 
-- [ ] Update docs/skills that treat `mockups/` as SoT to point at the archive (Phase 8), then remove `mockups/` from this production repo (Phase 9)
+- [ ] Remove `mockups/` from this production repo (Phase 9) now that archive + docs retarget are done
 - [ ] Leave a lean, pushable repo: tracked app code, no orphan design binaries in the production tree
 
 ### Out of Scope
@@ -42,7 +43,7 @@ Ship a clean production Next.js site that keeps every asset and behavior the liv
 - Production app: `web/` (Next.js). Hi-fi design archive: `.planning/phases/07-archive-mockups/07-ARCHIVE.md` (`archive/mockups` / sibling). In-repo `mockups/` may remain until Phase 9 — not required SoT.
 - Map findings (`.planning/codebase/CONCERNS.md`): ~53 unreferenced files (~32.6MB) under `web/public/assets/` — **Phase 5 pruned all 55 inventory deletes**; `web/` is tracked; dead CSS/root hero orphans removed in Phase 3.
 - User chose safer full-phase GSD path: map → project → phased roadmap → execute with approvals.
-- **Current state:** Phase 7 complete — next is Phase 8 retarget docs/skills to archive, then remove (9), lean check (10).
+- **Current state:** Phase 8 complete — next is Phase 9 remove in-repo `mockups/`, then lean check (10).
 
 ## Constraints
 
@@ -81,4 +82,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-09-05 after Phase 7 — mockups archive complete*
+*Last updated: 2026-09-05 after Phase 8 — design docs retargeted to archive*

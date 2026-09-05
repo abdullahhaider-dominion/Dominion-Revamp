@@ -19,7 +19,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 5: Prune Public Assets** - Delete inventory-proven unused files under `web/public` (completed 2026-09-04)
 - [x] **Phase 6: Parity Verification** - Confirm remaining homepage look/behavior matches pre-cleanup (completed 2026-09-05)
 - [x] **Phase 7: Archive Mockups** - Preserve `mockups/` history in a separate repo or long-lived branch (completed 2026-09-05)
-- [ ] **Phase 8: Retarget Design Docs** - Point skills/READMEs at the archive instead of in-repo SoT
+- [x] **Phase 8: Retarget Design Docs** - Point skills/READMEs at the archive instead of in-repo SoT (completed 2026-09-05)
 - [ ] **Phase 9: Remove Mockups Tree** - Delete `mockups/` from this production repo after archive + docs
 - [ ] **Phase 10: Lean Production Check** - Confirm repo is slim and push-ready for `web/` deploy
 
@@ -126,7 +126,7 @@ Plans:
   1. `.cursor/skills/dominion-section-redesign/SKILL.md` points design work at the archive (and/or `web/` for production) instead of requiring local `mockups/` as SoT
   2. Root `readme.md`, `web/README.md`, and any other docs that declare `mockups/` as SoT are updated to the archive location
   3. A reader following docs/skills would not assume `mockups/` must remain in this production repo
-**Plans:** 1 plan
+**Plans:** 1/1 plans complete
 
 Plans:
 - [x] 08-01-PLAN.md — Retarget skill + READMEs + PROJECT + CLAUDE SoT to 07-ARCHIVE (MOCK-02)
@@ -165,7 +165,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8 →
 | 5. Prune Public Assets | 1/1 | Complete    | 2026-09-04 |
 | 6. Parity Verification | 1/1 | Complete    | 2026-09-05 |
 | 7. Archive Mockups | 1/1 | Complete    | 2026-09-05 |
-| 8. Retarget Design Docs | 1/1 | Plans executed (awaiting verify) | - |
+| 8. Retarget Design Docs | 1/1 | Complete    | 2026-09-05 |
 | 9. Remove Mockups Tree | 0/TBD | Not started | - |
 | 10. Lean Production Check | 0/TBD | Not started | - |
 
