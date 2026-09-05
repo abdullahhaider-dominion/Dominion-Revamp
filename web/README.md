@@ -26,4 +26,4 @@ Open [http://localhost:3000](http://localhost:3000).
 - Markup is the original mockup HTML (SSR via `dangerouslySetInnerHTML`) for visual parity.
 - Interactions come from the ported `mockups/main.js` (`src/lib/mockups-main.js`).
 - Static assets live in `public/assets/` (copied from `mockups/assets/`).
-- Source of truth for design still lives in `../mockups/`.
+- Hi-fi design archive: see [`.planning/phases/07-archive-mockups/07-ARCHIVE.md`](../.planning/phases/07-archive-mockups/07-ARCHIVE.md) (`archive/mockups` / sibling repo). Production site: this `web/` app. In-repo `../mockups/` is not required SoT (temporary until Phase 9).

@@ -39,7 +39,7 @@ Ship a clean production Next.js site that keeps every asset and behavior the liv
 ## Context
 
 - Brownfield repo at `/Users/usama/Desktop/Dominion Markets/Vanilla to nextjs` (Cursor workspace may still point at an empty sibling folder — work against this path).
-- Production app: `web/` (Next.js). Design SoT today: `mockups/` (~64MB), referenced by port workflow and `.cursor/skills`, not imported at Next runtime.
+- Production app: `web/` (Next.js). Hi-fi design archive: `.planning/phases/07-archive-mockups/07-ARCHIVE.md` (`archive/mockups` / sibling). In-repo `mockups/` may remain until Phase 9 — not required SoT.
 - Map findings (`.planning/codebase/CONCERNS.md`): ~53 unreferenced files (~32.6MB) under `web/public/assets/` — **Phase 5 pruned all 55 inventory deletes**; `web/` is tracked; dead CSS/root hero orphans removed in Phase 3.
 - User chose safer full-phase GSD path: map → project → phased roadmap → execute with approvals.
 - **Current state:** Phase 7 complete — next is Phase 8 retarget docs/skills to archive, then remove (9), lean check (10).

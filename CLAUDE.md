@@ -61,8 +61,8 @@ Dominion Markets’ marketing website, recently ported from vanilla HTML/CSS/JS 
 ## Platform Requirements
 - macOS / Linux / Windows with Node ≥ 20.9.0
 - Work from `web/`: `npm install` then `npm run dev` (see `readme.md`, `web/README.md`)
-- Design source of truth remains `mockups/` (vanilla HTML/CSS/JS); brand docs in `docs/brand/`, design specs in `docs/superpowers/`
-- Supporting assets: repo-root `Hero-background.png`, `wireframes/`, `docs/`, `mockups/` (not the Next runtime)
+- Hi-fi design archive: see `.planning/phases/07-archive-mockups/07-ARCHIVE.md` (`archive/mockups` / sibling repo). Production site: `web/`. In-repo `mockups/` may exist until Phase 9 — not required SoT. Brand docs in `docs/brand/`, design specs in `docs/superpowers/`
+- Supporting assets: repo-root `Hero-background.png`, `wireframes/`, `docs/`; in-repo `mockups/` temporary until Phase 9 (not Next runtime)
 - Standard Next.js Node server (`next start`) or any Next-compatible host
 - `.vercel` listed in `web/.gitignore` — Vercel-compatible layout implied; no committed `vercel.json` or CI workflows detected
 - Static assets served from `web/public/` (especially `web/public/assets/`, `web/public/mockups.css`)
@@ -188,13 +188,13 @@ Dominion Markets’ marketing website, recently ported from vanilla HTML/CSS/JS 
 | mockups-main | Ported vanilla interactions (marquees, sessions, quotes, charts, carousels) | `web/src/lib/mockups-main.js` |
 | icons barrel | Re-exports Lucide icons for future componentization | `web/src/components/icons.ts` |
 | Window typing | Guard flag `__dominionMockupsInit` for one-shot JS init | `web/src/types/dominion.d.ts` |
-| Vanilla mockup | Design-source HTML/CSS/JS (Floating Sanctuary hi-fi) | `mockups/index.html`, `mockups/styles.css`, `mockups/main.js` |
+| Vanilla mockup (archived) | Historical Floating Sanctuary hi-fi; coordinates in `07-ARCHIVE.md` | Archive branch/sibling — not required in-repo SoT |
 | Wireframes | IA / structure checkpoint before hi-fi | `wireframes/index.html` |
 | Brand/spec docs | Brand tokens + Floating Sanctuary design contract | `docs/brand/`, `docs/superpowers/specs/` |
 ## Pattern Overview
 - Single-route homepage (`/`) with no API routes, auth, or database layer
 - Dual UI stacks on one page: React (`CinematicHero`) above; BEM-style mockup HTML below via `dangerouslySetInnerHTML`
-- Design source of truth remains `mockups/`; `web/` is the Next.js port with assets copied into `web/public/`
+- Hi-fi design archive: see `.planning/phases/07-archive-mockups/07-ARCHIVE.md` (`archive/mockups` / sibling repo). Production site: `web/` (Next.js port with assets in `web/public/`). In-repo `mockups/` may exist until Phase 9 — not required SoT
 - Client-only interactivity for body sections via dynamic `import("@/lib/mockups-main.js")`
 - `reactStrictMode: false` in `web/next.config.ts` so vanilla one-shot listeners are not broken by remounts
 - Demo/mock data only (canvas charts, quote ticks); no live market APIs wired
@@ -225,14 +225,14 @@ Dominion Markets’ marketing website, recently ported from vanilla HTML/CSS/JS 
 - Depends on: Font CSS variables from layout
 - Used by: Layout (`globals.css` + `<link href="/mockups.css">`) and `CinematicHero` (CSS import)
 - Purpose: Images, logos, payment marks, section backgrounds
-- Location: `web/public/assets/` (runtime); source originals in `mockups/assets/`
+- Location: `web/public/assets/` (runtime); originals live in the hi-fi archive (see `07-ARCHIVE.md`)
 - Contains: Section-scoped folders (`hero/`, `logo/`, `payments/`, etc.)
 - Depends on: None
 - Used by: Injected HTML `src="/assets/..."`, `next/image` in hero
-- Purpose: Wireframes → hi-fi mockups → brand/spec documentation
-- Location: `wireframes/`, `mockups/`, `docs/`
+- Purpose: Wireframes → archived hi-fi → brand/spec documentation
+- Location: `wireframes/`, archive (see `.planning/phases/07-archive-mockups/07-ARCHIVE.md`), `docs/`
 - Contains: Standalone HTML/CSS/JS and Markdown specs
-- Depends on: Local static servers (`npx serve`) for preview
+- Depends on: Local static servers for preview; archive checkout / sibling for hi-fi
 - Used by: Design workflow (`.cursor/skills/dominion-section-redesign/`); feeds content into `web/`
 ## Data Flow
 ### Primary request path (homepage)
@@ -264,8 +264,8 @@ Dominion Markets’ marketing website, recently ported from vanilla HTML/CSS/JS 
 - Location: `web/src/app/layout.tsx`
 - Triggers: Every App Router request
 - Responsibilities: Metadata, fonts, global CSS, static link to mockup stylesheet
-- Location: `mockups/index.html`
-- Triggers: `npx serve mockups -p 4174` (per `mockups/README.md`)
+- Location: Hi-fi archive (see `.planning/phases/07-archive-mockups/07-ARCHIVE.md`)
+- Triggers: Preview via archive checkout / sibling (in-repo `mockups/` may exist until Phase 9 — temporary, not required SoT)
 - Responsibilities: Standalone Floating Sanctuary hi-fi (full page including original hero)
 - Location: `wireframes/index.html`
 - Triggers: `npx serve wireframes -p 4173`; structure check via `wireframes/wireframe-check.mjs`
@@ -280,7 +280,7 @@ Dominion Markets’ marketing website, recently ported from vanilla HTML/CSS/JS 
 ## Anti-Patterns
 ### Treating injected HTML as React
 ### Re-initializing vanilla JS without the guard
-### Editing Next styles as the design source of truth
+### Treating `web/` styles alone as the hi-fi design archive
 ### Enabling Tailwind Preflight
 ## Error Handling
 - Guard early returns when DOM nodes missing (`if (!nav) return`, etc. in `mockups-main.js`)
@@ -295,7 +295,7 @@ Dominion Markets’ marketing website, recently ported from vanilla HTML/CSS/JS 
 
 | Skill | Description | Path |
 |-------|-------------|------|
-| dominion-section-redesign | Redesign Dominion Markets website sections into Floating Sanctuary liquid-glass hi-fi mockups. Use when recreating old dominionmarkets.com sections, generating design options, mobile variants, or implementing glass UI in mockups/. | `.cursor/skills/dominion-section-redesign/SKILL.md` |
+| dominion-section-redesign | Redesign Dominion Markets website sections in the Floating Sanctuary liquid-glass system. Use for old-site recreations, design options, mobile variants, archive hi-fi work (see 07-ARCHIVE.md), or production polish in web/. | `.cursor/skills/dominion-section-redesign/SKILL.md` |
 <!-- GSD:skills-end -->
 
 <!-- GSD:workflow-start source:GSD defaults -->
