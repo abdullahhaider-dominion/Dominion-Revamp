@@ -23,13 +23,66 @@ const poppins = Poppins({
   display: "swap",
 });
 
+const siteUrl = "https://dominion-revamp.vercel.app";
+
 export const metadata: Metadata = {
-  title: "Dominion Markets — Floating Sanctuary UI Mockup",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "Dominion Markets | Your Trading Sanctuary",
+    template: "%s | Dominion Markets",
+  },
   description:
-    "Hi-fi UI mockup for Dominion Markets Floating Sanctuary homepage redesign.",
+    "Trade with clarity on MT5 and cTrader. Regulated brokerage with transparent conditions, fast execution, and global market access.",
+  applicationName: "Dominion Markets",
+  keywords: [
+    "Dominion Markets",
+    "forex",
+    "CFD trading",
+    "MT5",
+    "cTrader",
+    "regulated broker",
+  ],
+  authors: [{ name: "Dominion Markets" }],
+  creator: "Dominion Markets",
+  publisher: "Dominion Markets",
+  alternates: {
+    canonical: "/",
+  },
   icons: {
-    icon: "/assets/logo/logo-isotype-app.png",
-    apple: "/assets/logo/logo-isotype-app.png",
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/assets/logo/logo-isotype-app.png", type: "image/png", sizes: "64x64" },
+    ],
+    apple: [{ url: "/assets/logo/logo-isotype.png", type: "image/png" }],
+    shortcut: ["/favicon.ico"],
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: siteUrl,
+    siteName: "Dominion Markets",
+    title: "Dominion Markets | Your Trading Sanctuary",
+    description:
+      "Trade with clarity on MT5 and cTrader. Regulated brokerage with transparent conditions, fast execution, and global market access.",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Dominion Markets",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Dominion Markets | Your Trading Sanctuary",
+    description:
+      "Trade with clarity on MT5 and cTrader. Regulated brokerage with transparent conditions, fast execution, and global market access.",
+    images: ["/og-image.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 
