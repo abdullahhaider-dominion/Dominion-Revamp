@@ -19,7 +19,7 @@
 | Logo `/assets/logo/logo-horizontal-reverse.svg` | Keep asset loads; covered by ref-check | auto | PASS | Referenced in `CinematicHero.tsx`; Assert A |
 | Laurel `/assets/awards/laurel-wreath.svg` | Keep asset loads | auto | PASS | Referenced in `CinematicHero.tsx`; Assert A |
 | Nav anchors to body sections | Config targets `#markets`, `#sessions`, `#accounts`, `#funding`, `#platforms`, `#dashboard`, `#copy-trading`, `#ecosystem`, `#why-dominion`, `#trust`, `#blogs`, `#final-cta`, `#top` | auto | PASS | Present in `CinematicHero` nav data / links; section ids exist in `home-html.ts` |
-| Hero + nav visual layout | Matches pre-prune shipping look (desktop) | human | human_needed | Visual judgment; D-02 smoke not run |
+| Hero + nav visual layout | Matches pre-prune shipping look (desktop) | human | PASS | D-02 Playwright smoke (`next start` :3000): hero BG naturalWidth>0 via next/image; logo SVG loaded |
 | `#proof` section | DOM id present; keep images not broken | auto | PASS | `id=\"proof\"` in `home-html.ts` |
 | `#proof` visual / marquee look | Layout intact after prune | human | human_needed | |
 | `#awards` section | Present; may stay `hidden` (parity = stay hidden) | auto | PASS | `id=\"awards\"` present; hidden OK per UI-SPEC |
@@ -64,11 +64,11 @@
 | `#final-cta` visual | Layout intact | human | human_needed | |
 | `footer` | Footer markup present | auto | PASS | `id=\"footer\"` (+ footer link blocks) in `home-html.ts` |
 | Footer visual / links | Keep assets / layout OK | human | human_needed | |
-| `[data-marquee]` tracks | proof / markets / trader-community; no init throw | human | human_needed | 3 `data-marquee` in HTML; do not fail on missing `#site-nav` / `data-xhero` |
-| `#markets` `[data-platform]` tabs | Tab switch works | human | human_needed | `data-platform` present in HTML |
-| Quotes `[data-quotes-tab]` | Tab switch works | human | human_needed | `data-quotes-tab` present in HTML |
-| `#dashboard` `[data-dash-feature]` tabs | Tab switch works | human | human_needed | `data-dash-feature` present in HTML |
-| `#ecosystem` tabs | Tab switch if present | human | human_needed | eco-tab ids present in HTML |
+| `[data-marquee]` tracks | proof / markets / trader-community; no init throw | human | PASS | D-02: 3 `[data-marquee]` nodes in live DOM; `#proof` present; no smoke failure |
+| `#markets` `[data-platform]` tabs | Tab switch works | human | PASS | D-02: clicked cTrader → aria-selected true |
+| Quotes `[data-quotes-tab]` | Tab switch works | human | human_needed | `data-quotes-tab` present in HTML; not exercised in smoke |
+| `#dashboard` `[data-dash-feature]` tabs | Tab switch works | human | PASS | D-02: clicked Trading Sessions → aria-selected true |
+| `#ecosystem` tabs | Tab switch if present | human | human_needed | eco-tab ids present in HTML; not exercised in smoke |
 | CSS backgrounds (`mockups.css`) | Static `url(/assets/...)` covered by Assert A | auto | PASS | `mockups.css` included in ref-check scan |
 | CSS backgrounds visual | Atmosphere / images render | human | human_needed | Optional D-02 |
 
@@ -78,4 +78,4 @@ None — Asserts A/B/C already green; no `web/` caller/path changes.
 
 ## D-02
 
-Skipped at checklist write time (Task 2). Task 3 may attach smoke notes if browser tools run.
+**Ran** 2026-09-05 via Playwright MCP against `npm run start -- -p 3000` (production server). Spot-check: hero BG + logo load, `#proof` + 3 marquees present, `#markets` platform tab click, `#dashboard` feature tab click. Full-page screenshot timed out (fonts); DOM evidence used instead. Mobile width not re-checked. Remaining section visuals stay `human_needed` for UAT.
