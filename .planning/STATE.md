@@ -2,13 +2,13 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: executing
-stopped_at: Completed 09-01-PLAN.md — awaiting verify-work for Phase 9 close
-last_updated: "2026-09-05T09:04:18Z"
-last_activity: 2026-09-05 -- Phase 9 plan 09-01 SUMMARY written (MOCK-03 evidence)
+status: ready
+stopped_at: Phase 9 complete — verified; next Phase 10 Lean Production Check
+last_updated: "2026-09-05T09:00:00Z"
+last_activity: 2026-09-05
 progress:
   total_phases: 10
-  completed_phases: 8
+  completed_phases: 9
   total_plans: 9
   completed_plans: 9
   percent: 90
@@ -21,14 +21,14 @@ progress:
 See: .planning/PROJECT.md (updated 2026-09-05)
 
 **Core value:** Ship a clean production Next.js site that keeps every asset and behavior the live site actually uses — never delete something still referenced.
-**Current focus:** Phase 9 — Remove Mockups Tree (plan executed; phase close pending verify-work)
+**Current focus:** Phase 10 — Lean Production Check
 
 ## Current Position
 
-Phase: 9 (Remove Mockups Tree) — PLAN 09-01 DONE (phase not closed)
-Plan: 1 of 1 complete
-Status: Awaiting verify-work / phase close (do not mark Phase 9 complete yet)
-Last activity: 2026-09-05 -- Phase 9 plan 09-01 SUMMARY written (MOCK-03 evidence)
+Phase: 10 of 10 (Lean Production Check)
+Plan: Not started
+Status: Phase 9 complete — MOCK-03 in-repo mockups/ removed; archive intact
+Last activity: 2026-09-05 — Phase 9 verified passed 6/6
 
 Progress: [█████████░] 90%
 
@@ -50,19 +50,15 @@ Progress: [█████████░] 90%
 | 6. Parity Verification | 1 | 1 | Complete |
 | 7. Archive Mockups | 1 | 1 | Complete |
 | 8. Retarget Design Docs | 1 | 1 | Complete |
-| 9. Remove Mockups Tree | 1 | 1 | Plan done — phase close pending verify-work |
-
-| Phase | Plan | Duration | Tasks | Files |
-|-------|------|----------|-------|-------|
-| 09 | 01 | 4min | 3 | 146 |
+| 9. Remove Mockups Tree | 1 | 1 | Complete |
 
 ## Accumulated Context
 
 ### Decisions
 
-- [Phase 7]: MOCK-01 archive/mockups + sibling Dominion-Markets-mockups-archive; no origin push
-- [Phase 8]: MOCK-02 skill/READMEs/PROJECT/CLAUDE retargeted to 07-ARCHIVE.md + web/; mockups/ retained until Phase 9
-- [Phase 9]: MOCK-03 git rm -r mockups after D-01; KEEP mockups.css + mockups-main.js; no push; phase close deferred to verify-work
+- [Phase 7]: MOCK-01 archive/mockups + sibling; no origin push
+- [Phase 8]: MOCK-02 docs/skills → 07-ARCHIVE.md + web/
+- [Phase 9]: MOCK-03 mockups/ removed from main; archive tip 3e9401b intact; KEEP ports; build exit 0
 
 ### Blockers/Concerns
 
@@ -71,5 +67,5 @@ None
 ## Session Continuity
 
 Last session: 2026-09-05
-Stopped at: Completed 09-01-PLAN.md — awaiting verify-work for Phase 9 close
+Stopped at: Phase 9 complete — verified; next Phase 10 Lean Production Check
 Resume file: None

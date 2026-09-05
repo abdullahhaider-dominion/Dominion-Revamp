@@ -82,4 +82,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-09-05 after Phase 8 — design docs retargeted to archive*
+*Last updated: 2026-09-05 after Phase 9 — in-repo mockups/ removed*
