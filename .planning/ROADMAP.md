@@ -129,7 +129,7 @@ Plans:
 **Plans:** 1 plan
 
 Plans:
-- [ ] 08-01-PLAN.md — Retarget skill + READMEs + PROJECT + CLAUDE SoT to 07-ARCHIVE (MOCK-02)
+- [x] 08-01-PLAN.md — Retarget skill + READMEs + PROJECT + CLAUDE SoT to 07-ARCHIVE (MOCK-02)
 
 ### Phase 9: Remove Mockups Tree
 **Goal**: Legacy `mockups/` is gone from this production repo after archive + doc updates
@@ -165,7 +165,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8 →
 | 5. Prune Public Assets | 1/1 | Complete    | 2026-09-04 |
 | 6. Parity Verification | 1/1 | Complete    | 2026-09-05 |
 | 7. Archive Mockups | 1/1 | Complete    | 2026-09-05 |
-| 8. Retarget Design Docs | 0/1 | Not started | - |
+| 8. Retarget Design Docs | 1/1 | Plans executed (awaiting verify) | - |
 | 9. Remove Mockups Tree | 0/TBD | Not started | - |
 | 10. Lean Production Check | 0/TBD | Not started | - |
 
