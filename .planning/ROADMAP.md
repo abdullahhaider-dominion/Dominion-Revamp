@@ -155,7 +155,7 @@ Plans:
 **Plans:** 1 plan
 
 Plans:
-- [ ] 10-01-PLAN.md — Lean-verify script + 10-LEAN-CHECK.md + build proof / SUMMARY (PROD-03)
+- [x] 10-01-PLAN.md — Lean-verify script + 10-LEAN-CHECK.md + build proof / SUMMARY (PROD-03)
 
 ## Progress
 
@@ -173,7 +173,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8 →
 | 7. Archive Mockups | 1/1 | Complete    | 2026-09-05 |
 | 8. Retarget Design Docs | 1/1 | Complete    | 2026-09-05 |
 | 9. Remove Mockups Tree | 1/1 | Complete    | 2026-09-05 |
-| 10. Lean Production Check | 0/TBD | Not started | - |
+| 10. Lean Production Check | 1/1 | Plan executed — awaiting verify | - |
 
 ## Coverage Validation
 

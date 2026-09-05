@@ -28,7 +28,7 @@ Requirements for this milestone. Each maps to roadmap phases.
 
 - [x] **PROD-01**: After cleanup, live homepage sections still match pre-cleanup look/behavior for remaining content
 - [x] **PROD-02**: Ensure `web/` app source is tracked in git (not left untracked)
-- [ ] **PROD-03**: Repo is lean and push-ready for production deploy of `web/`
+- [x] **PROD-03**: Repo is lean and push-ready for production deploy of `web/`
 
 ## v2 Requirements
 
@@ -71,7 +71,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | REACT-01 | Phase 4 | Complete |
 | PROD-01 | Phase 6 | Complete |
 | PROD-02 | Phase 1 | Complete |
-| PROD-03 | Phase 10 | Pending |
+| PROD-03 | Phase 10 | Complete |
 
 **Coverage:**
 - v1 requirements: 11 total
