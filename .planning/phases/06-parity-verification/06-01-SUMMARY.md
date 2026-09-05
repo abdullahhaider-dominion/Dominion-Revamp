@@ -65,7 +65,7 @@ completed: 2026-09-05
 2. **Task 2: Production build + 06-PARITY-CHECKLIST.md** - `b6420ea` (docs)
 3. **Task 3: D-02 smoke + SUMMARY** - `bf3abb9` (docs)
 
-**Plan metadata:** *(final docs commit)*
+**Plan metadata:** `4010b52`
 
 ## Files Created/Modified
 
