@@ -99,10 +99,10 @@ Plans:
   1. Critical above-the-fold and body sections (hero/nav, proof through final CTA still shipped) render without missing images or broken layout relative to pre-cleanup expectation
   2. Key interactions still work (nav anchors, widgets driven by remaining `mockups-main.js` init)
   3. `npm run build` (or equivalent) succeeds for `web/` after the prune
-**Plans:** 1 plan
+**Plans:** 1/1 plans complete
 
 Plans:
-- [ ] 06-01-PLAN.md — Path-aware ref-check + build + parity checklist (PROD-01); optional D-02 smoke
+- [x] 06-01-PLAN.md — Path-aware ref-check + build + parity checklist (PROD-01); optional D-02 smoke
 **UI hint**: yes
 
 ### Phase 7: Archive Mockups
@@ -157,7 +157,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8 →
 | 3. Safe Orphan Deletes | 1/1 | Complete | 2026-09-05 |
 | 4. Minimal React Unlock | 1/1 | Complete | 2026-09-05 |
 | 5. Prune Public Assets | 1/1 | Complete    | 2026-09-04 |
-| 6. Parity Verification | 0/TBD | Not started | - |
+| 6. Parity Verification | 1/1 | Pending verification | - |
 | 7. Archive Mockups | 0/TBD | Not started | - |
 | 8. Retarget Design Docs | 0/TBD | Not started | - |
 | 9. Remove Mockups Tree | 0/TBD | Not started | - |
