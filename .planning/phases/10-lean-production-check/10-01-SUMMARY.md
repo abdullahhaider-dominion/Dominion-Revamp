@@ -67,7 +67,7 @@ completed: 2026-09-05
 2. **Task 2: Write 10-LEAN-CHECK.md** - `3878f8f` (docs)
 3. **Task 3: Full lean-verify + SUMMARY** - `3ad12f2` (docs)
 
-**Plan metadata:** `6fcc197` (docs: complete plan)
+**Plan metadata:** `a9c8574` (docs: complete plan)
 
 ## Files Created/Modified
 
@@ -123,7 +123,7 @@ docs/ present; wireframes/ present
 
 ## Self-Check: PASSED
 
-- FOUND metadata commit: 6fcc197
+- FOUND metadata commit: a9c8574
 
 - FOUND: scripts/lean-verify.mjs
 - FOUND: 10-LEAN-CHECK.md
