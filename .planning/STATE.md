@@ -2,16 +2,16 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: executing
-stopped_at: Completed 06-01-PLAN.md — awaiting phase verification (orchestrator)
-last_updated: "2026-09-05T07:59:00.000Z"
-last_activity: 2026-09-05 -- 06-01 plan executed (PROD-01 evidence)
+status: ready
+stopped_at: Phase 6 complete — verified; next Phase 7 Archive Mockups
+last_updated: "2026-09-05T08:05:00Z"
+last_activity: 2026-09-05
 progress:
   total_phases: 10
-  completed_phases: 5
+  completed_phases: 6
   total_plans: 6
   completed_plans: 6
-  percent: 50
+  percent: 60
 ---
 
 # Project State
@@ -21,16 +21,16 @@ progress:
 See: .planning/PROJECT.md (updated 2026-09-05)
 
 **Core value:** Ship a clean production Next.js site that keeps every asset and behavior the live site actually uses — never delete something still referenced.
-**Current focus:** Phase 6 — Parity Verification
+**Current focus:** Phase 7 — Archive Mockups
 
 ## Current Position
 
-Phase: 6 (Parity Verification) — EXECUTING
-Plan: 1 of 1
-Status: 06-01 plan complete — awaiting phase verification (orchestrator owns phase close)
-Last activity: 2026-09-05 -- 06-01 plan executed (PROD-01 evidence)
+Phase: 7 of 10 (Archive Mockups)
+Plan: Not started
+Status: Phase 6 complete — PROD-01 verified (ref-check + build + D-02 smoke); 25 visual UAT rows optional
+Last activity: 2026-09-05 — Phase 6 verified passed 7/7
 
-Progress: [█████░░░░░] 50%
+Progress: [██████░░░░] 60%
 
 ## Performance Metrics
 
@@ -47,9 +47,9 @@ Progress: [█████░░░░░] 50%
 | 3. Safe Orphan Deletes | 1 | 1 | Complete |
 | 4. Minimal React Unlock | 1 | 1 | Complete |
 | 5. Prune Public Assets | 1 | 1 | Complete |
-| 6. Parity Verification | 1 | 1 | Plan done — pending verification |
+| 6. Parity Verification | 1 | 1 | Complete |
 
-**Plan metrics:** Phase 5 P01 — 4min, 3 tasks, 55 files deleted; Phase 6 P01 — 4min, 3 tasks, 3 files
+**Plan metrics:** Phase 5 P01 — 4min, 55 deletes; Phase 6 P01 — 4min, ref-check + checklist
 
 ## Accumulated Context
 
@@ -57,7 +57,7 @@ Progress: [█████░░░░░] 50%
 
 - Phase 4: no React changes needed; Phase 5 cleared to delete all 55 paths from 02-INVENTORY delete class (~32.6 MB)
 - [Phase 5]: Pruned all 55 still_unreferenced public assets (ASSET-02); ~32.6 MB inventory savings; keeps intact; build exit 0
-- [Phase 6]: D-04 none (asserts green); D-02 Playwright smoke on `next start` :3000; phase close deferred to orchestrator/verifier
+- [Phase 6]: PROD-01 parity gate green: ref-check 82/0 missing, build 0, D-02 smoke ran; 25 visual UAT rows remain non-blocking
 
 ### Blockers/Concerns
 
@@ -65,6 +65,6 @@ None
 
 ## Session Continuity
 
-Last session: 2026-09-05T07:59:00Z
-Stopped at: Completed 06-01-PLAN.md — awaiting phase verification (orchestrator)
+Last session: 2026-09-05
+Stopped at: Phase 6 complete — verified; next Phase 7 Archive Mockups
 Resume file: None

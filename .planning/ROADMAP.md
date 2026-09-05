@@ -17,7 +17,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 3: Safe Orphan Deletes** - Remove dead CSS mirror and root hero PNG duplicate
 - [x] **Phase 4: Minimal React Unlock** - Change callers only if needed to free large unused assets
 - [x] **Phase 5: Prune Public Assets** - Delete inventory-proven unused files under `web/public` (completed 2026-09-04)
-- [ ] **Phase 6: Parity Verification** - Confirm remaining homepage look/behavior matches pre-cleanup
+- [x] **Phase 6: Parity Verification** - Confirm remaining homepage look/behavior matches pre-cleanup (completed 2026-09-05)
 - [ ] **Phase 7: Archive Mockups** - Preserve `mockups/` history in a separate repo or long-lived branch
 - [ ] **Phase 8: Retarget Design Docs** - Point skills/READMEs at the archive instead of in-repo SoT
 - [ ] **Phase 9: Remove Mockups Tree** - Delete `mockups/` from this production repo after archive + docs
@@ -157,7 +157,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8 →
 | 3. Safe Orphan Deletes | 1/1 | Complete | 2026-09-05 |
 | 4. Minimal React Unlock | 1/1 | Complete | 2026-09-05 |
 | 5. Prune Public Assets | 1/1 | Complete    | 2026-09-04 |
-| 6. Parity Verification | 1/1 | Pending verification | - |
+| 6. Parity Verification | 1/1 | Complete    | 2026-09-05 |
 | 7. Archive Mockups | 0/TBD | Not started | - |
 | 8. Retarget Design Docs | 0/TBD | Not started | - |
 | 9. Remove Mockups Tree | 0/TBD | Not started | - |
