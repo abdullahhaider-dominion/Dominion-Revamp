@@ -139,10 +139,10 @@ Plans:
   1. `mockups/` directory is absent from the production repo working tree
   2. Archive from Phase 7 remains reachable; docs from Phase 8 still resolve to it
   3. `web/` app still builds and runs without any runtime dependency on `../mockups`
-**Plans:** 1 plan
+**Plans:** 1/1 plans complete (phase close pending verify-work)
 
 Plans:
-- [ ] 09-01-PLAN.md — Preflight + `git rm -r mockups` + tense cleanup + remove-verify/build proof (MOCK-03)
+- [x] 09-01-PLAN.md — Preflight + `git rm -r mockups` + tense cleanup + remove-verify/build proof (MOCK-03)
 
 ### Phase 10: Lean Production Check
 **Goal**: Repo is lean and push-ready for production deploy of `web/`
@@ -169,7 +169,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8 →
 | 6. Parity Verification | 1/1 | Complete    | 2026-09-05 |
 | 7. Archive Mockups | 1/1 | Complete    | 2026-09-05 |
 | 8. Retarget Design Docs | 1/1 | Complete    | 2026-09-05 |
-| 9. Remove Mockups Tree | 0/TBD | Not started | - |
+| 9. Remove Mockups Tree | 1/1 | Plan executed — phase close pending verify-work | - |
 | 10. Lean Production Check | 0/TBD | Not started | - |
 
 ## Coverage Validation
