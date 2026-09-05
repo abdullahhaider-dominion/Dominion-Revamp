@@ -21,10 +21,11 @@ Ship a clean production Next.js site that keeps every asset and behavior the liv
 - ✓ Dead CSS mirror + root hero PNG orphan removed (ASSET-03/04) — Validated in Phase 3
 - ✓ Minimal React unlock not required; all 55 deletes cleared (REACT-01) — Validated in Phase 4
 - ✓ Homepage parity after prune (PROD-01) — Validated in Phase 6 (automated + D-02 smoke; optional visual UAT remains)
+- ✓ `mockups/` archived (MOCK-01) — Validated in Phase 7 (`archive/mockups` + sibling repo; still present on main until Phase 9)
 
 ### Active
 
-- [ ] Archive `mockups/` to a separate repo or long-lived branch, update docs/skills that treat it as SoT, then remove `mockups/` from this production repo
+- [ ] Update docs/skills that treat `mockups/` as SoT to point at the archive (Phase 8), then remove `mockups/` from this production repo (Phase 9)
 - [ ] Leave a lean, pushable repo: tracked app code, no orphan design binaries in the production tree
 
 ### Out of Scope
@@ -41,7 +42,7 @@ Ship a clean production Next.js site that keeps every asset and behavior the liv
 - Production app: `web/` (Next.js). Design SoT today: `mockups/` (~64MB), referenced by port workflow and `.cursor/skills`, not imported at Next runtime.
 - Map findings (`.planning/codebase/CONCERNS.md`): ~53 unreferenced files (~32.6MB) under `web/public/assets/` — **Phase 5 pruned all 55 inventory deletes**; `web/` is tracked; dead CSS/root hero orphans removed in Phase 3.
 - User chose safer full-phase GSD path: map → project → phased roadmap → execute with approvals.
-- **Current state:** Phase 6 complete — next is Phase 7 archive `mockups/`, then doc retarget (8), remove (9), lean check (10).
+- **Current state:** Phase 7 complete — next is Phase 8 retarget docs/skills to archive, then remove (9), lean check (10).
 
 ## Constraints
 
@@ -58,7 +59,7 @@ Ship a clean production Next.js site that keeps every asset and behavior the liv
 |----------|-----------|---------|
 | Milestone = cleanup + ship, with minimal React only if needed for deletes | User 1B + depth C — avoid full rewrite while still unblocking large asset removal | Validated — Phase 4 verify-only; Phase 5 pruned 55 |
 | Delete bar = static scan of `web/src` + served `mockups.css` only | User 3A — safest proof before production | Validated — inventory + rescan + prune honor bar |
-| Archive `mockups/` to separate repo/branch, then remove from this repo | User 2C + sequence C — preserve design history without bloating prod repo | — Pending |
+| Archive `mockups/` to separate repo/branch, then remove from this repo | User 2C + sequence C — preserve design history without bloating prod repo | Archive done (Phase 7); remove pending Phase 9 |
 | Keep `docs/` / `wireframes/` unless they block prod | Small on disk; not runtime; not the main weight problem | — Pending |
 | Full homepage React cutover deferred | Explicitly out of scope for this milestone | — Pending |
 
@@ -80,4 +81,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-09-05 after Phase 6 — parity verification complete*
+*Last updated: 2026-09-05 after Phase 7 — mockups archive complete*
