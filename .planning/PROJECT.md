@@ -24,10 +24,12 @@ Ship a clean production Next.js site that keeps every asset and behavior the liv
 - ✓ `mockups/` archived (MOCK-01) — Validated in Phase 7 (`archive/mockups` + sibling repo)
 - ✓ Docs/skills retargeted off in-repo `mockups/` SoT (MOCK-02) — Validated in Phase 8
 - ✓ In-repo `mockups/` removed from production tree (MOCK-03) — Phase 9 plan 09-01 (orchestrator/verify-work closes REQUIREMENTS/ROADMAP)
+- ✓ Repo lean and push-ready for `web/` deploy (PROD-03) — Validated in Phase 10
 
 ### Active
 
-- [ ] Leave a lean, pushable repo: tracked app code, no orphan design binaries in the production tree
+- (none — v1 cleanup milestone requirements validated)
+
 
 ### Out of Scope
 
@@ -82,4 +84,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-09-05 after Phase 9 — in-repo mockups/ removed*
+*Last updated: 2026-09-05 after Phase 10 — lean production check complete (milestone)*

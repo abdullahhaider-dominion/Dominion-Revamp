@@ -21,7 +21,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 7: Archive Mockups** - Preserve `mockups/` history in a separate repo or long-lived branch (completed 2026-09-05)
 - [x] **Phase 8: Retarget Design Docs** - Point skills/READMEs at the archive instead of in-repo SoT (completed 2026-09-05)
 - [x] **Phase 9: Remove Mockups Tree** - Delete `mockups/` from this production repo after archive + docs (completed 2026-09-05)
-- [ ] **Phase 10: Lean Production Check** - Confirm repo is slim and push-ready for `web/` deploy
+- [x] **Phase 10: Lean Production Check** - Confirm repo is slim and push-ready for `web/` deploy (completed 2026-09-05)
 
 ## Phase Details
 
@@ -152,7 +152,7 @@ Plans:
   1. Production tree has no orphan design binaries that were targeted this milestone (root hero duplicate, pruned public orphans, in-repo `mockups/`)
   2. Tracked app paths are sufficient to deploy `web/` (source + public + config; ignores still exclude install/build artifacts)
   3. Final status check shows a pushable, coherent production-focused tree (docs/wireframes may remain per project constraints)
-**Plans:** 1 plan
+**Plans:** 1/1 plans complete
 
 Plans:
 - [x] 10-01-PLAN.md — Lean-verify script + 10-LEAN-CHECK.md + build proof / SUMMARY (PROD-03)
@@ -173,7 +173,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8 →
 | 7. Archive Mockups | 1/1 | Complete    | 2026-09-05 |
 | 8. Retarget Design Docs | 1/1 | Complete    | 2026-09-05 |
 | 9. Remove Mockups Tree | 1/1 | Complete    | 2026-09-05 |
-| 10. Lean Production Check | 1/1 | Plan executed — awaiting verify | - |
+| 10. Lean Production Check | 1/1 | Complete    | 2026-09-05 |
 
 ## Coverage Validation
 
