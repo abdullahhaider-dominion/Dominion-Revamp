@@ -152,7 +152,10 @@ Plans:
   1. Production tree has no orphan design binaries that were targeted this milestone (root hero duplicate, pruned public orphans, in-repo `mockups/`)
   2. Tracked app paths are sufficient to deploy `web/` (source + public + config; ignores still exclude install/build artifacts)
   3. Final status check shows a pushable, coherent production-focused tree (docs/wireframes may remain per project constraints)
-**Plans**: TBD
+**Plans:** 1 plan
+
+Plans:
+- [ ] 10-01-PLAN.md — Lean-verify script + 10-LEAN-CHECK.md + build proof / SUMMARY (PROD-03)
 
 ## Progress
 
