@@ -1,0 +1,33 @@
+@import "tailwindcss/theme" layer(theme);
+@import "tailwindcss/utilities" layer(utilities);
+
+@theme inline {
+  --font-sans: var(--font-montserrat);
+  --font-heading: var(--font-poppins);
+  --color-navy: #1d3347;
+  --color-green: #47bd68;
+  --color-mist: #e8eef2;
+  --color-dm-navy: #1d3347;
+  --color-dm-green: #47bd68;
+  --color-dm-white: #ffffff;
+  --color-dm-black: #000000;
+}
+
+/*
+  mockups.css sets body { overflow-x: hidden }, which makes the body a
+  scrollport and prevents backdrop-filter from sampling page content.
+  Keep horizontal clipping on an inner wrapper instead.
+*/
+html,
+body {
+  overflow-x: visible !important;
+}
+
+body {
+  padding-top: 0 !important;
+}
+
+.page-root {
+  overflow-x: clip;
+  min-height: 100%;
+}

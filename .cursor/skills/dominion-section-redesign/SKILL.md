@@ -1,6 +1,6 @@
 ---
 name: dominion-section-redesign
-description: Redesign Dominion Markets website sections into Floating Sanctuary liquid-glass hi-fi mockups. Use when recreating old dominionmarkets.com sections, generating design options, mobile variants, or implementing glass UI in mockups/.
+description: Redesign Dominion Markets website sections in the Floating Sanctuary liquid-glass system. Use for old-site recreations, design options, mobile variants, archive hi-fi work (see 07-ARCHIVE.md), or production polish in web/.
 ---
 
 # Dominion Markets — Floating Sanctuary Section Redesign
@@ -12,7 +12,7 @@ Use this skill whenever recreating or adding homepage (and later site) sections 
 - User pastes / screenshots an old Dominion Markets section and asks to redesign it
 - User asks for design options before implementation
 - User asks how a chosen concept looks on mobile
-- Implementing or polishing sections inside `mockups/`
+- Implementing or polishing sections in the hi-fi archive (sibling / `archive/mockups` checkout — see `07-ARCHIVE.md`) **or** production polish under `web/`
 
 ## Is a skill the right tool?
 
@@ -24,8 +24,8 @@ Do **not** invent a new visual system per section. Extend Floating Sanctuary.
 
 1. Brand: `docs/brand/Dominion_Markets_Brand_Guidelines.md`
 2. Design spec: `docs/superpowers/specs/2026-08-07-dominion-markets-floating-sanctuary-design.md`
-3. Working hi-fi: `mockups/` (`index.html`, `styles.css`, `main.js`, `assets/`)
-4. Concept exports (optional): `mockups/concepts/`
+3. Hi-fi design archive: see `.planning/phases/07-archive-mockups/07-ARCHIVE.md` — branch `archive/mockups` + sibling repo (coordinates in that file).
+4. Production polish: `web/` (Next.js App Router)
 
 ## Locked design system
 
@@ -43,7 +43,7 @@ Do **not** invent a new visual system per section. Extend Floating Sanctuary.
 - Body: light milky glass, readable navy type, soft mist backgrounds
 
 **Logo:**
-- Use approved assets in `mockups/assets/logo/` only
+- Use approved assets from the archive logo path (see `07-ARCHIVE.md`) or `web/public/assets/logo/` for production
 - Reverse lockup on navy/dark; full-color on light
 - Never redraw, recolor, stretch, or approximate the mark with CSS/text/icons
 - Horizontal lockup ≥ 120px wide; isotype ≥ 24px; clear space ≈ chart-icon height
@@ -57,7 +57,7 @@ Do **not** invent a new visual system per section. Extend Floating Sanctuary.
 ### 1) Capture the old section
 
 - Note structure, dynamic bits (API/live data), and required copy/legal
-- For mockups: simulate dynamics with demo data; do not hard-wire production APIs unless asked
+- For hi-fi: simulate dynamics with demo data; do not hard-wire production APIs unless asked
 
 ### 2) Offer 2–3 desktop concept images first
 
@@ -68,26 +68,31 @@ Typical option shapes:
 - **B — Mist-split / story layout** (copy + glass module)
 - **C — Modular / more visual** (cards, floating modules)
 
-Save under `mockups/concepts/` when useful. Present tradeoffs in a short table. **Stop and wait for the user’s pick.**
+Save under archive `concepts/` when useful. Present tradeoffs in a short table. **Stop and wait for the user’s pick.**
 
 ### 3) Mobile treatments for the chosen option
 
 After desktop choice, show 2–3 mobile adaptations (e.g. stacked, 2-up grid, swipe carousel). Recommend one. **Wait for confirmation.**
 
-### 4) Implement into hi-fi mockup
+### 4) Implement into hi-fi or production
 
-- Add/update section in `mockups/index.html`
-- Style in `mockups/styles.css` (gloss: blur, specular edges, soft green open-state glow where appropriate)
-- Behavior in `mockups/main.js` (tabs, timers, mock ticks, carousels)
-- Bump stylesheet cache (`styles.css?v=N`)
+Prefer implement/polish in the **archive working tree** (sibling / `archive/mockups` checkout — coordinates in `.planning/phases/07-archive-mockups/07-ARCHIVE.md`) **or** under `web/` when shipping to production.
+
+For archive hi-fi:
+- Add/update section HTML/CSS/JS in the archive checkout
+- Bump stylesheet cache when applicable
 - Keep one job per section; match surrounding Floating Sanctuary patterns
+
+For production polish:
+- Update the relevant paths under `web/` (App Router, styles, content modules)
 - Prefer official payment/brand logos as assets when available; do not invent trademark-inaccurate marks
+- Logo assets: archive assets path or `web/public/assets/` — not in-repo `mockups/assets/logo/` as mandatory SoT
 
 ### 5) Verify, commit, push, update PR
 
 - Screenshot desktop + mobile of the new section
-- Commit with a clear message; `git push -u origin <branch>`
-- Update the existing PR for `cursor/floating-sanctuary-design-fdb2` (or current feature branch)
+- Commit with a clear message; `git push -u origin <branch>` when shipping (do not push archive tip unless asked)
+- Update the existing PR for the current feature branch
 - Share preview URL + hard-refresh note
 
 ## Dynamics policy
@@ -110,9 +115,9 @@ After desktop choice, show 2–3 mobile adaptations (e.g. stacked, 2-up grid, sw
 - [ ] 2–3 desktop concepts shown and user picked
 - [ ] Mobile treatment confirmed
 - [ ] Brand/logo rules respected
-- [ ] Implemented in `mockups/` with cache bump
+- [ ] Implemented in archive working tree and/or `web/` (not requiring in-repo `mockups/` as SoT)
 - [ ] Dynamic demo behavior if the old section was live
-- [ ] Screenshots + commit + push + PR update
+- [ ] Screenshots + commit + push + PR update (as appropriate)
 - [ ] Preview link shared
 
 ## Anti-patterns
@@ -122,3 +127,4 @@ After desktop choice, show 2–3 mobile adaptations (e.g. stacked, 2-up grid, sw
 - Purple/glow spam / emoji clutter
 - Packing stats and promo chips into the hero
 - Changing the global design language mid-project
+- Treating in-repo `mockups/` as required design SoT after Phase 7 archive

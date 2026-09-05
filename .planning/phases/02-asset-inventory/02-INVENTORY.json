@@ -1,0 +1,839 @@
+{
+  "generated": "2026-09-05",
+  "phase": "02-asset-inventory",
+  "requirement": "ASSET-01",
+  "scan_sources": [
+    "web/src",
+    "web/public/mockups.css"
+  ],
+  "summary": {
+    "total": 137,
+    "keep": 82,
+    "delete": 55,
+    "delete_bytes": 34209521
+  },
+  "files": [
+    {
+      "path": "web/public/.DS_Store",
+      "bytes": 6148,
+      "class": "delete",
+      "evidence": "OS junk; not a runtime asset"
+    },
+    {
+      "path": "web/public/assets/.DS_Store",
+      "bytes": 14340,
+      "class": "delete",
+      "evidence": "OS junk; not a runtime asset"
+    },
+    {
+      "path": "web/public/assets/accounts-clarity-bg.png",
+      "bytes": 1867516,
+      "class": "keep",
+      "evidence": "web/public/mockups.css:/assets/accounts-clarity-bg.png"
+    },
+    {
+      "path": "web/public/assets/accounts-focus-bg.png",
+      "bytes": 1556031,
+      "class": "keep",
+      "evidence": "web/public/mockups.css:/assets/accounts-focus-bg.png"
+    },
+    {
+      "path": "web/public/assets/awards/laurel-wreath.svg",
+      "bytes": 8592,
+      "class": "keep",
+      "evidence": "web/src/components/CinematicHero.tsx:/assets/awards/laurel-wreath.svg"
+    },
+    {
+      "path": "web/public/assets/awards/laurel.svg",
+      "bytes": 888,
+      "class": "delete",
+      "evidence": "no match in web/src or web/public/mockups.css"
+    },
+    {
+      "path": "web/public/assets/awards/mist-bg.jpg",
+      "bytes": 2275204,
+      "class": "delete",
+      "evidence": "no match in web/src or web/public/mockups.css"
+    },
+    {
+      "path": "web/public/assets/blogs/featured-xau.png",
+      "bytes": 1386827,
+      "class": "keep",
+      "evidence": "web/src/content/home-html.ts:/assets/blogs/featured-xau.png"
+    },
+    {
+      "path": "web/public/assets/blogs/mist-bg.jpg",
+      "bytes": 239192,
+      "class": "keep",
+      "evidence": "web/src/content/home-html.ts:/assets/blogs/mist-bg.jpg"
+    },
+    {
+      "path": "web/public/assets/blogs/mist-bg.png",
+      "bytes": 2342812,
+      "class": "delete",
+      "evidence": "no match in web/src or web/public/mockups.css"
+    },
+    {
+      "path": "web/public/assets/blogs/thumb-global.png",
+      "bytes": 1656675,
+      "class": "keep",
+      "evidence": "web/src/content/home-html.ts:/assets/blogs/thumb-global.png"
+    },
+    {
+      "path": "web/public/assets/blogs/thumb-inflation.png",
+      "bytes": 2098558,
+      "class": "keep",
+      "evidence": "web/src/content/home-html.ts:/assets/blogs/thumb-inflation.png"
+    },
+    {
+      "path": "web/public/assets/blogs/thumb-risk.png",
+      "bytes": 1274961,
+      "class": "keep",
+      "evidence": "web/src/content/home-html.ts:/assets/blogs/thumb-risk.png"
+    },
+    {
+      "path": "web/public/assets/dashboard/dashboard-preview.jpg",
+      "bytes": 67136,
+      "class": "keep",
+      "evidence": "web/src/content/home-html.ts:/assets/dashboard/dashboard-preview.jpg"
+    },
+    {
+      "path": "web/public/assets/dashboard/dashboard-preview.webp",
+      "bytes": 37270,
+      "class": "keep",
+      "evidence": "web/src/content/home-html.ts:/assets/dashboard/dashboard-preview.webp"
+    },
+    {
+      "path": "web/public/assets/features/features-bento-bg.jpg",
+      "bytes": 1962195,
+      "class": "keep",
+      "evidence": "web/src/content/home-html.ts:/assets/features/features-bento-bg.jpg"
+    },
+    {
+      "path": "web/public/assets/features/features-devices-platforms.png",
+      "bytes": 1702560,
+      "class": "keep",
+      "evidence": "web/src/content/home-html.ts:/assets/features/features-devices-platforms.png"
+    },
+    {
+      "path": "web/public/assets/features/features-phones-spreads.png",
+      "bytes": 1136754,
+      "class": "keep",
+      "evidence": "web/src/content/home-html.ts:/assets/features/features-phones-spreads.png"
+    },
+    {
+      "path": "web/public/assets/features/features-tile-commission.jpg",
+      "bytes": 1385459,
+      "class": "keep",
+      "evidence": "web/src/content/home-html.ts:/assets/features/features-tile-commission.jpg"
+    },
+    {
+      "path": "web/public/assets/features/features-tile-discord.jpg",
+      "bytes": 1289943,
+      "class": "keep",
+      "evidence": "web/src/content/home-html.ts:/assets/features/features-tile-discord.jpg"
+    },
+    {
+      "path": "web/public/assets/features/features-tile-execution.jpg",
+      "bytes": 1126704,
+      "class": "keep",
+      "evidence": "web/src/content/home-html.ts:/assets/features/features-tile-execution.jpg"
+    },
+    {
+      "path": "web/public/assets/features/features-tile-platforms-bg.jpg",
+      "bytes": 1822770,
+      "class": "keep",
+      "evidence": "web/src/content/home-html.ts:/assets/features/features-tile-platforms-bg.jpg"
+    },
+    {
+      "path": "web/public/assets/features/features-tile-withdrawals.jpg",
+      "bytes": 1235319,
+      "class": "keep",
+      "evidence": "web/src/content/home-html.ts:/assets/features/features-tile-withdrawals.jpg"
+    },
+    {
+      "path": "web/public/assets/features/icons/bolt.svg",
+      "bytes": 135,
+      "class": "keep",
+      "evidence": "web/src/content/home-html.ts:/assets/features/icons/bolt.svg"
+    },
+    {
+      "path": "web/public/assets/features/icons/devices.svg",
+      "bytes": 334,
+      "class": "keep",
+      "evidence": "web/src/content/home-html.ts:/assets/features/icons/devices.svg"
+    },
+    {
+      "path": "web/public/assets/features/icons/discord.svg",
+      "bytes": 575,
+      "class": "keep",
+      "evidence": "web/src/content/home-html.ts:/assets/features/icons/discord.svg"
+    },
+    {
+      "path": "web/public/assets/features/icons/percent.svg",
+      "bytes": 303,
+      "class": "keep",
+      "evidence": "web/src/content/home-html.ts:/assets/features/icons/percent.svg"
+    },
+    {
+      "path": "web/public/assets/features/icons/sliders.svg",
+      "bytes": 215,
+      "class": "keep",
+      "evidence": "web/src/content/home-html.ts:/assets/features/icons/sliders.svg"
+    },
+    {
+      "path": "web/public/assets/features/icons/wallet.svg",
+      "bytes": 273,
+      "class": "keep",
+      "evidence": "web/src/content/home-html.ts:/assets/features/icons/wallet.svg"
+    },
+    {
+      "path": "web/public/assets/footer/footer-desktop.jpg",
+      "bytes": 156124,
+      "class": "keep",
+      "evidence": "web/public/mockups.css:/assets/footer/footer-desktop.jpg"
+    },
+    {
+      "path": "web/public/assets/footer/footer-desktop.webp",
+      "bytes": 107142,
+      "class": "keep",
+      "evidence": "web/public/mockups.css:/assets/footer/footer-desktop.webp"
+    },
+    {
+      "path": "web/public/assets/footer/footer-mobile.jpg",
+      "bytes": 117686,
+      "class": "keep",
+      "evidence": "web/public/mockups.css:/assets/footer/footer-mobile.jpg"
+    },
+    {
+      "path": "web/public/assets/footer/footer-mobile.webp",
+      "bytes": 71560,
+      "class": "keep",
+      "evidence": "web/public/mockups.css:/assets/footer/footer-mobile.webp"
+    },
+    {
+      "path": "web/public/assets/funding/mist-bg.jpg",
+      "bytes": 2275204,
+      "class": "keep",
+      "evidence": "web/src/content/home-html.ts:/assets/funding/mist-bg.jpg"
+    },
+    {
+      "path": "web/public/assets/hero/Hero-background.png",
+      "bytes": 2164492,
+      "class": "keep",
+      "evidence": "web/src/components/CinematicHero.tsx:/assets/hero/Hero-background.png"
+    },
+    {
+      "path": "web/public/assets/hero/hero-media.png",
+      "bytes": 1826816,
+      "class": "delete",
+      "evidence": "no match in web/src or web/public/mockups.css"
+    },
+    {
+      "path": "web/public/assets/hero/hero.mp4",
+      "bytes": 16489618,
+      "class": "delete",
+      "evidence": "no match in web/src or web/public/mockups.css"
+    },
+    {
+      "path": "web/public/assets/how-start/funding.png",
+      "bytes": 18032,
+      "class": "keep",
+      "evidence": "web/src/content/home-html.ts:/assets/how-start/funding.png"
+    },
+    {
+      "path": "web/public/assets/how-start/mist-bg.jpg",
+      "bytes": 2275204,
+      "class": "keep",
+      "evidence": "web/src/content/home-html.ts:/assets/how-start/mist-bg.jpg"
+    },
+    {
+      "path": "web/public/assets/how-start/register.png",
+      "bytes": 12690,
+      "class": "keep",
+      "evidence": "web/src/content/home-html.ts:/assets/how-start/register.png"
+    },
+    {
+      "path": "web/public/assets/how-start/trade.png",
+      "bytes": 19581,
+      "class": "keep",
+      "evidence": "web/src/content/home-html.ts:/assets/how-start/trade.png"
+    },
+    {
+      "path": "web/public/assets/logo/logo-horizontal-color-transparent.png",
+      "bytes": 114408,
+      "class": "keep",
+      "evidence": "web/src/content/home-html.ts:/assets/logo/logo-horizontal-color-transparent.png"
+    },
+    {
+      "path": "web/public/assets/logo/logo-horizontal-color.png",
+      "bytes": 99301,
+      "class": "delete",
+      "evidence": "no match in web/src or web/public/mockups.css"
+    },
+    {
+      "path": "web/public/assets/logo/logo-horizontal-reverse.svg",
+      "bytes": 12066,
+      "class": "keep",
+      "evidence": "web/src/components/CinematicHero.tsx:/assets/logo/logo-horizontal-reverse.svg"
+    },
+    {
+      "path": "web/public/assets/logo/logo-isotype-app.png",
+      "bytes": 1210,
+      "class": "keep",
+      "evidence": "web/src/app/layout.tsx:/assets/logo/logo-isotype-app.png"
+    },
+    {
+      "path": "web/public/assets/logo/logo-isotype.png",
+      "bytes": 22879,
+      "class": "keep",
+      "evidence": "web/src/content/home-html.ts:/assets/logo/logo-isotype.png"
+    },
+    {
+      "path": "web/public/assets/markets-reach/commodities.svg",
+      "bytes": 1024,
+      "class": "delete",
+      "evidence": "no match in web/src or web/public/mockups.css"
+    },
+    {
+      "path": "web/public/assets/markets-reach/currencies.svg",
+      "bytes": 865,
+      "class": "delete",
+      "evidence": "no match in web/src or web/public/mockups.css"
+    },
+    {
+      "path": "web/public/assets/markets-reach/discord.svg",
+      "bytes": 794,
+      "class": "delete",
+      "evidence": "no match in web/src or web/public/mockups.css"
+    },
+    {
+      "path": "web/public/assets/markets-reach/mist-bg.jpg",
+      "bytes": 2275204,
+      "class": "delete",
+      "evidence": "no match in web/src or web/public/mockups.css"
+    },
+    {
+      "path": "web/public/assets/mrkt/mist-bg.jpg",
+      "bytes": 2275204,
+      "class": "delete",
+      "evidence": "no match in web/src or web/public/mockups.css"
+    },
+    {
+      "path": "web/public/assets/mrkt/mrktedge-mark.svg",
+      "bytes": 354,
+      "class": "keep",
+      "evidence": "web/src/content/home-html.ts:/assets/mrkt/mrktedge-mark.svg"
+    },
+    {
+      "path": "web/public/assets/mrkt/product-collage.png",
+      "bytes": 1900666,
+      "class": "delete",
+      "evidence": "no match in web/src or web/public/mockups.css"
+    },
+    {
+      "path": "web/public/assets/mrkt/product-collage.webp",
+      "bytes": 103942,
+      "class": "delete",
+      "evidence": "no match in web/src or web/public/mockups.css"
+    },
+    {
+      "path": "web/public/assets/mt5-sim/mist-bg.jpg",
+      "bytes": 2275204,
+      "class": "delete",
+      "evidence": "no match in web/src or web/public/mockups.css"
+    },
+    {
+      "path": "web/public/assets/mt5-sim/mt5Logo-transparent.png",
+      "bytes": 25459,
+      "class": "delete",
+      "evidence": "no match in web/src or web/public/mockups.css"
+    },
+    {
+      "path": "web/public/assets/mt5-sim/mt5Logo.png",
+      "bytes": 36349,
+      "class": "delete",
+      "evidence": "no match in web/src or web/public/mockups.css"
+    },
+    {
+      "path": "web/public/assets/mt5-sim/mt5_section.png",
+      "bytes": 458895,
+      "class": "delete",
+      "evidence": "no match in web/src or web/public/mockups.css"
+    },
+    {
+      "path": "web/public/assets/mt5-sim/mt5_trading.png",
+      "bytes": 277520,
+      "class": "delete",
+      "evidence": "no match in web/src or web/public/mockups.css"
+    },
+    {
+      "path": "web/public/assets/payments/bitcoin_icon.png",
+      "bytes": 4802,
+      "class": "delete",
+      "evidence": "no match in web/src or web/public/mockups.css"
+    },
+    {
+      "path": "web/public/assets/payments/dm-payment-options-darkmode.png",
+      "bytes": 71822,
+      "class": "delete",
+      "evidence": "no match in web/src or web/public/mockups.css"
+    },
+    {
+      "path": "web/public/assets/payments/dm-payment-options.png",
+      "bytes": 72577,
+      "class": "delete",
+      "evidence": "no match in web/src or web/public/mockups.css"
+    },
+    {
+      "path": "web/public/assets/payments/ethereum_icon.png",
+      "bytes": 9103,
+      "class": "delete",
+      "evidence": "no match in web/src or web/public/mockups.css"
+    },
+    {
+      "path": "web/public/assets/payments/funding.png",
+      "bytes": 2878,
+      "class": "delete",
+      "evidence": "no match in web/src or web/public/mockups.css"
+    },
+    {
+      "path": "web/public/assets/payments/icons/applepay.svg",
+      "bytes": 935,
+      "class": "keep",
+      "evidence": "web/src/content/home-html.ts:/assets/payments/icons/applepay.svg"
+    },
+    {
+      "path": "web/public/assets/payments/icons/bitcoin.png",
+      "bytes": 5846,
+      "class": "keep",
+      "evidence": "web/src/content/home-html.ts:/assets/payments/icons/bitcoin.png"
+    },
+    {
+      "path": "web/public/assets/payments/icons/crypto-badge.png",
+      "bytes": 1169,
+      "class": "keep",
+      "evidence": "web/src/content/home-html.ts:/assets/payments/icons/crypto-badge.png"
+    },
+    {
+      "path": "web/public/assets/payments/icons/crypto-pair.png",
+      "bytes": 23082,
+      "class": "delete",
+      "evidence": "no match in web/src or web/public/mockups.css"
+    },
+    {
+      "path": "web/public/assets/payments/icons/ethereum.png",
+      "bytes": 8712,
+      "class": "keep",
+      "evidence": "web/src/content/home-html.ts:/assets/payments/icons/ethereum.png"
+    },
+    {
+      "path": "web/public/assets/payments/icons/googlepay.png",
+      "bytes": 15725,
+      "class": "delete",
+      "evidence": "no match in web/src or web/public/mockups.css"
+    },
+    {
+      "path": "web/public/assets/payments/icons/googlepay.svg",
+      "bytes": 1043,
+      "class": "keep",
+      "evidence": "web/src/content/home-html.ts:/assets/payments/icons/googlepay.svg"
+    },
+    {
+      "path": "web/public/assets/payments/icons/mastercard-circles.png",
+      "bytes": 7930,
+      "class": "delete",
+      "evidence": "no match in web/src or web/public/mockups.css"
+    },
+    {
+      "path": "web/public/assets/payments/icons/mastercard.png",
+      "bytes": 9315,
+      "class": "keep",
+      "evidence": "web/src/content/home-html.ts:/assets/payments/icons/mastercard.png"
+    },
+    {
+      "path": "web/public/assets/payments/icons/neteller.png",
+      "bytes": 13385,
+      "class": "keep",
+      "evidence": "web/src/content/home-html.ts:/assets/payments/icons/neteller.png"
+    },
+    {
+      "path": "web/public/assets/payments/icons/skrill.png",
+      "bytes": 13099,
+      "class": "keep",
+      "evidence": "web/src/content/home-html.ts:/assets/payments/icons/skrill.png"
+    },
+    {
+      "path": "web/public/assets/payments/icons/tether.png",
+      "bytes": 909,
+      "class": "keep",
+      "evidence": "web/src/content/home-html.ts:/assets/payments/icons/tether.png"
+    },
+    {
+      "path": "web/public/assets/payments/icons/upi.png",
+      "bytes": 8613,
+      "class": "delete",
+      "evidence": "no match in web/src or web/public/mockups.css"
+    },
+    {
+      "path": "web/public/assets/payments/icons/visa.png",
+      "bytes": 12491,
+      "class": "keep",
+      "evidence": "web/src/content/home-html.ts:/assets/payments/icons/visa.png"
+    },
+    {
+      "path": "web/public/assets/payments/mastercard-logo.png",
+      "bytes": 7098,
+      "class": "delete",
+      "evidence": "no match in web/src or web/public/mockups.css"
+    },
+    {
+      "path": "web/public/assets/payments/mastercard.svg",
+      "bytes": 3431,
+      "class": "delete",
+      "evidence": "no match in web/src or web/public/mockups.css"
+    },
+    {
+      "path": "web/public/assets/payments/mastercard_icon.png",
+      "bytes": 6091,
+      "class": "delete",
+      "evidence": "no match in web/src or web/public/mockups.css"
+    },
+    {
+      "path": "web/public/assets/payments/pay-icons-01.png",
+      "bytes": 87714,
+      "class": "delete",
+      "evidence": "no match in web/src or web/public/mockups.css"
+    },
+    {
+      "path": "web/public/assets/payments/pay-icons-darkmode-01.png",
+      "bytes": 87141,
+      "class": "delete",
+      "evidence": "no match in web/src or web/public/mockups.css"
+    },
+    {
+      "path": "web/public/assets/payments/pay-icons-darkmode.png",
+      "bytes": 35428,
+      "class": "delete",
+      "evidence": "no match in web/src or web/public/mockups.css"
+    },
+    {
+      "path": "web/public/assets/payments/pay-icons-new-01-00.png",
+      "bytes": 27136,
+      "class": "delete",
+      "evidence": "no match in web/src or web/public/mockups.css"
+    },
+    {
+      "path": "web/public/assets/payments/pay-icons-new-01.png",
+      "bytes": 124735,
+      "class": "delete",
+      "evidence": "no match in web/src or web/public/mockups.css"
+    },
+    {
+      "path": "web/public/assets/payments/pay-icons.png",
+      "bytes": 24082,
+      "class": "delete",
+      "evidence": "no match in web/src or web/public/mockups.css"
+    },
+    {
+      "path": "web/public/assets/payments/same-day-withdrawls-03.png",
+      "bytes": 181778,
+      "class": "delete",
+      "evidence": "no match in web/src or web/public/mockups.css"
+    },
+    {
+      "path": "web/public/assets/payments/visa-logo.png",
+      "bytes": 6483,
+      "class": "delete",
+      "evidence": "no match in web/src or web/public/mockups.css"
+    },
+    {
+      "path": "web/public/assets/payments/visa.svg",
+      "bytes": 1004,
+      "class": "delete",
+      "evidence": "no match in web/src or web/public/mockups.css"
+    },
+    {
+      "path": "web/public/assets/platforms/ctrader-icon.png",
+      "bytes": 10529,
+      "class": "delete",
+      "evidence": "no match in web/src or web/public/mockups.css"
+    },
+    {
+      "path": "web/public/assets/platforms/ctrader-lockup.png",
+      "bytes": 15079,
+      "class": "delete",
+      "evidence": "no match in web/src or web/public/mockups.css"
+    },
+    {
+      "path": "web/public/assets/platforms/ctrader-logo2.png",
+      "bytes": 132716,
+      "class": "delete",
+      "evidence": "no match in web/src or web/public/mockups.css"
+    },
+    {
+      "path": "web/public/assets/platforms/ctrader-official.png",
+      "bytes": 12693,
+      "class": "keep",
+      "evidence": "web/src/content/home-html.ts:/assets/platforms/ctrader-official.png"
+    },
+    {
+      "path": "web/public/assets/platforms/download-ctrader-logo.png",
+      "bytes": 132716,
+      "class": "delete",
+      "evidence": "no match in web/src or web/public/mockups.css"
+    },
+    {
+      "path": "web/public/assets/platforms/mt5-icon.png",
+      "bytes": 22222,
+      "class": "delete",
+      "evidence": "no match in web/src or web/public/mockups.css"
+    },
+    {
+      "path": "web/public/assets/platforms/mt5-lockup.png",
+      "bytes": 27619,
+      "class": "delete",
+      "evidence": "no match in web/src or web/public/mockups.css"
+    },
+    {
+      "path": "web/public/assets/platforms/mt5-official.png",
+      "bytes": 36126,
+      "class": "keep",
+      "evidence": "web/src/content/home-html.ts:/assets/platforms/mt5-official.png"
+    },
+    {
+      "path": "web/public/assets/platforms/platforms-mist-water-hero.jpg",
+      "bytes": 2113720,
+      "class": "keep",
+      "evidence": "web/src/content/home-html.ts:/assets/platforms/platforms-mist-water-hero.jpg"
+    },
+    {
+      "path": "web/public/assets/platforms/platforms-mist-water.jpg",
+      "bytes": 345109,
+      "class": "delete",
+      "evidence": "no match in web/src or web/public/mockups.css"
+    },
+    {
+      "path": "web/public/assets/regulatory/world-map.svg",
+      "bytes": 128967,
+      "class": "keep",
+      "evidence": "web/src/content/home-html.ts:/assets/regulatory/world-map.svg"
+    },
+    {
+      "path": "web/public/assets/sanctuary-close/sanctuary-close-desktop.jpg",
+      "bytes": 145964,
+      "class": "keep",
+      "evidence": "web/public/mockups.css:/assets/sanctuary-close/sanctuary-close-desktop.jpg"
+    },
+    {
+      "path": "web/public/assets/sanctuary-close/sanctuary-close-desktop.webp",
+      "bytes": 80190,
+      "class": "keep",
+      "evidence": "web/public/mockups.css:/assets/sanctuary-close/sanctuary-close-desktop.webp"
+    },
+    {
+      "path": "web/public/assets/sanctuary-close/sanctuary-close-mobile.jpg",
+      "bytes": 151146,
+      "class": "keep",
+      "evidence": "web/public/mockups.css:/assets/sanctuary-close/sanctuary-close-mobile.jpg"
+    },
+    {
+      "path": "web/public/assets/sanctuary-close/sanctuary-close-mobile.webp",
+      "bytes": 90224,
+      "class": "keep",
+      "evidence": "web/public/mockups.css:/assets/sanctuary-close/sanctuary-close-mobile.webp"
+    },
+    {
+      "path": "web/public/assets/sessions/icon-asia.png",
+      "bytes": 8717,
+      "class": "keep",
+      "evidence": "web/src/content/home-html.ts:/assets/sessions/icon-asia.png"
+    },
+    {
+      "path": "web/public/assets/sessions/icon-london.png",
+      "bytes": 10718,
+      "class": "keep",
+      "evidence": "web/src/content/home-html.ts:/assets/sessions/icon-london.png"
+    },
+    {
+      "path": "web/public/assets/sessions/icon-newyork.png",
+      "bytes": 8827,
+      "class": "keep",
+      "evidence": "web/src/content/home-html.ts:/assets/sessions/icon-newyork.png"
+    },
+    {
+      "path": "web/public/assets/sessions/world-map-bg.jpg",
+      "bytes": 93418,
+      "class": "keep",
+      "evidence": "web/src/content/home-html.ts:/assets/sessions/world-map-bg.jpg"
+    },
+    {
+      "path": "web/public/assets/skylines/skyline-asia.jpg",
+      "bytes": 84055,
+      "class": "keep",
+      "evidence": "web/src/content/home-html.ts:/assets/skylines/skyline-asia.jpg"
+    },
+    {
+      "path": "web/public/assets/skylines/skyline-london.jpg",
+      "bytes": 44449,
+      "class": "keep",
+      "evidence": "web/src/content/home-html.ts:/assets/skylines/skyline-london.jpg"
+    },
+    {
+      "path": "web/public/assets/skylines/skyline-newyork.jpg",
+      "bytes": 158398,
+      "class": "keep",
+      "evidence": "web/src/content/home-html.ts:/assets/skylines/skyline-newyork.jpg"
+    },
+    {
+      "path": "web/public/assets/trade-better/icons/bull-hologram.png",
+      "bytes": 1052277,
+      "class": "keep",
+      "evidence": "web/src/content/home-html.ts:/assets/trade-better/icons/bull-hologram.png"
+    },
+    {
+      "path": "web/public/assets/trade-better/icons/bull-wire.svg",
+      "bytes": 2153,
+      "class": "delete",
+      "evidence": "no match in web/src or web/public/mockups.css"
+    },
+    {
+      "path": "web/public/assets/trade-better/icons/discord-badge.svg",
+      "bytes": 993,
+      "class": "keep",
+      "evidence": "web/src/content/home-html.ts:/assets/trade-better/icons/discord-badge.svg"
+    },
+    {
+      "path": "web/public/assets/trade-better/icons/mk-badge-rail.svg",
+      "bytes": 793,
+      "class": "keep",
+      "evidence": "web/src/content/home-html.ts:/assets/trade-better/icons/mk-badge-rail.svg"
+    },
+    {
+      "path": "web/public/assets/trade-better/icons/mk-badge.svg",
+      "bytes": 834,
+      "class": "keep",
+      "evidence": "web/src/content/home-html.ts:/assets/trade-better/icons/mk-badge.svg"
+    },
+    {
+      "path": "web/public/assets/trade-better/pedestal.svg",
+      "bytes": 2899,
+      "class": "keep",
+      "evidence": "web/src/content/home-html.ts:/assets/trade-better/pedestal.svg"
+    },
+    {
+      "path": "web/public/assets/trade-better/spotlight-bg.jpg",
+      "bytes": 50872,
+      "class": "keep",
+      "evidence": "web/src/content/home-html.ts:/assets/trade-better/spotlight-bg.jpg"
+    },
+    {
+      "path": "web/public/assets/trader-community/avatars/avatar-1.jpg",
+      "bytes": 6899,
+      "class": "keep",
+      "evidence": "web/src/content/home-html.ts:/assets/trader-community/avatars/avatar-1.jpg"
+    },
+    {
+      "path": "web/public/assets/trader-community/avatars/avatar-1.webp",
+      "bytes": 3966,
+      "class": "delete",
+      "evidence": "no match in web/src or web/public/mockups.css"
+    },
+    {
+      "path": "web/public/assets/trader-community/avatars/avatar-2.jpg",
+      "bytes": 7890,
+      "class": "keep",
+      "evidence": "web/src/content/home-html.ts:/assets/trader-community/avatars/avatar-2.jpg"
+    },
+    {
+      "path": "web/public/assets/trader-community/avatars/avatar-2.webp",
+      "bytes": 4754,
+      "class": "delete",
+      "evidence": "no match in web/src or web/public/mockups.css"
+    },
+    {
+      "path": "web/public/assets/trader-community/avatars/avatar-3.jpg",
+      "bytes": 8687,
+      "class": "keep",
+      "evidence": "web/src/content/home-html.ts:/assets/trader-community/avatars/avatar-3.jpg"
+    },
+    {
+      "path": "web/public/assets/trader-community/avatars/avatar-3.webp",
+      "bytes": 5476,
+      "class": "delete",
+      "evidence": "no match in web/src or web/public/mockups.css"
+    },
+    {
+      "path": "web/public/assets/trader-community/avatars/avatar-4.jpg",
+      "bytes": 6329,
+      "class": "keep",
+      "evidence": "web/src/content/home-html.ts:/assets/trader-community/avatars/avatar-4.jpg"
+    },
+    {
+      "path": "web/public/assets/trader-community/avatars/avatar-4.webp",
+      "bytes": 3380,
+      "class": "delete",
+      "evidence": "no match in web/src or web/public/mockups.css"
+    },
+    {
+      "path": "web/public/assets/trader-community/avatars/avatar-5.jpg",
+      "bytes": 7102,
+      "class": "keep",
+      "evidence": "web/src/content/home-html.ts:/assets/trader-community/avatars/avatar-5.jpg"
+    },
+    {
+      "path": "web/public/assets/trader-community/avatars/avatar-5.webp",
+      "bytes": 3998,
+      "class": "delete",
+      "evidence": "no match in web/src or web/public/mockups.css"
+    },
+    {
+      "path": "web/public/assets/trader-community/avatars/avatar-6.jpg",
+      "bytes": 7938,
+      "class": "keep",
+      "evidence": "web/src/content/home-html.ts:/assets/trader-community/avatars/avatar-6.jpg"
+    },
+    {
+      "path": "web/public/assets/trader-community/avatars/avatar-6.webp",
+      "bytes": 4898,
+      "class": "delete",
+      "evidence": "no match in web/src or web/public/mockups.css"
+    },
+    {
+      "path": "web/public/assets/trader-community/icons/commodities.svg",
+      "bytes": 269,
+      "class": "keep",
+      "evidence": "web/src/content/home-html.ts:/assets/trader-community/icons/commodities.svg"
+    },
+    {
+      "path": "web/public/assets/trader-community/icons/crypto.svg",
+      "bytes": 394,
+      "class": "keep",
+      "evidence": "web/src/content/home-html.ts:/assets/trader-community/icons/crypto.svg"
+    },
+    {
+      "path": "web/public/assets/trader-community/icons/forex.svg",
+      "bytes": 328,
+      "class": "keep",
+      "evidence": "web/src/content/home-html.ts:/assets/trader-community/icons/forex.svg"
+    },
+    {
+      "path": "web/public/assets/trader-community/icons/indices.svg",
+      "bytes": 194,
+      "class": "keep",
+      "evidence": "web/src/content/home-html.ts:/assets/trader-community/icons/indices.svg"
+    },
+    {
+      "path": "web/public/assets/trader-community/icons/stocks.svg",
+      "bytes": 319,
+      "class": "keep",
+      "evidence": "web/src/content/home-html.ts:/assets/trader-community/icons/stocks.svg"
+    },
+    {
+      "path": "web/public/mockups.css",
+      "bytes": 294589,
+      "class": "keep",
+      "evidence": "web/src/app/layout.tsx:/mockups.css"
+    }
+  ]
+}
