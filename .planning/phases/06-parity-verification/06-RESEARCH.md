@@ -410,15 +410,11 @@ Recommended sections / rows (order from UI-SPEC / CONTEXT):
 | A1 | `next start` is slightly better than `next dev` for catching public asset 404s in smoke | Browser Smoke | Low — either still optional under D-02 |
 | A2 | No new npm test runner should be introduced in Phase 6 | Standard Stack / Pitfalls | Low — if org later wants Playwright, Phase 10+ |
 
-## Open Questions
+## Open Questions (RESOLVED)
 
-1. **Who signs human visual rows?**
-   - What we know: CONTEXT routes visual judgment to VERIFICATION `human_needed` / UAT.
-   - What's unclear: Whether executor alone may mark visual PASS via browser screenshots.
-   - Recommendation: Executor may mark PASS when D-02 screenshots attach; otherwise leave `human_needed` for verifier/user.
+1. **Who signs human visual rows?** — **RESOLVED:** Executor may mark visual PASS only with D-02 smoke evidence (notes/screenshots). Otherwise leave Status=`human_needed` for verifier/UAT. Do not invent visual PASS from build alone.
 
-2. **Should ref-check script live under `.planning/.../scripts/` or `web/scripts/`?**
-   - Recommendation: **phase dir** — keeps production app free of one-off cleanup tooling; Phase 10 lean push won't ship it inside `web/`.
+2. **Should ref-check script live under `.planning/.../scripts/` or `web/scripts/`?** — **RESOLVED:** Phase dir `.planning/phases/06-parity-verification/scripts/` (not under `web/`) so production app stays free of one-off cleanup tooling.
 
 ## Environment Availability
 
