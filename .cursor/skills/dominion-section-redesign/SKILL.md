@@ -24,7 +24,7 @@ Do **not** invent a new visual system per section. Extend Floating Sanctuary.
 
 1. Brand: `docs/brand/Dominion_Markets_Brand_Guidelines.md`
 2. Design spec: `docs/superpowers/specs/2026-08-07-dominion-markets-floating-sanctuary-design.md`
-3. Hi-fi design archive: see `.planning/phases/07-archive-mockups/07-ARCHIVE.md` — branch `archive/mockups` + sibling repo (coordinates in that file). Do **not** treat in-repo `mockups/` as required SoT (tree may remain temporarily until Phase 9).
+3. Hi-fi design archive: see `.planning/phases/07-archive-mockups/07-ARCHIVE.md` — branch `archive/mockups` + sibling repo (coordinates in that file).
 4. Production polish: `web/` (Next.js App Router)
 
 ## Locked design system

@@ -23,9 +23,9 @@ Dominion Markets’ marketing website, recently ported from vanilla HTML/CSS/JS 
 ## Languages
 - TypeScript 5.9.x (`typescript` ^5 in `web/package.json`; resolved 5.9.3) — App Router pages, React components, content modules under `web/src/`
 - TSX / React — UI in `web/src/app/`, `web/src/components/`
-- JavaScript (plain ES modules) — Ported mockup interactions in `web/src/lib/mockups-main.js` (from `mockups/main.js`); vanilla hi-fi source in `mockups/main.js`
-- CSS — Design system and section styles in `web/src/styles/mockups.css`, `web/public/mockups.css`, `web/src/styles/cinematic-hero.css`, `web/src/app/globals.css`; source of truth also in `mockups/styles.css`
-- HTML — Vanilla mockup markup in `mockups/index.html`; production body sections embedded as an HTML string in `web/src/content/home-html.ts`
+- JavaScript (plain ES modules) — Ported mockup interactions in `web/src/lib/mockups-main.js` (ported from archived `mockups/main.js`)
+- CSS — Design system and section styles in `web/public/mockups.css`, `web/src/styles/cinematic-hero.css`, `web/src/app/globals.css` (hi-fi CSS history in archive `styles.css`)
+- HTML — Production body sections embedded as an HTML string in `web/src/content/home-html.ts` (generated from archived `mockups/index.html`)
 - Markdown — Brand and design docs under `docs/` (not runtime)
 ## Runtime
 - Node.js ≥ 20.9.0 (required by `next@16.3.4` `engines`)
@@ -61,8 +61,8 @@ Dominion Markets’ marketing website, recently ported from vanilla HTML/CSS/JS 
 ## Platform Requirements
 - macOS / Linux / Windows with Node ≥ 20.9.0
 - Work from `web/`: `npm install` then `npm run dev` (see `readme.md`, `web/README.md`)
-- Hi-fi design archive: see `.planning/phases/07-archive-mockups/07-ARCHIVE.md` (`archive/mockups` / sibling repo). Production site: `web/`. In-repo `mockups/` may exist until Phase 9 — not required SoT. Brand docs in `docs/brand/`, design specs in `docs/superpowers/`
-- Supporting assets: repo-root `Hero-background.png`, `wireframes/`, `docs/`; in-repo `mockups/` temporary until Phase 9 (not Next runtime)
+- Hi-fi design archive: see `.planning/phases/07-archive-mockups/07-ARCHIVE.md` (`archive/mockups` / sibling repo). Production site: `web/`. Brand docs in `docs/brand/`, design specs in `docs/superpowers/`
+- Supporting assets: repo-root `Hero-background.png`, `wireframes/`, `docs/` (hi-fi originals in archive — not Next runtime)
 - Standard Next.js Node server (`next start`) or any Next-compatible host
 - `.vercel` listed in `web/.gitignore` — Vercel-compatible layout implied; no committed `vercel.json` or CI workflows detected
 - Static assets served from `web/public/` (especially `web/public/assets/`, `web/public/mockups.css`)
@@ -194,7 +194,7 @@ Dominion Markets’ marketing website, recently ported from vanilla HTML/CSS/JS 
 ## Pattern Overview
 - Single-route homepage (`/`) with no API routes, auth, or database layer
 - Dual UI stacks on one page: React (`CinematicHero`) above; BEM-style mockup HTML below via `dangerouslySetInnerHTML`
-- Hi-fi design archive: see `.planning/phases/07-archive-mockups/07-ARCHIVE.md` (`archive/mockups` / sibling repo). Production site: `web/` (Next.js port with assets in `web/public/`). In-repo `mockups/` may exist until Phase 9 — not required SoT
+- Hi-fi design archive: see `.planning/phases/07-archive-mockups/07-ARCHIVE.md` (`archive/mockups` / sibling repo). Production site: `web/` (Next.js port with assets in `web/public/`).
 - Client-only interactivity for body sections via dynamic `import("@/lib/mockups-main.js")`
 - `reactStrictMode: false` in `web/next.config.ts` so vanilla one-shot listeners are not broken by remounts
 - Demo/mock data only (canvas charts, quote ticks); no live market APIs wired
@@ -265,7 +265,7 @@ Dominion Markets’ marketing website, recently ported from vanilla HTML/CSS/JS 
 - Triggers: Every App Router request
 - Responsibilities: Metadata, fonts, global CSS, static link to mockup stylesheet
 - Location: Hi-fi archive (see `.planning/phases/07-archive-mockups/07-ARCHIVE.md`)
-- Triggers: Preview via archive checkout / sibling (in-repo `mockups/` may exist until Phase 9 — temporary, not required SoT)
+- Triggers: Preview via archive checkout / sibling (see `.planning/phases/07-archive-mockups/07-ARCHIVE.md`)
 - Responsibilities: Standalone Floating Sanctuary hi-fi (full page including original hero)
 - Location: `wireframes/index.html`
 - Triggers: `npx serve wireframes -p 4173`; structure check via `wireframes/wireframe-check.mjs`

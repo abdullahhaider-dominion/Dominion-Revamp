@@ -15,18 +15,18 @@ Ship a clean production Next.js site that keeps every asset and behavior the liv
 - ✓ Next.js 16 + React 19 marketing app runs from `web/` — existing
 - ✓ Cinematic hero/nav implemented as React (`CinematicHero.tsx`) — existing
 - ✓ Homepage body sections still served via ported HTML string + `mockups.css` + `mockups-main.js` — existing
-- ✓ Brand/docs and hi-fi vanilla mockup exist as design artifacts (`docs/`, `mockups/`, `wireframes/`) — existing
+- ✓ Brand/docs and hi-fi vanilla mockup exist as design artifacts (`docs/`, archive via Phase 7, `wireframes/`) — existing
 - ✓ Codebase map documents unused-asset candidates (~33MB under `web/public/assets/`) — existing (`.planning/codebase/`)
 - ✓ Inventory + prune of unused `web/public` assets (ASSET-01/02) — Validated in Phase 2 + Phase 5
 - ✓ Dead CSS mirror + root hero PNG orphan removed (ASSET-03/04) — Validated in Phase 3
 - ✓ Minimal React unlock not required; all 55 deletes cleared (REACT-01) — Validated in Phase 4
 - ✓ Homepage parity after prune (PROD-01) — Validated in Phase 6 (automated + D-02 smoke; optional visual UAT remains)
-- ✓ `mockups/` archived (MOCK-01) — Validated in Phase 7 (`archive/mockups` + sibling repo; still present on main until Phase 9)
+- ✓ `mockups/` archived (MOCK-01) — Validated in Phase 7 (`archive/mockups` + sibling repo)
 - ✓ Docs/skills retargeted off in-repo `mockups/` SoT (MOCK-02) — Validated in Phase 8
+- ✓ In-repo `mockups/` removed from production tree (MOCK-03) — Phase 9 plan 09-01 (orchestrator/verify-work closes REQUIREMENTS/ROADMAP)
 
 ### Active
 
-- [ ] Remove `mockups/` from this production repo (Phase 9) now that archive + docs retarget are done
 - [ ] Leave a lean, pushable repo: tracked app code, no orphan design binaries in the production tree
 
 ### Out of Scope
@@ -40,10 +40,10 @@ Ship a clean production Next.js site that keeps every asset and behavior the liv
 ## Context
 
 - Brownfield repo at `/Users/usama/Desktop/Dominion Markets/Vanilla to nextjs` (Cursor workspace may still point at an empty sibling folder — work against this path).
-- Production app: `web/` (Next.js). Hi-fi design archive: `.planning/phases/07-archive-mockups/07-ARCHIVE.md` (`archive/mockups` / sibling). In-repo `mockups/` may remain until Phase 9 — not required SoT.
+- Production app: `web/` (Next.js). Hi-fi design archive: `.planning/phases/07-archive-mockups/07-ARCHIVE.md` (`archive/mockups` / sibling).
 - Map findings (`.planning/codebase/CONCERNS.md`): ~53 unreferenced files (~32.6MB) under `web/public/assets/` — **Phase 5 pruned all 55 inventory deletes**; `web/` is tracked; dead CSS/root hero orphans removed in Phase 3.
 - User chose safer full-phase GSD path: map → project → phased roadmap → execute with approvals.
-- **Current state:** Phase 8 complete — next is Phase 9 remove in-repo `mockups/`, then lean check (10).
+- **Current state:** Phase 9 plan 09-01 executed (in-repo `mockups/` removed) — next lean check (Phase 10); REQUIREMENTS/ROADMAP phase-close owned by verify-work.
 
 ## Constraints
 
@@ -60,7 +60,7 @@ Ship a clean production Next.js site that keeps every asset and behavior the liv
 |----------|-----------|---------|
 | Milestone = cleanup + ship, with minimal React only if needed for deletes | User 1B + depth C — avoid full rewrite while still unblocking large asset removal | Validated — Phase 4 verify-only; Phase 5 pruned 55 |
 | Delete bar = static scan of `web/src` + served `mockups.css` only | User 3A — safest proof before production | Validated — inventory + rescan + prune honor bar |
-| Archive `mockups/` to separate repo/branch, then remove from this repo | User 2C + sequence C — preserve design history without bloating prod repo | Archive done (Phase 7); remove pending Phase 9 |
+| Archive `mockups/` to separate repo/branch, then remove from this repo | User 2C + sequence C — preserve design history without bloating prod repo | Archive done (Phase 7); in-repo tree removed (Phase 9 plan 09-01) |
 | Keep `docs/` / `wireframes/` unless they block prod | Small on disk; not runtime; not the main weight problem | — Pending |
 | Full homepage React cutover deferred | Explicitly out of scope for this milestone | — Pending |
 
