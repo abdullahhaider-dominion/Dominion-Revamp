@@ -139,7 +139,10 @@ Plans:
   1. `mockups/` directory is absent from the production repo working tree
   2. Archive from Phase 7 remains reachable; docs from Phase 8 still resolve to it
   3. `web/` app still builds and runs without any runtime dependency on `../mockups`
-**Plans**: TBD
+**Plans:** 1 plan
+
+Plans:
+- [ ] 09-01-PLAN.md — Preflight + `git rm -r mockups` + tense cleanup + remove-verify/build proof (MOCK-03)
 
 ### Phase 10: Lean Production Check
 **Goal**: Repo is lean and push-ready for production deploy of `web/`
