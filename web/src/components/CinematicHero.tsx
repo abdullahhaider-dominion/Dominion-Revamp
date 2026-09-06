@@ -5,7 +5,9 @@ import { useEffect, useRef, useState } from "react";
 import {
   Activity,
   ArrowRight,
+  BarChart3,
   ChevronDown,
+  Cog,
   Menu,
   Network,
   Play,
@@ -109,7 +111,6 @@ function InsightCard({
   badge,
   badgeClass,
   spark,
-  compact,
   iconClass,
 }: {
   icon: React.ReactNode;
@@ -119,75 +120,26 @@ function InsightCard({
   badge: string;
   badgeClass: string;
   spark: string;
-  compact?: boolean;
   iconClass?: string;
 }) {
   return (
-    <div
-      className={`hg hero-card ${compact ? "hero-card--sm" : ""}`}
-      style={compact ? { padding: 10, borderRadius: 12 } : undefined}
-    >
+    <div className="hg hero-card">
       <div className="hero-card__row">
         <div
           className={`hero-card__icon ${iconClass ?? ""}`}
-          style={{
-            background: iconBg,
-            width: compact ? 28 : undefined,
-            height: compact ? 28 : undefined,
-          }}
+          style={{ background: iconBg }}
         >
           {icon}
         </div>
         <div className="hero-card__body">
           <div className="hero-card__top">
-            <p className="hero-card__title" style={compact ? { fontSize: 11 } : undefined}>
-              {title}
-            </p>
-            <span
-              className={`hero-card__badge ${badgeClass}`}
-              style={compact ? { fontSize: 9 } : undefined}
-            >
-              {badge}
-            </span>
+            <p className="hero-card__title">{title}</p>
+            <span className={`hero-card__badge ${badgeClass}`}>{badge}</span>
           </div>
           <div className="hero-card__meta">
-            <p className="hero-card__desc" style={compact ? { fontSize: 9 } : undefined}>
-              {desc}
-            </p>
+            <p className="hero-card__desc">{desc}</p>
             <Spark color={spark} />
           </div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function PortfolioCard() {
-  return (
-    <div className="hg hero-card" style={{ padding: 10, borderRadius: 12 }}>
-      <div className="hero-card__row">
-        <div
-            className="hero-card__icon"
-            style={{
-              background: "rgba(71,189,104,0.14)",
-              width: 28,
-              height: 28,
-            }}
-          >
-          <Shield size={14} color="#47BD68" aria-hidden="true" />
-        </div>
-        <div className="hero-card__body">
-          <div className="hero-card__top">
-            <p className="hero-card__title" style={{ fontSize: 11 }}>
-              Portfolio Protection
-            </p>
-            <span className="hero-card__badge hero-card__badge--green" style={{ fontSize: 9 }}>
-              LIVE
-            </span>
-          </div>
-          <p className="hero-card__desc" style={{ fontSize: 9 }}>
-            Real-time risk monitoring.
-          </p>
         </div>
       </div>
     </div>
@@ -582,116 +534,126 @@ export function CinematicHero() {
 
       {/* ===== MOBILE ===== */}
       <div className="hero-mobile">
-        <div className="hero-mobile__art" aria-hidden="true">
+        <div className="hero-mobile__sky" aria-hidden="true">
           <Image
-            src="/assets/hero/Hero-background.png"
+            src="/assets/hero/3.png"
             alt=""
             fill
             priority
             sizes="100vw"
-            style={{ objectFit: "contain" }}
+            className="hero-mobile__sky-img"
           />
+          <div className="hero-mobile__sky-fade" />
+        </div>
+
+        <div className="hero-mobile__stage" aria-hidden="true">
+          <div className="hero-mobile__layer hero-mobile__layer--debris">
+            <Image
+              src="/assets/hero/4.png"
+              alt=""
+              fill
+              priority
+              sizes="100vw"
+              className="hero-mobile__img"
+            />
+          </div>
+          <div className="hero-mobile__layer hero-mobile__layer--ring">
+            <Image
+              src="/assets/hero/5.png"
+              alt=""
+              fill
+              priority
+              sizes="(max-width: 767px) 90vw, 400px"
+              className="hero-mobile__img"
+            />
+          </div>
+
+          <div className="hero-mobile__float">
+            <div className="hero-mobile__layer hero-mobile__layer--candles">
+              <Image
+                src="/assets/hero/2.png"
+                alt=""
+                fill
+                priority
+                sizes="(max-width: 767px) 70vw, 320px"
+                className="hero-mobile__img"
+              />
+            </div>
+            <div className="hero-mobile__layer hero-mobile__layer--subject">
+              <Image
+                src="/assets/hero/1.png"
+                alt=""
+                fill
+                priority
+                sizes="(max-width: 767px) 92vw, 420px"
+                className="hero-mobile__img"
+              />
+            </div>
+          </div>
+
+          <div className="hero-mobile__chip hero-mobile__chip--signal">
+            <span className="hero-mobile__chip-value hero-mobile__chip-value--up">
+              +12.4% ▲
+            </span>
+            <span className="hero-mobile__chip-label">AI Signal</span>
+          </div>
+          <div className="hero-mobile__chip hero-mobile__chip--risk">
+            <span className="hero-mobile__chip-value hero-mobile__chip-value--down">
+              −28% ▼
+            </span>
+            <span className="hero-mobile__chip-label">Lower Drawdown</span>
+          </div>
+
+          <p className="hero-mobile__micro hero-mobile__micro--tr">
+            Markets intelligence
+            <br />a higher tomorrow
+          </p>
+          <p className="hero-mobile__micro hero-mobile__micro--center">
+            Discipline meets intelligence
+          </p>
         </div>
 
         <div className="hero-mobile__content">
-          <div className="hero-mobile__top">
-            <div>
-              <div className="hg-pill hero-mobile__badge">
-                <Sparkles size={9} color="#47BD68" aria-hidden="true" />
-                <span
-                  style={{
-                    overflow: "hidden",
-                    textOverflow: "ellipsis",
-                    whiteSpace: "nowrap",
-                  }}
-                >
-                  AI-Powered Trading Platform
-                </span>
-                <span className="hero-dot" />
-              </div>
-              <h1 className="hero-mobile__h1">
-                Your <span className="ht-ai">AI</span> Edge in Trading
-              </h1>
-              <p className="hero-mobile__sub">
-                Smarter signals. Faster decisions. Stay ahead of the market with
-                AI that works for you.
-              </p>
-              <div className="hero-mobile__ctas">
-                <a href="#final-cta" className="hb-primary">
-                  Start Trading Smarter
-                  <ArrowRight size={13} aria-hidden="true" />
-                </a>
-                <a href="#platforms" className="hb-ghost">
-                  <span
-                    style={{
-                      width: 18,
-                      height: 18,
-                      borderRadius: "50%",
-                      border: "1px solid rgba(255,255,255,0.4)",
-                      display: "inline-flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                    }}
-                  >
-                    <Play size={7} fill="#fff" aria-hidden="true" />
-                  </span>
-                  Watch Demo
-                </a>
-              </div>
-            </div>
+          <h1 className="hero-mobile__h1">
+            Trade Smarter
+            <span className="hero-mobile__h1-accent"> with AI</span>
+          </h1>
+          <p className="hero-mobile__sub">
+            AI-driven trading tools built for faster decisions.
+          </p>
 
-            <div className="hero-mobile__cards">
-              <InsightCard
-                compact
-                icon={<Activity size={13} color="#47BD68" aria-hidden="true" />}
-                iconBg="rgba(71,189,104,0.14)"
-                title="Real-time Insights"
-                desc="AI-powered market analysis in real-time."
-                badge="+ 27.6%"
-                badgeClass="hero-card__badge--green"
-                spark="#47BD68"
-              />
-              <InsightCard
-                compact
-                icon={<Network size={13} color="#6FD48A" aria-hidden="true" />}
-                iconBg="rgba(71,189,104,0.1)"
-                title="Automated Signals"
-                desc="High-probability signals with precision."
-                badge="+ 32.1%"
-                badgeClass="hero-card__badge--blue"
-                spark="#6FD48A"
-              />
-              <PortfolioCard />
+          <div className="hero-mobile__ctas">
+            <a href="#final-cta" className="hero-mobile__btn hero-mobile__btn--primary">
+              Get Started
+              <ArrowRight size={16} aria-hidden="true" />
+            </a>
+            <a href="#platforms" className="hero-mobile__btn hero-mobile__btn--ghost">
+              <span className="hero-mobile__play" aria-hidden="true">
+                <Play size={9} fill="currentColor" />
+              </span>
+              Watch Demo
+            </a>
+          </div>
+
+          <div className="hero-mobile__features" role="list">
+            <div className="hero-mobile__feature" role="listitem">
+              <BarChart3 size={14} strokeWidth={2} color="#47BD68" aria-hidden="true" />
+              <span>Real-time Signals</span>
+            </div>
+            <div className="hero-mobile__feature" role="listitem">
+              <Cog size={14} strokeWidth={2} color="#47BD68" aria-hidden="true" />
+              <span>Automation</span>
+            </div>
+            <div className="hero-mobile__feature" role="listitem">
+              <Shield size={14} strokeWidth={2} color="#47BD68" aria-hidden="true" />
+              <span>Risk Insights</span>
             </div>
           </div>
 
-          <div className="hero-mobile__bottom">
-            <div className="hg hero-mobile__stats">
-              <div className="hero-mobile__stat">
-                <Users size={22} strokeWidth={1.75} color="#47BD68" aria-hidden="true" />
-                <span>
-                  <strong>125K+</strong> Active Traders
-                </span>
-              </div>
-              <div className="hero-mobile__stat">
-                <TrendingUp size={22} strokeWidth={1.75} color="#47BD68" aria-hidden="true" />
-                <span>
-                  <strong>98.6%</strong> Signal Accuracy
-                </span>
-              </div>
-              <div className="hero-mobile__stat">
-                <ShieldCheck size={22} strokeWidth={1.75} color="#47BD68" aria-hidden="true" />
-                <span>
-                  <strong>$2.4B+</strong> Volume Analyzed
-                </span>
-              </div>
-            </div>
-
-            <div className="hero-mobile__trust">
-              <p>Recognized for excellence</p>
-              <AwardsRow />
-            </div>
-          </div>
+          <a href="#proof" className="hero-mobile__scroll">
+            <ChevronDown size={16} aria-hidden="true" />
+            <span>Scroll to explore</span>
+          </a>
         </div>
       </div>
     </section>
