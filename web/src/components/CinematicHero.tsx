@@ -62,34 +62,6 @@ const NAV = [
   },
 ] as const;
 
-const AWARDS = [
-  {
-    org: "Forex Expo Dubai",
-    name: "Fastest Trade Execution",
-    year: "2023",
-  },
-  {
-    org: "MEFM",
-    name: "Top 100 Trusted Financial Institutions",
-    year: "2023",
-  },
-  {
-    org: "Forex Traders Summit Dubai",
-    name: "Innovation Leader in Forex",
-    year: "2025",
-  },
-  {
-    org: "Forex Expo Dubai",
-    name: "Fastest Growing Broker",
-    year: "2025",
-  },
-  {
-    org: "MEFM",
-    name: "Top 100 Trusted Financial Institutions",
-    year: "2025",
-  },
-] as const;
-
 function Spark({ color }: { color: string }) {
   return (
     <svg width="56" height="20" viewBox="0 0 56 20" fill="none" aria-hidden="true">
@@ -172,35 +144,6 @@ function BtcCard() {
           <path d="M0 28C14 26 22 14 34 16s20 16 32 6 20-10 44-6" stroke="#47BD68" strokeWidth="2" />
         </svg>
       </div>
-    </div>
-  );
-}
-
-function AwardsRow() {
-  return (
-    <div className="hero-awards" role="list" aria-label="Industry awards">
-      {AWARDS.map((award) => (
-        <article
-          key={`${award.org}-${award.name}-${award.year}`}
-          className="hero-award"
-          role="listitem"
-        >
-          <Image
-            src="/assets/awards/laurel-wreath.svg"
-            alt=""
-            width={120}
-            height={92}
-            className="hero-award__wreath"
-            unoptimized
-          />
-          <div className="hero-award__body">
-            <p className="hero-award__org">{award.org}</p>
-            <span className="hero-award__rule" aria-hidden="true" />
-            <h3 className="hero-award__name">{award.name}</h3>
-            <p className="hero-award__year">{award.year}</p>
-          </div>
-        </article>
-      ))}
     </div>
   );
 }
@@ -517,11 +460,6 @@ export function CinematicHero() {
                 <span className="hero-desktop__stat-label">Volume Analyzed</span>
               </span>
             </div>
-          </div>
-
-          <div className="hero-desktop__trust">
-            <p>Recognized for excellence</p>
-            <AwardsRow />
           </div>
         </div>
 
