@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
-import { PlaceholderPage } from "@/components/PlaceholderPage";
+import { MoreInfo } from "@/components/more-info/MoreInfo";
 
 export const metadata: Metadata = {
   title: "More Info",
+  description: "Learn more about Dominion Markets.",
 };
 
 export default function MoreInfoPage() {
-  return <PlaceholderPage title="More Info" />;
+  return <MoreInfo />;
 }
