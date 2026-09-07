@@ -1,14 +1,12 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
 import {
   Activity,
   ArrowRight,
   BarChart3,
   ChevronDown,
   Cog,
-  Menu,
   Network,
   Play,
   Shield,
@@ -16,51 +14,8 @@ import {
   Sparkles,
   TrendingUp,
   Users,
-  X,
 } from "lucide-react";
 import "@/styles/cinematic-hero.css";
-
-const NAV = [
-  {
-    label: "Markets",
-    href: "#markets",
-    children: [
-      { label: "Markets overview", href: "#markets" },
-      { label: "Market sessions", href: "#sessions" },
-      { label: "Trade better", href: "#trade-better" },
-    ],
-  },
-  {
-    label: "Accounts",
-    href: "#accounts",
-    children: [
-      { label: "Account types", href: "#accounts" },
-      { label: "Funding", href: "#funding" },
-    ],
-  },
-  {
-    label: "Platforms",
-    href: "#platforms",
-  },
-  {
-    label: "Tools",
-    href: "#dashboard",
-    children: [
-      { label: "Trader dashboard", href: "#dashboard" },
-      { label: "Copy trading", href: "#copy-trading" },
-      { label: "Ecosystem", href: "#ecosystem" },
-    ],
-  },
-  {
-    label: "About",
-    href: "#trust",
-    children: [
-      { label: "Why Dominion", href: "#why-dominion" },
-      { label: "Trust & regulation", href: "#trust" },
-      { label: "Insights & blog", href: "#blogs" },
-    ],
-  },
-] as const;
 
 function Spark({ color }: { color: string }) {
   return (
@@ -149,68 +104,6 @@ function BtcCard() {
 }
 
 export function CinematicHero() {
-  const [open, setOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-  const [navShown, setNavShown] = useState(true);
-  const [openMenu, setOpenMenu] = useState<string | null>(null);
-  const lastY = useRef(0);
-  const ticking = useRef(false);
-
-  useEffect(() => {
-    lastY.current = window.scrollY;
-    const update = () => {
-      const y = window.scrollY;
-      const delta = y - lastY.current;
-      setScrolled(y > 12);
-
-      // Always show near the top; hide on scroll down, reveal on scroll up
-      if (y <= 24) {
-        setNavShown(true);
-      } else if (delta > 6) {
-        setNavShown(false);
-        setOpenMenu(null);
-        setOpen(false);
-      } else if (delta < -6) {
-        setNavShown(true);
-      }
-
-      lastY.current = y;
-      ticking.current = false;
-    };
-
-    const onScroll = () => {
-      if (ticking.current) return;
-      ticking.current = true;
-      requestAnimationFrame(update);
-    };
-
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
-  useEffect(() => {
-    document.body.style.overflow = open ? "hidden" : "";
-    return () => {
-      document.body.style.overflow = "";
-    };
-  }, [open]);
-
-  useEffect(() => {
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") {
-        setOpen(false);
-        setOpenMenu(null);
-      }
-    };
-    window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-  }, []);
-
-  const closeMenus = () => {
-    setOpen(false);
-    setOpenMenu(null);
-  };
-
   const insights = (
     <InsightCard
       icon={<Activity size={26} strokeWidth={1.75} color="#47BD68" aria-hidden="true" />}
@@ -237,148 +130,6 @@ export function CinematicHero() {
   );
 
   return (
-    <>
-      <header
-        className={`dm-nav${scrolled ? " is-scrolled" : ""}${open ? " is-open" : ""}${navShown || open ? "" : " is-hidden"}`}
-      >
-        <div className="dm-nav__inner">
-          <a href="#top" className="dm-nav__brand" onClick={closeMenus}>
-            <Image
-              src="/assets/logo/logo-horizontal-reverse.svg"
-              alt="Dominion Markets"
-              width={176}
-              height={28}
-              priority
-              className="dm-nav__logo dm-nav__logo--desktop"
-            />
-            <Image
-              src="/assets/logo/logo-horizontal-reverse.svg"
-              alt="Dominion Markets"
-              width={140}
-              height={22}
-              priority
-              className="dm-nav__logo dm-nav__logo--mobile"
-            />
-          </a>
-
-          <nav className="dm-nav__links" aria-label="Primary">
-            {NAV.map((item) => {
-              const hasChildren = "children" in item && Boolean(item.children?.length);
-              return (
-                <div
-                  key={item.label}
-                  className={`dm-nav__item${openMenu === item.label ? " is-open" : ""}`}
-                  onMouseEnter={() => {
-                    if (hasChildren) setOpenMenu(item.label);
-                  }}
-                  onMouseLeave={() => setOpenMenu(null)}
-                >
-                  <a
-                    href={item.href}
-                    className="dm-nav__link"
-                    aria-haspopup={hasChildren ? "menu" : undefined}
-                    aria-expanded={hasChildren ? openMenu === item.label : undefined}
-                    onClick={() => setOpenMenu(null)}
-                  >
-                    {item.label}
-                    {hasChildren ? (
-                      <ChevronDown
-                        size={14}
-                        className="dm-nav__chevron"
-                        aria-hidden="true"
-                      />
-                    ) : null}
-                  </a>
-                  {hasChildren ? (
-                    <div className="dm-nav__dropdown" role="menu">
-                      {item.children!.map((child) => (
-                        <a
-                          key={`${child.href}-${child.label}`}
-                          href={child.href}
-                          role="menuitem"
-                          onClick={closeMenus}
-                        >
-                          {child.label}
-                        </a>
-                      ))}
-                    </div>
-                  ) : null}
-                </div>
-              );
-            })}
-          </nav>
-
-          <div className="dm-nav__actions">
-            <a href="#final-cta" className="dm-nav__login" onClick={closeMenus}>
-              Log in
-            </a>
-            <a
-              href="#accounts"
-              className="hb-primary dm-nav__cta"
-              onClick={closeMenus}
-            >
-              Get Started
-            </a>
-            <button
-              type="button"
-              className="dm-nav__burger"
-              aria-label={open ? "Close menu" : "Open menu"}
-              aria-expanded={open}
-              aria-controls="dm-nav-drawer"
-              onClick={() => setOpen((v) => !v)}
-            >
-              {open ? <X size={22} /> : <Menu size={22} />}
-            </button>
-          </div>
-        </div>
-
-        <div
-          id="dm-nav-drawer"
-          className={`dm-nav__drawer${open ? " is-open" : ""}`}
-          hidden={!open}
-        >
-          <nav className="dm-nav__drawer-nav" aria-label="Mobile">
-            {NAV.map((item) => (
-              <div key={item.label} className="dm-nav__drawer-group">
-                <a
-                  href={item.href}
-                  className="dm-nav__drawer-link"
-                  onClick={closeMenus}
-                >
-                  {item.label}
-                </a>
-                {"children" in item && item.children
-                  ? item.children.map((child) => (
-                      <a
-                        key={`${child.href}-${child.label}`}
-                        href={child.href}
-                        className="dm-nav__drawer-sub"
-                        onClick={closeMenus}
-                      >
-                        {child.label}
-                      </a>
-                    ))
-                  : null}
-              </div>
-            ))}
-            <a
-              href="#final-cta"
-              className="dm-nav__drawer-link"
-              onClick={closeMenus}
-            >
-              Log in
-            </a>
-            <a
-              href="#accounts"
-              className="hb-primary dm-nav__drawer-cta"
-              onClick={closeMenus}
-            >
-              Get Started
-            </a>
-          </nav>
-        </div>
-      </header>
-
       <section id="top" className="hero-root">
       <div className="hero-sky" aria-hidden="true" />
 
@@ -595,6 +346,5 @@ export function CinematicHero() {
         </div>
       </div>
     </section>
-    </>
   );
 }

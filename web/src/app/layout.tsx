@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Montserrat, Poppins } from "next/font/google";
+import { SiteNav } from "@/components/SiteNav";
 import "./globals.css";
 
 const inter = Inter({
@@ -100,7 +101,10 @@ export default function RootLayout({
         {/* Served from /public so Tailwind PostCSS does not rewrite mockup CSS */}
         <link rel="stylesheet" href="/mockups.css" />
       </head>
-      <body>{children}</body>
+      <body>
+        <SiteNav />
+        {children}
+      </body>
     </html>
   );
 }
