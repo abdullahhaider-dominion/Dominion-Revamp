@@ -1,0 +1,64 @@
+/* Commission Incentives — scaffold styles (expand with design reference) */
+
+.ci-page {
+  --ci-navy: #1d3347;
+  --ci-green: #47bd68;
+  --ci-copy: #3a5366;
+  color: var(--ci-navy);
+  background: #f5f8fa;
+}
+
+.ci-wrap {
+  width: min(calc(100% - 48px), 1180px);
+  margin-inline: auto;
+}
+
+.ci-hero {
+  position: relative;
+  min-height: 52vh;
+  padding: 140px 0 80px;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 70% 20%, rgba(71, 189, 104, 0.12), transparent 42%),
+    linear-gradient(180deg, #0b1c29 0%, #143247 100%);
+  color: #fff;
+}
+
+.ci-kicker {
+  margin: 0 0 12px;
+  color: var(--ci-green);
+  font-family: var(--font-montserrat), "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.ci-hero h1 {
+  margin: 0 0 16px;
+  max-width: 14ch;
+  font-family: var(--font-poppins), "Poppins", sans-serif;
+  font-size: clamp(36px, 5vw, 56px);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+}
+
+.ci-hero__copy {
+  margin: 0;
+  max-width: 42ch;
+  color: rgba(255, 255, 255, 0.72);
+  font-family: var(--font-montserrat), "Montserrat", sans-serif;
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+@media (max-width: 767px) {
+  .ci-wrap {
+    width: min(calc(100% - 32px), 560px);
+  }
+
+  .ci-hero {
+    padding: 112px 0 64px;
+  }
+}
