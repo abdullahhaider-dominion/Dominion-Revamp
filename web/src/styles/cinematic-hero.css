@@ -158,7 +158,9 @@
 }
 
 .dm-nav.is-scrolled,
-.dm-nav.is-open {
+.dm-nav.is-open,
+body:has(.incentives-page) .dm-nav,
+body:has(.lb-page) .dm-nav {
   background: rgba(15, 28, 40, 0.82);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(16px) saturate(1.2);
@@ -213,14 +215,18 @@
   left: auto;
   transform: none;
   display: flex;
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
+  align-self: stretch;
+  height: 100%;
   gap: 20px;
   justify-self: center;
 }
 
 .dm-nav__item {
   position: relative;
+  display: flex;
+  align-items: center;
 }
 
 .dm-nav__link {
@@ -252,10 +258,23 @@
 
 .dm-nav__dropdown {
   position: absolute;
-  top: calc(100% + 16px);
+  top: 100%;
   left: 50%;
-  transform: translateX(-50%) translateY(6px);
+  transform: translateX(-50%);
   min-width: 210px;
+  /* Transparent padding bridges the trigger so the cursor never leaves the item. */
+  padding: 8px 0 0;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.18s ease, visibility 0.18s ease;
+  z-index: 30;
+}
+
+.dm-nav__dropdown-panel {
   padding: 8px;
   border-radius: 14px;
   background: rgba(10, 18, 28, 0.96);
@@ -263,14 +282,6 @@
   box-shadow: 0 18px 48px rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transition:
-    opacity 0.18s ease,
-    transform 0.18s ease,
-    visibility 0.18s ease;
-  z-index: 30;
 }
 
 .dm-nav__item:hover .dm-nav__dropdown,
@@ -278,7 +289,6 @@
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
-  transform: translateX(-50%) translateY(0);
 }
 
 .dm-nav__dropdown a {

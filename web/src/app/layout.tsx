@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Montserrat, Poppins } from "next/font/google";
+import { SiteFooter } from "@/components/SiteFooter";
 import { SiteNav } from "@/components/SiteNav";
 import "./globals.css";
 
@@ -104,6 +105,7 @@ export default function RootLayout({
       <body>
         <SiteNav />
         {children}
+        <SiteFooter />
       </body>
     </html>
   );

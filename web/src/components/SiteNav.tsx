@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState, type ComponentProps } from "react";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { SITE_NAV } from "@/content/site-nav";
@@ -21,14 +20,20 @@ function NavHref({
 }
 
 export function SiteNav() {
-  const pathname = usePathname();
-  const isHome = pathname === "/";
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [navShown, setNavShown] = useState(true);
   const [openMenu, setOpenMenu] = useState<string | null>(null);
   const lastY = useRef(0);
   const ticking = useRef(false);
+  const menuLeaveTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const cancelMenuLeave = () => {
+    if (menuLeaveTimer.current) {
+      clearTimeout(menuLeaveTimer.current);
+      menuLeaveTimer.current = null;
+    }
+  };
 
   useEffect(() => {
     lastY.current = window.scrollY;
@@ -79,16 +84,20 @@ export function SiteNav() {
     return () => window.removeEventListener("keydown", onKey);
   }, []);
 
+  useEffect(() => cancelMenuLeave, []);
+
   const closeMenus = () => {
+    cancelMenuLeave();
     setOpen(false);
     setOpenMenu(null);
   };
 
-  const frosted = !isHome || scrolled || open;
+  const frosted = scrolled || open;
 
   return (
     <header
       className={`dm-nav${frosted ? " is-scrolled" : ""}${open ? " is-open" : ""}${navShown || open ? "" : " is-hidden"}`}
+      suppressHydrationWarning
     >
       <div className="dm-nav__inner">
         <Link href="/" className="dm-nav__brand" onClick={closeMenus}>
@@ -118,16 +127,23 @@ export function SiteNav() {
                 key={item.label}
                 className={`dm-nav__item${openMenu === item.label ? " is-open" : ""}`}
                 onMouseEnter={() => {
+                  cancelMenuLeave();
                   if (hasChildren) setOpenMenu(item.label);
                 }}
-                onMouseLeave={() => setOpenMenu(null)}
+                onMouseLeave={() => {
+                  menuLeaveTimer.current = setTimeout(() => {
+                    setOpenMenu(null);
+                  }, 160);
+                }}
               >
                 <NavHref
                   href={item.href}
                   className="dm-nav__link"
                   aria-haspopup={hasChildren ? "menu" : undefined}
                   aria-expanded={hasChildren ? openMenu === item.label : undefined}
-                  onClick={() => setOpenMenu(null)}
+                  onClick={() => {
+                    if (!hasChildren) setOpenMenu(null);
+                  }}
                 >
                   {item.label}
                   {hasChildren ? (
@@ -140,16 +156,18 @@ export function SiteNav() {
                 </NavHref>
                 {hasChildren ? (
                   <div className="dm-nav__dropdown" role="menu">
-                    {item.children!.map((child) => (
-                      <NavHref
-                        key={`${child.href}-${child.label}`}
-                        href={child.href}
-                        role="menuitem"
-                        onClick={closeMenus}
-                      >
-                        {child.label}
-                      </NavHref>
-                    ))}
+                    <div className="dm-nav__dropdown-panel">
+                      {item.children!.map((child) => (
+                        <NavHref
+                          key={`${child.href}-${child.label}`}
+                          href={child.href}
+                          role="menuitem"
+                          onClick={closeMenus}
+                        >
+                          {child.label}
+                        </NavHref>
+                      ))}
+                    </div>
                   </div>
                 ) : null}
               </div>

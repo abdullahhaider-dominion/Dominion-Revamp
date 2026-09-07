@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 import { CinematicHero } from "@/components/CinematicHero";
-import { homeHtml } from "@/content/home-html";
+import { homeBodyHtml } from "@/content/shared-footer-html";
 
 export function DominionHome() {
   useEffect(() => {
@@ -23,9 +23,9 @@ export function DominionHome() {
       <CinematicHero />
       <div
         className="page-root"
-        // Remaining mockup sections (proof → footer) for 1:1 parity below the new hero.
+        // Remaining mockup sections (proof → final CTA) for 1:1 parity below the new hero.
         suppressHydrationWarning
-        dangerouslySetInnerHTML={{ __html: homeHtml }}
+        dangerouslySetInnerHTML={{ __html: homeBodyHtml }}
       />
     </>
   );
