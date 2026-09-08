@@ -9,7 +9,7 @@ Next.js (App Router) port of the vanilla `mockups/` Floating Sanctuary homepage.
 - Lucide React (`src/components/icons.ts`)
 - Inter, Montserrat, and Poppins via `next/font/google`
 
-Montserrat/Poppins remain the design fonts (1:1 with the mockup). Inter is available as `--font-inter` / Tailwind `font-sans`.
+Montserrat (body) and Poppins (headings/CTAs) are the site-wide design fonts, loaded in the root layout and applied in `globals.css` so every page inherits them.
 
 ## Develop
 

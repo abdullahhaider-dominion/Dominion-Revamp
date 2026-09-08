@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Caveat } from "next/font/google";
 import {
   ArrowRight,
   Calendar,
@@ -13,11 +12,6 @@ import {
 } from "lucide-react";
 import { LbTestimonials } from "@/components/leaderboard/LbTestimonials";
 import "@/styles/leaderboard-challenge.css";
-
-const handwriting = Caveat({
-  subsets: ["latin"],
-  weight: ["600"],
-});
 
 const REGISTER_HREF = "/#accounts";
 
@@ -186,9 +180,7 @@ export function LeaderboardChallenge() {
                 fill
                 sizes="(max-width: 1023px) 90vw, 42vw"
               />
-              <p className={`${handwriting.className} lb-intro__script`}>
-                More Than Trading
-              </p>
+              <p className="lb-intro__script">More Than Trading</p>
             </div>
             <Image
               src="/assets/leaderboard-challenge/feature-pills.png"
