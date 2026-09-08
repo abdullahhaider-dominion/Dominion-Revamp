@@ -761,13 +761,14 @@ body:has(.accounts-page) .dm-nav {
   }
 
   .accounts-eyebrow {
-    font-size: 8px;
-    letter-spacing: 0.19em;
+    font-size: 9px;
+    line-height: 1.55;
+    letter-spacing: 0.2em;
   }
 
   .accounts-hero {
-    min-height: 570px;
-    padding: 94px 0 42px;
+    min-height: 0;
+    padding: 94px 0 50px;
   }
 
   .accounts-hero .accounts-cover {
@@ -781,7 +782,7 @@ body:has(.accounts-page) .dm-nav {
   }
 
   .accounts-breadcrumb {
-    margin-bottom: 38px;
+    margin-bottom: 30px;
     font-size: 9px;
   }
 
@@ -790,11 +791,14 @@ body:has(.accounts-page) .dm-nav {
   }
 
   .accounts-hero h1 {
-    font-size: clamp(42px, 13vw, 57px);
+    font-size: clamp(43px, 13.4vw, 52px);
+    letter-spacing: -0.07em;
   }
 
   .accounts-hero__copy > p:last-child {
-    font-size: 11px;
+    margin-top: 14px;
+    font-size: 12px;
+    line-height: 1.6;
   }
 
   .accounts-hero__aside {
@@ -803,12 +807,18 @@ body:has(.accounts-page) .dm-nav {
 
   .accounts-hero__benefits {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 17px 13px;
-    margin-top: 33px;
+    gap: 18px;
+    margin-top: 28px;
+  }
+
+  .accounts-hero__benefits img {
+    width: 34px;
+    height: 34px;
   }
 
   .accounts-hero__benefits span {
-    font-size: 8px;
+    font-size: 9px;
+    line-height: 1.4;
   }
 
   .accounts-flow {
@@ -989,10 +999,6 @@ body:has(.accounts-page) .dm-nav {
 }
 
 @media (max-width: 420px) {
-  .accounts-hero {
-    min-height: 590px;
-  }
-
   .accounts-hero__benefits > div {
     align-items: flex-start;
   }
