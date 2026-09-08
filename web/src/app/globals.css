@@ -14,10 +14,16 @@
 }
 
 /*
-  mockups.css sets body { overflow-x: hidden }, which makes the body a
-  scrollport and prevents backdrop-filter from sampling page content.
-  Keep horizontal clipping on an inner wrapper instead.
+  Site-wide typography (same stack as homepage):
+  - Body / UI: Montserrat
+  - Headings / CTAs / brand marks: Poppins
+  Applied here so every current and future page inherits automatically.
 */
+:root {
+  --dm-font-body: var(--font-montserrat), "Montserrat", system-ui, sans-serif;
+  --dm-font-heading: var(--font-poppins), "Poppins", system-ui, sans-serif;
+}
+
 html,
 body {
   overflow-x: visible !important;
@@ -25,6 +31,27 @@ body {
 
 body {
   padding-top: 0 !important;
+  font-family: var(--dm-font-body);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.brand-mark,
+.font-heading {
+  font-family: var(--dm-font-heading);
+}
+
+button,
+.font-cta {
+  font-family: var(--dm-font-heading);
+}
+
+.font-body {
+  font-family: var(--dm-font-body);
 }
 
 .page-root {

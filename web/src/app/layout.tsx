@@ -1,16 +1,10 @@
 import type { Metadata } from "next";
-import { Inter, Montserrat, Poppins } from "next/font/google";
+import { Montserrat, Poppins } from "next/font/google";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteNav } from "@/components/SiteNav";
 import "./globals.css";
 
-const inter = Inter({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-inter",
-  display: "swap",
-});
-
+/** Body / UI copy — matches homepage */
 const montserrat = Montserrat({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
@@ -18,6 +12,7 @@ const montserrat = Montserrat({
   display: "swap",
 });
 
+/** Headings / CTAs — matches homepage */
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["500", "600", "700", "800"],
@@ -96,13 +91,13 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${montserrat.variable} ${poppins.variable}`}
+      className={`${montserrat.variable} ${poppins.variable}`}
     >
       <head>
         {/* Served from /public so Tailwind PostCSS does not rewrite mockup CSS */}
         <link rel="stylesheet" href="/mockups.css" />
       </head>
-      <body>
+      <body className={montserrat.className}>
         <SiteNav />
         {children}
         <SiteFooter />
