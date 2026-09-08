@@ -180,7 +180,7 @@ export function SiteNav() {
             Log in
           </Link>
           <Link
-            href="/#accounts"
+            href="/accounts"
             className="hb-primary dm-nav__cta"
             onClick={closeMenus}
           >
@@ -236,7 +236,7 @@ export function SiteNav() {
             Log in
           </Link>
           <Link
-            href="/#accounts"
+            href="/accounts"
             className="hb-primary dm-nav__drawer-cta"
             onClick={closeMenus}
           >
