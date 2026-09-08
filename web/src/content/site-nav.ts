@@ -22,10 +22,6 @@ export const SITE_NAV: readonly SiteNavItem[] = [
   {
     label: "Accounts",
     href: "/accounts",
-    children: [
-      { label: "Account types", href: "/accounts" },
-      { label: "Funding", href: "/#funding" },
-    ],
   },
   {
     label: "Platforms",
