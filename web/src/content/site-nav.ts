@@ -21,9 +21,9 @@ export const SITE_NAV: readonly SiteNavItem[] = [
   },
   {
     label: "Accounts",
-    href: "/#accounts",
+    href: "/accounts",
     children: [
-      { label: "Account types", href: "/#accounts" },
+      { label: "Account types", href: "/accounts" },
       { label: "Funding", href: "/#funding" },
     ],
   },
