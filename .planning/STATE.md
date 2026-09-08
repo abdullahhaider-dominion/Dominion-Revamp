@@ -28,7 +28,7 @@ See: .planning/PROJECT.md (updated 2026-09-05)
 Phase: 10 of 10 (Lean Production Check) — **COMPLETE**
 Plan: Complete
 Status: All 10 phases verified — PROD-03 lean + push-ready (not pushed)
-Last activity: 2026-09-08 — Completed quick task 260909-2rd: improved Accounts mobile hero density
+Last activity: 2026-09-08 — Completed quick task 260909-318: removed Accounts navigation dropdown
 
 Progress: [██████████] 100%
 
@@ -71,6 +71,7 @@ None
 |---|-------------|------|--------|-----------|
 | 260909-26l | Build a production Accounts page matching the provided reference image using supplied assets and responsive layouts | 2026-09-08 | 1e6103e | [260909-26l-build-a-production-accounts-page-matchin](./quick/260909-26l-build-a-production-accounts-page-matchin/) |
 | 260909-2rd | Improve Accounts mobile hero density and use the available space intelligently | 2026-09-08 | 63908a8 | [260909-2rd-improve-accounts-page-mobile-hero-densit](./quick/260909-2rd-improve-accounts-page-mobile-hero-densit/) |
+| 260909-318 | Remove the Accounts navigation dropdown and keep one direct link | 2026-09-08 | dd11185 | [260909-318-remove-the-accounts-navigation-dropdown-](./quick/260909-318-remove-the-accounts-navigation-dropdown-/) |
 
 ## Session Continuity
 
