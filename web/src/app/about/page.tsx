@@ -4,7 +4,7 @@ import { AboutPage } from "@/components/about/AboutPage";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Discover Dominion Markets' vision, story, values, and trader-first global community.",
+    "About Dominion Markets — our vision, values, platforms, trading conditions, and how to get started.",
   alternates: {
     canonical: "/about",
   },
