@@ -13,7 +13,6 @@ files_modified:
   - web/src/styles/partnership.css
   - web/public/assets/Partnership-page/partnership-hero-partner.png
   - web/public/assets/Partnership-page/partnership-dashboard-devices.png
-  - web/public/assets/Partnership-page/partnership-affiliate-figure.jpg
 must_haves:
   truths:
     - "A visitor can open /partnership and see every visible reference section in the same order, followed by the existing shared footer."
@@ -31,7 +30,7 @@ must_haves:
     - path: "web/src/styles/partnership.css"
       provides: "Route-scoped reference-matched responsive design"
     - path: "web/public/assets/Partnership-page/"
-      provides: "Three available generated page-specific visual assets"
+      provides: "Two generated page-specific visual assets, with the partner cutout reused across compositions"
   key_links:
     - from: "web/src/app/partnership/page.tsx"
       to: "web/src/components/partnership/PartnershipPage.tsx"
@@ -51,7 +50,7 @@ must_haves:
 Build a responsive Dominion Markets Partnership page at `/partnership` that closely recreates the supplied reference while fitting the existing Next.js site.
 
 Purpose: Deliver the complete partner-acquisition journey without duplicating shared chrome or depending on the missing source pack.
-Output: One route, one semantic page component, one interactive calculator, one route-scoped stylesheet, and three reviewed production visuals.
+Output: One route, one semantic page component, one interactive calculator, one route-scoped stylesheet, and two reviewed production visuals.
 </objective>
 
 <execution_context>
@@ -111,15 +110,15 @@ The route renders only `<main className="partnership-page">`; shared chrome come
 
 <task type="auto">
   <name>Task 1: Audit and prepare the available partnership visuals</name>
-  <files>web/public/assets/Partnership-page/partnership-hero-partner.png, web/public/assets/Partnership-page/partnership-dashboard-devices.png, web/public/assets/Partnership-page/partnership-affiliate-figure.jpg</files>
+  <files>web/public/assets/Partnership-page/partnership-hero-partner.png, web/public/assets/Partnership-page/partnership-dashboard-devices.png</files>
   <action>
-Per D-01, D-05, and D-06, use the three available generated files for their intended reference roles: `partnership-hero-partner.png` on the right side of the dark hero, `partnership-dashboard-devices.png` in the broker-benefits section, and `partnership-affiliate-figure.jpg` in the central affiliate-program composition. Inspect each at full size for malformed anatomy/devices, accidental text, watermarks, edge artifacts, and responsive crop safety. If an asset fails review, regenerate only that asset while preserving its current production filename and role. Do not copy README.txt, invent source-pack files, redraw the Dominion logo, or add third-party marks.
+Per D-01, D-05, and D-06, use the two available generated files for their intended reference roles: `partnership-hero-partner.png` on the right side of the dark hero and reused over a CSS globe in the affiliate composition, plus `partnership-dashboard-devices.png` in the broker-benefits section. Inspect each at full size for malformed anatomy/devices, accidental text, watermarks, edge artifacts, and responsive crop safety. If an asset fails review, regenerate only that asset while preserving its current production filename and role. Do not copy README.txt, invent source-pack files, redraw the Dominion logo, or add third-party marks.
   </action>
   <verify>
-    <automated>test -s web/public/assets/Partnership-page/partnership-hero-partner.png &amp;&amp; test -s web/public/assets/Partnership-page/partnership-dashboard-devices.png &amp;&amp; test -s web/public/assets/Partnership-page/partnership-affiliate-figure.jpg &amp;&amp; test "$(find web/public/assets/Partnership-page -maxdepth 1 -type f \( -name '*.png' -o -name '*.jpg' \) | wc -l | tr -d ' ')" = "3"</automated>
-    <manual>Open all three images and confirm clean edges/crops, no watermark, and close visual compatibility with the supplied reference.</manual>
+    <automated>test -s web/public/assets/Partnership-page/partnership-hero-partner.png &amp;&amp; test -s web/public/assets/Partnership-page/partnership-dashboard-devices.png &amp;&amp; test "$(find web/public/assets/Partnership-page -maxdepth 1 -type f -name '*.png' | wc -l | tr -d ' ')" = "2"</automated>
+    <manual>Open both images and confirm clean edges/crops, no watermark, and close visual compatibility with the supplied reference.</manual>
   </verify>
-  <done>Exactly three reviewed page-specific visuals are retained under their existing filenames; no nonexistent pack asset is referenced or copied.</done>
+  <done>Exactly two reviewed page-specific visuals are retained under their existing filenames; the partner cutout is reused for the affiliate composition and no nonexistent pack asset is referenced or copied.</done>
 </task>
 
 <task type="auto">
@@ -133,7 +132,7 @@ Build typed readonly data and semantic markup for the complete D-02 flow:
 2. Income calculator headed “The More Clients You Sign Up, the Greater Your Income,” with total client lots, a 0–20,000 range, visible reference tick labels, and the estimated monthly result.
 3. “Be Your Own Broker with Dominion Markets!” split section with the four visible benefit bullets and generated laptop/phone dashboard.
 4. Dark four-stat band: IBs &amp; Affiliates 1,000+, Dominion Markets Clients 90,000+, Trading Instruments 200+, Offices &amp; Branches 3+.
-5. “Dominion Markets Affiliate Program Includes” composition with four cards: tight spreads, cutting-edge trading platforms, leverage/swap-free option, and instant withdrawals, surrounding the generated affiliate-advisor image.
+5. “Dominion Markets Affiliate Program Includes” composition with four cards: tight spreads, cutting-edge trading platforms, leverage/swap-free option, and instant withdrawals, surrounding the transparent partner cutout over a light CSS globe/orbit.
 6. `id="how-it-works"` three-step ordered process: Register, Introduce, Earn.
 7. Five-question native FAQ accordion matching the visible reference questions, with concise factual answers that do not introduce guarantees.
 8. “Choose Where To Go Next” destination cards: About Us → `/about`, Blogs → `/#insights`, Leaderboard → `/incentives/leaderboard-challenge`, Contact → `/#final-cta`.
@@ -156,7 +155,7 @@ Import and implement a fully route-scoped `.partnership-page` stylesheet per D-0
 
 Create deliberate responsive compositions: wide desktop mirrors the reference’s split hero, horizontal benefit/stat bands, centered affiliate visual, and compact process row; tablet collapses dense four-column regions to 2×2; 390px and 320px stack the hero copy/art, turn strips and cards into readable grids, keep generated figures uncropped, make the calculator/tick labels usable, stack the process and destination links, and preserve at least 44px controls. Add visible `:focus-visible`, native FAQ open-state styling, slider focus/value visibility, contrast-safe overlays, and `prefers-reduced-motion`. Prevent clipping and horizontal overflow.
 
-Run lint, TypeScript, and production build. Serve `/partnership` and compare it with the supplied reference at 1440px, tablet, 390px, and 320px. Verify exact section order, one shared nav/footer, three successful image requests, keyboard-operable slider/FAQ/links, valid destinations, no console errors, and `scrollWidth <= clientWidth`. Capture temporary desktop/mobile screenshots for comparison but do not commit them.
+Run lint, TypeScript, and production build. Serve `/partnership` and compare it with the supplied reference at 1440px, tablet, 390px, and 320px. Verify exact section order, one shared nav/footer, successful image requests, keyboard-operable slider/FAQ/links, valid destinations, no console errors, and `scrollWidth <= clientWidth`. Capture temporary desktop/mobile screenshots for comparison but do not commit them.
   </action>
   <verify>
     <automated>cd web &amp;&amp; npm run lint &amp;&amp; npx tsc --noEmit &amp;&amp; npm run build</automated>
@@ -177,12 +176,12 @@ Run lint, TypeScript, and production build. Serve `/partnership` and compare it 
 <verification>
 1. Run `cd web && npm run lint && npx tsc --noEmit && npm run build`.
 2. Browser-check `/partnership` at 1440px, tablet, 390px, and 320px.
-3. Confirm all required sections, three generated assets, interactive calculator, keyboard FAQ, valid destination links, one shared SiteNav/SiteFooter, no console errors, and no horizontal overflow.
+3. Confirm all required sections, two generated assets, interactive calculator, keyboard FAQ, valid destination links, one shared SiteNav/SiteFooter, no console errors, and no horizontal overflow.
 </verification>
 
 <success_criteria>
 - `/partnership` contains every visible reference section in the approved order.
-- The three available generated visuals fill the missing pack roles without fake logos, watermarks, or third-party marks.
+- The two available generated visuals fill the missing pack roles without watermarks or third-party marks.
 - The calculator is accessible and computes $10 estimated monthly income per referred-client lot.
 - Desktop and mobile layouts closely preserve the reference hierarchy and brand.
 - No new dependency, duplicated chrome, unsupported claim, production error, or committed screenshot is introduced.

@@ -25,15 +25,16 @@ brand tokens, and typography.
 
 ## Assets
 
-The supplied download pack only contained `README.txt`, so three genuinely
+The supplied download pack only contained `README.txt`, so two genuinely
 missing visuals were generated and prepared for production:
 
 - `partnership-hero-partner.png`
 - `partnership-dashboard-devices.png`
-- `partnership-affiliate-figure.jpg`
 
 The final hero visual was chroma-keyed from a clean source to preserve the
-white shirt and tablet edges.
+white shirt and tablet edges. The same transparent cutout is reused over a
+light CSS globe/orbit in the affiliate-program composition so that section
+matches the reference without a dark boxed portrait.
 
 ## Verification
 
