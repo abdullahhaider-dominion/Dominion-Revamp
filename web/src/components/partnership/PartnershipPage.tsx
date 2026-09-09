@@ -388,15 +388,17 @@ export function PartnershipPage() {
               </div>
 
               <div className="partner-program__portrait">
+                <span className="partner-program__globe" aria-hidden="true" />
                 <Image
-                  src={`${ASSET_ROOT}/partnership-affiliate-figure.jpg`}
-                  alt="Dominion Markets partnership representative"
-                  fill
+                  src={`${ASSET_ROOT}/partnership-hero-partner.png`}
+                  alt=""
+                  width={864}
+                  height={1152}
                   unoptimized
                   loading="eager"
-                  sizes="(max-width: 767px) 72vw, 30vw"
+                  className="partner-program__person"
                 />
-                <span aria-hidden="true" />
+                <span className="partner-program__orbit-dot" aria-hidden="true" />
               </div>
 
               <div className="partner-program__column">
