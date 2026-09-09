@@ -46,11 +46,12 @@ export const SITE_NAV: readonly SiteNavItem[] = [
   },
   {
     label: "About",
-    href: "/#trust",
+    href: "/about",
     children: [
-      { label: "Why Dominion", href: "/#why-dominion" },
-      { label: "Trust & regulation", href: "/#trust" },
-      { label: "Insights & blog", href: "/#blogs" },
+      { label: "Our Story", href: "/about#our-story" },
+      { label: "Our Values", href: "/about#our-values" },
+      { label: "Why Dominion", href: "/about#why-dominion" },
+      { label: "How to Start", href: "/about#how-to-start" },
     ],
   },
 ];
