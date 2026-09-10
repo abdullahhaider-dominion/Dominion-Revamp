@@ -9,6 +9,7 @@ export const siteFooterHtml =
     ? homeHtml
         .slice(footerStart, footerEnd)
         .replaceAll('href="#', 'href="/#')
+        .replaceAll('href="/#contact"', 'href="/contact"')
     : "";
 
 export const homeBodyHtml =
