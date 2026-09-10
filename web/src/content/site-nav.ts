@@ -26,6 +26,10 @@ export const SITE_NAV: readonly SiteNavItem[] = [
   {
     label: "Platforms",
     href: "/#platforms",
+    children: [
+      { label: "Platforms overview", href: "/#platforms" },
+      { label: "cTrader", href: "/ctrader" },
+    ],
   },
   {
     label: "Partners",
