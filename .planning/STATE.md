@@ -74,7 +74,7 @@ None
 | 260909-318 | Remove the Accounts navigation dropdown and keep one direct link | 2026-09-08 | dd11185 | [260909-318-remove-the-accounts-navigation-dropdown-](./quick/260909-318-remove-the-accounts-navigation-dropdown-/) |
 | 260909-rq1 | Build a production About page matching the supplied reference with responsive layouts | 2026-09-09 | 04dfc70 | [260909-rq1-build-a-production-about-page-at-about-m](./quick/260909-rq1-build-a-production-about-page-at-about-m/) |
 | 260909-partnership | Build a production Partnership page matching the supplied reference with responsive layouts | 2026-09-09 | 2d4d122 | [260909-partnership](./quick/260909-partnership/) |
-| 260910-legal | Build a production Legal Documents page with grouped PDF library | 2026-09-10 | pending | [260910-legal](./quick/260910-legal/) |
+| 260910-legal | Build a production Legal Documents page with grouped PDF library | 2026-09-10 | ad98a4e | [260910-legal](./quick/260910-legal/) |
 
 ## Session Continuity
 
