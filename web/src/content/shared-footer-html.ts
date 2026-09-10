@@ -11,6 +11,7 @@ export const siteFooterHtml =
         .replaceAll('href="#', 'href="/#')
         .replaceAll('href="/#faqs"', 'href="/faqs"')
         .replaceAll('href="/#contact"', 'href="/contact"')
+        .replaceAll('href="/#legal"', 'href="/legal-documents"')
     : "";
 
 export const homeBodyHtml =
