@@ -6,16 +6,19 @@ import "@/styles/careers.css";
 export function CareersPage() {
   return (
     <main className="careers-page" id="top">
-      <section className="careers-hero" aria-labelledby="careers-title">
+      <div className="careers-atmosphere" aria-hidden="true">
         <Image
-          src="/assets/Accounts-page/accounts-hero-mountains.png"
+          src="/assets/Careers-page/careers-hero-banner.jpg"
           alt=""
           fill
           priority
+          quality={90}
           sizes="100vw"
           className="careers-cover"
         />
-        <div className="careers-hero__wash" aria-hidden="true" />
+        <div className="careers-atmosphere__fade" />
+      </div>
+      <section className="careers-hero" aria-labelledby="careers-title">
         <div className="careers-wrap careers-hero__inner">
           <nav className="careers-breadcrumb" aria-label="Breadcrumb">
             <Link href="/">Home</Link>

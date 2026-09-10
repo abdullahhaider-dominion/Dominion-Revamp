@@ -45,7 +45,6 @@ body:has(.careers-page) .dm-nav {
 }
 
 .careers-cover {
-  z-index: -2;
   object-fit: cover;
   pointer-events: none;
   user-select: none;
@@ -58,6 +57,10 @@ body:has(.careers-page) .dm-nav {
   font-weight: 800;
   letter-spacing: 0.24em;
   text-transform: uppercase;
+}
+
+.careers-hero .careers-eyebrow {
+  color: var(--careers-green);
 }
 
 .careers-page a:focus-visible,
@@ -105,24 +108,37 @@ body:has(.careers-page) .dm-nav {
   box-shadow: none;
 }
 
-.careers-hero {
-  min-height: 390px;
-  padding: 118px 0 56px;
-  overflow: hidden;
-  background: #e7f4f9;
-}
-
-.careers-hero .careers-cover {
-  object-position: center 38%;
-}
-
-.careers-hero__wash {
+.careers-atmosphere {
   position: absolute;
-  z-index: -1;
+  z-index: 0;
+  isolation: isolate;
+  inset: 0 0 auto;
+  height: 560px;
+  pointer-events: none;
+}
+
+.careers-atmosphere .careers-cover {
+  object-position: center 32%;
+}
+
+.careers-atmosphere__fade {
+  position: absolute;
   inset: 0;
-  background:
-    linear-gradient(90deg, rgba(239, 249, 252, 0.94) 0%, rgba(239, 249, 252, 0.75) 48%, rgba(239, 249, 252, 0.12) 80%),
-    linear-gradient(180deg, rgba(232, 247, 250, 0.22), rgba(239, 249, 252, 0.46));
+  background: linear-gradient(
+    180deg,
+    rgba(7, 19, 29, 0.16) 0%,
+    rgba(7, 19, 29, 0) 14%,
+    rgba(7, 19, 29, 0) 86%,
+    var(--careers-mist) 100%
+  );
+}
+
+.careers-hero {
+  position: relative;
+  z-index: 2;
+  min-height: 0;
+  padding: 118px 0 36px;
+  background: transparent;
 }
 
 .careers-breadcrumb {
@@ -130,7 +146,7 @@ body:has(.careers-page) .dm-nav {
   align-items: center;
   gap: 8px;
   margin-bottom: 27px;
-  color: #6c8290;
+  color: rgba(255, 255, 255, 0.78);
   font-size: 10px;
   font-weight: 600;
 }
@@ -141,13 +157,13 @@ body:has(.careers-page) .dm-nav {
 }
 
 .careers-breadcrumb a:hover {
-  color: var(--careers-green-dark);
+  color: var(--careers-green);
 }
 
 .careers-hero h1 {
   max-width: 10ch;
   margin: 0;
-  color: #0d2034;
+  color: #fff;
   font-size: clamp(44px, 4.5vw, 66px);
   font-weight: 800;
   letter-spacing: -0.055em;
@@ -157,21 +173,22 @@ body:has(.careers-page) .dm-nav {
 .careers-hero__inner > p:last-child {
   max-width: 620px;
   margin: 15px 0 0;
-  color: #4c6575;
+  color: rgba(255, 255, 255, 0.78);
   font-size: 16px;
   line-height: 1.62;
 }
 
 .careers-flow {
   position: relative;
+  z-index: 2;
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.42), rgba(244, 247, 249, 0.58)),
-    url("/assets/Accounts-page/accounts-mist-portrait.png") center top / 100% auto repeat-y;
-  background-color: #eef4f7;
+    linear-gradient(180deg, rgba(238, 247, 250, 0) 0%, #eef4f7 120px),
+    url("/assets/Accounts-page/accounts-mist-portrait.png") center 120px / 100% auto repeat-y;
+  background-color: transparent;
 }
 
 .careers-body {
-  padding: 28px 0 36px;
+  padding: 12px 0 36px;
 }
 
 .careers-glass {
@@ -454,9 +471,17 @@ body:has(.careers-page) .dm-nav {
     width: min(calc(100% - 32px), 1280px);
   }
 
+  .careers-atmosphere {
+    height: 420px;
+  }
+
+  .careers-atmosphere .careers-cover {
+    object-position: 72% 30%;
+  }
+
   .careers-hero {
     min-height: 0;
-    padding: 106px 0 36px;
+    padding: 106px 0 28px;
   }
 
   .careers-hero h1 {
