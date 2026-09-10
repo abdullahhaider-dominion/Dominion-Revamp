@@ -99,9 +99,21 @@ function TicketPane() {
   );
 }
 
-export function CTraderPage() {
-  const ticker = [...CTRADER_PROOF, ...CTRADER_PROOF];
+function ProofSet({ hidden }: { hidden?: boolean }) {
+  const items = [...CTRADER_PROOF, ...CTRADER_PROOF, ...CTRADER_PROOF];
 
+  return (
+    <div className="ctrader-ticker__set" aria-hidden={hidden || undefined}>
+      {items.map((item, index) => (
+        <span key={`${item.value}-${index}`}>
+          <b>{item.value}</b> {item.label}
+        </span>
+      ))}
+    </div>
+  );
+}
+
+export function CTraderPage() {
   return (
     <main className="ctrader-page" id="top">
       <div className="ctrader-atmosphere" aria-hidden="true">
@@ -164,7 +176,7 @@ export function CTraderPage() {
             </header>
             <div className="ctrader-modules">
               {CTRADER_MODULES.map((module) => (
-                <article className="ctrader-module" key={module.id}>
+                <article className="ctrader-module ctrader-glass" key={module.id}>
                   <header className="ctrader-pane__bar">
                     <span className="ctrader-pane__dots" aria-hidden="true" />
                     <h3>{module.title}</h3>
@@ -182,7 +194,7 @@ export function CTraderPage() {
               <p className="ctrader-eyebrow">See the desk</p>
               <h2 id="ctrader-video-title">A short walk through cTrader</h2>
             </header>
-            <div className="ctrader-video">
+            <div className="ctrader-video ctrader-glass">
               <iframe
                 src={CTRADER_VIDEO}
                 title="cTrader walkthrough"
@@ -196,16 +208,13 @@ export function CTraderPage() {
 
         <div className="ctrader-ticker" aria-label="Platform figures">
           <div className="ctrader-ticker__track">
-            {ticker.map((item, index) => (
-              <span key={`${item.value}-${index}`}>
-                <b>{item.value}</b> {item.label}
-              </span>
-            ))}
+            <ProofSet />
+            <ProofSet hidden />
           </div>
         </div>
 
         <section className="ctrader-why" aria-labelledby="ctrader-why-title">
-          <div className="ctrader-wrap ctrader-why__inner">
+          <div className="ctrader-wrap ctrader-why__inner ctrader-glass">
             <div>
               <p className="ctrader-eyebrow">With Dominion</p>
               <h2 id="ctrader-why-title">Why trade on cTrader with us</h2>
@@ -226,7 +235,7 @@ export function CTraderPage() {
             </header>
             <div className="ctrader-faq-list">
               {CTRADER_FAQS.map((item) => (
-                <details className="ctrader-faq" key={item.id}>
+                <details className="ctrader-faq ctrader-glass" key={item.id}>
                   <summary>{item.question}</summary>
                   <p>{item.answer}</p>
                 </details>
@@ -236,7 +245,7 @@ export function CTraderPage() {
         </section>
 
         <section className="ctrader-close" aria-labelledby="ctrader-close-title">
-          <div className="ctrader-wrap ctrader-close__inner">
+          <div className="ctrader-wrap ctrader-close__inner ctrader-glass">
             <div>
               <p className="ctrader-eyebrow">Open the desk</p>
               <h2 id="ctrader-close-title">Ready to trade on cTrader?</h2>

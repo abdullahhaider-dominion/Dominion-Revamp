@@ -9,8 +9,12 @@ export function CTraderDock() {
   const extra = CTRADER_DOWNLOADS.filter((item) => item.dock === "more");
 
   return (
-    <div className="ctrader-dock" id="download">
-      <p className="ctrader-dock__label">Download</p>
+    <div className="ctrader-dock" id="download" aria-labelledby="ctrader-download-title">
+      <div className="ctrader-dock__copy">
+        <p className="ctrader-eyebrow">Get the desk</p>
+        <h2 id="ctrader-download-title">Download cTrader</h2>
+        <p>Official Dominion Markets builds for web, iPhone, Android, Mac, and Windows.</p>
+      </div>
       <div className="ctrader-dock__row">
         {always.map((item) => (
           <a

@@ -3,11 +3,11 @@
   --ctrader-green: #47bd68;
   --ctrader-green-dark: #239d53;
   --ctrader-copy: #526a79;
-  --ctrader-mist: #eef7fa;
+  --ctrader-mist: #e8eef2;
+  --ctrader-mist-2: #f4f7f9;
   position: relative;
-  overflow: clip;
   color: var(--ctrader-navy);
-  background: var(--ctrader-mist);
+  background: var(--ctrader-mist-2);
   font-family: var(--dm-font-body);
 }
 
@@ -74,7 +74,7 @@ body:has(.ctrader-page) .dm-nav {
   z-index: 0;
   isolation: isolate;
   inset: 0 0 auto;
-  height: 720px;
+  height: 820px;
   pointer-events: none;
 }
 
@@ -89,15 +89,15 @@ body:has(.ctrader-page) .dm-nav {
     180deg,
     rgba(7, 19, 29, 0.16) 0%,
     rgba(7, 19, 29, 0) 14%,
-    rgba(7, 19, 29, 0) 72%,
-    var(--ctrader-mist) 100%
+    rgba(7, 19, 29, 0) 88%,
+      #e8eef2 100%
   );
 }
 
 .ctrader-hero {
   position: relative;
   z-index: 2;
-  padding: 118px 0 28px;
+  padding: 118px 0 40px;
 }
 
 .ctrader-breadcrumb {
@@ -171,17 +171,53 @@ body:has(.ctrader-page) .dm-nav {
   grid-area: ticket;
 }
 
-.ctrader-pane,
-.ctrader-module,
-.ctrader-faq,
-.ctrader-close__inner,
-.ctrader-video {
+.ctrader-pane {
   border: 1px solid rgba(255, 255, 255, 0.22);
   border-radius: 18px;
   background: rgba(16, 32, 46, 0.42);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.18);
   backdrop-filter: blur(22px) saturate(1.05);
   -webkit-backdrop-filter: blur(22px) saturate(1.05);
+}
+
+.ctrader-glass {
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 28px;
+  background: linear-gradient(
+    155deg,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.42)
+  );
+  box-shadow:
+    0 24px 60px rgba(20, 36, 51, 0.12),
+    0 0 0 1px rgba(71, 189, 104, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(24px) saturate(1.35);
+  -webkit-backdrop-filter: blur(24px) saturate(1.35);
+}
+
+.ctrader-glass::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(
+    135deg,
+    rgba(71, 189, 104, 0.45),
+    transparent 40%,
+    rgba(29, 51, 71, 0.12)
+  );
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
 }
 
 .ctrader-pane__bar {
@@ -291,22 +327,32 @@ body:has(.ctrader-page) .dm-nav {
 }
 
 .ctrader-dock {
-  margin-top: 16px;
-  padding: 12px 14px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 20px;
-  background: rgba(12, 24, 36, 0.46);
-  backdrop-filter: blur(22px) saturate(1.1);
-  -webkit-backdrop-filter: blur(22px) saturate(1.1);
+  display: grid;
+  grid-template-columns: minmax(240px, 0.85fr) minmax(0, 1.35fr);
+  gap: 18px 28px;
+  align-items: center;
+  margin-top: 28px;
+  padding: 26px 28px;
+  border: 1px solid rgba(71, 189, 104, 0.42);
+  border-radius: 24px;
+  background: rgba(8, 20, 32, 0.78);
+  backdrop-filter: blur(24px) saturate(1.12);
+  -webkit-backdrop-filter: blur(24px) saturate(1.12);
 }
 
-.ctrader-dock__label {
-  margin: 0 0 8px;
-  color: rgba(255, 255, 255, 0.55);
-  font-size: 10px;
+.ctrader-dock__copy h2 {
+  margin: 0 0 6px;
+  color: #fff;
+  font-size: clamp(26px, 3vw, 34px);
   font-weight: 800;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
+  letter-spacing: -0.045em;
+}
+
+.ctrader-dock__copy p:last-child {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 15px;
+  line-height: 1.5;
 }
 
 .ctrader-dock__row,
@@ -314,7 +360,7 @@ body:has(.ctrader-page) .dm-nav {
 .ctrader-close__actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 10px;
 }
 
 .ctrader-chip {
@@ -334,6 +380,16 @@ body:has(.ctrader-page) .dm-nav {
   transition:
     transform 160ms cubic-bezier(0.22, 1, 0.36, 1),
     background-color 160ms ease;
+}
+
+.ctrader-dock .ctrader-chip {
+  min-height: 56px;
+  padding: 0 22px;
+  font-size: 16px;
+}
+
+.ctrader-dock .ctrader-chip--primary {
+  min-width: 188px;
 }
 
 .ctrader-chip:hover {
@@ -365,8 +421,9 @@ body:has(.ctrader-page) .dm-nav {
   position: relative;
   z-index: 2;
   background:
-    linear-gradient(180deg, rgba(238, 247, 250, 0) 0%, #eef4f7 90px),
-    url("/assets/Accounts-page/accounts-mist-portrait.png") center 90px / 100% auto repeat-y;
+    radial-gradient(ellipse at 8% 6%, rgba(71, 189, 104, 0.16), transparent 44%),
+    radial-gradient(ellipse at 92% 38%, rgba(71, 189, 104, 0.08), transparent 40%),
+    linear-gradient(180deg, #dce6ee 0%, #e8eef2 35%, #f4f7f9 100%);
 }
 
 .ctrader-body,
@@ -403,15 +460,13 @@ body:has(.ctrader-page) .dm-nav {
 
 .ctrader-module {
   min-height: 148px;
-  border-color: rgba(255, 255, 255, 0.82);
-  background: linear-gradient(
-    160deg,
-    rgba(255, 255, 255, 0.9) 0%,
-    rgba(255, 255, 255, 0.72) 100%
-  );
-  box-shadow:
-    0 18px 40px rgba(20, 36, 51, 0.08),
-    inset 0 1px 0 #fff;
+  transition:
+    transform 180ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 180ms ease;
+}
+
+.ctrader-module:hover {
+  transform: translateY(-2px);
 }
 
 .ctrader-module .ctrader-pane__bar h3 {
@@ -436,7 +491,6 @@ body:has(.ctrader-page) .dm-nav {
 .ctrader-video {
   overflow: hidden;
   margin-top: 18px;
-  border-color: rgba(255, 255, 255, 0.82);
   background: #0f1c28;
   aspect-ratio: 16 / 9;
 }
@@ -455,18 +509,32 @@ body:has(.ctrader-page) .dm-nav {
   color: var(--ctrader-navy);
   font-size: 13px;
   font-weight: 600;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent);
 }
 
 .ctrader-ticker__track {
   display: flex;
   width: max-content;
-  gap: 36px;
   padding: 14px 0;
-  animation: ctrader-ticker 28s linear infinite;
+  will-change: transform;
+  animation: ctrader-ticker 22s linear infinite;
 }
 
 .ctrader-ticker:hover .ctrader-ticker__track {
   animation-play-state: paused;
+}
+
+.ctrader-ticker__set {
+  display: flex;
+  flex-shrink: 0;
+  gap: 48px;
+  padding-inline-end: 48px;
+}
+
+.ctrader-ticker__set span {
+  flex: 0 0 auto;
+  white-space: nowrap;
 }
 
 .ctrader-ticker b {
@@ -475,6 +543,10 @@ body:has(.ctrader-page) .dm-nav {
 }
 
 @keyframes ctrader-ticker {
+  from {
+    transform: translateX(0);
+  }
+
   to {
     transform: translateX(-50%);
   }
@@ -482,6 +554,10 @@ body:has(.ctrader-page) .dm-nav {
 
 .ctrader-why {
   padding: 28px 0;
+}
+
+.ctrader-why__inner {
+  padding: 28px;
 }
 
 .ctrader-why__inner,
@@ -499,8 +575,7 @@ body:has(.ctrader-page) .dm-nav {
 }
 
 .ctrader-faq {
-  border-color: rgba(255, 255, 255, 0.82);
-  background: rgba(255, 255, 255, 0.78);
+  overflow: hidden;
 }
 
 .ctrader-faq summary {
@@ -545,8 +620,6 @@ body:has(.ctrader-page) .dm-nav {
 
 .ctrader-close__inner {
   padding: 28px;
-  border-color: rgba(255, 255, 255, 0.82);
-  background: rgba(255, 255, 255, 0.8);
 }
 
 .ctrader-close .ctrader-chip {
@@ -589,22 +662,31 @@ body:has(.ctrader-page) .dm-nav {
   }
 
   .ctrader-dock {
-    position: fixed;
-    z-index: 30;
-    right: 12px;
-    bottom: 12px;
-    left: 12px;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-top: 20px;
+    padding: 18px 16px;
+  }
+
+  .ctrader-dock__copy p:last-child {
+    display: none;
+  }
+
+  .ctrader-dock__copy h2 {
     margin: 0;
-    padding-bottom: calc(12px + env(safe-area-inset-bottom));
+    font-size: 22px;
+  }
+
+  .ctrader-dock .ctrader-chip {
+    min-height: 48px;
+    min-width: 0;
+    flex: 1 1 auto;
+    font-size: 14px;
   }
 
   .ctrader-dock__more.is-open {
     display: flex;
-    margin-top: 8px;
-  }
-
-  .ctrader-page {
-    padding-bottom: 92px;
+    margin-top: 0;
   }
 }
 
@@ -636,30 +718,35 @@ body:has(.ctrader-page) .dm-nav {
 
 @media (prefers-reduced-motion: reduce) {
   .ctrader-chip,
+  .ctrader-module,
   .ctrader-ticker__track {
     transition: none;
     animation: none;
   }
 
-  .ctrader-chip:active {
+  .ctrader-ticker {
+    overflow-x: auto;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+
+  .ctrader-chip:active,
+  .ctrader-module:hover {
     transform: none;
   }
 }
 
 @media (prefers-reduced-transparency: reduce) {
   .ctrader-pane,
-  .ctrader-dock,
-  .ctrader-module,
-  .ctrader-faq,
-  .ctrader-close__inner {
+  .ctrader-dock {
     background: #123044;
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
   }
 
-  .ctrader-module,
-  .ctrader-faq,
-  .ctrader-close__inner {
+  .ctrader-glass {
     background: #fff;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
   }
 }
