@@ -28,7 +28,7 @@ See: .planning/PROJECT.md (updated 2026-09-05)
 Phase: 10 of 10 (Lean Production Check) — **COMPLETE**
 Plan: Complete
 Status: All 10 phases verified — PROD-03 lean + push-ready (not pushed)
-Last activity: 2026-09-10 — Completed quick task 260910-legal: production Legal Documents page
+Last activity: 2026-09-11 — Completed quick task 260911-careers: production Careers page
 
 Progress: [██████████] 100%
 
@@ -75,6 +75,7 @@ None
 | 260909-rq1 | Build a production About page matching the supplied reference with responsive layouts | 2026-09-09 | 04dfc70 | [260909-rq1-build-a-production-about-page-at-about-m](./quick/260909-rq1-build-a-production-about-page-at-about-m/) |
 | 260909-partnership | Build a production Partnership page matching the supplied reference with responsive layouts | 2026-09-09 | 2d4d122 | [260909-partnership](./quick/260909-partnership/) |
 | 260910-legal | Build a production Legal Documents page with grouped PDF library | 2026-09-10 | ad98a4e | [260910-legal](./quick/260910-legal/) |
+| 260911-careers | Build a production Careers page with path tiles and apply dock | 2026-09-11 | 8c6e9c6 | [260911-careers](./quick/260911-careers/) |
 
 ## Session Continuity
 
