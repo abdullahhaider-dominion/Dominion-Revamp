@@ -10,16 +10,19 @@ import "@/styles/legal.css";
 export function LegalPage() {
   return (
     <main className="legal-page" id="top">
-      <section className="legal-hero" aria-label="Legal documents">
+      <div className="legal-atmosphere" aria-hidden="true">
         <Image
-          src="/assets/Accounts-page/accounts-hero-mountains.png"
+          src="/assets/Legal-page/legal-hero-banner.jpg"
           alt=""
           fill
           priority
+          quality={90}
           sizes="100vw"
           className="legal-cover"
         />
-        <div className="legal-hero__wash" aria-hidden="true" />
+        <div className="legal-atmosphere__fade" />
+      </div>
+      <section className="legal-hero" aria-label="Legal documents">
         <div className="legal-wrap legal-hero__inner">
           <nav className="legal-breadcrumb" aria-label="Breadcrumb">
             <Link href="/">Home</Link>
