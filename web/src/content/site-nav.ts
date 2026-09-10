@@ -54,4 +54,8 @@ export const SITE_NAV: readonly SiteNavItem[] = [
       { label: "How to Start", href: "/about#how-to-start" },
     ],
   },
+  {
+    label: "Contact",
+    href: "/contact",
+  },
 ];
