@@ -28,6 +28,10 @@ export const SITE_NAV: readonly SiteNavItem[] = [
     href: "/#platforms",
   },
   {
+    label: "Partners",
+    href: "/partnership",
+  },
+  {
     label: "Tools",
     href: "/#dashboard",
     children: [
@@ -54,5 +58,9 @@ export const SITE_NAV: readonly SiteNavItem[] = [
       { label: "How to Start", href: "/about#how-to-start" },
       { label: "FAQs", href: "/faqs" },
     ],
+  },
+  {
+    label: "Contact",
+    href: "/contact",
   },
 ];
