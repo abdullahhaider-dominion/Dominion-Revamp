@@ -242,6 +242,14 @@ body:has(.lb-page) .dm-nav {
   transition: color 0.2s ease;
 }
 
+button.dm-nav__link {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  font: inherit;
+}
+
 .dm-nav__link:hover,
 .dm-nav__item.is-open > .dm-nav__link {
   color: #fff;
@@ -423,6 +431,7 @@ body:has(.lb-page) .dm-nav {
     font-weight: 600;
     color: #fff;
     text-decoration: none;
+    margin: 0;
   }
 
   .dm-nav__drawer-sub {

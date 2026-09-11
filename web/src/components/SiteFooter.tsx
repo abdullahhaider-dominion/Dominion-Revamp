@@ -1,4 +1,5 @@
 import { siteFooterHtml } from "@/content/shared-footer-html";
+import "@/styles/site-footer.css";
 
 export function SiteFooter() {
   return (

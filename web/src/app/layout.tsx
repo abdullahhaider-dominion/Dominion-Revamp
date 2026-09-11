@@ -96,6 +96,7 @@ export default function RootLayout({
       <head>
         {/* Served from /public so Tailwind PostCSS does not rewrite mockup CSS */}
         <link rel="stylesheet" href="/mockups.css" />
+        <link rel="stylesheet" href="/site-footer.css?v=dividers" />
       </head>
       <body className={montserrat.className}>
         <SiteNav />
