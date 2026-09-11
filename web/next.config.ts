@@ -7,6 +7,11 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
+        source: "/before-you-trade-trading-sessions",
+        destination: "/education/best-times-to-trade",
+        permanent: true,
+      },
+      {
         source: "/pairs-to-trade",
         destination: "/education/pairs-to-trade",
         permanent: true,
