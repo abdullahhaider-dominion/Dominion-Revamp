@@ -67,7 +67,7 @@ export const SITE_NAV: readonly SiteNavItem[] = [
         label: "Best Times to Trade",
         href: `${LIVE}/before-you-trade-trading-sessions/`,
       },
-      { label: "Pairs to Trade", href: `${LIVE}/pairs-to-trade/` },
+      { label: "Pairs to Trade", href: "/education/pairs-to-trade" },
       { label: "Blog", href: `${LIVE}/blog/` },
     ],
   },
