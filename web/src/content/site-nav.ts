@@ -29,6 +29,7 @@ export const SITE_NAV: readonly SiteNavItem[] = [
     children: [
       { label: "Platforms overview", href: "/#platforms" },
       { label: "cTrader", href: "/ctrader" },
+      { label: "MT5 Web Trader", href: "/webterminal-mt5" },
     ],
   },
   {
