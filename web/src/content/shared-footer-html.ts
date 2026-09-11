@@ -25,6 +25,22 @@ export const siteFooterHtml =
           '<a href="/#platforms">cTrader Android<span aria-hidden="true">›</span></a>',
           '<a href="https://www.dominionmarkets.com/ctrader/files/com.dominion.app.apk">cTrader Android<span aria-hidden="true">›</span></a>',
         )
+        .replace(
+          '<a href="/#platforms">Meta Trader 5<span aria-hidden="true">›</span></a>',
+          '<a href="https://download.mql5.com/cdn/web/dominion.markets.llc/mt5/dominionmarkets5setup.exe">Meta Trader 5<span aria-hidden="true">›</span></a>',
+        )
+        .replace(
+          '<a href="/#platforms">Meta Trader 5 Web Trader<span aria-hidden="true">›</span></a>',
+          '<a href="/webterminal-mt5">Meta Trader 5 Web Trader<span aria-hidden="true">›</span></a>',
+        )
+        .replace(
+          '<a href="/#platforms">Meta Trader 5 iOS<span aria-hidden="true">›</span></a>',
+          '<a href="https://download.mql5.com/cdn/mobile/mt5/ios?server=DominionMarkets-Live">Meta Trader 5 iOS<span aria-hidden="true">›</span></a>',
+        )
+        .replace(
+          '<a href="/#platforms">Meta Trader 5 Android<span aria-hidden="true">›</span></a>',
+          '<a href="https://download.mql5.com/cdn/mobile/mt5/android?server=DominionMarkets-Live">Meta Trader 5 Android<span aria-hidden="true">›</span></a>',
+        )
     : "";
 
 export const homeBodyHtml =
