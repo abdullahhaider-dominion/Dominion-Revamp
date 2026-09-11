@@ -1,0 +1,55 @@
+/* Loaded after /mockups.css so the footer is one navy fill, not an inset glass card. */
+
+footer.site-footer {
+  background: #0e1e31 !important;
+  color: #fff;
+}
+
+footer.site-footer .site-footer__atmosphere,
+footer.site-footer .site-footer__bg,
+footer.site-footer .site-footer__overlay {
+  display: none !important;
+}
+
+footer.site-footer .site-footer__inner,
+footer.site-footer .container.site-footer__inner,
+footer.site-footer .site-footer__glass {
+  background: #0e1e31 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+footer.site-footer .site-footer__inner,
+footer.site-footer .container.site-footer__inner {
+  border: 0 !important;
+}
+
+footer.site-footer .site-footer__glass {
+  border: 0 solid transparent;
+}
+
+footer.site-footer .site-footer__glass::before,
+footer.site-footer .site-footer__glass::after {
+  content: none !important;
+  display: none !important;
+}
+
+footer.site-footer .site-footer__ribbon--cta {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
+}
+
+footer.site-footer .site-footer__ribbon--legal {
+  border-top: 1px solid rgba(255, 255, 255, 0.12) !important;
+}
+
+@media (min-width: 980px) {
+  footer.site-footer .site-footer__module + .site-footer__module {
+    border-left: 1px solid rgba(255, 255, 255, 0.12) !important;
+  }
+
+  footer.site-footer .site-footer__legal-col + .site-footer__legal-col {
+    border-left: 1px solid rgba(255, 255, 255, 0.12) !important;
+  }
+}

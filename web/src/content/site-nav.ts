@@ -1,70 +1,81 @@
-import { incentivePath, INCENTIVES_PAGES } from "@/content/incentives";
+import { incentivePath } from "@/content/incentives";
 
 export type SiteNavLink = {
   label: string;
   href: string;
+  openInNewTab?: boolean;
 };
 
-export type SiteNavItem = SiteNavLink & {
+export type SiteNavItem = {
+  label: string;
+  href?: string;
+  openInNewTab?: boolean;
   children?: readonly SiteNavLink[];
 };
 
+const LIVE = "https://www.dominionmarkets.com";
+
 export const SITE_NAV: readonly SiteNavItem[] = [
-  {
-    label: "Markets",
-    href: "/#markets",
-    children: [
-      { label: "Markets overview", href: "/#markets" },
-      { label: "Market sessions", href: "/#sessions" },
-      { label: "Trade better", href: "/#trade-better" },
-    ],
-  },
   {
     label: "Accounts",
     href: "/accounts",
   },
   {
-    label: "Platforms",
-    href: "/#platforms",
-    children: [
-      { label: "Platforms overview", href: "/#platforms" },
-      { label: "cTrader", href: "/ctrader" },
-    ],
-  },
-  {
-    label: "Partners",
+    label: "IBs/Partners",
     href: "/partnership",
   },
   {
-    label: "Tools",
-    href: "/#dashboard",
+    label: "Incentives",
     children: [
-      { label: "Trader dashboard", href: "/#dashboard" },
-      { label: "Copy trading", href: "/#copy-trading" },
-      { label: "Ecosystem", href: "/#ecosystem" },
+      { label: "Leaderboard Challenge", href: incentivePath("leaderboard-challenge") },
+      { label: "Commission", href: incentivePath("commission-incentives") },
+      { label: "Copy Trading", href: incentivePath("copy-trading") },
+      { label: "More Info", href: incentivePath("more-info") },
+      { label: "Wall of Love", href: incentivePath("wall-of-love") },
     ],
   },
   {
-    label: "Incentives",
-    href: incentivePath("leaderboard-challenge"),
-    children: INCENTIVES_PAGES.map((page) => ({
-      label: page.title,
-      href: incentivePath(page.slug),
-    })),
+    label: "Platforms",
+    children: [
+      {
+        label: "Meta Trader 5",
+        href: "https://download.mql5.com/cdn/web/dominion.markets.llc/mt5/dominionmarkets5setup.exe",
+        openInNewTab: true,
+      },
+      {
+        label: "Meta Trader 5 Web Trader",
+        href: `${LIVE}/webterminal-mt5/`,
+      },
+      { label: "cTrader", href: "/ctrader" },
+      {
+        label: "cTrader Webterminal",
+        href: "https://app.ctrader.com/",
+        openInNewTab: true,
+      },
+    ],
+  },
+  {
+    label: "Get Funded",
+    href: "https://dominionfunding.trade/",
+    openInNewTab: true,
+  },
+  {
+    label: "Education",
+    children: [
+      { label: "Market Analysis", href: `${LIVE}/marketanalysis/` },
+      {
+        label: "Best Times to Trade",
+        href: `${LIVE}/before-you-trade-trading-sessions/`,
+      },
+      { label: "Pairs to Trade", href: `${LIVE}/pairs-to-trade/` },
+      { label: "Blog", href: `${LIVE}/blog/` },
+    ],
   },
   {
     label: "About",
     href: "/about",
-    children: [
-      { label: "Our Story", href: "/about#our-story" },
-      { label: "Our Values", href: "/about#our-values" },
-      { label: "Why Dominion", href: "/about#why-dominion" },
-      { label: "How to Start", href: "/about#how-to-start" },
-      { label: "FAQs", href: "/faqs" },
-    ],
-  },
-  {
-    label: "Contact",
-    href: "/contact",
   },
 ];
+
+export const SITE_LOGIN_HREF = "https://app.dominionmarkets.com/en/login";
+export const SITE_REGISTER_HREF = "https://app.dominionmarkets.com/";

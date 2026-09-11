@@ -4,16 +4,40 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState, type ComponentProps } from "react";
 import { ChevronDown, Menu, X } from "lucide-react";
-import { SITE_NAV } from "@/content/site-nav";
+import {
+  SITE_LOGIN_HREF,
+  SITE_NAV,
+  SITE_REGISTER_HREF,
+} from "@/content/site-nav";
 import "@/styles/cinematic-hero.css";
+
+function isHttpUrl(href: string) {
+  return /^https?:\/\//i.test(href);
+}
 
 function NavHref({
   href,
   children,
+  openInNewTab,
   ...props
-}: { href: string } & Omit<ComponentProps<typeof Link>, "href">) {
+}: {
+  href: string;
+  openInNewTab?: boolean;
+} & Omit<ComponentProps<typeof Link>, "href">) {
+  const extra = openInNewTab
+    ? { target: "_blank" as const, rel: "noopener noreferrer" }
+    : {};
+
+  if (isHttpUrl(href)) {
+    return (
+      <a href={href} {...props} {...extra}>
+        {children}
+      </a>
+    );
+  }
+
   return (
-    <Link href={href} {...props}>
+    <Link href={href} {...props} {...extra}>
       {children}
     </Link>
   );
@@ -136,24 +160,48 @@ export function SiteNav() {
                   }, 160);
                 }}
               >
-                <NavHref
-                  href={item.href}
-                  className="dm-nav__link"
-                  aria-haspopup={hasChildren ? "menu" : undefined}
-                  aria-expanded={hasChildren ? openMenu === item.label : undefined}
-                  onClick={() => {
-                    if (!hasChildren) setOpenMenu(null);
-                  }}
-                >
-                  {item.label}
-                  {hasChildren ? (
-                    <ChevronDown
-                      size={14}
-                      className="dm-nav__chevron"
-                      aria-hidden="true"
-                    />
-                  ) : null}
-                </NavHref>
+                {item.href ? (
+                  <NavHref
+                    href={item.href}
+                    openInNewTab={item.openInNewTab}
+                    className="dm-nav__link"
+                    aria-haspopup={hasChildren ? "menu" : undefined}
+                    aria-expanded={hasChildren ? openMenu === item.label : undefined}
+                    onClick={() => {
+                      if (!hasChildren) setOpenMenu(null);
+                    }}
+                  >
+                    {item.label}
+                    {hasChildren ? (
+                      <ChevronDown
+                        size={14}
+                        className="dm-nav__chevron"
+                        aria-hidden="true"
+                      />
+                    ) : null}
+                  </NavHref>
+                ) : (
+                  <button
+                    type="button"
+                    className="dm-nav__link"
+                    aria-haspopup={hasChildren ? "menu" : undefined}
+                    aria-expanded={hasChildren ? openMenu === item.label : undefined}
+                    onClick={() => {
+                      setOpenMenu((current) =>
+                        current === item.label ? null : item.label,
+                      );
+                    }}
+                  >
+                    {item.label}
+                    {hasChildren ? (
+                      <ChevronDown
+                        size={14}
+                        className="dm-nav__chevron"
+                        aria-hidden="true"
+                      />
+                    ) : null}
+                  </button>
+                )}
                 {hasChildren ? (
                   <div className="dm-nav__dropdown" role="menu">
                     <div className="dm-nav__dropdown-panel">
@@ -161,6 +209,7 @@ export function SiteNav() {
                         <NavHref
                           key={`${child.href}-${child.label}`}
                           href={child.href}
+                          openInNewTab={child.openInNewTab}
                           role="menuitem"
                           onClick={closeMenus}
                         >
@@ -176,16 +225,20 @@ export function SiteNav() {
         </nav>
 
         <div className="dm-nav__actions">
-          <Link href="/#final-cta" className="dm-nav__login" onClick={closeMenus}>
+          <a
+            href={SITE_LOGIN_HREF}
+            className="dm-nav__login"
+            onClick={closeMenus}
+          >
             Log in
-          </Link>
-          <Link
-            href="/accounts"
+          </a>
+          <a
+            href={SITE_REGISTER_HREF}
             className="hb-primary dm-nav__cta"
             onClick={closeMenus}
           >
-            Get Started
-          </Link>
+            Register
+          </a>
           <button
             type="button"
             className="dm-nav__burger"
@@ -207,18 +260,24 @@ export function SiteNav() {
         <nav className="dm-nav__drawer-nav" aria-label="Mobile">
           {SITE_NAV.map((item) => (
             <div key={item.label} className="dm-nav__drawer-group">
-              <NavHref
-                href={item.href}
-                className="dm-nav__drawer-link"
-                onClick={closeMenus}
-              >
-                {item.label}
-              </NavHref>
+              {item.href ? (
+                <NavHref
+                  href={item.href}
+                  openInNewTab={item.openInNewTab}
+                  className="dm-nav__drawer-link"
+                  onClick={closeMenus}
+                >
+                  {item.label}
+                </NavHref>
+              ) : (
+                <p className="dm-nav__drawer-link">{item.label}</p>
+              )}
               {item.children
                 ? item.children.map((child) => (
                     <NavHref
                       key={`${child.href}-${child.label}`}
                       href={child.href}
+                      openInNewTab={child.openInNewTab}
                       className="dm-nav__drawer-sub"
                       onClick={closeMenus}
                     >
@@ -228,20 +287,20 @@ export function SiteNav() {
                 : null}
             </div>
           ))}
-          <Link
-            href="/#final-cta"
+          <a
+            href={SITE_LOGIN_HREF}
             className="dm-nav__drawer-link"
             onClick={closeMenus}
           >
             Log in
-          </Link>
-          <Link
-            href="/accounts"
+          </a>
+          <a
+            href={SITE_REGISTER_HREF}
             className="hb-primary dm-nav__drawer-cta"
             onClick={closeMenus}
           >
-            Get Started
-          </Link>
+            Register
+          </a>
         </nav>
       </div>
     </header>
