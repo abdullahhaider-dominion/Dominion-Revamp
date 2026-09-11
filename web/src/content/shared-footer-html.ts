@@ -48,7 +48,7 @@ function applyFooterHrefs(html: string): string {
     ],
     [
       'href="#sessions">Best times to trade',
-      `href="${LIVE}/before-you-trade-trading-sessions/">Best times to trade`,
+      `href="/education/best-times-to-trade">Best times to trade`,
     ],
     [
       'href="#markets">Pairs to trade',
