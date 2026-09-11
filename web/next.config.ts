@@ -11,6 +11,11 @@ const nextConfig: NextConfig = {
         destination: "/education/best-times-to-trade",
         permanent: true,
       },
+      {
+        source: "/pairs-to-trade",
+        destination: "/education/pairs-to-trade",
+        permanent: true,
+      },
     ];
   },
   images: {

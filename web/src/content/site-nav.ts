@@ -64,7 +64,7 @@ export const SITE_NAV: readonly SiteNavItem[] = [
     children: [
       { label: "Market Analysis", href: "/marketanalysis" },
       { label: "Best Times to Trade", href: "/education/best-times-to-trade" },
-      { label: "Pairs to Trade", href: `${LIVE}/pairs-to-trade/` },
+      { label: "Pairs to Trade", href: "/education/pairs-to-trade" },
       { label: "Blog", href: `${LIVE}/blog/` },
     ],
   },

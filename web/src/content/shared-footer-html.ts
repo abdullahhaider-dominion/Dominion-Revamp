@@ -52,7 +52,7 @@ function applyFooterHrefs(html: string): string {
     ],
     [
       'href="#markets">Pairs to trade',
-      `href="${LIVE}/pairs-to-trade/">Pairs to trade`,
+      `href="/education/pairs-to-trade">Pairs to trade`,
     ],
     ['href="#blogs">Blogs', `href="${LIVE}/blog/">Blogs`],
     ['href="#careers"', 'href="/careers"'],
