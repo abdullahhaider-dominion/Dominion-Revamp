@@ -44,7 +44,7 @@ export const SITE_NAV: readonly SiteNavItem[] = [
       },
       {
         label: "Meta Trader 5 Web Trader",
-        href: `${LIVE}/webterminal-mt5/`,
+        href: "/webterminal-mt5",
       },
       { label: "cTrader", href: "/ctrader" },
       {

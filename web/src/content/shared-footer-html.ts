@@ -62,7 +62,7 @@ function applyFooterHrefs(html: string): string {
     ],
     [
       'href="#platforms">Meta Trader 5 Web Trader<span',
-      `href="${LIVE}/webterminal-mt5/">Meta Trader 5 Web Trader<span`,
+      `href="/webterminal-mt5">Meta Trader 5 Web Trader<span`,
     ],
     [
       'href="#platforms">Meta Trader 5 iOS<span',
