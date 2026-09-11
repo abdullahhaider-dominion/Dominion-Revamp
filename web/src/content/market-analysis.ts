@@ -109,3 +109,77 @@ export const MARKET_ANALYSIS_POSTS: readonly AnalysisPost[] = [
     published: "3 September 2026",
   },
 ];
+
+export type AnalysisArchive = {
+  label: string;
+  href: string;
+};
+
+export const MARKET_ANALYSIS_ARCHIVES: readonly AnalysisArchive[] = [
+  { label: "September 2026", href: "https://www.dominionmarkets.com/marketanalysis/2026/09/" },
+  { label: "August 2026", href: "https://www.dominionmarkets.com/marketanalysis/2026/08/" },
+  { label: "July 2026", href: "https://www.dominionmarkets.com/marketanalysis/2026/07/" },
+  { label: "June 2026", href: "https://www.dominionmarkets.com/marketanalysis/2026/06/" },
+  { label: "May 2026", href: "https://www.dominionmarkets.com/marketanalysis/2026/05/" },
+  { label: "April 2026", href: "https://www.dominionmarkets.com/marketanalysis/2026/04/" },
+  { label: "March 2026", href: "https://www.dominionmarkets.com/marketanalysis/2026/03/" },
+  { label: "February 2026", href: "https://www.dominionmarkets.com/marketanalysis/2026/02/" },
+  { label: "January 2026", href: "https://www.dominionmarkets.com/marketanalysis/2026/01/" },
+  { label: "December 2025", href: "https://www.dominionmarkets.com/marketanalysis/2025/12/" },
+  { label: "November 2025", href: "https://www.dominionmarkets.com/marketanalysis/2025/11/" },
+  { label: "October 2025", href: "https://www.dominionmarkets.com/marketanalysis/2025/10/" },
+  { label: "September 2025", href: "https://www.dominionmarkets.com/marketanalysis/2025/09/" },
+  { label: "August 2025", href: "https://www.dominionmarkets.com/marketanalysis/2025/08/" },
+  { label: "July 2025", href: "https://www.dominionmarkets.com/marketanalysis/2025/07/" },
+  { label: "June 2025", href: "https://www.dominionmarkets.com/marketanalysis/2025/06/" },
+  { label: "May 2025", href: "https://www.dominionmarkets.com/marketanalysis/2025/05/" },
+  { label: "April 2025", href: "https://www.dominionmarkets.com/marketanalysis/2025/04/" },
+  { label: "March 2025", href: "https://www.dominionmarkets.com/marketanalysis/2025/03/" },
+  { label: "February 2025", href: "https://www.dominionmarkets.com/marketanalysis/2025/02/" },
+  { label: "January 2025", href: "https://www.dominionmarkets.com/marketanalysis/2025/01/" },
+  { label: "December 2024", href: "https://www.dominionmarkets.com/marketanalysis/2024/12/" },
+  { label: "November 2024", href: "https://www.dominionmarkets.com/marketanalysis/2024/11/" },
+  { label: "October 2024", href: "https://www.dominionmarkets.com/marketanalysis/2024/10/" },
+  { label: "September 2024", href: "https://www.dominionmarkets.com/marketanalysis/2024/09/" },
+  { label: "August 2024", href: "https://www.dominionmarkets.com/marketanalysis/2024/08/" },
+  { label: "July 2024", href: "https://www.dominionmarkets.com/marketanalysis/2024/07/" },
+  { label: "June 2024", href: "https://www.dominionmarkets.com/marketanalysis/2024/06/" },
+  { label: "May 2024", href: "https://www.dominionmarkets.com/marketanalysis/2024/05/" },
+  { label: "April 2024", href: "https://www.dominionmarkets.com/marketanalysis/2024/04/" },
+  { label: "March 2024", href: "https://www.dominionmarkets.com/marketanalysis/2024/03/" },
+  { label: "February 2024", href: "https://www.dominionmarkets.com/marketanalysis/2024/02/" },
+  { label: "January 2024", href: "https://www.dominionmarkets.com/marketanalysis/2024/01/" },
+  { label: "December 2023", href: "https://www.dominionmarkets.com/marketanalysis/2023/12/" },
+  { label: "November 2023", href: "https://www.dominionmarkets.com/marketanalysis/2023/11/" },
+  { label: "October 2023", href: "https://www.dominionmarkets.com/marketanalysis/2023/10/" },
+  { label: "September 2023", href: "https://www.dominionmarkets.com/marketanalysis/2023/09/" },
+  { label: "August 2023", href: "https://www.dominionmarkets.com/marketanalysis/2023/08/" },
+  { label: "July 2023", href: "https://www.dominionmarkets.com/marketanalysis/2023/07/" },
+  { label: "June 2023", href: "https://www.dominionmarkets.com/marketanalysis/2023/06/" },
+  { label: "May 2023", href: "https://www.dominionmarkets.com/marketanalysis/2023/05/" },
+  { label: "April 2023", href: "https://www.dominionmarkets.com/marketanalysis/2023/04/" },
+  { label: "March 2023", href: "https://www.dominionmarkets.com/marketanalysis/2023/03/" },
+  { label: "February 2023", href: "https://www.dominionmarkets.com/marketanalysis/2023/02/" },
+  { label: "January 2023", href: "https://www.dominionmarkets.com/marketanalysis/2023/01/" },
+  { label: "December 2022", href: "https://www.dominionmarkets.com/marketanalysis/2022/12/" },
+  { label: "November 2022", href: "https://www.dominionmarkets.com/marketanalysis/2022/11/" },
+  { label: "October 2022", href: "https://www.dominionmarkets.com/marketanalysis/2022/10/" },
+  { label: "September 2022", href: "https://www.dominionmarkets.com/marketanalysis/2022/09/" },
+  { label: "August 2022", href: "https://www.dominionmarkets.com/marketanalysis/2022/08/" },
+  { label: "July 2022", href: "https://www.dominionmarkets.com/marketanalysis/2022/07/" },
+  { label: "June 2022", href: "https://www.dominionmarkets.com/marketanalysis/2022/06/" },
+  { label: "May 2022", href: "https://www.dominionmarkets.com/marketanalysis/2022/05/" },
+  { label: "April 2022", href: "https://www.dominionmarkets.com/marketanalysis/2022/04/" },
+  { label: "March 2022", href: "https://www.dominionmarkets.com/marketanalysis/2022/03/" },
+  { label: "February 2022", href: "https://www.dominionmarkets.com/marketanalysis/2022/02/" },
+  { label: "January 2022", href: "https://www.dominionmarkets.com/marketanalysis/2022/01/" },
+  { label: "December 2021", href: "https://www.dominionmarkets.com/marketanalysis/2021/12/" },
+  { label: "November 2021", href: "https://www.dominionmarkets.com/marketanalysis/2021/11/" },
+];
+
+/** First visible block ends at August 2024; older months sit behind Load more. */
+const archivePreviewIndex = MARKET_ANALYSIS_ARCHIVES.findIndex((month) =>
+  month.href.endsWith("/2024/08/"),
+);
+export const MARKET_ANALYSIS_ARCHIVE_PREVIEW =
+  archivePreviewIndex >= 0 ? archivePreviewIndex + 1 : 26;
