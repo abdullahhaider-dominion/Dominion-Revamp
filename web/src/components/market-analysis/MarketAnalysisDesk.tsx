@@ -1,0 +1,109 @@
+"use client";
+
+import { useMemo, useState } from "react";
+import {
+  MARKET_ANALYSIS_ARCHIVE_PREVIEW,
+  MARKET_ANALYSIS_ARCHIVES,
+  MARKET_ANALYSIS_POSTS,
+} from "@/content/market-analysis";
+
+const FILTERS = [
+  { id: "all" as const, label: "All" },
+  { id: "XAUUSD" as const, label: "XAUUSD" },
+  { id: "GBPJPY" as const, label: "GBPJPY" },
+];
+
+type FilterId = (typeof FILTERS)[number]["id"];
+
+export function MarketAnalysisDesk() {
+  const [filter, setFilter] = useState<FilterId>("all");
+  const [archiveCount, setArchiveCount] = useState(
+    MARKET_ANALYSIS_ARCHIVE_PREVIEW,
+  );
+
+  const posts = useMemo(
+    () =>
+      filter === "all"
+        ? MARKET_ANALYSIS_POSTS
+        : MARKET_ANALYSIS_POSTS.filter((post) => post.pair === filter),
+    [filter],
+  );
+
+  return (
+    <div className="analysis-desk">
+      <div className="analysis-filters" role="tablist" aria-label="Filter by pair">
+        {FILTERS.map((item) => {
+          const selected = filter === item.id;
+          return (
+            <button
+              key={item.id}
+              type="button"
+              role="tab"
+              aria-selected={selected}
+              className={`analysis-chip${selected ? " is-on" : ""}`}
+              onClick={() => setFilter(item.id)}
+            >
+              {item.label}
+            </button>
+          );
+        })}
+      </div>
+
+      <p className="analysis-note">
+        Analysis only — not financial advice. Notes open on the Dominion
+        Markets desk archive.
+      </p>
+
+      <div className="analysis-body">
+        <ul className="analysis-grid">
+          {posts.map((post) => (
+            <li key={post.id}>
+              <a
+                className="analysis-card analysis-glass"
+                href={post.href}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span
+                  className={`analysis-pair${post.pair === "XAUUSD" ? " is-gold" : ""}`}
+                >
+                  {post.pair}
+                </span>
+                <h2>{post.title}</h2>
+                <p>
+                  by {post.author}
+                  <span aria-hidden="true"> · </span>
+                  <time>{post.published}</time>
+                </p>
+              </a>
+            </li>
+          ))}
+        </ul>
+
+        <aside className="analysis-archives analysis-glass" aria-labelledby="analysis-archives-title">
+          <h2 id="analysis-archives-title">Archives</h2>
+          <ul>
+            {MARKET_ANALYSIS_ARCHIVES.slice(0, archiveCount).map((month) => (
+              <li key={month.href}>
+                <a href={month.href} target="_blank" rel="noopener noreferrer">
+                  {month.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+          {archiveCount < MARKET_ANALYSIS_ARCHIVES.length ? (
+            <button
+              type="button"
+              className="analysis-more"
+              onClick={() =>
+                setArchiveCount(MARKET_ANALYSIS_ARCHIVES.length)
+              }
+            >
+              Load more
+            </button>
+          ) : null}
+        </aside>
+      </div>
+    </div>
+  );
+}

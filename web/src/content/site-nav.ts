@@ -62,7 +62,7 @@ export const SITE_NAV: readonly SiteNavItem[] = [
   {
     label: "Education",
     children: [
-      { label: "Market Analysis", href: `${LIVE}/marketanalysis/` },
+      { label: "Market Analysis", href: "/marketanalysis" },
       {
         label: "Best Times to Trade",
         href: `${LIVE}/before-you-trade-trading-sessions/`,

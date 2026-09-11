@@ -44,7 +44,7 @@ function applyFooterHrefs(html: string): string {
     ],
     [
       'href="#markets">Market Analysis',
-      `href="${LIVE}/marketanalysis/">Market Analysis`,
+      `href="/marketanalysis">Market Analysis`,
     ],
     [
       'href="#sessions">Best times to trade',
