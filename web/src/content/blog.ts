@@ -301,3 +301,34 @@ export const BLOG_FEATURED = BLOG_ARTICLES.filter((article) => article.featured)
 export function articleHref(slug: string) {
   return `/blog/${slug}`;
 }
+
+export function getArticle(slug: string) {
+  return BLOG_ARTICLES.find((article) => article.slug === slug);
+}
+
+export function relatedArticles(slug: string, count = 2) {
+  const current = getArticle(slug);
+  const others = BLOG_ARTICLES.filter((article) => article.slug !== slug);
+  const differentCategory = others.filter(
+    (article) => article.category !== current?.category,
+  );
+  const pool = differentCategory.length >= count ? differentCategory : others;
+  return pool.slice(0, count);
+}
+
+export type BlogTocItem = {
+  id: string;
+  label: string;
+};
+
+export type BlogBlock =
+  | { type: "h2"; id: string; text: string }
+  | { type: "h3"; text: string }
+  | { type: "p"; text: string }
+  | { type: "doDont"; do: string; dont: string }
+  | { type: "figure"; src: string; alt: string };
+
+export type BlogArticleBody = {
+  toc: readonly BlogTocItem[];
+  blocks: readonly BlogBlock[];
+};
