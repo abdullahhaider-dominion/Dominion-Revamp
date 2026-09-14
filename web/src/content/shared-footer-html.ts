@@ -1,7 +1,6 @@
 import { incentivePath } from "@/content/incentives";
 import { homeHtml } from "@/content/home-html";
 
-const LIVE = "https://www.dominionmarkets.com";
 const MT5_DESKTOP =
   "https://download.mql5.com/cdn/web/dominion.markets.llc/mt5/dominionmarkets5setup.exe";
 const MT5_IOS =
@@ -54,7 +53,7 @@ function applyFooterHrefs(html: string): string {
       'href="#markets">Pairs to trade',
       `href="/education/pairs-to-trade">Pairs to trade`,
     ],
-    ['href="#blogs">Blogs', `href="${LIVE}/blog/">Blogs`],
+    ['href="#blogs">Blogs', 'href="/blog">Blogs'],
     ['href="#careers"', 'href="/careers"'],
     [
       'href="#platforms">Meta Trader 5<span',
