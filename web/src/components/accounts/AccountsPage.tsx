@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { SITE_LOGIN_HREF, SITE_REGISTER_HREF } from "@/content/site-nav";
 import "@/styles/accounts.css";
 
 const ASSET_ROOT = "/assets/Accounts-page";
@@ -123,7 +124,7 @@ const ACCOUNTS: readonly AccountType[] = [
     name: "Islamic",
     subtitle: "Trade With Confidence",
     bestFor: "Traders seeking Sharia-compliant conditions",
-    spread: "1.0 pip",
+    spread: "1.5 pip",
     commission: "$3.5",
     minimum: "$50",
     platform: "cTrader",
@@ -132,7 +133,7 @@ const ACCOUNTS: readonly AccountType[] = [
     features: [
       "Sharia-compliant conditions",
       "100% swap-free trading",
-      "Spreads from 1.0 pip",
+      "Spreads from 1.5 pip",
       "$3.5 one-way commission",
       "Access to all instruments",
       "Transparent pricing",
@@ -155,7 +156,7 @@ const HERO_BENEFITS: readonly HeroBenefit[] = [
   { title: "Multiple Account Options", icon: "layers.png" },
   { title: "Transparent Trading Conditions", icon: "infinity.png" },
   { title: "Regulated & Trusted", icon: "shield-check.png" },
-  { title: "2,800+ Traders Live", icon: "users.png" },
+  { title: "200+ Active Clients", icon: "users.png" },
 ] as const;
 
 const BENEFITS: readonly Benefit[] = [
@@ -204,7 +205,7 @@ const ONBOARDING_STEPS: readonly OnboardingStep[] = [
   },
   {
     title: "Trade",
-    body: "Start trading on your live account across 2,800+ instruments.",
+    body: "Start trading on your live account across 200+ instruments.",
     icon: "trend-up.png",
   },
 ] as const;
@@ -358,9 +359,9 @@ export function AccountsPage() {
                     </li>
                   ))}
                 </ul>
-                <Link className="accounts-button" href="/#final-cta">
+                <a className="accounts-button" href={SITE_REGISTER_HREF}>
                   Open an Account <Arrow />
-                </Link>
+                </a>
               </article>
             ))}
           </div>
@@ -486,15 +487,15 @@ export function AccountsPage() {
               ))}
             </ol>
             <div className="accounts-actions">
-              <Link className="accounts-button" href="/#final-cta">
+              <a className="accounts-button" href={SITE_REGISTER_HREF}>
                 Register Now <Arrow />
-              </Link>
-              <Link
+              </a>
+              <a
                 className="accounts-button accounts-button--outline"
-                href="/#client-area"
+                href={SITE_LOGIN_HREF}
               >
                 Client Login
-              </Link>
+              </a>
             </div>
           </div>
         </section>
@@ -544,9 +545,9 @@ export function AccountsPage() {
               Open an account with us.
             </h2>
           </div>
-          <Link className="accounts-button" href="/#final-cta">
+          <a className="accounts-button" href={SITE_REGISTER_HREF}>
             Register Now <Arrow />
-          </Link>
+          </a>
           <p className="accounts-final__aside">
             Higher opportunities.
             <br />A brighter tomorrow.
