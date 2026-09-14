@@ -13,8 +13,6 @@ export type SiteNavItem = {
   children?: readonly SiteNavLink[];
 };
 
-const LIVE = "https://www.dominionmarkets.com";
-
 export const SITE_NAV: readonly SiteNavItem[] = [
   {
     label: "Accounts",
@@ -65,7 +63,7 @@ export const SITE_NAV: readonly SiteNavItem[] = [
       { label: "Market Analysis", href: "/marketanalysis" },
       { label: "Best Times to Trade", href: "/education/best-times-to-trade" },
       { label: "Pairs to Trade", href: "/education/pairs-to-trade" },
-      { label: "Blog", href: `${LIVE}/blog/` },
+      { label: "Blog", href: "/blog" },
     ],
   },
   {
